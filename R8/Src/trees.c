@@ -5,7 +5,7 @@
 /*									 */
 /*************************************************************************/
 
-
+#include <stdlib.h>
 #include "defns.i"
 #include "types.i"
 #include "extern.i"
@@ -511,17 +511,17 @@ Tree InTree()
 	    ReleaseTree(Node->Branch[v]);
 	}
 
-	cfree(Node->Branch);
+	free(Node->Branch);
 
 	if ( Node->NodeType == BrSubset )
 	{
-	    cfree(Node->Subset);
+	    free(Node->Subset);
 	}
 
     }
 
-    cfree(Node->ClassDist);
-    cfree(Node);
+    free(Node->ClassDist);
+    free(Node);
 }
 
 

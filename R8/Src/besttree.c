@@ -5,7 +5,7 @@
 /*									 */
 /*************************************************************************/
 
-
+#include <stdlib.h>
 #include "defns.i"
 #include "types.i"
 #include "extern.i"
@@ -188,7 +188,7 @@ short BestTree()
 	ClassesLeft--;
     }
 
-    cfree(ClassFreq);
+    free(ClassFreq);
 }
 
 

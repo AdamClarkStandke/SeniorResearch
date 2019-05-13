@@ -5,7 +5,7 @@
 /*									 */
 /*************************************************************************/
 
-
+#include <stdlib.h>
 #include "defns.i"
 #include "types.i"
 #include "extern.i"
@@ -42,10 +42,10 @@ float	*CVals;		/*  All values of a continuous attribute  */
 
     ScanTree(T, 0, MaxItem);
 
-    cfree(ThreshErrs);
-    cfree(RHSErr);
-    cfree(LHSErr);
-    cfree(CVals);
+    free(ThreshErrs);
+    free(RHSErr);
+    free(LHSErr);
+    free(CVals);
 }
 
 

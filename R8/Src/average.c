@@ -48,7 +48,7 @@ main()
 
 	if ( Lines )
 	{
-	    if ( i != Numbers ) exit();
+	    if ( i != Numbers ) exit(1);
 	}
 	else
 	{
