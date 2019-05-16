@@ -52,9 +52,10 @@ def firefox_list_history():
        file +=".html"
        driver.get(row[0])
        content = driver.page_source
+       #preprocesses the html dodcument(want to get rid of script tags and forms)
        cleaner = clean.Cleaner(style=False, page_structure=False, safe_attrs_only=False, 
-                               remove_unknown_tags=False, links=False, scripts=True,
-                               javascript=True, forms=False, embedded=False, comments=True, meta=False,
+                               remove_unknown_tags=True, links=False, scripts=True,
+                               javascript=True, forms=True, embedded=False, comments=True, meta=False,
                                add_nofollow=False, frames=False, annoying_tags=False, processing_instructions=True)
        content = cleaner.clean_html(content)
        with open(file, 'w') as f:
