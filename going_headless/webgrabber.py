@@ -21,6 +21,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 import contextlib
+import binascii
+import base64
 import lxml.html.clean as clean
 
 '''sets up chrome driver for version 74 and makes it headless'''
@@ -40,16 +42,16 @@ HISTORY_DB='~/Library/Application Support/FireFox/Profiles/r6ha5y55.default/plac
 conn = sqlite3.connect(expanduser(HISTORY_DB))
 c = conn.cursor()
 
+
 ## main function that executes sql querey on Firefox's history file/database to get urls and then calls
 ## either firefox (or chrome) to get the rendered webpage, cleans it by removing unwanted tags, 
 ## and then outputs the preprocessed HTML document to a file for further processing by CoreEx
 def firefox_list_history():
     result = c.execute('SELECT DISTINCT  moz_places.url FROM moz_places, moz_historyvisits WHERE moz_places.id = moz_historyvisits.place_id AND moz_historyvisits.visit_type=2;')
     for row in result:
-       now = datetime.datetime.now()
-       file = "dom_"
-       file += now.strftime("%Y.%m.%d %H:%M:%S")
-       file +=".html"
+       file = row[0]
+       #encodes url into base64 format for later use
+       file = base64.urlsafe_b64encode(file.encode())
        driver.get(row[0])
        content = driver.page_source
        #preprocesses the html dodcument(want to get rid of script tags and forms)
@@ -58,7 +60,7 @@ def firefox_list_history():
                                javascript=True, forms=True, embedded=False, comments=True, meta=False,
                                add_nofollow=False, frames=False, annoying_tags=False, processing_instructions=True)
        content = cleaner.clean_html(content)
-       with open(file, 'w') as f:
+       with open(file, 'w+') as f:
             f.write(content)
     driver.close()
 
