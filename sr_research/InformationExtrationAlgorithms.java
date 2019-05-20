@@ -2,6 +2,8 @@ package sr_research;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,6 +16,8 @@ import org.apache.commons.codec.binary.Base64;
 
 
 public class InformationExtrationAlgorithms {
+
+	private static final boolean True = false;
 
 	/**
 	 * Main method that opens the file directory where 
@@ -46,7 +50,7 @@ public class InformationExtrationAlgorithms {
 	
 	/**
 	 * Method that will implement link target identification. Each root url
-	 * will be parsed based on the following features: does the root link contain a number/Id 
+	 * will be parsed based on the following features: does the root link contain a number or Id 
 	 * in the name of the link, 
 	 * does the root link contain a date, does the root link contain a reserved word, 
 	 * does the root link  end with a forward slash mark, 
@@ -55,8 +59,76 @@ public class InformationExtrationAlgorithms {
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
 	public static void LinkTargetIdentification(String baseurl) throws IOException 
-	{
-		System.out.println(baseurl);
+	{   
+		boolean num_or_id=false; 
+		boolean date =false; 
+		boolean reservedWord =false; 
+		boolean endWithSlash = false; 
+		int lenghLink =0; 
+		int numForwardSlashes = 0; 
+		
+		//pre-processes url to get rid of https:// or http://
+		StringBuffer https = new StringBuffer("https://"); 
+		StringBuffer http  = new StringBuffer("http://"); 
+		if(baseurl.contains(https))
+		{
+			baseurl=baseurl.replaceFirst("https://", ""); 
+		}
+		else if (baseurl.contains(http))
+		{
+			baseurl=baseurl.replaceFirst("http://", "");
+
+
+		}
+		//ends with slash, and length will be calculated here
+		
+		String dateRegrex ="(\\/\\d+[\\/\\-]\\d+[\\/\\-]\\d+[\\/\\-]*)+";
+		//checks to see if date is in the format like /mdy/-mdy/-mdy/ where m=month,d=day, y=year
+		if (baseurl.matches(dateRegrex))
+		{
+			date=True; 
+		}
+		
+		//splits link based on forward slash mark
+		String[] array = baseurl.split("/");
+		//counts the number of forwards slash marks in link
+		numForwardSlashes=array.length;
+		
+		//checks to see if link contains a number or Id in the link
+		String numberRegrex= "([\\/\\-\\d]+)+)";
+		String id_pattern = "id=[\\d]+";
+		Pattern idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE); 
+		Matcher idMatch = idpattern.matcher(baseurl); 
+	    //will match to see if url has id=some number
+		if(idMatch.matches())
+		{
+			num_or_id=True; 
+		}
+		//will match to see if part of url has a number (not a date) in its link 
+	    if (baseurl.matches(numberRegrex))
+		{
+	    	String[] numbers = baseurl.split(numberRegrex);
+	    	for(int i=0; i<numbers.length; i++)
+	    	{
+	    		int mostSeqDigits=0;
+	    		String pattern = numbers[i]; 
+	    		char[] singleCharacter = pattern.toCharArray(); 
+	    		for(char digit: singleCharacter)
+	    		{
+	    			if(Character.isDigit(digit))
+	    			{
+	    				mostSeqDigits++; 
+	    			}
+	    		}
+	    		if(mostSeqDigits>4)
+	    		{
+	    			num_or_id=true; 
+	    		}
+	    	}
+			 
+		}
+	    
+	    //will determine if link has a reserved word as dictated by the literature
 		   
 	}
 	
