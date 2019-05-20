@@ -50,7 +50,7 @@ def firefox_list_history():
     result = c.execute('SELECT DISTINCT  moz_places.url FROM moz_places, moz_historyvisits WHERE moz_places.id = moz_historyvisits.place_id AND moz_historyvisits.visit_type=2;')
     for row in result:
        file = row[0]
-       #encodes url into base64 format for later use
+       #encodes url into base64 format for later link target analysis use(ie file name is the url of the webpage)
        file = base64.urlsafe_b64encode(file.encode())
        driver.get(row[0])
        content = driver.page_source
