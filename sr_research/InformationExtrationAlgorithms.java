@@ -18,16 +18,18 @@ import com.opencsv.CSVReader;
 
 public class InformationExtrationAlgorithms {
 
-	
-	String gallery_pattern = "\\bgallery?";
-    String video_pattern = "\\bvideos?";
-    String image_pattern = "\\bimages?";
-    String photo_pattern = "\\bphotos?";
-    String slideshow_pattern = "\\bslideshows?";
-    String episode_pattern = "\\bepisodes?";
-    String player_pattern = "\\bplayers?";
-    String comment_pattern = "\\bcomments?";
-    String id_pattern = "id=[\\d]+";
+	//instance variables used for link-target identification and CoreEx
+	private static String gallery_pattern = "\\bgallery?";
+	private static String video_pattern = "\\bvideos?";
+    private static String image_pattern = "\\bimages?";
+    private static String photo_pattern = "\\bphotos?";
+    private static String slideshow_pattern = "\\bslideshows?";
+    private static String episode_pattern = "\\bepisodes?";
+    private static String player_pattern = "\\bplayers?";
+    private static String comment_pattern = "\\bcomments?";
+    private static String id_pattern = "id=[\\d]+";
+    private static String numberRegrex= "[-]\\d{5,}[-/]?|[/]\\d{5,}[/]"; 
+    private static String dateRegrex ="\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,4}|[/]\\d{8}[-]";
     private static Pattern gallery; 
     private static Pattern video;
     private static Pattern image;
@@ -78,7 +80,7 @@ public class InformationExtrationAlgorithms {
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-//				System.out.println(root_url);
+				System.out.println(root_url);
 //				LinkTargetIdentification(root_url);
 //				CorexEx(file, root_url); 
 			}
@@ -120,6 +122,7 @@ public class InformationExtrationAlgorithms {
 			baseurl=baseurl.replaceFirst("http://", "");
 
 		}
+		
 		//checks to see if link ends with slash
 		if(baseurl.endsWith("/"))
 		{
@@ -130,7 +133,6 @@ public class InformationExtrationAlgorithms {
 		lenghLink=baseurl.length(); 
 		
 		//checks to see if date is in the format like /mdy/-mdy/-mdy/ where m=month,d=day, y=year
-		String dateRegrex ="(\\/\\d+[\\/\\-]\\d+[\\/\\-]\\d+[\\/\\-]*)+";
 		if (baseurl.matches(dateRegrex))
 		{
 			date=true; 
@@ -140,33 +142,17 @@ public class InformationExtrationAlgorithms {
 		String[] array = baseurl.split("/");
 		numForwardSlashes=array.length;
 		
-		//checks to see if link contains a number or Id in the name link 
+		//checks to see if link contains a Id in the name link 
 		if(idpattern.matcher(baseurl).matches())
 		{
-			num_or_id=true; //will match to see if url has id=somenumber
+			num_or_id=true; 
 		}
-		String numberRegrex= "([\\/\\-\\d]+)+)"; 
-	    if (baseurl.matches(numberRegrex)) //will match to see if part of url has a number (not a date) in its link 
+		
+		//checks to see if link contains a contiguous number in the name link
+	    if (baseurl.matches(numberRegrex))  
 		{
-	    	String[] numbers = baseurl.split(numberRegrex);
-	    	for(int i=0; i<numbers.length; i++)
-	    	{
-	    		int mostSeqDigits=0;
-	    		String pattern = numbers[i]; 
-	    		char[] singleCharacter = pattern.toCharArray(); 
-	    		for(char digit: singleCharacter)
-	    		{
-	    			if(Character.isDigit(digit))
-	    			{
-	    				mostSeqDigits++; 
-	    			}
-	    		}
-	    		if(mostSeqDigits>4)//if number has more than 4 sequential digits in a row, number is not a date 
-	    		{
-	    			num_or_id=true; 
-	    		}
-	    	}
-			 
+	    	num_or_id=true;  
+	 
 		}
 	    
 	    //will determine if link has a reserved word in its link as dictated by the literature
@@ -207,7 +193,7 @@ public class InformationExtrationAlgorithms {
 		
 		if(comment.matcher(baseurl).matches())
 		{
-			reservedWord=true;  //checks if link has comment word in link
+			reservedWord=true;  //checks if link has comment word in link (added this for Reddit)
 		}
 	    
 	    	   
