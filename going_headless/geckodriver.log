@@ -1328,3 +1328,21 @@ JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp
 JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
 JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/ima/Ima.min.js, line 1: TypeError: akamai.amp is undefined
 JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[Child 4833, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

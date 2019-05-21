@@ -10,6 +10,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.apache.commons.codec.binary.Base64;
+import com.opencsv.CSVReader;
 
 //import org.junit.Test;
 
@@ -17,7 +18,42 @@ import org.apache.commons.codec.binary.Base64;
 
 public class InformationExtrationAlgorithms {
 
-	private static final boolean True = false;
+	
+	String gallery_pattern = "\\bgallery?";
+    String video_pattern = "\\bvideos?";
+    String image_pattern = "\\bimages?";
+    String photo_pattern = "\\bphotos?";
+    String slideshow_pattern = "\\bslideshows?";
+    String episode_pattern = "\\bepisodes?";
+    String player_pattern = "\\bplayers?";
+    String comment_pattern = "\\bcomments?";
+    String id_pattern = "id=[\\d]+";
+    private static Pattern gallery; 
+    private static Pattern video;
+    private static Pattern image;
+    private static Pattern photo;
+    private static Pattern slideshow;
+    private static Pattern episode;
+    private static Pattern player;
+    private static Pattern comment;
+    private static Pattern idpattern; 
+    
+    /**
+     * Constructor that compiles the case-sensitive regrex pattern once, 
+     * so that it does not have to be recompiled multiple times for each web page 
+     */
+	public InformationExtrationAlgorithms() 
+	{
+		 gallery = Pattern.compile(gallery_pattern, Pattern.CASE_INSENSITIVE); 
+		 video = Pattern.compile(video_pattern, Pattern.CASE_INSENSITIVE);
+		 image = Pattern.compile(image_pattern, Pattern.CASE_INSENSITIVE);
+		 photo = Pattern.compile(photo_pattern, Pattern.CASE_INSENSITIVE);
+		 slideshow = Pattern.compile(slideshow_pattern, Pattern.CASE_INSENSITIVE);
+		 episode = Pattern.compile(episode_pattern, Pattern.CASE_INSENSITIVE);
+		 player = Pattern.compile(player_pattern, Pattern.CASE_INSENSITIVE);
+		 comment = Pattern.compile(comment_pattern, Pattern.CASE_INSENSITIVE);
+		 idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE);
+	}
 
 	/**
 	 * Main method that opens the file directory where 
@@ -31,7 +67,8 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static void main(String[] args) throws IOException 
 	{
-		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/articles/abcnews"); 
+		new InformationExtrationAlgorithms(); 
+		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/"); 
 		File [] listOfFiles = folder.listFiles(); 
 		for(File file: listOfFiles)
 		{
@@ -41,7 +78,7 @@ public class InformationExtrationAlgorithms {
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-				System.out.println(root_url);
+//				System.out.println(root_url);
 //				LinkTargetIdentification(root_url);
 //				CorexEx(file, root_url); 
 			}
@@ -63,6 +100,7 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static void LinkTargetIdentification(String baseurl) throws IOException 
 	{   
+		//features to extract for each link
 		boolean num_or_id=false; 
 		boolean date =false; 
 		boolean reservedWord =false; 
@@ -70,7 +108,7 @@ public class InformationExtrationAlgorithms {
 		int lenghLink =0; 
 		int numForwardSlashes = 0; 
 		
-		//pre-processes url to get rid of https:// or http://
+		//pre-processes url to get rid of boilerplate terms of https:// or http://
 		StringBuffer https = new StringBuffer("https://"); 
 		StringBuffer http  = new StringBuffer("http://"); 
 		if(baseurl.contains(https))
@@ -81,34 +119,34 @@ public class InformationExtrationAlgorithms {
 		{
 			baseurl=baseurl.replaceFirst("http://", "");
 
-
 		}
-		//ends with slash, and length will be calculated here
+		//checks to see if link ends with slash
+		if(baseurl.endsWith("/"))
+		{
+			endWithSlash=true; 
+		}
 		
-		String dateRegrex ="(\\/\\d+[\\/\\-]\\d+[\\/\\-]\\d+[\\/\\-]*)+";
+		//computes the approximate length of the link 
+		lenghLink=baseurl.length(); 
+		
 		//checks to see if date is in the format like /mdy/-mdy/-mdy/ where m=month,d=day, y=year
+		String dateRegrex ="(\\/\\d+[\\/\\-]\\d+[\\/\\-]\\d+[\\/\\-]*)+";
 		if (baseurl.matches(dateRegrex))
 		{
-			date=True; 
+			date=true; 
 		}
 		
-		//splits link based on forward slash mark
+		//counts the number of forwards slash marks in a link
 		String[] array = baseurl.split("/");
-		//counts the number of forwards slash marks in link
 		numForwardSlashes=array.length;
 		
-		//checks to see if link contains a number or Id in the link
-		String numberRegrex= "([\\/\\-\\d]+)+)";
-		String id_pattern = "id=[\\d]+";
-		Pattern idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE); 
-		Matcher idMatch = idpattern.matcher(baseurl); 
-	    //will match to see if url has id=some number
-		if(idMatch.matches())
+		//checks to see if link contains a number or Id in the name link 
+		if(idpattern.matcher(baseurl).matches())
 		{
-			num_or_id=True; 
+			num_or_id=true; //will match to see if url has id=somenumber
 		}
-		//will match to see if part of url has a number (not a date) in its link 
-	    if (baseurl.matches(numberRegrex))
+		String numberRegrex= "([\\/\\-\\d]+)+)"; 
+	    if (baseurl.matches(numberRegrex)) //will match to see if part of url has a number (not a date) in its link 
 		{
 	    	String[] numbers = baseurl.split(numberRegrex);
 	    	for(int i=0; i<numbers.length; i++)
@@ -123,7 +161,7 @@ public class InformationExtrationAlgorithms {
 	    				mostSeqDigits++; 
 	    			}
 	    		}
-	    		if(mostSeqDigits>4)
+	    		if(mostSeqDigits>4)//if number has more than 4 sequential digits in a row, number is not a date 
 	    		{
 	    			num_or_id=true; 
 	    		}
@@ -131,8 +169,48 @@ public class InformationExtrationAlgorithms {
 			 
 		}
 	    
-	    //will determine if link has a reserved word as dictated by the literature
-		   
+	    //will determine if link has a reserved word in its link as dictated by the literature
+		if(gallery.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has gallery word in link
+		}
+		 
+		if(video.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has video word in link
+		}
+		
+		if(image.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has image word in link
+		}
+		 
+		if(photo.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has photo word in link
+		}
+		 
+		if(slideshow.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has slide-show word in link
+		}
+
+		if(episode.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has episode word in link
+		}
+		 
+		if(player.matcher(baseurl).matches())
+		{
+			reservedWord=true; //checks if link has player word in link
+		}
+		
+		if(comment.matcher(baseurl).matches())
+		{
+			reservedWord=true;  //checks if link has comment word in link
+		}
+	    
+	    	   
 	}
 	
 	/**
