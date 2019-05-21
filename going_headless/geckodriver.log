@@ -722,3 +722,609 @@ IPDL protocol error: Handler returned error code!
 JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
 JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
 [Child 1890, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+1558414272201	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.wCidPHKbBLWU"
+*** You are running in headless mode.
+1558414272787	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558414272788	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558414272788	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558414274666	Marionette	INFO	Listening on port 61414
+1558414274761	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+1558414337305	Marionette	INFO	Stopped listening on port 61414
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3789, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+1558415824526	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.VCZkJahbyumt"
+*** You are running in headless mode.
+1558415825109	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558415825110	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558415825110	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558415826817	Marionette	INFO	Listening on port 63722
+1558415827764	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://a.teads.tv/media/format/v3/teads-format.min.js, line 1: TypeError: n is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://a.teads.tv/media/format/v3/teads-format.min.js, line 1: TypeError: window.teads is undefined
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558417406547	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.yzoZJlyBqsqG"
+*** You are running in headless mode.
+1558417407183	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558417407183	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558417407183	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558417409325	Marionette	INFO	Listening on port 65234
+1558417409350	Marionette	WARN	TLS certificate errors will be ignored for this session
+1558417419146	Marionette	INFO	Stopped listening on port 65234
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 4193, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558417880767	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.5PGk3vpTyrg5"
+*** You are running in headless mode.
+1558417881408	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558417881409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558417881409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558417883982	Marionette	INFO	Listening on port 50173
+1558417884074	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript warning: https://z.moatads.com/px2/client.js, line 24: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 24: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 25: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 25: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 24: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 24: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 25: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 25: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://z.moatads.com/px2/client.js, line 29: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558418039698	Marionette	INFO	Stopped listening on port 50173
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558419450021	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.jzqtkzArcEPb"
+*** You are running in headless mode.
+1558419450639	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558419450640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558419450640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558419452574	Marionette	INFO	Listening on port 51375
+1558419452610	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://pixel.adsafeprotected.com/fwjsvid/st/260391/34646311/skeleton.js?videoId=f0b763cf7ed0a0ac1814b2509cad154d&creativeId=1l9ooh&campId=73544&placementId=1256015&impId=2fd5a53f10ceed2b4376173ee488ded8, line 883: NS_ERROR_FAILURE: 
+JavaScript error: https://pixel.adsafeprotected.com/fwjsvid/st/260391/34646311/skeleton.js?videoId=f0b763cf7ed0a0ac1814b2509cad154d&creativeId=1l9ooh&campId=73544&placementId=1256015&impId=2fd5a53f10ceed2b4376173ee488ded8, line 883: NS_ERROR_FAILURE: 
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+[Child 4483, MediaPlayback #3] WARNING: Decoder=102bf0400 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/workspace/build/src/dom/media/MediaDecoderStateMachine.cpp, line 350
+[Child 4483, MediaPlayback #3] WARNING: Decoder=102bf0400 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) - static MP4Metadata::ResultAndByteBuffer mozilla::MP4Metadata::Metadata(mozilla::ByteStream *): Cannot parse metadata: file /builds/worker/workspace/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3331
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558419980832	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.eDPMDrpwNptL"
+*** You are running in headless mode.
+1558419981504	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558419981505	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558419981505	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558419983671	Marionette	INFO	Listening on port 52038
+1558419983721	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://s-f.scribdassets.com/webpack/scribd/embeds_new.1ea1c0afaaf84d1875d0.js, line 18: SecurityError: Permission denied to access property "document" on cross-origin object
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558421281609	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.7BxWZacp7niS"
+*** You are running in headless mode.
+1558421282810	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558421282810	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558421282810	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558421287099	Marionette	INFO	Listening on port 53353
+1558421287311	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558421325231	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.QMjX9dV0NfgB"
+*** You are running in headless mode.
+1558421326120	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558421326121	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558421326121	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558421330046	Marionette	INFO	Listening on port 53450
+1558421330115	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+1558421360322	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.q7V4tcWZE2CK"
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+*** You are running in headless mode.
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+1558421363565	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558421363569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558421363569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+1558421371114	Marionette	INFO	Listening on port 53734
+1558421371250	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/ima/Ima.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+1558421458542	Marionette	INFO	Stopped listening on port 53734
+[Child 4862, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x52000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x52000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x52000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+1558422473795	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.9JEjxIY0b9me"
+*** You are running in headless mode.
+1558422475386	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558422475387	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558422475388	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558422481540	Marionette	INFO	Listening on port 54973
+1558422481600	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.fb066ff7f5f4afee7716887031da2ea8.html?origin=https%3A%2F%2Fabcnews.go.com&settingsEndpoint=https%3A%2F%2Fsyndication.twitter.com%2Fsettings, line 12: Error: Network error.
+1558422510384	Marionette	INFO	Stopped listening on port 54973
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 5030, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://s.abcnews.com/assets/js/s_code_15.js?v=5 line 663 > Function line 3 > Function line 3 > Function line 3 > Function line 3 > Function, line 3: TypeError: i.m is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/ima/Ima.min.js, line 1: TypeError: akamai.amp is undefined
+JavaScript error: https://abcnewsplayer-a.akamaihd.net/player/2.106.5/akamai/amp/react/React.min.js, line 1: TypeError: akamai.amp is undefined

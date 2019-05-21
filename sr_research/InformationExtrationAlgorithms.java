@@ -31,15 +31,18 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static void main(String[] args) throws IOException 
 	{
-		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/"); 
+		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/articles/abcnews"); 
 		File [] listOfFiles = folder.listFiles(); 
 		for(File file: listOfFiles)
 		{
 			if(file.isFile())
 			{
-				byte[] decoded = Base64.decodeBase64(file.getName());
+				String rm_html = file.getName(); 
+				rm_html=rm_html.replace(".html", ""); 
+				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-				LinkTargetIdentification(root_url);
+				System.out.println(root_url);
+//				LinkTargetIdentification(root_url);
 //				CorexEx(file, root_url); 
 			}
 		}

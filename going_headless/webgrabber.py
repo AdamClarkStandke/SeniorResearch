@@ -35,7 +35,11 @@ import lxml.html.clean as clean
 firefox_options = Options()
 firefox_options.set_headless(headless=True)
 binary= FirefoxBinary(firefox_path='/Applications/Firefox.app/Contents/MacOS/firefox-bin')
-driver = webdriver.Firefox(firefox_options=firefox_options, firefox_binary=binary, executable_path=os.path.abspath("geckodriver"))
+fp = webdriver.FirefoxProfile()
+fp.set_preference("http.response.timeout", 5)
+fp.set_preference("dom.max_script_run_time", 5)
+driver = webdriver.Firefox(firefox_options=firefox_options, firefox_binary=binary, executable_path=os.path.abspath("geckodriver"), firefox_profile=fp)
+
 
 ## creates connection with Firefox's history file/database
 HISTORY_DB='~/Library/Application Support/FireFox/Profiles/r6ha5y55.default/places.sqlite'
