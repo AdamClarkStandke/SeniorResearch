@@ -112,13 +112,12 @@ public class InformationExtrationAlgorithms {
 //				rm_html=rm_html.replace(".html", ""); 
 //				byte[] decoded = Base64.decodeBase64(rm_html);
 //				String root_url= new String(decoded, "UTF-8");
-//				System.out.println(root_url);
 //				LinkTargetIdentification(root_url);
-//				CorexEx(file, root_url, info); 
+//				CorexEx(file, root_url); 
 //			}
 //		}
-//		
-		File folder = new File("/Users/adam/Desktop/aHR0cDovL3d3dy5iYmMuY29tL2N1bHR1cmUvc3RvcnkvMjAxODA3MjUtaG93LWphcGFucy12aXNpb25hcmllcy1zYXctdGhlLWZ1dHVyZQ==.html"); 
+		
+		File folder = new File("/Users/adam/Desktop/simple.html"); 
 		String root_url = folder.getName();
 		CorexEx(folder, root_url); 
 	}
@@ -143,19 +142,15 @@ public class InformationExtrationAlgorithms {
 		int lenghLink =0; 
 		int numForwardSlashes = 0; 
 		
-		//pre-processes url to get rid of boilerplate terms of https:// or http://
+		//pre-processes url to get rid of first terms of 
 		StringBuffer https = new StringBuffer("https://"); 
 		StringBuffer http  = new StringBuffer("http://"); 
-		if(baseurl.contains(https))
+		if(baseurl.contains(https) || baseurl.contains(http))
 		{
-			baseurl=baseurl.replaceFirst("https://", ""); 
-		}
-		else if (baseurl.contains(http))
-		{
-			baseurl=baseurl.replaceFirst("http://", "");
-
+			baseurl=baseurl.replaceFirst("([\\w.:/]+com\\/)", ""); 
 		}
 		
+		System.out.println(baseurl);
 		//checks to see if link ends with slash
 		if(baseurl.endsWith("/"))
 		{
@@ -293,7 +288,25 @@ public class InformationExtrationAlgorithms {
 		if(child2.childNodeSize()==1 && child2.childNode(0) instanceof TextNode)
 		{
 			Node terminalchild = child2.childNode(0); 
-			//checks to see if node's parent is a link
+			if(flag==true) //if so the amount of text will be equal to how much text the node contains
+			{
+					String text_node =  ((TextNode) terminalchild).getWholeText();  
+					StringTokenizer tokens = new StringTokenizer(text_node);
+					if(tokens != null)
+					{
+						terminalTextCnt = tokens.countTokens();
+					}
+					return terminalTextCnt; 
+			}
+			if(flag==false) //since its parent is not a link node the link amount will be zero
+			{
+				terminalLinkCnt = 0;
+				return terminalLinkCnt; 
+			}	
+		}
+		else if(child2.childNodeSize()==1 && child2.childNode(0) instanceof Element)
+		{
+			Node terminalchild = child2.childNode(0);
 			Node parent = terminalchild.parent();
 			String parentName = parent.nodeName(); 
 			if(parentName.equals("a"))
@@ -310,23 +323,6 @@ public class InformationExtrationAlgorithms {
 				}
  
 			}
-			String text_node =  ((TextNode) terminalchild).getWholeText();  
-			StringTokenizer tokens = new StringTokenizer(text_node);
-			if(tokens != null)
-			{
-				if(flag==true) //if so the amount of text will be equal to how much text the node contains
-				{
-					terminalTextCnt = tokens.countTokens();
-					return terminalTextCnt; 
-				}
-				if(flag==false) //since its parent is not a link node the link amount will be zero
-				{
-					terminalLinkCnt = 0;
-					return terminalLinkCnt; 
-				}
-						
-			}
-			 
 		}
 		else if (child2.childNodeSize()==0)
 		{
@@ -341,6 +337,7 @@ public class InformationExtrationAlgorithms {
 				return terminalLinkCnt; 
 			}
 		}
+		
 		float childRatio=0; 
 		int textCnt =0; 
 		int linkCnt=0; 
