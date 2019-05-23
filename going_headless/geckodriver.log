@@ -1573,3 +1573,220 @@ JavaScript error: , line 0: InvalidStateError: An attempt was made to use an obj
 1558477913702	Marionette	INFO	Listening on port 60606
 1558477914667	Marionette	WARN	TLS certificate errors will be ignored for this session
 1558477917849	Marionette	INFO	Stopped listening on port 60606
+1558583624265	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.BKDs1zCPeYcT"
+*** You are running in headless mode.
+1558583624889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558583624889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558583624889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558583626852	Marionette	INFO	Listening on port 54878
+1558583626928	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.responsive.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#3Vb7j9u4Ef5XCAF9AUub1FsGDkU2adJDe8Eie3tFGwcGX7K4q1dFyo8L9n%2B%2FGcn2LhZpLwXS%2FlAYsKjRkDPzcR7f50CMvutrcQxWfhjNVbCz2nTB6nNgvWlcsPr4OfDH3gSrYNfp4CqwGpaFSXWYhjnlIec0jhinUsYlzXgcRXmksqzIQLfpDx9M%2BT3u2P%2F0t3%2Fsw82h%2Fue7vHk1NuIn%2B%2B5tKPX1QX0Y491h1p5Uxbsmqx7e39%2Fd%2F70GsavHLUj7rje0HESrrKPNUbSNGOjQVbbdHgVtRldbcPcq8NbX6O0N6JO3sz6xLflh3gIa2jy8%2FO68GLzRpIK1H2xPfHfeQESrybVot7XQxlVEHonQejDOgWXiK0MaW1vYfyRqEOpBd%2FuWdC35cHKN%2FDC7tiA%2Fgu7d4v2CVMIRJeoaDOJ%2BcGQQ3sIe0RLjq9YqomojWrSwIHet3ZnBWX8kXUmu7dCAuBIN7u3qbnsk%2FdCV4E83kNfgrNVgs3OO3He2deT19e17DEdbp0aQosW%2Ba70ty9850sA%2BsTULgKUc6%2FqL4LneiAdHxp6UYOJlXBjrC8jgMCXaDuIQ9Y%2Ff6kRvwVcvmj5Y8YTznCdRmDPG4D7HGb5gFUb50%2BtfhTQ1WGbRKsnhgHp%2BbyFMyOIGonaY5g5TrvK%2Bd6v1cr1U0rVm7%2FgCFhbseasWqmvWy2qU66VdL4f1MmQ8Wy85hxU%2B84iFSnJI%2FkzSWGeK5nGRQGnkIZMyy4SJ10tfjY1sha3XyzRmhyhl6yWLWMkTpSNTcBaZXIQmDsMkljwOSyin2Rtajg7CoV9VAPRih%2FI4YSlL6Mnc4r7fAgrVF8ON%2Fovhwgd2yEKIV5aqKMNIKxOFJQ8lh57BsiyOS5MWYVZ8%2B3gfr4J%2BMDtr9ncD5gKG3I%2Byhih3tj62hzlYbQej%2FHqZlyriGQ%2B1yXhkmIpilSQqlsqwKEo5xPU1jQ9MDF1agIW9baEdLJo%2BDi6N9Rn4%2B%2F1%2BcbqA2Q%2FRA%2BI7ALq0tfFQwwDfH103Dsp8Z3uhqfODEVj%2Fv%2B2Fr777Tfi2MdoKfPYH%2BMerggfnuJ5XLE5CgCRK8xzesRtsZoA3XwXwZnJ7M4ObbryQ4Nmiicb8HFL4%2FxXTOCXKvwlo2gx3%2FDWW1kucmO77pu%2BcN0OwKkXtYMjCyLVqGrJYjrmIMpUmkiqpYwrpJqlkOqWlZEYoKAye5U%2BDEJ3BQrYwNQZVweD%2BOMs%2BQbab3rpOQ8PloG%2BEw64YcNxsto1p%2Ffxh7HscYBd3YBa9Ugok13WnHi490t05M9yO0qnBSqMv6g7mB0ybs15lDq%2FemFKMtcd2ewW%2FYJJeP0mj4ipOrpIiePwEg954MbVeD53abI%2B4BlnVTdO%2F702rg8fHS8ClEX4cjKYKO7tBEnJiJDW0LMD72dTHivc4hlGM%2BLo%2FtXi9%2BkxvYM5bGK6vRjA3IN34GERMC6WloqnIBeXchLTQPKSM8byErsyYZMGnF1vfi8ackYfUIL%2BvrNamBXpQ29b84Zn%2BxGlYmhaJKiIq4kJD31AxlbEMaZRwyQQ2wBzjOm25GeUbiBT2YfKDSzRiJGSrOF3F0ZPaebZiKpJTKhJtGiABjqyB58A7cAcY8sIBgG4d4EiFRVejVAAbMIdOjw6JxTl1yROVOpuZwVZAGiCDNicpDvkOOIzCWXsG0mSqkAU1Kmc0LllEZVoYiBSyWbFEKI5B6ijmhZApzaUIT3jHjFEWFjDXY55nkCefnh9%2FBvviIyQkjCt0oQJmZojwE6%2FZ4fwSLW7W0PXV2XUgbg9QclMtvjE7xBXWPVCAkwJe4QYJL1YKPP9ssVg%2FBvtuqDUeh8Lb2Rkks5N4lp5OAFSxKhDuvZHBqcSnu09ZlpQxy2mW5Ppf5ddpwxzpxYB8uAUTeEoURUB14GIslFN8uZvbqZFOZYPqkAP6phYeaFUz2T6l5wY93TzBgK8nUyeNiRc33XYQfWXVX8wRqX9w38m3YzuHfYVvr7Fgu%2BGIULaQOX5aQl%2FsR%2BhvN0BErbKmVWepaI%2B39mdMli1UtUEiB6i%2FG7qxnzTGFk8AgL0RtR0brFmks7Z%2B5ht6C9qmxZuDrxqr%2FMIw736tYePqRb8%2BlwY9lwbFaqBzNXy5i09D6aYDXwCM06UDSdenRPofeYGmThf3rY6c5tmvuv8fTr3Hx18A, line 163: Error: Script error for "//imasdk.googleapis.com/js/sdkloader/ima3.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: , line 0: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.responsive.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://tealium.cbsnews.com/prod/utag.js?v=201905132105#&v=1.f954c3471906a30da65d4fb43128184acbc90613, line 86: TypeError: iframe.contentWindow is null
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#5Vfpb9vIFf9XCALttoBG4k1KwKJI4u7VTeDGMbrdKBDmeJRmTXK4M0PJauD%2Fve%2BROoyi282HdPuhtsFj%2BM7fO%2F0x5IM3fcOP4crbAWbhXisw4epjqD20Lly9%2Fxj6Yw%2FhKtwbFc5CrfCxEClkKq9YpASwTEQJWxa8YHGhlqBEnBVVhbRt%2F%2FgW6m%2BJY7%2FZbPjL797%2BbH64qf7%2BKs3di8MPYvP4t%2Br2ft%2B%2B8hP1SPoaxN27H%2F%2FafH%2BwBR67ZtjiqQKumiPba9NAJ4GBk7zhHhzrtOSWbwfOtmYPtmuh86w2VuI33e25Aia1P7KWO37kKNFr35BDN6PI4CwyuIgMuLTGueDNWTIyKXhAlq8vGoJJQ6C7K1kwqVOB30FAOgNTB69HtbOAB%2B7YCtNoGUjkB0sfLTjtPEfts8B0wbsBnOLHeXDf6b12Go8s9MYS9Ttd804Hb40A613geuAPLjhovwtevbx784ULbuA1t9IEr43d8i7gwgx%2BMmWwlkx22g%2Fck1T8ow9ba4ZOkQ8jGb54e5yjt%2FXQNJ8A0zOIgu2%2FgYbQuLrdgd7uhLE7M2aS5J2h2DXv%2FsuKvG4BQW77cBXnaVyVWZJH%2BINBHeyIR7hKq%2BT6%2Bj0X0KBBUbFKEhTQTO8dgoIF0PItOKoQR9m68753q%2FVivZDCdXBwyRwfKKhey7k07XqxG8R6odcLu14kUVytF1G5XtC9qGK1LCPF6jopWJZmORMiTZiMFJfLoohTQCq%2FG1rRcd0gQxY9pkW0XvC4ipdVIuukhCzL47QqeJXlSZFXJRdxPVnD6oFyiP1y7fBPKp8zsOw5sOxiF5Z9nOXLnJ3Mm%2F%2FUbxG13W8OT5xU0WOZID5FLHhR52lSZzlPCx6XFVRpBLLmIslV8r%2FH52kW9hb2Gg73lnKNIOoHgVLme90cu8cJHKUtSL9eVLVM4zJOFJTodiTTTOa5zISEKE1RPLr8CT0ZVVhTLFHDQXfKHOZtn4WXnv8sWIfDYX4K2GQH7zFC%2B3i9qHUDHpsjwv0nZwaE4Uvdc8Wct8Bb3W1%2F33O%2F%2B%2FJ3yVctKM3p3j%2FilUKLt6jEy%2FgUJ%2BWyKtKqzDHG%2BE5NbDMFZPO5mv1m9Gwz4b%2FceC7Q%2BHmbDtXZ6%2BT%2Fzu1hTLf%2F4PPIjJn3mYxZL2hrcN%2B2vXE4x8JVzRuHiwauHVqOiwb1iYqnpSxywaRQGWavFExEqmC1iIBLxAwr%2BLoMkL3UYTRYnHg7XF7eT2cfsKyg184oHCgx0gN31N7DmJhhS6ZOH4Yey8%2B5izm8aV5I9MC9bIx8uDR7d%2B%2FA3g3CSasFqAu5603njD3T7eDxxQ3UfGg8zY0Z%2Fobj6cvrabqcZfksX4ZPH3DZAc%2FHGeJx5MD2SM94tjMEBu976FT49HRxuAbuBwuKSRpRME61aStrsJdi%2Bj1ba6i1oFT5QMeEr%2FtzRxmgziset9h7G3gxoDpLK9f7MKWWqoRkOEY4i2PA5qHihEWYvjVUPIpEFH74F9Y3vIUz8pg9wR92WinoAnFsdAd%2FfEY%2F7nWqqgTEZcniKI0xxHnMRFnXLE%2BqPIlxcqkcwgvL7SBu0FPkoxJiEbKVQVyt8nIVFVey8%2B5wycnuvBTgTosLD2wh8ObZ6oWJ%2BYx7wlAa3Mc6vzmdjtveXsvzZwXuAbN1TOMb2JNJ%2BNzjGnAiIO83tC9TkuH9G015%2Fj48GNsogoEO77CPj6vG6Xg6PUnAVKSE0nsIDiDCU3WMsBVRmddZVLESEfql0JwYpohcFIiHO1RBUtI0xXWn0a3GTMwu%2Ft%2BNnWwqKGp2xGN5p26x0BHGdjTgFN4Nmbu5YkGvJ30nihG31mwt73da%2FgWO9O9D%2BJMRXw3d5PuM3l5RwhtLYcAhNGAF0CO2nn7A%2FnBrTa2lxpZzPuXd8U7%2Fg6KyxapAZNH8LXyNq2s%2FUoxLK6HsgTd6aCnne5LSPLONrEVq6Ch8%2BFVRlVw20Ptf64n0hNdLkp3bHSYZG5OMeXNdA8bud03bsQOOY%2BHWoB0IxCnqDbbYUyb9BhaQmlPAPoe4cUz8qtmff5g8Pf0T, line 163: Error: Script error for "main.video-embed"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#5Vfpb9vIFf9XCALttoBG4k1KwKJI4u7VTeDGMbrdKBDmeJRmTXK4M0PJauD%2Fve%2BROoyi282HdPuhtsFj%2BM7fO%2F0x5IM3fcOP4crbAWbhXisw4epjqD20Lly9%2Fxj6Yw%2FhKtwbFc5CrfCxEClkKq9YpASwTEQJWxa8YHGhlqBEnBVVhbRt%2F%2FgW6m%2BJY7%2FZbPjL797%2BbH64qf7%2BKs3di8MPYvP4t%2Br2ft%2B%2B8hP1SPoaxN27H%2F%2FafH%2BwBR67ZtjiqQKumiPba9NAJ4GBk7zhHhzrtOSWbwfOtmYPtmuh86w2VuI33e25Aia1P7KWO37kKNFr35BDN6PI4CwyuIgMuLTGueDNWTIyKXhAlq8vGoJJQ6C7K1kwqVOB30FAOgNTB69HtbOAB%2B7YCtNoGUjkB0sfLTjtPEfts8B0wbsBnOLHeXDf6b12Go8s9MYS9Ttd804Hb40A613geuAPLjhovwtevbx784ULbuA1t9IEr43d8i7gwgx%2BMmWwlkx22g%2Fck1T8ow9ba4ZOkQ8jGb54e5yjt%2FXQNJ8A0zOIgu2%2FgYbQuLrdgd7uhLE7M2aS5J2h2DXv%2FsuKvG4BQW77cBXnaVyVWZJH%2BINBHeyIR7hKq%2BT6%2Bj0X0KBBUbFKEhTQTO8dgoIF0PItOKoQR9m68753q%2FVivZDCdXBwyRwfKKhey7k07XqxG8R6odcLu14kUVytF1G5XtC9qGK1LCPF6jopWJZmORMiTZiMFJfLoohTQCq%2FG1rRcd0gQxY9pkW0XvC4ipdVIuukhCzL47QqeJXlSZFXJRdxPVnD6oFyiP1y7fBPKp8zsOw5sOxiF5Z9nOXLnJ3Mm%2F%2FUbxG13W8OT5xU0WOZID5FLHhR52lSZzlPCx6XFVRpBLLmIslV8r%2FH52kW9hb2Gg73lnKNIOoHgVLme90cu8cJHKUtSL9eVLVM4zJOFJTodiTTTOa5zISEKE1RPLr8CT0ZVVhTLFHDQXfKHOZtn4WXnv8sWIfDYX4K2GQH7zFC%2B3i9qHUDHpsjwv0nZwaE4Uvdc8Wct8Bb3W1%2F33O%2F%2B%2FJ3yVctKM3p3j%2FilUKLt6jEy%2FgUJ%2BWyKtKqzDHG%2BE5NbDMFZPO5mv1m9Gwz4b%2FceC7Q%2BHmbDtXZ6%2BT%2Fzu1hTLf%2F4PPIjJn3mYxZL2hrcN%2B2vXE4x8JVzRuHiwauHVqOiwb1iYqnpSxywaRQGWavFExEqmC1iIBLxAwr%2BLoMkL3UYTRYnHg7XF7eT2cfsKyg184oHCgx0gN31N7DmJhhS6ZOH4Yey8%2B5izm8aV5I9MC9bIx8uDR7d%2B%2FA3g3CSasFqAu5603njD3T7eDxxQ3UfGg8zY0Z%2Fobj6cvrabqcZfksX4ZPH3DZAc%2FHGeJx5MD2SM94tjMEBu976FT49HRxuAbuBwuKSRpRME61aStrsJdi%2Bj1ba6i1oFT5QMeEr%2FtzRxmgziset9h7G3gxoDpLK9f7MKWWqoRkOEY4i2PA5qHihEWYvjVUPIpEFH74F9Y3vIUz8pg9wR92WinoAnFsdAd%2FfEY%2F7nWqqgTEZcniKI0xxHnMRFnXLE%2BqPIlxcqkcwgvL7SBu0FPkoxJiEbKVQVyt8nIVFVey8%2B5wycnuvBTgTosLD2wh8ObZ6oWJ%2BYx7wlAa3Mc6vzmdjtveXsvzZwXuAbN1TOMb2JNJ%2BNzjGnAiIO83tC9TkuH9G015%2Fj48GNsogoEO77CPj6vG6Xg6PUnAVKSE0nsIDiDCU3WMsBVRmddZVLESEfql0JwYpohcFIiHO1RBUtI0xXWn0a3GTMwu%2Ft%2BNnWwqKGp2xGN5p26x0BHGdjTgFN4Nmbu5YkGvJ30nihG31mwt73da%2FgWO9O9D%2BJMRXw3d5PuM3l5RwhtLYcAhNGAF0CO2nn7A%2FnBrTa2lxpZzPuXd8U7%2Fg6KyxapAZNH8LXyNq2s%2FUoxLK6HsgTd6aCnne5LSPLONrEVq6Ch8%2BFVRlVw20Ptf64n0hNdLkp3bHSYZG5OMeXNdA8bud03bsQOOY%2BHWoB0IxCnqDbbYUyb9BhaQmlPAPoe4cUz8qtmff5g8Pf0T, line 163: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.responsive.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/sharebar"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/social-links"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/sticky-player"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/ticker"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/smart-banner"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/placeholder"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/draggable-frame"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/search"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#1VbbbttGEP0VgkCbF1Fa3kkBgeHESZu4SIw4Th7CQFguh9LG5JLgLiWrgf%2B9MyQlO61R10D7UAggl6O5nLnvd5v3pmkrvreXputhZm9lAY29%2FG5LA7W2l1%2B%2B22bfgr20t01hz2xZ4NEXgSd4Hjks95kThII5eQqlw8M4jhNfJHmUIm%2Fd3nyA8g1J6PJUvzXn5%2FVbVRjFvol0fb1affp0LstX6pUfjNwD66tPwU34sT4zZUlkXfVrpG64AaeTWqq1s9sgOEf3bQc1F3tHKofX0EnBkd9IUxHcX1HA%2BjAIILWAa6R9JkHrICi10ZZUltmAdTW%2FnFu8A2vdNTsUIbrq6xy6mcVVYYkNV2uiI7PsLMOFkULPrY%2BNtW6smkulTQe8nhHD%2Fhkqaro1V4N5yzRW1yurbDqragSvrKYspYC59Rm9eqatHDYSbYyq0Uc4Qb1qb531103fygrBbEEbuUaX9KAms1%2B%2BuHy3tN4r61RruVY1KJPZ6GjZV9UDIVhao%2B%2BXh6CRg6fHoAmuGoXH6uOTRY2sERuvW3vphsz3ozgKfcYYxrzvuJGNspdBktx9%2FsZzqNAES5YsQQXV%2BK0QOJZXzdegqf401cLGmFYvs0W2ELlWsNPeHA%2BYONQk5qKps8Wmz7OFzBZdtvCYG2cLluDJyxYhFF4ggsIJY9d3gtjznLz0Y8dPfZ5GrlukaZQtzAazrLisskUUsBs%2FYtkicD0II08Evud7eR6VOWdJUnhxilTPRQ6qxqkYXT9OYxY6k%2FT8W0v1tnkQvf8fone9hN3EHoJL3NIHhg3Ko7wMWFryPGBQhkGKGJMwehT%2B7czGVG8l7K46yhR50PZ5haC3stqrmxF7ITsQBu2Vwndj1ysAoQITfiDCUAS5ACoHN8gW%2F2ReoImuiVK0gP1XNLt53VL7T%2FPoXix3u918iueIg7cYwK2bLUpZgWm0xmic6KbvBDyXLS%2BcsTXR259bbjbPf%2FJe11BITu%2F2Bp8UeXyxhM4ePlzmpUGEwfTjmOE3NtvqvbrrtBW1x9gdqzGA6crwHK3Pa79PDrC9%2Fx%2Fufkj434AeHBsr6PFxnC1oY%2Bg3ddtorDh7WfJK45LBlSPFsGSoTYI0TQs%2F8RyIQqwOzkonDxPfiQVEMeRhEZTJ3SIgNE6DJo5eUbtJ6HgnNrjGvgwcVqOsexxfsaShlbopcLgFqAu4psHk0nE9sAznvkUntD4C5VV1KgRSXuDgvj4OKX2lobvscy06mUNxZNdto3TTHfg2cHN6BiXvK0PzboY%2Fe6C%2BuKP66SwIZ2Fq337FFQiGD7PP4KiE9Z7OSNs0FCbetqAK%2B%2Fb2GIoSuOk7KBxBoxVoPU%2B7usIhMy6%2Bwy6gpkat4prIFHn9SlHmi8Pi5x0OpQpOezTX0SL%2BYnsxDyD1mBPxJHdcFzwnLVzPYcxNSkg4Yzmzv%2F5J9B3mnoRPTk6sdY%2Br4R7HsN%2BZF7s5d2MHwC8w3Zw5SYqJj1nE8jIqPZwk9lHkos%2FP0DeUo2p3WOJ4ruW5yzBeBsEd22FvUV1a3bS3dj%2Bs%2Bz1uWlquh5Xfz%2FX8noIxcKJRhhplog43hy3u6unvAvQ1Fu9Q1WewJVR4bnFnTQzUKCu6OlHB4vtXSWX%2FcE2OHJc4Q4cl%2BRDPyDLpxsqk%2BpJbsHaQ21MbvXlCCw0CY4IetpZfX6I9Uun7Pq7wStbSDB0zBeRyGE%2BjuEXOklCHN6SLihu8mdQDnGlirAj86i5m9HnP%2BihdQN2sO95upDiHPd047W9N%2FrpXY1hm9PWSuqHp9hR3VfTYHnTEedT2OFYuugavUxKUOFC52l%2FK3yl7a2wZzADiX8MvHd6mBo5ekQZMgAFeyb6mhmhJS3UPG6FFblCUZvy3oBY6XpSuHhuUdPpxTv51cg3zcZjpFw2aQ3%2BnVFfAi6mw%2Fj1DpG0K%2FxOkhoH%2FKIinroXb2z8A, line 163: Error: Script error for "//imasdk.googleapis.com/js/sdkloader/ima3.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://platform.twitter.com/widgets.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: , line 0: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#1VZtj9s2Ev4rhID2vpg29S4ZKIJNNmnT5tpttun1EAUGRY5sZiVKFSV7fcH%2B987Ib9terg0OaIGusTZFzXCeGc48Mx88OQ5tV8u9txz6EWbe1mhoveUHzwzQOG%2F59oM37Dvwlt621d7MMxqXUVhWoAOfxxloHkGkeA5JySsRVr7wU5nIBGWb7v41VC9JI3l%2F239V%2Bim0%2Fk%2BvN%2Fuvv3wR3a3z7dZefS9eqefPDtKT6OvQfJ3Z4Orpj98NuO3qcY27RkEtrXZctzvL3d7qvm2Aa1ND00iUG8xQE8xr42TXgeyNXbNrFF6ylwfdfzgGw8YoWbOLmoY7VLpI7NB%2F1%2FUgNRsdsLZia7AwGMUGcAOd2YC0jnWAYQOmpGWF1xl1x1CfqU3bOig8tkM7G3w0te7BsqFl5QTIWFwOG2C7tq%2F1nP2wAbSC9qwcEJdTPYBFQTc7HrGRW2Cyrlk5Dgxq0xiUBD15xm6PYZgx2QPrpXFkw%2BEOc9Cbdrx4%2FPNI8Fvr5ux5LY0F9v1o3kuLaOQdOHQWYfXtuN5M8DSUaIZVbY%2FuPXt6%2B%2B2SXVUD9NPLK%2BfM2jZgh3nhYQyrsa5P4b9EckJ4uqhHEceQtZYw%2FfDJKoNpEL1sOm%2FpxyJIk0RMf3h9Yy%2FJLW8Zpcnl8ZUsocajRbqMKRPrw7NFoJjCjVyDoxx3lG%2BbYejcslgUC1U6CzsXznFh0B7e%2Bly1TbHYjGWxMMWiLxYBpnexEFmx8OlfK53pKuKBCBWPIq24DKHksRalSmQu4xylhs3YlFaaulgkkbgPE4ELJWUUQOLHAFXsy9DPRS6TMqsioWIhyIYfcYLE97LhfpjGQRzx4wHz990a%2Fdr85Q74QSbu0wDxpX4AsS%2ByKM%2BUToJIylCAqCqVK1H5Ov0UDx5mHub%2B1sDuTU%2F3RU50Y1kj7q2p9%2Fb%2BAF%2BbHtRQLLJKhT7a1ZD6IQgVRiqOVVQqEGGY%2BFGx%2BBRmQhN9m%2BRoYWcs0sm86SLvzHyPwrnb7ebHkB5wyA5juPWLRYWpObTOYUCeuHbsFXxhOqm5G5A5sETXn3dy2HzxWfCiAW0k%2FXb3%2BE3Bxx%2BR4Zcf05cIohQT2s%2FT6PDGj1ZUb6t%2FX%2F1z9eq7fz1%2F%2FeLlT6ubb1Y9IE0roKpbUShT318NskQc8yYcs5MDwd%2FZg3FKgt%2BBP7mImfy7zaBYUJ9yL5uudUhZ3rKStcPWho3OqKm1UdWEqYp8UWkOkGY8qlLFy6xMeKSRWDCfZVaVl%2FYzZXFruTxTH5fEhxz58NEmlaSBXvZqgx317aTGWst%2BJfHfm0yeufWR5DusDuiMazWypI9QQDpiOs8nXLCehKYXY4dV5NzZU%2BwXV0rhztO6VXdn3nNvsCvcjiV2GVOCPou7DvtC25%2FkNnB%2FdQ2VHOuBKHSGH2%2FafXrZDfNZFM%2Fi3Ht4h50bBjnR6YDsC%2Bs9rXFv01KcqRlb7T08nGNZgRzGHstTEVsDTRXHEaM2U4t91M2JIfBUdUfbdHXuuaWU0ad5RfZIcjVcjWiup%2FnhrRekMoI8EDyRWcl9HwKeaz%2FgQvhZBZkUohTeu9%2BofisbIOUnT56wNfXKRxLTWIIBK6EUAU%2BSRPIow3zJg6TC85O0SrIEeYnCdFS5Gctr9A31qGC4yFCOBWIpxDLwL2KnFljCBqloSoAarFsyc%2B6J%2Bn%2F0xNMJh8ip1g5UV8fdabDZ4iHH1zjT3GH6T3VxDVuChesO%2B%2BBRgEpsRSMfpRb%2BfmWocD6awO8OErfIyFPj%2FXiSk8jxbExNSjCDg8wOqKamQpyCGuV5rsMs4JDEgkdSVLyMs5CnCpIUylhHVXZSONzQx62Vd7doj44MwxDHApqTME2jc5huJ4o7qDNylpR6jPBNLQeccpoJzpFrVgR%2BdYkZPT6yftDW0LTrXnY4Xn0De5qUvfdt%2BWK0h7DM6OkZlUPb7ynuVo9YH7REJutGrPebvq2MMmDVaVfa%2Fa35D90eDp0abwDxr%2BFLHMu6SWK0dAJewACyNmNDFdHRKfUjbIQWpcHSNeNbTTV0Hrre%2FBHF0qpYHBJyYjdKSKTWy1T9a9ad2HbqETctmkbfj9de4wx9TLI%2FxyidfLyW%2F%2FOEqZ38IbhPbToPD78A, line 163: Error: Script error for "//imasdk.googleapis.com/js/sdkloader/ima3.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium, managers/click-tracking
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://cbsnews.cbsi.com/bidbarrel.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//native.sharethrough.com/assets/tag.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: , line 0: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://cbsnews.cbsi.com/bidbarrel.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//native.sharethrough.com/assets/tag.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium, managers/click-tracking
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: , line 0: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#5Vfbjtw2Ev0VQcDmaTit%2B6WBYOHLJnZiDAbbdvLgNhq8lFr0SKJWpPoSY%2F59qyR1z2we4n1wsg8Lw2qJLJJVp04Vz3zx%2BehM3%2FCzv3bDCDf%2BQSsw%2FvqLrx201l9%2F%2FOK7cw%2F%2B2j8Y5d%2F4WuGrStMsLquAKZnGLFEiZGWZZSwoykBGZV6JRKJt25%2F%2BCdVbWnF8f1cY%2B%2B5XM76r7u5On8VPG%2FU%2B%2FdfbzSl7mxf342w9mf5Y24f0c%2F9TkrpfcNg24542qNEhVpvRAjvyzlnmajOYcV8zOPBm5E6bjpmKWWncaFlnWt0BMDGAc%2ByBH3jH0Rg3dNo1FM%2Bvb7xpI2%2FrX7bynrba%2Bp6pvJ%2BfrVPwQKvID%2B8N%2BeHdD2CttwGJZ%2FDh7G34wGvvzSgfuADAz07BYD3Lz9ZzNXjvh7HtPa7QM23dMJ2z%2BMD%2FyIvN2A%2FQgvfKjIPzlsi8lxTZk4eeGJ1Xmx7wLOPxg9Fq3pWfen6GgVUjuqO8Sttad3sPTj0ovRyiO%2Fzm5BfO1Np6A0gzKHuLcVdj01wxexb9V8H7vYOVGf4zFNxc8s50WvLm%2FZ91gtMtWMfb3l%2BHaRxHSVAkSRAEmNBxToG%2FTuOnr3eYuwYdCQIcxvXN%2FN0hCsj%2Blu%2FBUnlYomrtXG%2FX29V2JYXt4GjjW3zB3OJO8laadruqR7Fd6e1q2K6iICy2q4D%2BR9tVkucyTIOEZXEUsaSSJRNCJqxMEpXzjAc8z7YrV4%2Bt6LhutqssCU5xFuDKJOCp4llRijQKZRzGaVzmpYiioEpTkczeYL4tlcQ3Khx29YSFWZTFMTo%2BO3T7ud8jTvVfDkgYFcEpjxCRuBARl6qqKoBYgBJZlXAelzwPCyUJs78ekccbH4l40HD8MBCfCJR%2BFA3icNDNuTvNcCiNpea2q6LCROZhpCAPYwhknMg0lYmQEMRxFmJS%2F5umi0cMJivxhKPulDnetn3iX5v6s%2FQcj8fbJUWzH7zHnBzC7arSDThjLQL8d4s1JOF73XPFsGEBdYj9dz139fd%2Fi35osX9w%2Bu1P%2BKRk4k8wPSJ8hFEZhlGCz7RM8fvVy83dbk7B7hulYDcFtpvgT5Kd4wJ9v23jsbgEHf2%2FRT1OZPuDkKfFOP5tfNmuSBPYt21vrIPBX1e8sSgjUFRoOckIagsFj3OZpYJJoRKGpBZMBCpjlQiAyygvw7x4uurJXWooGgY%2ByBqlycd57BPWFPTaGoU3RYj2wC21bz%2BkxbBvoXPzxNj3dDdf3eFN80JKHHnZGPlw7eb2g4VhMworB41t42pue9NZM1zsaji9eA0VHxtHF8MN%2FvOn0ZdPo3F5k6Q3aek%2FfkIpg3pguiTokof9md5xrDYEBu976JT%2F%2BHgNuALuxgEUk3QHAcmsRXM12DqRfM9UC%2FUV3FU%2B0DDha%2F%2FREQHURcDxAVttAy9GyicJqo%2B%2BiII4i9OQ5XGlWJImERMyA5ZGicCZJCkh9z%2F9bukdb4EW7%2FEw8BBdlDLPjCapxpMqzXgkGG6QY17ziBUQcRZkoUyzKA7LgoJZltyP4jWGh%2BuoarBvsSDywmIdJus4ejK7KIFuoiBvPCKBPqCuafkZ1Y9DCYP6qfbm7kqK5UpHTxk5Eg2sJwDVAHgINSkFI50RyM%2BnU2aApekcmu%2BW0UnmHbS8TCuwD0jlieOv4UCu43uPImAxoLrakVQmBuLvG01F8NHvTYPaSk6I0TiKxFlqPM3ME8s%2ByFbiHIbpHUH4SwFNICc8A8GTjOVpoVgYQsRKFUYsQBArKHgQiOCyYE7a8zPEwwZPoY3iOEbR0%2BhWI1%2BTKxCbqdvNZedROLRoQOl633CHELaTE0sL2ZHLuydU6HM5c7GYEGwNsqavtfwZzvQ3hP%2FZiB%2FGbobghr5eUV2Y4UzIdmrEQqFXbFD9iG3kfjCVlho6eRnl3Xmjf6P87IFUNSVyDz9iw%2Boni7GjHRBsB7zRY0ul0dMuzTPfyFu0ho4SibOKiumqQD98rXPSGz4XWrILLRnSEtujYzMt2ZWWz6TClZZspiXDIKi5LrScuuh0sdwbO2nyhRYNcLUQ7n%2FtHvmwpPpPP2u6o74a8De%2FyR4f%2Fw0%3D, line 163: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://www.cbsnews.com/embed/video/?v=1.f954c3471906a30da65d4fb43128184acbc90613#5Vfbjtw2Ev0VQcDmaTit%2B6WBYOHLJnZiDAbbdvLgNhq8lFr0SKJWpPoSY%2F59qyR1z2we4n1wsg8Lw2qJLJJVp04Vz3zx%2BehM3%2FCzv3bDCDf%2BQSsw%2FvqLrx201l9%2F%2FOK7cw%2F%2B2j8Y5d%2F4WuGrStMsLquAKZnGLFEiZGWZZSwoykBGZV6JRKJt25%2F%2BCdVbWnF8f1cY%2B%2B5XM76r7u5On8VPG%2FU%2B%2FdfbzSl7mxf342w9mf5Y24f0c%2F9TkrpfcNg24542qNEhVpvRAjvyzlnmajOYcV8zOPBm5E6bjpmKWWncaFlnWt0BMDGAc%2ByBH3jH0Rg3dNo1FM%2Bvb7xpI2%2FrX7bynrba%2Bp6pvJ%2BfrVPwQKvID%2B8N%2BeHdD2CttwGJZ%2FDh7G34wGvvzSgfuADAz07BYD3Lz9ZzNXjvh7HtPa7QM23dMJ2z%2BMD%2FyIvN2A%2FQgvfKjIPzlsi8lxTZk4eeGJ1Xmx7wLOPxg9Fq3pWfen6GgVUjuqO8Sttad3sPTj0ovRyiO%2Fzm5BfO1Np6A0gzKHuLcVdj01wxexb9V8H7vYOVGf4zFNxc8s50WvLm%2FZ91gtMtWMfb3l%2BHaRxHSVAkSRAEmNBxToG%2FTuOnr3eYuwYdCQIcxvXN%2FN0hCsj%2Blu%2FBUnlYomrtXG%2FX29V2JYXt4GjjW3zB3OJO8laadruqR7Fd6e1q2K6iICy2q4D%2BR9tVkucyTIOEZXEUsaSSJRNCJqxMEpXzjAc8z7YrV4%2Bt6LhutqssCU5xFuDKJOCp4llRijQKZRzGaVzmpYiioEpTkczeYL4tlcQ3Khx29YSFWZTFMTo%2BO3T7ud8jTvVfDkgYFcEpjxCRuBARl6qqKoBYgBJZlXAelzwPCyUJs78ekccbH4l40HD8MBCfCJR%2BFA3icNDNuTvNcCiNpea2q6LCROZhpCAPYwhknMg0lYmQEMRxFmJS%2F5umi0cMJivxhKPulDnetn3iX5v6s%2FQcj8fbJUWzH7zHnBzC7arSDThjLQL8d4s1JOF73XPFsGEBdYj9dz139fd%2Fi35osX9w%2Bu1P%2BKRk4k8wPSJ8hFEZhlGCz7RM8fvVy83dbk7B7hulYDcFtpvgT5Kd4wJ9v23jsbgEHf2%2FRT1OZPuDkKfFOP5tfNmuSBPYt21vrIPBX1e8sSgjUFRoOckIagsFj3OZpYJJoRKGpBZMBCpjlQiAyygvw7x4uurJXWooGgY%2ByBqlycd57BPWFPTaGoU3RYj2wC21bz%2BkxbBvoXPzxNj3dDdf3eFN80JKHHnZGPlw7eb2g4VhMworB41t42pue9NZM1zsaji9eA0VHxtHF8MN%2FvOn0ZdPo3F5k6Q3aek%2FfkIpg3pguiTokof9md5xrDYEBu976JT%2F%2BHgNuALuxgEUk3QHAcmsRXM12DqRfM9UC%2FUV3FU%2B0DDha%2F%2FREQHURcDxAVttAy9GyicJqo%2B%2BiII4i9OQ5XGlWJImERMyA5ZGicCZJCkh9z%2F9bukdb4EW7%2FEw8BBdlDLPjCapxpMqzXgkGG6QY17ziBUQcRZkoUyzKA7LgoJZltyP4jWGh%2BuoarBvsSDywmIdJus4ejK7KIFuoiBvPCKBPqCuafkZ1Y9DCYP6qfbm7kqK5UpHTxk5Eg2sJwDVAHgINSkFI50RyM%2BnU2aApekcmu%2BW0UnmHbS8TCuwD0jlieOv4UCu43uPImAxoLrakVQmBuLvG01F8NHvTYPaSk6I0TiKxFlqPM3ME8s%2ByFbiHIbpHUH4SwFNICc8A8GTjOVpoVgYQsRKFUYsQBArKHgQiOCyYE7a8zPEwwZPoY3iOEbR0%2BhWI1%2BTKxCbqdvNZedROLRoQOl633CHELaTE0sL2ZHLuydU6HM5c7GYEGwNsqavtfwZzvQ3hP%2FZiB%2FGbobghr5eUV2Y4UzIdmrEQqFXbFD9iG3kfjCVlho6eRnl3Xmjf6P87IFUNSVyDz9iw%2Boni7GjHRBsB7zRY0ul0dMuzTPfyFu0ho4SibOKiumqQD98rXPSGz4XWrILLRnSEtujYzMt2ZWWz6TClZZspiXDIKi5LrScuuh0sdwbO2nyhRYNcLUQ7n%2FtHvmwpPpPP2u6o74a8De%2FyR4f%2Fw0%3D, line 163: Error: Script error for "main.video-embed"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.responsive.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//native.sharethrough.com/assets/tag.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://cbsnews.cbsi.com/bidbarrel.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "libs/hls-0.12.2.light.min"
+http://requirejs.org/docs/errors.html#scripterror
+1558583655657	Marionette	INFO	Stopped listening on port 54878
+JavaScript error: https://tealium.cbsnews.com/prod/utag.js?v=201905132105#&v=1.f954c3471906a30da65d4fb43128184acbc90613, line 217: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/social-links"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/dashboard-loader"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "libs/hls-0.12.2.light.min"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/smart-banner"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "fly/components/carousel-1.0"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/placeholder"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/search"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/ticker"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/sticky-player"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/sharebar"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://cbsnews.cbsi.com/bidbarrel.js"
+http://requirejs.org/docs/errors.html#scripterror
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+1558583907246	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/ql/fn7pgssn6sq8hnczwrmdvz4w0000gn/T/rust_mozprofile.toqUoDzymAPL"
+*** You are running in headless mode.
+1558583907686	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558583907687	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558583907687	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558583909314	Marionette	INFO	Listening on port 55551
+1558583909402	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://gum.criteo.com/sync?r=2&c=158&j=STRCriteoCallback&callback=STRCriteoCallback, line 1: ReferenceError: STRCriteoCallback is not defined
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 0: Error: Script error for "pkg.utils", needed by: components/sharebar
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript warning: https://secureimg.stitcher.com/webapp/splayer/dist/release/require.js?v=1558486800, line 120: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript error: https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f4f5f230e01fb&origin=https%3A%2F%2Fapp.stitcher.com, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#cb=f3b9201f5143748&domain=app.stitcher.com&origin=https%3A%2F%2Fapp.stitcher.com%2Ff4f5f230e01fb&relation=parent&error=unknown_user, line 1: SecurityError: The operation is insecure.
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.responsive.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/sharebar"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "components/search"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+1558583934077	Marionette	INFO	Stopped listening on port 55551
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//native.sharethrough.com/assets/tag.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//imasdk.googleapis.com/js/sdkloader/ima3.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "https://cbsnews.cbsi.com/bidbarrel.js"
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 27: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://cbsnews4.cbsistatic.com/fly/bundles/cbsnewscore/js-build/main.video.js?v=1.f954c3471906a30da65d4fb43128184acbc90613, line 5: Error: Script error for "//tealium.cbsnews.com/prod/utag.js?v=201905132105#", needed by: third-party/tealium
+http://requirejs.org/docs/errors.html#scripterror
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3041, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726

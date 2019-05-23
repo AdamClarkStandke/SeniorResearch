@@ -58,7 +58,7 @@ public class InformationExtrationAlgorithms {
     private static Pattern numpattern;
     private static Pattern datepattern;
     private static ArrayList<Storage> domNodes;
-    private static int depth; 
+    private static int depth2; 
     
     /**
      * Constructor that compiles the case-sensitive regrex pattern once, 
@@ -78,7 +78,7 @@ public class InformationExtrationAlgorithms {
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
 		 domNodes = new ArrayList<Storage>();
-		 depth=0; 
+		 depth2=0; 
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class InformationExtrationAlgorithms {
 //			}
 //		}
 //		
-		File folder = new File("/Users/adam/Desktop/simple.html"); 
+		File folder = new File("/Users/adam/Desktop/aHR0cDovL3d3dy5iYmMuY29tL2N1bHR1cmUvc3RvcnkvMjAxODA3MjUtaG93LWphcGFucy12aXNpb25hcmllcy1zYXctdGhlLWZ1dHVyZQ==.html"); 
 		String root_url = folder.getName();
 		CorexEx(folder, root_url, info); 
 	}
@@ -247,9 +247,15 @@ public class InformationExtrationAlgorithms {
 		Node body = doc.body(); 
 		//calls the function that recursively traverses the dom tree
 		nonTerminalNode(body, true, info);
-		
+		//System.out.println("Finished");
 		//calls the scoring function and determines the main content node
-		Storage mainContent =  scoring(domNodes, pageText);
+//		Storage mainContent =  scoring(domNodes, pageText);
+//		ArrayList<Node> content = (ArrayList<Node>) mainContent.S.clone();
+//		for (int i=0; i<content.size(); i++)
+//		{
+//			Node dom = content.get(i); 
+//			System.out.println(dom.nodeName());
+//		}
 
 		
 		//store the main content node's tag
@@ -273,7 +279,7 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static int nonTerminalNode(Node child2, boolean flag, InformationExtrationAlgorithms info)
 	{
-		depth++; 
+		 
 		int terminalTextCnt=0; 
 		int terminalLinkCnt=0;
 		//base case where node is a terminal node (ie., has no children)
@@ -353,11 +359,13 @@ public class InformationExtrationAlgorithms {
 				}
 			}
 		}
-		int nodeDepth = depth; 
+		int nodeDepth = depth2; 
 		Storage store = info.new Storage(S, textCnt, linkCnt, setTextCnt, setLinkCnt, nodeDepth);
-		if (!(S.isEmpty()))
+		if (!(S.isEmpty()))//problem area!!!!!!!!!!
 		{
-			domNodes.add(store);
+			
+			//System.out.println(depth2++);
+			//domNodes.add(store);
 		}
 		if(flag==true)
 		{
