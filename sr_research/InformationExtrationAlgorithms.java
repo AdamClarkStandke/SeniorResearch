@@ -11,11 +11,14 @@ import java.util.regex.Pattern;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
+import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
 import com.opencsv.CSVReader;
+import java.util.List; 
 
 //import org.junit.Test;
 
@@ -54,7 +57,8 @@ public class InformationExtrationAlgorithms {
     private static Pattern idpattern;
     private static Pattern numpattern;
     private static Pattern datepattern;
-    private static ArrayList<Storage> domNodes; 
+    private static ArrayList<Storage> domNodes;
+    private static int depth; 
     
     /**
      * Constructor that compiles the case-sensitive regrex pattern once, 
@@ -73,7 +77,8 @@ public class InformationExtrationAlgorithms {
 		 idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE);
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
-		 domNodes = new ArrayList<Storage>(); 
+		 domNodes = new ArrayList<Storage>();
+		 depth=0; 
 	}
 
 	/**
@@ -89,24 +94,25 @@ public class InformationExtrationAlgorithms {
 	public static void main(String[] args) throws IOException 
 	{
 		InformationExtrationAlgorithms info = new InformationExtrationAlgorithms(); 
-		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/"); 
-		File [] listOfFiles = folder.listFiles(); 
-		for(File file: listOfFiles)
-		{
-			if(file.isFile())
-			{
-				String rm_html = file.getName(); 
-				rm_html=rm_html.replace(".html", ""); 
-				byte[] decoded = Base64.decodeBase64(rm_html);
-				String root_url= new String(decoded, "UTF-8");
-				System.out.println(root_url);
-				LinkTargetIdentification(root_url);
+//		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/datTested_May22_linkTarget/"); 
+//		File [] listOfFiles = folder.listFiles(); 
+//		for(File file: listOfFiles)
+//		{
+//			if(file.isFile())
+//			{
+//				String rm_html = file.getName(); 
+//				rm_html=rm_html.replace(".html", ""); 
+//				byte[] decoded = Base64.decodeBase64(rm_html);
+//				String root_url= new String(decoded, "UTF-8");
+//				System.out.println(root_url);
+//				LinkTargetIdentification(root_url);
 //				CorexEx(file, root_url, info); 
-			}
-		}
-		
- 
-
+//			}
+//		}
+//		
+		File folder = new File("/Users/adam/Desktop/simple.html"); 
+		String root_url = folder.getName();
+		CorexEx(folder, root_url, info); 
 	}
 	
 	/**
@@ -229,22 +235,26 @@ public class InformationExtrationAlgorithms {
 	{
 		//Opens the document for traversing the body of the document
 		Document doc = Jsoup.parse(file, "UTF-8", baseurl);
-		Element htmlbody = doc.body();
+		doc.outputSettings().indentAmount(0).prettyPrint(false);
+
+		Node htmlbody = doc.root();
+		//System.out.println(htmlbody.outerHtml());
 		
 		//gets the total amount of text contained in the body, used later for scoring
-		String totalText = htmlbody.text();
+		String totalText = ((Element) htmlbody).text();
 		StringTokenizer tokens = new StringTokenizer(totalText);
 		int pageText = tokens.countTokens(); 
-		
+		Node body = doc.body(); 
 		//calls the function that recursively traverses the dom tree
-		nonTerminalNode(htmlbody, true, info);
+		nonTerminalNode(body, true, info);
 		
 		//calls the scoring function and determines the main content node
 		Storage mainContent =  scoring(domNodes, pageText);
+
 		
 		//store the main content node's tag
-		Element tag = mainContent.nonTerminalChild; 
-		String mainTag = tag.id();
+//		Node tag = mainContent.nonTerminalChild; 
+//		String mainTag = tag.nodeName();
 		
 		//have to add the other features here used for project 
 		
@@ -255,22 +265,25 @@ public class InformationExtrationAlgorithms {
 	 * The recursive algorithm that implements CoreEx's determination of the text-to-link ratio for each
 	 * DOM node in the tree. After doing so, each non-terminal node will have an associated text count, 
 	 * link count, and a list of nodes that make up the main content of the web page.
-	 * @param htmlbody is Element from the HTML page that represents a given node in the DOM tree
+	 * @param child2 is Element from the HTML page that represents a given node in the DOM tree
 	 * @param flag is used to determine whether the textCnt or LinkCnt should be returned from the base case
 	 * @param info is the main class used to instantiate the inner class Storage to store each node's attributes
 	 * @return an integer that represents either terminal counts of text and links or the value zero which means
 	 * the algorithm has finished
 	 */
-	public static int nonTerminalNode(Element htmlbody, boolean flag, InformationExtrationAlgorithms info)
+	public static int nonTerminalNode(Node child2, boolean flag, InformationExtrationAlgorithms info)
 	{
+		depth++; 
+		int terminalTextCnt=0; 
+		int terminalLinkCnt=0;
 		//base case where node is a terminal node (ie., has no children)
-		if(htmlbody.childNodeSize()==0)
+		if(child2.childNodeSize()==1 && child2.childNode(0) instanceof TextNode)
 		{
-			int terminalTextCnt=0; 
-			int terminalLinkCnt=0; 
+			Node terminalchild = child2.childNode(0); 
 			//checks to see if node's parent is a link
-			Element parent = htmlbody.parent(); 
-			if(parent.getElementById("a") != null)
+			Node parent = terminalchild.parent();
+			String parentName = parent.nodeName(); 
+			if(parentName.equals("a"))
 			{
 				if(flag==true) //if so the amount of text will be 1
 				{
@@ -284,66 +297,79 @@ public class InformationExtrationAlgorithms {
 				}
  
 			}
-			//checks to see node is textual node 
-			else if (htmlbody.hasText())
+			String text_node =  ((TextNode) terminalchild).getWholeText();  
+			StringTokenizer tokens = new StringTokenizer(text_node);
+			if(tokens != null)
 			{
-				String text_node = htmlbody.ownText(); 
-				StringTokenizer tokens = new StringTokenizer(text_node);
-				if(tokens != null)
+				if(flag==true) //if so the amount of text will be equal to how much text the node contains
 				{
-					if(flag==true) //if so the amount of text will be equal to how much text the node contains
-					{
-						terminalTextCnt = tokens.countTokens();
-						return terminalTextCnt; 
-					}
-					if(flag==false) //since its parent is not a link node the link amount will be zero
-					{
-						terminalLinkCnt = 0;
-						return terminalLinkCnt; 
-					}
-						
-				}
-			}
-			//in all other cases the amount of text and links will be zero
-			else
-			{
-				if(flag==true)
-				{
-					terminalTextCnt = 0; 
+					terminalTextCnt = tokens.countTokens();
 					return terminalTextCnt; 
 				}
-				if(flag==false)
+				if(flag==false) //since its parent is not a link node the link amount will be zero
 				{
 					terminalLinkCnt = 0;
 					return terminalLinkCnt; 
 				}
-				 
+						
+			}
+			 
+		}
+		else if (child2.childNodeSize()==0)
+		{
+			if(flag==true)
+			{
+				terminalTextCnt = 0; 
+				return terminalTextCnt; 
+			}
+			if(flag==false)
+			{
+				terminalLinkCnt = 0;
+				return terminalLinkCnt; 
 			}
 		}
+
+		
 		
 		float childRatio=0; 
 		int textCnt =0; 
 		int linkCnt=0; 
-		ArrayList<Element> S = new ArrayList<Element>();
+		ArrayList<Node> S = new ArrayList<Node>();
 		int setTextCnt=0; 
 		int setLinkCnt=0;
-		Elements children = htmlbody.children(); 
-		for(Element child: children)
+		List<Node> children = child2.childNodes();
+		for(Node child: children)
 		{
-			textCnt = textCnt + nonTerminalNode(child, true, info);
-			linkCnt = linkCnt + nonTerminalNode(child, false, info); 
-			childRatio = (((float)textCnt-linkCnt)/textCnt);
-			if(childRatio>0.9f)
+			if (!(child instanceof TextNode))
 			{
-				S.add(child); 
-				setTextCnt = setTextCnt + textCnt; 
-				setLinkCnt = setLinkCnt + linkCnt; 
+				textCnt = textCnt + nonTerminalNode(child, true, info);
+				linkCnt = linkCnt + nonTerminalNode(child, false, info); 
+				childRatio = (((float)textCnt-linkCnt)/textCnt);
+				if(childRatio>0.9f)
+				{
+					S.add(child); 
+					setTextCnt = setTextCnt + textCnt; 
+					setLinkCnt = setLinkCnt + linkCnt; 
+				}
 			}
-			Storage store = info.new Storage(child, S, textCnt, linkCnt, setTextCnt, setLinkCnt); 
-			domNodes.add(store); 	
+		}
+		int nodeDepth = depth; 
+		Storage store = info.new Storage(S, textCnt, linkCnt, setTextCnt, setLinkCnt, nodeDepth);
+		if (!(S.isEmpty()))
+		{
+			domNodes.add(store);
+		}
+		if(flag==true)
+		{
+ 
+			return textCnt; 
+		}
+		else
+		{
+			return linkCnt; 
 		}
 		
-		return 0; 
+		
 	}
 	
 	/**
@@ -353,25 +379,29 @@ public class InformationExtrationAlgorithms {
 	 */
 	public class Storage 
 	{
-		public Element nonTerminalChild; 
-		public ArrayList<Element> S;
+		public int  nodeDepth; 
+		public ArrayList<Node> S;
 		public int textCnt; 
 		public int linkCnt; 
 		public int SetTextCnt; 
 		public int SetLinkCnt;
 		public double score; 
 		
-		public Storage(Element child, ArrayList<Element> set, int text, int link, int totaltext, int totallinks)
+		public Storage (ArrayList<Node> set, int text, int link, int totaltext, int totallinks, int nodeDepth)
 		{
-			nonTerminalChild=child; 
-			for (int i = 0 ; i<set.size();i++)
+			
+			S = new ArrayList<Node>();
+			Iterator<Node> iterate = set.iterator(); 
+			while(iterate.hasNext())
 			{
-			    S.add(set.get(i));
+				Node sub_node = iterate.next(); 
+				S.add(sub_node); 
 			}
 			textCnt=text; 
 			linkCnt=link; 
 			SetTextCnt=totaltext; 
-			SetLinkCnt=totallinks; 	
+			SetLinkCnt=totallinks;
+			this.nodeDepth=nodeDepth; 
 		}
 		
 		public void setScore(double score)
@@ -417,10 +447,34 @@ public class InformationExtrationAlgorithms {
 				highestScoringNode=node;
 				node.setScore(score);
 			}
-//			if (score == max)
-//			{
-//				figure out way to find higher nodes in dom tree
-//			}
+			else if (score == max)
+			{
+				if (node.nodeDepth < highestScoringNode.nodeDepth)
+				{
+					max=score; 
+					highestScoringNode=node; 
+					node.setScore(score);
+				}
+				else if (node.nodeDepth == highestScoringNode.nodeDepth)
+				{
+					int randomChoice=  (int) (Math.random()*1); 
+					if(randomChoice==0)
+					{
+						; 
+					}
+					else
+					{
+						max=score; 
+						highestScoringNode=node; 
+						node.setScore(score);
+					}
+				}
+				else
+				{
+					; 
+				}
+				
+			}
 			
 		}
 	
