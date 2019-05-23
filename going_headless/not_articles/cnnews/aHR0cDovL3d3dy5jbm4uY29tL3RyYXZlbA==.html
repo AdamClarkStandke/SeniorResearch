@@ -1,0 +1,1901 @@
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="css">/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)*/html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after, q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}@font-face { font-family: "CNNSans"; font-style: normal; font-weight: 300; src: url(https://verticals-static.cnn.com/travel/assets/557bb10607ba3d656d2bd2b59e020119.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/ea36f6343335a13a079e7bdc15ce25a0.woff) format("woff");}@font-face { font-family: "CNNSans"; font-style: normal; font-weight: 400; src: url(https://verticals-static.cnn.com/travel/assets/211b2f2141e3c4e2ddef82016bf521e8.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/4b91f5d3a49228ec789e5a11a72aaa8b.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 200; src: url(https://verticals-static.cnn.com/travel/assets/01117b3bc5b6b91ed8e0586de8569d73.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/b93400b84ea66b3b0714db1fc3c41575.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 300; src: url(https://verticals-static.cnn.com/travel/assets/a9dd70f8b1b04de30f0d5ad1bb1134d2.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/35f1399b54b947a0617fdec8cf9a9601.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 400; src: url(https://verticals-static.cnn.com/travel/assets/531dff7d4e1abb89f59f087aa22a0e8d.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/c27c05374a745d3f15f307ea2ab11138.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 500; src: url(https://verticals-static.cnn.com/travel/assets/cd02fb2f31c0dd5036f647c8ee20c586.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/3263dde5fcf1b576638661c36084551f.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 600; src: url(https://verticals-static.cnn.com/travel/assets/9c13f4c0a5b24fa0bd5f249da45b85c2.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/644181cf5228ce16069dbbc93cc8e002.woff) format("woff");}@font-face { font-family: "CNNTravel"; font-style: normal; font-weight: 700; src: url(https://verticals-static.cnn.com/travel/assets/01d67c62c3203106e75c7e67ab11bb53.woff2) format("woff2"), url(https://verticals-static.cnn.com/travel/assets/cf32a16d91981bc4157dbe798ce7d76d.woff) format("woff");}* { -webkit-box-sizing: border-box; box-sizing: border-box;}a { color: #000; text-decoration: none;}body { min-width: 320px;}.Chrome__component { background-color: #fff; color: #000; font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-font-smoothing: antialiased;}.searchShown.Chrome__component { position: fixed; width: 100%; }.Chrome__content { min-height: calc(100vh - 50px); position: relative;}.Chrome__adTop { background-color: #f0f0f0; max-height: 500px; overflow: hidden; -webkit-transition: max-height 1s; -o-transition: max-height 1s; transition: max-height 1s;}.hasModal .Chrome__adTop, .menuShown .Chrome__adTop { display: none; }.searchShown .Chrome__adTop { max-height: 0; }.Chrome__sticky .sticky-outer-wrapper { position: relative; -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); -o-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); z-index: 100;}.nav-hidden .Chrome__sticky .sticky-outer-wrapper { -webkit-transform: translateY(-50px); -ms-transform: translateY(-50px); transform: translateY(-50px); -webkit-transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335); -o-transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335); transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335); }.hasModal .Chrome__component > .sticky-outer-wrapper { left: 0; position: absolute; right: 0; top: 0; z-index: 1;}.bookmarksShown .Chrome__content, .searchShown .Chrome__content, .menuShown .Chrome__content { overflow: hidden; position: fixed; top: 50px; width: 100%;}.menuShown .Chrome__sticky { position: fixed; top: 0; width: 100%; z-index: 1;}@media only screen and (min-width: 600px) { .Chrome__content { min-height: calc(100vh - 60px); } .hasModal .Chrome__content { min-height: 0; } .searchShown .Chrome__content, .menuShown .Chrome__content { top: 60px; } .nav-hidden .Chrome__sticky .sticky-outer-wrapper { -webkit-transform: translateY(-60px); -ms-transform: translateY(-60px); transform: translateY(-60px); }}@media only screen and (min-width: 1024px) { .searchShown.Chrome__component { position: relative; width: auto; } .searchShown .Chrome__content, .menuShown .Chrome__content { overflow: visible; position: static; } .searchResultsShown .Chrome__content { overflow: hidden; position: fixed; } .menuShown .Chrome__sticky { position: static; top: inherit; width: auto; }}.StickyTop__ad { background-color: #fff; max-height: 0; overflow: hidden;} .StickyTop__isMenuShown:not(.StickyTop__isStickyAd) .StickyTop__ad { display: none; }.StickyTop__isStickyAd { left: 0; position: fixed; right: 0; top: 0; z-index: 7;}.Ad__component { position: relative;}.Ad__tag { text-align: center;}.Ad__hasLabel.adfuel-rendered::after { color: #9b9b9b; content: "Advertisement"; display: block; font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1; margin-top: 16px; text-align: center;}/* Fix beacon images causing white space at bottom of page */body > img[style*="height:0"] { bottom: 0; position: absolute;}.Header__container { position: relative; z-index: 5}.Header__container.Header__isShown { z-index: 10;}.Header__component { background-color: #fff; left: 0; position: absolute; right: 0;}.Header__isSticky { left: 0; position: fixed; right: 0; top: 0; z-index: 7;}.Header__wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; height: 50px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 auto; max-width: 1100px;}.Header__logo { display: -webkit-box; display: -ms-flexbox; display: flex;}.Header__logoCNN, .Header__logoTravel { background: no-repeat center; background-size: contain; height: 50px;}.Header__logoCNN { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NSIgaGVpZ2h0PSI2NSIgdmlld0JveD0iMCAwIDY1IDY1Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNDMDAiIGQ9Ik0wIDY1aDY1VjBIMHoiLz48ZyBmaWxsPSIjRkVGRUZFIj48cGF0aCBkPSJNNTQuMjc4IDIyLjM3NHYxOC4yMjFjMCAuNzIzLS40NTMgMS4zMzMtMS4xMjcgMS41MTdhMS41NDcgMS41NDcgMCAwIDEtLjM5Ny4wNTNjLS41MTQgMC0xLjEwNi0uMjU3LTEuNTMzLS45ODItLjAyMy0uMDM5LTEuNzE0LTIuOTU3LTQuMjk1LTcuNDA0bC00LjI3Ni03LjM3Yy0uMjM2LS40MDQtLjU2OC0uNTk0LS44ODUtLjUwOC0uMjY5LjA3NC0uNDQ0LjMyMS0uNDQ0LjYzdjE0LjA2NGMwIC43MjMtLjQ1MiAxLjMzMy0xLjEyNiAxLjUxNy0uNTc2LjE1OC0xLjM4Ny0uMDA2LTEuOTMtLjkyOWwtMy45MTktNi43NTQtNC42NS04LjAyYy0uMjQtLjQwNS0uNTc0LS41OTUtLjg5Ni0uNTA3LS4yMDYuMDU3LS40NDcuMjU1LS40NDcuNjI5djEzLjc1N2MwIC45MDYtLjc5NiAxLjctMS43MDMgMS43aC02Ljk4NGMtNC42NDYgMC04LjQyNi0zLjc3OS04LjQyNi04LjQyNiAwLTQuNjQ2IDMuNzgtOC40MjUgOC40MjYtOC40MjVoMy42Mjd2LTIuNzYzSDE5LjY3Yy02LjE4IDAtMTEuMTg5IDUuMDA5LTExLjE4OSAxMS4xODggMCA2LjE4IDUuMDEgMTEuMTkgMTEuMTkgMTEuMTloNy4wNWMyLjY4MS4wMDEgNC40MDUtMS41NjkgNC40MDEtNC40Njh2LTYuMzgxczQuNSA3Ljc0OSA0LjcwNiA4LjFjMi44NTUgNC44NTEgOC4yNTIgMi44NDYgOC4yNTItMS4zMjl2LTYuNzcxczQuNDk4IDcuNzQ5IDQuNzA0IDguMWMyLjg1NSA0Ljg1MSA4LjI1MiAyLjg0NiA4LjI1Mi0xLjMyOXYtMTguM2gtMi43NTd6Ii8+PHBhdGggZD0iTTEyLjE2MiAzMy41NjNjMCA0LjEzNyAzLjM2NyA3LjUwNCA3LjUwNCA3LjUwNGg2Ljk4NWMuNDM5IDAgLjc4LS40MTkuNzgtLjc3OGwuMDAyLTEzLjc1OWMwLS43MjQuNDUyLTEuMzMzIDEuMTI2LTEuNTE3LjU3Ny0uMTU4IDEuMzg2LjAwNCAxLjkzLjkyOGw0LjY1NSA4LjAyNSAzLjkxNiA2Ljc1Yy4yMzcuNDA1LjU3Mi41OTQuODkzLjUwNi4yMDctLjA1Ni40NDktLjI1NC40NDktLjYyOFYyNi41M2MwLS43MjUuNDUtMS4zMzUgMS4xMjItMS41MTcuNTczLS4xNTcgMS4zNzkuMDA2IDEuOTIuOTI4bDQuMjggNy4zNzUgNC4yOTIgNy40Yy4yMzguNDA1LjU3Mi41OTUuODk0LjUwNi4yMDctLjA1Ni40NDgtLjI1NC40NDgtLjYyOHYtMTguMjJoLTIuNzd2MTAuODQ4cy00LjQ5OC03Ljc1LTQuNzA1LTguMWMtMi44NTQtNC44NTItOC4yNTItMi44NDctOC4yNTIgMS4zM3Y2Ljc3cy00LjQ5OC03Ljc1LTQuNzAzLTguMWMtMi44NTYtNC44NTItOC4yNTItMi44NDctOC4yNTIgMS4zM3YxMS4wOTVhLjczOC43MzggMCAwIDEtLjc0NS43NTdoLTQuMjM0YTQuNzQyIDQuNzQyIDAgMSAxIDAtOS40ODNoMy41OTd2LTIuNzYzaC0zLjYyOGMtNC4xMzcgMC03LjUwNCAzLjM2OC03LjUwNCA3LjUwNSIvPjwvZz48L2c+PC9zdmc+); margin-right: 8px; width: 50px;}.Header__logoTravel { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDcwIDIyIj48cGF0aCBkPSJNOC4zMjQgOC4yMDRINC41djkuMzM3YzAgMS40MDYuNzYgMS44ODQgMS42NiAxLjg4NC44MTUgMCAxLjg1NS0uMjUzIDIuNTYtLjYxOGwuMzY0IDEuNzE0Yy0uNzg3LjQyMi0yLjA4LjczMi0zLjIwNi43MzItMS44NTYgMC0zLjQ4Ny0uNzU5LTMuNDg3LTMuMzQ3VjguMjA0SC4wMjhWNi40NjFIMi4zOVYxLjI4Nkg0LjV2NS4xNzVoNC4xNmwtLjMzNyAxLjc0M3ptNC43MjYgMTEuMDUzVjguMjA0aC0xLjc3M1Y2LjQ2aDMuODI1djEuOTdjMS4wNC0xLjQzNSAyLjYxNS0yLjEzOCA0LjQ0My0yLjEzOC40NSAwIC45LjAyOCAxLjI5NC4xNGwtLjM2NiAyLjExYy0uMzA5LS4wODQtLjc4Ny0uMTEyLTEuMjM3LS4xMTItMS43MTYgMC0zLjA2NS42MTgtNC4wNzggMi4wNTN2OC43NzRoMi4xNjVWMjFoLTYuMDQ2di0xLjc0M2gxLjc3MnptMTQuMzE0LTQuODk0Yy0xLjk2OCAwLTMuMDM3IDEuMDY4LTMuMDM3IDIuNjQ0IDAgMS4zNS43ODcgMi42NDMgMi45NTMgMi42NDMgMS44MjggMCAzLjAzNy0uOTU2IDMuNi0xLjQ5di0zLjc5N2gtMy41MTZ6bTMuNTE2LTMuNDNjMC0xLjk0LS44NzItMi45ODItMy4wMS0yLjk4Mi0yLjA1MiAwLTMuNzY4Ljk4NC00LjY5NiAxLjYzMWwtLjM2Ni0xLjg4NGMxLjEyNS0uNzMgMi45MjUtMS42MDMgNS4yNi0xLjYwMyAzLjI5IDAgNC45MjEgMS43MTUgNC45MjEgNC4zM3Y4LjgzMmgxLjUxOFYyMWgtMy41MTV2LTEuMjY2Yy0xLjAxMi45ODQtMi4yNzggMS42MzEtNC4xMDYgMS42MzEtMi45MjQgMC00LjY2OC0xLjgyNy00LjY2OC00LjM1OCAwLTIuNyAxLjgtNC4zMDMgNC44OTMtNC4zMDNoMy43N3YtMS43NzJ6bTE3LjAxNS0yLjcyOUw0My43ODggMjFINDAuNjFMMzYuNDc4IDguMjA0aC0xLjMyMlY2LjQ2MWg1LjY1M3YxLjc0M2gtMi4wNTNsMy4yODggMTAuOTY4aC4zNjdsMy4yNjItMTAuOTY4aC0yLjA4MVY2LjQ2MWg1LjY1M3YxLjc0M3ptMTEuMjUgMy4yOTFjMC0yLjEwOS0uNzg4LTMuNTQ0LTMuMDk0LTMuNTQ0LTIuMjIgMC0zLjEyMiAxLjMyMi0zLjEyMiAzLjQzMXYxLjE1M2g2LjIxNXYtMS4wNHptLTYuMjE2IDQuNjY4YzAgMi40NzUgMS40OSAzLjM0NyAzLjQwNCAzLjM0NyAxLjY2IDAgMi45ODItLjY3NSA0LjE5LTEuNDlsLjU5IDEuODI3Yy0xLjc0MiAxLjI2NS0zLjcxMiAxLjUxOC00Ljk0OSAxLjUxOC0zLjU0MyAwLTUuMzcyLTIuMDI0LTUuMzcyLTQuNzUydi01LjczN2MwLTIuNzI4IDEuOTctNC43OCA1LjI4OC00Ljc4IDMuMjkgMCA1LjE3NCAyLjAyNCA1LjE3NCA1LjAzM3YzLjA2NWgtOC4zMjV2MS45N3ptMTIuNzE0IDMuMDk0VjIuMjE1aC0xLjc3MVYuNDdoMy44OHYxOC43ODZoMS43NzJWMjFoLTUuNjUydi0xLjc0M3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==); width: 70px;}.Header__navigation { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; margin-right: 16px;}.Header__section { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 18px; text-transform: uppercase; color: #4a4a4a; display: none; margin-top: 2px; position: relative;}.Header__section + .Header__section { margin-left: 32px; }.Header__section.Header__video { display: block;}.Header__isOverlayVisible .Header__section.Header__video { display: none;}.Header__section.Header__active { font-weight: 600;}.Header__section::after { background: #4a4a4a; bottom: -5px; content: ""; height: 2px; left: 0; margin: auto; position: absolute; right: 0; -webkit-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; width: 0;}.Header__section:hover::after, .Header__section.Header__active::after { width: 100%;}.Header__section:active::after { height: 2px;}.Header__isOverlayVisible .Header__section { display: none;}.Header__heart, .Header__search, .Header__burger { background: no-repeat center; cursor: pointer; height: 21px; margin-left: 24px; width: 21px;}.Header__isOverlayVisible .Header__heart, .Header__isOverlayVisible .Header__search, .Header__isOverlayVisible .Header__burger { display: none; }.Header__heart { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxOSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTEwLjM5IDE3LjY1MmwuODM5LS43NmM1LjA0LTQuNTU0IDYuNjM0LTYuMTg4IDcuNzM0LTguMjIuNTUzLTEuMDIuODIxLTEuOTg2LjgyMS0yLjk3N0MxOS43ODQgMy4wNTkgMTcuNzE4IDEgMTUuMDcgMWE1LjIzMiA1LjIzMiAwIDAgMC0zLjkxNyAxLjgxNGwtLjc2Ljg5LS43Ni0uODlBNS4yMzIgNS4yMzIgMCAwIDAgNS43MTYgMUMzLjA2NiAxIDEgMy4wNTkgMSA1LjY5NWMwIC45ODcuMjY2IDEuOTQ4LjgxNCAyLjk2NCAxLjA5NyAyLjAzNSAyLjY4IDMuNjYgNy43NCA4LjI0MWwuODM2Ljc1MnoiIG9wYWNpdHk9Ii4xIi8+PC9zdmc+); position: relative; width: 24px}.Header__heart.Header__hasBookmarks { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMCI+PHBhdGggZmlsbD0iIzAyMDMwMyIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUuODYyIDBjLTEuOTA0IDAtMy43My44ODMtNC45MjMgMi4yNzhDOS43NDcuODgzIDcuOTE5IDAgNi4wMTYgMCAyLjY0NyAwIDAgMi42MzggMCA1Ljk5NWMwIDQuMTIgMy43MiA3LjQ3NiA5LjM1MyAxMi41NzdMMTAuOTM5IDIwbDEuNTg2LTEuNDM5YzUuNjM0LTUuMDkgOS4zNTMtOC40NDcgOS4zNTMtMTIuNTY2QzIxLjg3OCAyLjYzOCAxOS4yMzEgMCAxNS44NjIgMHoiLz48L3N2Zz4=);}.Header__heart.Header__isOpen, .Header__search.Header__isOpen { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyI+PHBhdGggZD0iTTEgMWwxNSAxNW0wLTE1TDEgMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=); display: block;}.Header__heartIcon { -ms-flex-item-align: center; align-self: center; position: relative;}.Header__unwatchedBookmarksCount { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 16px; background-color: #c00; border-radius: 10px; bottom: 2px; color: #fff; display: inline-block; font-size: 8px; height: 15px; position: absolute; right: -5px; text-align: center; width: 15px;}.Header__search { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAyMDMwMyIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNi43NDMgMTYuNDVsMi44MjggMi44MjgiLz48cGF0aCBkPSJNMTMuODAzIDEzLjgwM0E3LjUgNy41IDAgMSAwIDMuMTk2IDMuMTk2YTcuNSA3LjUgMCAwIDAgMTAuNjA3IDEwLjYwN3oiLz48L2c+PC9zdmc+);}.Header__burger { display: -webkit-box; display: -ms-flexbox; display: flex; height: 25px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 18px;}.Header__burgerIcon { -ms-flex-item-align: center; align-self: center; position: relative}.Header__burgerIcon, .Header__burgerIcon::before, .Header__burgerIcon::after { background-color: #000; border-radius: 2px; height: 2px; -webkit-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; width: 18px;}.Header__isOpen .Header__burgerIcon { background-color: transparent;}.Header__burgerIcon::before, .Header__burgerIcon::after { content: ""; display: block; position: absolute;}.Header__isOpen .Header__burgerIcon::before, .Header__isOpen .Header__burgerIcon::after { width: 22px;}.Header__burgerIcon::before { -webkit-transform: translateY(-7px); -ms-transform: translateY(-7px); transform: translateY(-7px);}.Header__isOpen .Header__burgerIcon::before { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);}.Header__burgerIcon::after { -webkit-transform: translateY(7px); -ms-transform: translateY(7px); transform: translateY(7px);}.Header__isOpen .Header__burgerIcon::after { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}.Header__hidden { height: 1px; left: -10000px; overflow: hidden; position: absolute; top: auto; width: 1px;}@media (max-width: 599px) { .Header__isBookmarksEnabled .Header__video { display: none; }}@media (min-width: 600px) { .Header__wrapper, .Header__logoCNN, .Header__logoTravel { height: 60px; } .Header__logoCNN { width: 60px; } .Header__heart { display: none; }}@media (min-width: 1024px) { .Header__isOverlayVisible .Header__component { background-color: transparent; top: 0; width: 100%; } .Header__isOverlayVisible .Header__logo { display: none; } .Header__isOverlayVisible .Header__navigation { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; width: 100%; } .Header__section { display: block; } .Header__heart { display: none; } .Header__isOverlayVisible .Header__search { display: none; } .Header__burger { display: none; }}@media (min-width: 1100px) { .Header__isOverlayVisible .Header__navigation { margin-right: 0; }}.Homepage__component { margin-bottom: 72px; overflow: hidden; position: relative;}.Homepage__zone { margin: 32px auto 0; max-width: 1100px}.Homepage__zone:first-child { margin-top: 0;}.Homepage__zone.Homepage__bleed { max-width: none;}.Homepage__zone.Homepage__pad { margin-left: 16px; margin-right: 16px;}.Homepage__zone.Homepage__editorsChoice { overflow: visible;}.Homepage__zone.Homepage__sections, .Homepage__zone.Homepage__destinations { display: -webkit-box; display: -ms-flexbox; display: flex;}.Homepage__primary { width: 100%;}.Homepage__secondary { display: none; margin-right: 16px; width: 300px; z-index: 1;}.Homepage__sections .Homepage__secondary { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }.Homepage__adRect { margin: 32px 0;}@media only screen and (min-width: 600px) { .Homepage__primary { margin: 0 16px; }}@media only screen and (min-width: 1024px) { .Homepage__primary { float: left; width: calc(100% - 300px - 48px); } .Homepage__secondary { display: block; }}@media only screen and (min-width: 1100px) { .Homepage__zone.Homepage__pad { margin-left: auto; margin-right: auto; } .Homepage__primary { margin: 0; width: calc(100% - 300px - 16px); } .Homepage__secondary { margin-left: 16px; margin-right: 0; }}.Loading__component { -webkit-box-align: center; -ms-flex-align: center; align-items: center; bottom: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; left: 0; position: absolute; right: 0; top: 0;}.Loading__loading { color: #e2e2e2; cursor: default; height: 36px; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; width: 580px;}.Loading__loading div { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 36px; font-weight: 300; letter-spacing: -0.5px; line-height: 40px; -webkit-animation: Loading__move 3s linear infinite; animation: Loading__move 3s linear infinite; height: 36px; opacity: 0; position: absolute; -webkit-transform: rotate(120deg); -ms-transform: rotate(120deg); transform: rotate(120deg); width: 20px }.Loading__loading div:nth-child(2) { -webkit-animation-delay: 0.2s; animation-delay: 0.2s;}.Loading__loading div:nth-child(3) { -webkit-animation-delay: 0.4s; animation-delay: 0.4s;}.Loading__loading div:nth-child(4) { -webkit-animation-delay: 0.6s; animation-delay: 0.6s;}.Loading__loading div:nth-child(5) { -webkit-animation-delay: 0.8s; animation-delay: 0.8s;}.Loading__loading div:nth-child(6) { -webkit-animation-delay: 1s; animation-delay: 1s;}.Loading__loading div:nth-child(7) { -webkit-animation-delay: 1.2s; animation-delay: 1.2s;}@-webkit-keyframes Loading__move { 0% { left: 0; opacity: 0; } 35% { left: 41%; opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } 65% { left: 59%; opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { left: 100%; opacity: 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }}@keyframes Loading__move { 0% { left: 0; opacity: 0; } 35% { left: 41%; opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } 65% { left: 59%; opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { left: 100%; opacity: 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }}.Footer__component { padding-bottom: 16px;} .searchShown .Footer__component, .hasModal .Footer__component, .menuShown .Footer__component { display: none; }.Footer__wrapper { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 auto; max-width: 1100px; overflow: hidden; padding: 24px 16px 48px;}.Footer__primary { background-color: #e2e2e2;}.Footer__navigation { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; float: left;}.Footer__section { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 18px; text-transform: uppercase; display: block; margin: 2px 0 16px;}.Footer__aside { float: right;}.Footer__top { background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RURGMEQ4MUMtMzlCRS00MkYwLTlGMjItNTVFOTFGQzRGMDE5PC90aXRsZT48ZyBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xLjI1NSA5Ljc5Nmw3LjgwMi04LjUyMyA4LjAxNyA4LjUyM005IDIuMjIyVjE4LjA0Ii8+PC9nPjwvc3ZnPg==) no-repeat center; display: block; height: 55px; margin-top: -17.5px; overflow: hidden; text-indent: -999px; width: 60px;}.Footer__legal, .Footer__links { font-size: 10px; font-weight: 500; line-height: 14px;}.Footer__links { margin-top: 8px;}.Footer__link { border-right: 1px solid #000; cursor: pointer; display: inline-block; line-height: 10px; margin-right: 8px; padding-right: 8px}.Footer__link:last-child { border: 0;}.Footer__link.Footer__adchoices::after { background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiPjxnIGZpbGw9IiM1QzVDNUMiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTcuMzY0IDQuNTE4Yy0uMDE3LjA2My0uMDMxLjEyMy0uMDYyLjE4M2EuNTgyLjU4MiAwIDAgMS0uMjEuMjJjLS41MzIuMzMyLTEuMDYuNjY4LTEuNTg4IDFsLTEuNC44OGMtLjM4MS4yNC0uNzY2LjQ4MS0xLjE0OC43MjVhLjQ2My40NjMgMCAwIDEtLjY0Ny0uMTcuNTM5LjUzOSAwIDAgMS0uMDc1LS4zMzJjLjAwNC0uMDE4IDAtLjAzNSAwLS4wNTdWNC45NTZjMC0uMjMzLjE1LS40NDIuMzU4LS40OTguMjMyLS4wNjQuNDguMDcuNTY1LjMxYS42NjQuNjY0IDAgMCAxIC4wMzQuMjE2djEuMTJjMCAuMDE1LS4wMDYuMDM2LjAwNy4wNDMuMDE0LjAwNy4wMjctLjAwNy4wNDEtLjAxNC42MS0uMzg1IDEuMjItLjc2NyAxLjgyOS0xLjE1Mi4yNzMtLjE3My41NDUtLjM0My44MTctLjUxNmwuMDI0LS4wMThjLS4wODEtLjA1LS4xNi0uMDk5LS4yMzgtLjE0NS0uMjY2LS4xNjMtLjUzMS0uMzI1LS43OTQtLjQ4OGwtMS4xNC0uNjk2LTEuMDk3LS42NzJhMjYxLjcyIDI2MS43MiAwIDAgMC0xLjIxLS43MzlsLS40MjktLjI2MWMtLjAzLS4wMTgtLjAzNy0uMDEtLjAzNC4wMjF2Ni4xMDFjLjA4Mi0uMDUuMTU0LS4wOTUuMjI1LS4xNDEuMDU4LS4wMzUuMTE2LS4wNzQuMTc0LS4xMWEuNDYuNDYgMCAwIDEgLjY0NC4yMDUuNTU3LjU1NyAwIDAgMS0uMTk4LjcyNWMtLjM2MS4yMTYtLjcxMi40NDUtMS4wNy42NzJDLjY4NSA4Ljk1NC42MjMgOC45NzUuNTYgOUguNDJhLjAyNS4wMjUgMCAwIDAtLjAxNC0uMDA3LjQ4Mi40ODIgMCAwIDEtLjMzMy0uMjRDLjAzNCA4LjY4OS4wMTcgOC42MTUgMCA4LjU0NC4wMDcgNS44NDQuMDA3IDMuMTUuMDA3LjQ1Mi4wMTQuNDQ1LjAxNC40MzguMDE0LjQyOGEuNTEuNTEgMCAwIDEgLjMxLS4zOTZDLjM1NC4wMTguMzkyLjAxLjQyMiAwaC4xNGMuMDYxLjAyMS4xMi4wMzkuMTc3LjA3NC4yNjIuMTYzLjUyNS4zMjIuNzg3LjQ4MS4zOTUuMjQuNzg3LjQ4NCAxLjE3OC43MjUuNTE4LjMxNCAxLjAzNi42MzIgMS41NS45NDdsMS4xNTguNzFjLjU3Mi4zNSAxLjE0NC43IDEuNzEzIDEuMDUuMDcyLjA0Ni4xMjYuMTEuMTcuMTg4LjAzNS4wNi4wNTIuMTI3LjA2NS4xOTQuMDA0LjA1My4wMDQuMS4wMDQuMTQ5Ii8+PHBhdGggZD0iTTIuNzA3IDQuMDlhLjQxLjQxIDAgMCAxLS4wODQtLjgxLjQwNi40MDYgMCAwIDEgLjQ0Mi4yMjIuNDA5LjQwOSAwIDAgMS0uMjU5LjU3Ny4zOS4zOSAwIDAgMS0uMS4wMTIiLz48L2c+PC9zdmc+) no-repeat; content: ""; display: inline-block; height: 10px; margin-left: 5px; vertical-align: middle; width: 7px;}.Footer__info { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}@media only screen and (min-width: 600px) { .Footer__wrapper { padding: 16px; } .Footer__navigation { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; } .Footer__section { margin-bottom: 0; margin-right: 32px } .Footer__section:last-child { margin-right: 0; } .Footer__section:nth-child(-n + 2) { margin-bottom: 16px; } .Footer__aside { display: -webkit-box; display: -ms-flexbox; display: flex; } .Footer__top { border-right: 1px solid #9b9b9b; margin-top: 0; -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } .Footer__primary { margin-bottom: 8px; }}@media only screen and (min-width: 600px) and (max-width: 1023px) { .Footer__navigation { width: 320px; }}@media only screen and (min-width: 900px) { .Footer__navigation { width: auto; } .Footer__primary .Footer__wrapper { padding: 0 16px; } .Footer__section { margin-bottom: 0 } .Footer__section:nth-child(-n + 2) { margin-bottom: 0; }}@media only screen and (min-width: 1100px) { .Footer__navigation { -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 55px; width: calc(100% - 300px); } .Footer__section { margin-bottom: 0; } .Footer__aside { margin-right: 40px; }}.SocialBar__component { display: -webkit-box; display: -ms-flexbox; display: flex}.SocialBar__component.SocialBar__vertical { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}.SocialBar__icon { background: no-repeat center; border: solid #9b9b9b; cursor: pointer; height: 55px; overflow: hidden; text-indent: -999px; width: 60px}.SocialBar__icon.SocialBar__facebook { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxMiAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+NTA0MDU5RDAtMjkzNy00NTU2LUFCQkUtOEIxMzY2OTRBOUFEPC90aXRsZT48cGF0aCBkPSJNMTAuOTM1IDEyLjEzM2wuNTEyLTMuOTY2SDcuNTE5VjUuNjM1YzAtMS4xNDguMzItMS45MyAxLjk2Ny0xLjkzbDIuMDk4LS4wMDJWLjE1N0MxMS4yMjIuMTA3IDkuOTc2IDAgOC41MjQgMGMtMy4wMjggMC01LjEgMS44NDktNS4xIDUuMjQydjIuOTI1SDB2My45NjZoMy40MjRWMjIuMzFINy41MlYxMi4xMzNoMy40MTZ6IiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);}.SocialBar__icon.SocialBar__twitter { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QzEwNjY1N0YtMDIzNy00MjRFLTg0OUYtNEIzOTAxQ0RCMDlDPC90aXRsZT48cGF0aCBkPSJNMjEuMDk0IDIuMDI5YTguNjIgOC42MiAwIDAgMS0yLjQ4Ni42OEE0LjMzNiA0LjMzNiAwIDAgMCAyMC41MTEuMzE3YTguNjc0IDguNjc0IDAgMCAxLTIuNzQ3IDEuMDUgNC4zMjggNC4zMjggMCAwIDAtNy4zNzUgMy45NDYgMTIuMjggMTIuMjggMCAwIDEtOC45Mi00LjUyIDQuMzEyIDQuMzEyIDAgMCAwLS41ODYgMi4xNzZjMCAxLjUuNzY0IDIuODI2IDEuOTI0IDMuNjAxYTQuMjk2IDQuMjk2IDAgMCAxLTEuOTYtLjU0MXYuMDU1YTQuMzMgNC4zMyAwIDAgMCAzLjQ3MSA0LjI0MyA0LjMyNiA0LjMyNiAwIDAgMS0xLjk1NC4wNzQgNC4zMzMgNC4zMzMgMCAwIDAgNC4wNDIgMy4wMDZBOC42NzcgOC42NzcgMCAwIDEgMCAxNS4xOThhMTIuMjU1IDEyLjI1NSAwIDAgMCA2LjYzNSAxLjk0NGM3Ljk2IDAgMTIuMzEyLTYuNTk0IDEyLjMxMi0xMi4zMTMgMC0uMTg3LS4wMDQtLjM3NC0uMDExLS41NmE4LjgyIDguODIgMCAwIDAgMi4xNTgtMi4yNCIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);}.SocialBar__icon.SocialBar__instagram { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPjU0Q0RFNTdDLTY2ODktNEM2Ri1CRTYwLUVCQkIyQkMwODcyODwvdGl0bGU+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0wIDE5Ljk5OGgxOS45OTRWLjAwNkgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik05Ljk5Ny4wMDZjLTIuNzE1IDAtMy4wNTYuMDEyLTQuMTIyLjA2LTEuMDY0LjA0OS0xLjc5LjIxOC0yLjQyNi40NjVhNC45IDQuOSAwIDAgMC0xLjc3MSAxLjE1MyA0LjkgNC45IDAgMCAwLTEuMTUzIDEuNzdDLjI3OCA0LjA5Mi4xMDkgNC44MTguMDYgNS44ODIuMDEyIDYuOTQ4IDAgNy4yODggMCAxMC4wMDNzLjAxMiAzLjA1Ni4wNiA0LjEyMmMuMDQ5IDEuMDY0LjIxOCAxLjc5LjQ2NSAyLjQyNmE0LjkgNC45IDAgMCAwIDEuMTUzIDEuNzcxIDQuOSA0LjkgMCAwIDAgMS43NyAxLjE1M2MuNjM2LjI0NyAxLjM2My40MTYgMi40MjcuNDY1IDEuMDY2LjA0OCAxLjQwNy4wNiA0LjEyMi4wNnMzLjA1NS0uMDEyIDQuMTIyLS4wNmMxLjA2NC0uMDQ5IDEuNzktLjIxOCAyLjQyNi0uNDY1YTQuOSA0LjkgMCAwIDAgMS43Ny0xLjE1MyA0LjkgNC45IDAgMCAwIDEuMTU0LTEuNzdjLjI0Ny0uNjM2LjQxNi0xLjM2My40NjUtMi40MjcuMDQ4LTEuMDY2LjA2LTEuNDA3LjA2LTQuMTIycy0uMDEyLTMuMDU1LS4wNi00LjEyMmMtLjA0OS0xLjA2NC0uMjE4LTEuNzktLjQ2NS0yLjQyNmE0LjkgNC45IDAgMCAwLTEuMTUzLTEuNzdBNC45IDQuOSAwIDAgMCAxNi41NDYuNTNjLS42MzctLjI0Ny0xLjM2My0uNDE2LTIuNDI3LS40NjUtMS4wNjctLjA0OC0xLjQwNy0uMDYtNC4xMjItLjA2em0wIDEuODAyYzIuNjcgMCAyLjk4NS4wMSA0LjA0LjA1OC45NzQuMDQ0IDEuNTAzLjIwNyAxLjg1Ni4zNDQuNDY2LjE4MS44LjM5OCAxLjE1Ljc0OC4zNDkuMzUuNTY2LjY4My43NDcgMS4xNS4xMzcuMzUyLjMuODguMzQ0IDEuODU2LjA0OCAxLjA1NC4wNTggMS4zNy4wNTggNC4wNCAwIDIuNjY4LS4wMSAyLjk4NS0uMDU4IDQuMDM5LS4wNDQuOTc0LS4yMDcgMS41MDQtLjM0NCAxLjg1Ni0uMTgxLjQ2Ny0uMzk4LjgtLjc0OCAxLjE1LS4zNS4zNS0uNjgzLjU2Ni0xLjE1Ljc0Ny0uMzUyLjEzNy0uODguMy0xLjg1Ni4zNDQtMS4wNTQuMDQ5LTEuMzcuMDU5LTQuMDQuMDU5LTIuNjY5IDAtMi45ODUtLjAxLTQuMDM5LS4wNTktLjk3NC0uMDQ0LTEuNTA0LS4yMDctMS44NTYtLjM0NGEzLjA5NyAzLjA5NyAwIDAgMS0xLjE1LS43NDggMy4wOTcgMy4wOTcgMCAwIDEtLjc0Ny0xLjE0OWMtLjEzNy0uMzUyLS4zLS44ODItLjM0NC0xLjg1Ni0uMDQ5LTEuMDU0LS4wNTktMS4zNy0uMDU5LTQuMDRzLjAxLTIuOTg1LjA1OS00LjA0Yy4wNDQtLjk3NC4yMDctMS41MDMuMzQ0LTEuODU2LjE4MS0uNDY2LjM5OC0uOC43NDgtMS4xNS4zNS0uMzQ5LjY4Mi0uNTY2IDEuMTQ5LS43NDcuMzUyLS4xMzcuODgyLS4zIDEuODU2LS4zNDQgMS4wNTQtLjA0OCAxLjM3LS4wNTggNC4wNC0uMDU4eiIgZmlsbD0iIzBBMEEwOCIgbWFzaz0idXJsKCNiKSIvPjwvZz48cGF0aCBkPSJNOS45OTcgMTMuMzM1YTMuMzMyIDMuMzMyIDAgMSAxIDAtNi42NjQgMy4zMzIgMy4zMzIgMCAwIDEgMCA2LjY2NHptMC04LjQ2NWE1LjEzMyA1LjEzMyAwIDEgMCAwIDEwLjI2NyA1LjEzMyA1LjEzMyAwIDAgMCAwLTEwLjI2N3pNMTYuNTMzIDQuNjY3YTEuMiAxLjIgMCAxIDEtMi40IDAgMS4yIDEuMiAwIDAgMSAyLjQgMCIgZmlsbD0iIzBBMEEwOCIvPjwvZz48L3N2Zz4=);}.SocialBar__icon.SocialBar__email { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+MDcwRjM0ODAtODY0Ny00OTdELUE0MjgtMzRCMkRGOUUwQTRGPC90aXRsZT48cGF0aCBkPSJNNy4zMDYgNy42MjhsMi4yMDkgMi4wN2MuODMzLjc4IDIuMTUyLjc4IDIuOTg0IDBsMi4yMDItMi4wNjMgNC42MzcgNC41MzVIMi42NjJsNC42NDQtNC41NDJ6bTEzLjI5LTUuNTIydjkuMzI1bC00Ljg3MS00Ljc1NCA0Ljg3LTQuNTd6bS0xOS4xOTIgMEw2LjI4MiA2LjY3IDEuNDA0IDExLjQzVjIuMTA2em0xLjMxLS43MDJoMTYuNThsLTcuNzYgNy4yN2EuNzQuNzQgMCAwIDEtMS4wNTQgMGwtNy43NjctNy4yN3pNMi4xMDUgMEEyLjExNyAyLjExNyAwIDAgMCAwIDIuMTA2djkuMzYyYzAgMS4xNTUuOTUxIDIuMTA2IDIuMTA2IDIuMTA2aDE3Ljc4N0EyLjExNyAyLjExNyAwIDAgMCAyMiAxMS40NjhWMi4xMDZBMi4xMTcgMi4xMTcgMCAwIDAgMTkuODkzIDBIMi4xMDZ6IiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);}.SocialBar__horizontal .SocialBar__icon { border-width: 0 1px 0 0}.SocialBar__horizontal .SocialBar__icon:first-child { border-width: 0 1px;}.SocialBar__vertical .SocialBar__icon { border-width: 0 0 1px}.SocialBar__vertical .SocialBar__icon:first-child { border-width: 1px 0;}.Zone__component { overflow: hidden; position: relative;}.EditorsChoice__wrapper { padding-top: 112.26%; position: relative; width: 100%;}.EditorsChoice__component { opacity: 0; position: absolute; top: 0; -webkit-transition: opacity 0.1s linear; -o-transition: opacity 0.1s linear; transition: opacity 0.1s linear; width: 100%;}.EditorsChoice__placeholder { background: #fff; bottom: 0; height: 100%; position: absolute; top: 0; width: 100%;}.EditorsChoice__isCarouselReady { opacity: 1;}@media only screen and (min-width: 600px) { .EditorsChoice__wrapper { padding-top: 48.26%; }}@media only screen and (min-width: 1100px) { .EditorsChoice__wrapper { padding-top: 650px; }}.Carousel__component { position: relative;}.Carousel__slide { opacity: 0.5; -webkit-transition: opacity 0.5s; -o-transition: opacity 0.5s; transition: opacity 0.5s}.Carousel__slide.Carousel__isSlideActive { opacity: 1;}.Carousel__overflowDecorators { padding-bottom: 56px;}.Image__component { overflow: hidden; position: relative}.Image__component.Image__isLoaded { overflow: visible;}.Image__image { display: block; -webkit-filter: blur(5px); filter: blur(5px); -webkit-transform: scale(1.01) translateZ(0); transform: scale(1.01) translateZ(0); width: 100%;}.Image__hasAspectRatio .Image__image { height: 100%; left: 0; position: absolute; top: 0; }.Image__isLoaded .Image__image { -webkit-filter: none; filter: none; -webkit-transform: none; -ms-transform: none; transform: none; }.CarouselDecorators__arrows { border-right: 1px solid #e2e2e2; display: -webkit-box; display: -ms-flexbox; display: flex; height: 56px; padding-right: 16px;}.CarouselDecorators__button { -ms-flex-item-align: center; align-self: center; background: no-repeat center; background-size: contain; cursor: pointer; height: 40px; width: 40px;}.CarouselDecorators__button + .CarouselDecorators__button { margin-left: 8px; }.CarouselDecorators__button.CarouselDecorators__previous { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QjFCNDQ5NTEtQjYzOS00Qzc1LUJEMEQtQUVGQzgyMzU2NUJGPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgc3Ryb2tlPSIjRTJFMkUyIiBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiLz48cGF0aCBkPSJNMTkuNSAyOC41bC05LTggOS04bS04IDhoMTciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PC9zdmc+);}:not(.CarouselDecorators__arrows) > .CarouselDecorators__button.CarouselDecorators__previous { -webkit-transform: translate3d(1.5vw, -50%, 0); transform: translate3d(1.5vw, -50%, 0);}.CarouselDecorators__button.CarouselDecorators__next { background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+M0FFRkI1RDQtQjYzMy00MzdELTlGODMtRTgzRDVERDdBNkJGPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMC41IDEyLjVsOSA4LTkgOG04LThoLTE3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBzdHJva2U9IiNFMkUyRTIiIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIvPjwvZz48L3N2Zz4=);}:not(.CarouselDecorators__arrows) > .CarouselDecorators__button.CarouselDecorators__next { -webkit-transform: translate3d(-1.5vw, -50%, 0); transform: translate3d(-1.5vw, -50%, 0);}.CarouselDecorators__buttonDisabled { opacity: 0.3;}.CarouselDecorators__count { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 15px; line-height: 21px; background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIzIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiPgogICAgICAgIDxwYXRoIGQ9Ik0xNyAyLjAydi0uMjU1YzAtLjUwMi0uMjM1LS43NjUtLjcyNy0uNzY1SDEuNzI3QzEuMjE3IDEgMSAxLjE4MiAxIDEuNzY1djExLjQ3YzAgLjc0OS4yMzUuNzY1LjcyNy43NjVoLjI0MyIvPgogICAgICAgIDxwYXRoIGQ9Ik0yMC43NDcgMTguMjZINi4wNDFhLjkwNS45MDUgMCAwIDEtLjg5Ny0uOTEzVjYuNDIzYzAtLjUwNS40MDItLjkxMy44OTctLjkxM2gxNC43MDZjLjQ5NiAwIC44OTcuNDA4Ljg5Ny45MTN2MTAuOTI0YS45MDUuOTA1IDAgMCAxLS44OTcuOTEzIi8+CiAgICA8L2c+Cjwvc3ZnPgo=) transparent no-repeat left center; line-height: 56px; padding-left: 32px;}.CarouselDecorators__dots { -webkit-transform: translateY(calc(-48px + 32px)); -ms-transform: translateY(calc(-48px + 32px)); transform: translateY(calc(-48px + 32px));}.CarouselDecorators__dot { background: transparent; border: 1px solid #4a4a4a; border-radius: 50%; cursor: pointer; display: inline-block; height: 10px; margin: 0 3px; opacity: 0.5; -webkit-transition: -webkit-transform 0.5s; transition: -webkit-transform 0.5s; -o-transition: transform 0.5s; transition: transform 0.5s; transition: transform 0.5s, -webkit-transform 0.5s; width: 10px;}.CarouselDecorators__dotActive { background: #4a4a4a; opacity: 1;}.ThemedGrid__component { border: 12px solid #000; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 32px; padding: 16px; position: relative}.ThemedGrid__component:last-child { margin-bottom: 0;}.ThemedGrid__component.ThemedGrid__themeFoodAndDrink { border-color: #55c2bf;}.ThemedGrid__component.ThemedGrid__themePlay { border-color: #fdbe34;}.ThemedGrid__component.ThemedGrid__themeStay { border-color: #3e74c1;}.ThemedGrid__titleContainer { width: 100%;}.ThemedGrid__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 32px; font-weight: 300; letter-spacing: -0.5px; line-height: 38px; border-bottom: 1px solid #e2e2e2; margin: 0 0 16px; padding-bottom: 8px; text-align: center; text-transform: uppercase;}.ThemedGrid__themeFoodAndDrink .ThemedGrid__title { color: #55c2bf; }.ThemedGrid__themePlay .ThemedGrid__title { color: #fdbe34; }.ThemedGrid__themeStay .ThemedGrid__title { color: #3e74c1; }.ThemedGrid__item { -ms-flex-line-pack: start; align-content: flex-start; border-bottom: 1px solid #e2e2e2; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-negative: 0; flex-shrink: 0; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; overflow: auto; padding: 16px 0; text-decoration: none; width: 100%;}.ThemedGrid__itemsPrimary .ThemedGrid__item { height: 100%; padding: 0 0 24px; }.ThemedGrid__itemsSecondary .ThemedGrid__item:nth-last-child(2) { border: none; }.ThemedGrid__media { -ms-flex-item-align: start; align-self: flex-start; overflow: hidden; position: relative; width: 50%;}.ThemedGrid__itemsPrimary .ThemedGrid__media { margin-bottom: 8px; width: 100%; }.ThemedGrid__zoom { -webkit-transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); -o-transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);}.ThemedGrid__item:hover .ThemedGrid__zoom, .ThemedGrid__item:focus .ThemedGrid__zoom { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }.ThemedGrid__mediaOverlay { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; background: no-repeat #fff; bottom: 0; display: -webkit-box; display: -ms-flexbox; display: flex; height: 40px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; left: calc(-16px + -12px); position: absolute; text-align: center; width: 66px;}.ThemedGrid__durationLabel { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 16px; margin-bottom: 3px;}.ThemedGrid__galleryLabel { color: #fff; font-size: 11px; margin-bottom: 12px; margin-left: 3px;}.ThemedGrid__content { width: calc(50% - 16px);}.ThemedGrid__itemsPrimary .ThemedGrid__content { width: 100%; }.ThemedGrid__headline { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 500; line-height: 20px; color: #000;}.ThemedGrid__itemsPrimary .ThemedGrid__headline { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 36px; font-weight: 300; letter-spacing: -0.5px; line-height: 40px; }.ThemedGrid__item:hover .ThemedGrid__headline, .ThemedGrid__item:focus .ThemedGrid__headline { color: #4a4a4a; }.ThemedGrid__byline { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 16px; color: #9b9b9b;}.ThemedGrid__cta { width: 100%;}@media only screen and (min-width: 600px) { .ThemedGrid__cta { margin-top: auto; padding-top: 0; } .ThemedGrid__items { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; } .ThemedGrid__itemsPrimary { border-right: 1px solid #e2e2e2; -ms-flex-preferred-size: 55%; flex-basis: 55%; padding-right: 16px; } .ThemedGrid__invertColumns .ThemedGrid__itemsPrimary { border-right: none; padding-right: 0; } .ThemedGrid__itemsPrimary .ThemedGrid__content { margin-top: 8px; } .ThemedGrid__itemsSecondary { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-preferred-size: 60%; flex-basis: 60%; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-left: 16px; } .ThemedGrid__item { border-bottom: 1px solid #e2e2e2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; padding-bottom: 16px; padding-top: 16px; } .ThemedGrid__itemsPrimary .ThemedGrid__item { border-bottom: 0 none; padding: 0; } .ThemedGrid__itemsSecondary .ThemedGrid__item { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; } .ThemedGrid__item:first-child { padding-top: 0; } .ThemedGrid__itemsPrimary .ThemedGrid__media { margin-bottom: 0; } .ThemedGrid__itemsPrimary .ThemedGrid__headline { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 26px; font-weight: 400; letter-spacing: -0.5px; line-height: 28px; margin-top: 8px; }}@media only screen and (min-width: 1024px) { .ThemedGrid__component { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; } .ThemedGrid__titleContainer { position: relative; width: 3em; } .ThemedGrid__title { border-bottom: none; display: inline-block; position: relative; top: 238px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transform-origin: 0 0 0; -ms-transform-origin: 0 0 0; transform-origin: 0 0 0; width: 200px; } .ThemedGrid__invertColumns .ThemedGrid__title { margin-left: 16px; } .ThemedGrid__items { border-left: 1px solid #e2e2e2; -ms-flex-preferred-size: 100%; flex-basis: 100%; padding-left: 16px; }}.CardBasic__component { cursor: pointer; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; position: relative; width: 100%}.CardBasic__component.CardBasic__isLeadOnMobile { padding-top: 56.25%;}.CardBasic__thumb, .CardBasic__details { -webkit-box-flex: 1; -ms-flex: 1; flex: 1;}.CardBasic__thumb { overflow: hidden;}.CardBasic__isLeadOnMobile .CardBasic__thumb { left: 0; position: absolute; right: 0; top: 0; }.CardBasic__link { display: block; position: relative;}.CardBasic__details { margin-left: 16px;}.CardBasic__isLeadOnMobile .CardBasic__details { margin: 0; }.CardBasic__section { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 16px; color: #9b9b9b; display: block; margin-bottom: 8px;}.light .CardBasic__title, .light .CardBasic__aux { color: #fff; }.CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 500; line-height: 18px; display: block;}.CardBasic__isLeadOnMobile .CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 500; line-height: 20px; margin-top: 16px; }.CardBasic__hasLargeTitle .CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 500; line-height: 20px; }.CardBasic__aux { font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 16px; color: #9b9b9b; padding-top: 8px;}.CardBasic__videoIcon { background-color: rgba(255, 255, 255, 0.75); height: 54px; left: 50%; pointer-events: none; position: absolute; top: 50%; -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); width: 54px}.CardBasic__videoIcon::before { background-color: #31315b; content: ""; display: block; height: 100%; left: 0; position: absolute; top: 0; -webkit-transition: width 0.3s; -o-transition: width 0.3s; transition: width 0.3s; width: 0; z-index: 1;}.CardBasic__videoIcon::after { background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMSAxbDE1IDguMDc3TDEgMTZ6Ii8+PC9zdmc+) center no-repeat; background-size: 15px 15px; content: ""; display: block; height: 100%; position: absolute; width: 100%; z-index: 2;}.CardBasic__videoIcon.CardBasic__videoIconSmall { bottom: 0; height: 34px; left: 0; top: initial; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); width: 34px}.CardBasic__videoIcon.CardBasic__videoIconSmall::after { background-size: 11px 11px;}.CardBasic__thumb:hover .CardBasic__videoIcon::before { width: 100%; z-index: 1;}.CardBasic__thumb:hover .CardBasic__videoIcon::after { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMSAxbDE1IDguMDc3TDEgMTZ6Ii8+PC9zdmc+);}.CardBasic__cursor:hover { cursor: pointer;}@media (min-width: 375px) { .CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 500; line-height: 20px; }}@media (min-width: 600px) { .CardBasic__component:not(.CardBasic__isSmall) { padding-top: 56.25%; } .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__thumb { left: 0; position: absolute; right: 0; top: 0; } .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__details { margin: 0; } .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__section { margin-bottom: 16px; margin-top: 8px; } .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title { margin-top: 16px; } .CardBasic__isHover .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title { color: #4a4a4a; } .light .CardBasic__isHover .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title { color: #fff; } .CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 500; line-height: 20px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; } .CardBasic__hasLargeTitle .CardBasic__title { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 26px; font-weight: 400; letter-spacing: -0.5px; line-height: 28px; } .CardBasic__videoIcon { height: 54px; width: 54px; } .CardBasic__image { -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); transition: -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); -o-transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); } .CardBasic__isHover .CardBasic__image { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }}.Button__component { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 500; line-height: 18px; border: 1px solid; cursor: pointer; display: block; padding: 16px 0; position: relative; text-align: center; -webkit-transition: color 0.2s linear; -o-transition: color 0.2s linear; transition: color 0.2s linear; width: 100%}.Button__component.Button__blue { border-color: #e2e2e2; color: #3e74c1;}.Button__component.Button__dark { border-color: #e2e2e2; color: #000;}.Button__component.Button__light { border-color: #fff; color: #fff;}.Button__component .Button__ctaText { position: relative; z-index: 1;}.hover:hover .Button__component, .Button__component:hover, .Button__component:hover a { color: #fff;}.Button__component::before { background: #000; content: ""; display: block; height: 100%; position: absolute; right: 0; top: 0; -webkit-transition: width 0.3s; -o-transition: width 0.3s; transition: width 0.3s; width: 0;}.hover:hover .Button__component::before, .Button__component:hover::before { left: 0; right: auto; width: 100%;}.Button__component.Button__FOOD_AND_DRINK::before { background: #55c2bf;}.Button__component.Button__PLAY::before { background: #fdbe34;}.Button__component.Button__STAY::before { background: #3e74c1;}.Button__component.Button__WHITE:hover { color: #000;}.Button__component.Button__WHITE::before { background: #fff;}.Button__component.Button__VIDEO_HUB:hover { color: #31315b;}.Button__component.Button__VIDEO_HUB::before { background: #fff;}.Button__component.Button__DESTINATION { border: 0}.Button__component.Button__DESTINATION:hover { color: #edf4fc;}.Button__component.Button__DESTINATION::before { background: #31315b;}.PromoBestBeaches__component { overflow: hidden; padding-top: 133%; position: relative;}.PromoBestBeaches__wrapper { height: 100%; left: 0; margin: 0 auto; overflow: hidden; position: absolute; top: 0; width: 100%;}.PromoBestBeaches__heroImage { height: 100%; width: 100%;}.PromoBestBeaches__heroVideo { height: auto; left: 50%; min-height: 100%; min-width: 100%; position: absolute; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: auto;}.PromoBestBeaches__content { -webkit-box-align: center; -ms-flex-align: center; align-items: center; bottom: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; left: 0; margin: 0 auto; padding: 16px; position: absolute; right: 0; text-align: center; top: 0; z-index: 1;}.PromoBestBeaches__titleTop { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 26px; font-weight: 400; letter-spacing: -0.5px; line-height: 28px; color: #fff; line-height: 1em; margin-bottom: 16px; position: relative;}.PromoBestBeaches__beaches { background: url(https://verticals-static.cnn.com/travel/assets/ed91e68296cc0c8391e8fc429759704e.png) no-repeat center top; background-size: contain; max-width: 760px; padding-top: 20%; position: relative; text-indent: -9999em; width: 100%;}.PromoBestBeaches__titleBottom { color: #fff; font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 400; line-height: 22px; margin-bottom: 24px; max-width: 491px; position: relative;}.PromoBestBeaches__button { margin: 0 16px; max-width: 320px;}@media (min-width: 600px) { .PromoBestBeaches__component { padding-top: 56.25%; } .PromoBestBeaches__content { margin: 0 110px; } .PromoBestBeaches__isHomepage .PromoBestBeaches__content { margin: 0 120px; } .PromoBestBeaches__titleBottom { font-size: 16px; line-height: 20px; }}@media (min-width: 1024px) { .PromoBestBeaches__isHomepage .PromoBestBeaches__titleTop { font-size: 32px; line-height: 26px; } .PromoBestBeaches__isHomepage .PromoBestBeaches__titleBottom { font-size: 22px; line-height: 26px; }}.PromoBourdain__component { margin: 0 auto; max-width: 728px;}.PromoBourdain__wrapper { border: 1px solid #d0011b; padding: 16px;}.PromoBourdain__primary { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; position: relative;}.PromoBourdain__heroWrapper { margin-bottom: 16px;}.PromoBourdain__hero { background: url(https://verticals-static.cnn.com/travel/assets/5ced617915b933212b384b93be6bcff2.jpg) no-repeat right center; background-size: cover; padding-top: 56.25%;}.PromoBourdain__logo { background: url(https://verticals-static.cnn.com/travel/assets/22bb695e14f677482f4e92712d9cc1e3.png) no-repeat; background-size: contain; height: 70px; margin-bottom: 16px; width: 80px;}.PromoBourdain__copy { font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 16px; font-weight: 500; line-height: 18px; width: 170px;}.PromoBourdain__arrow { background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgdmlld0JveD0iMCAwIDQyIDQyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBzdHJva2U9IiNEMDAxMUIiLz48cGF0aCBkPSJNMjAuNSAxMi41bDkgOC05IDhtOC04aC0xNyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=) no-repeat; background-size: cover; bottom: 0; display: block; height: 40px; position: absolute; right: 0; width: 40px;}@media only screen and (min-width: 375px) { .PromoBourdain__primary { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; } .PromoBourdain__heroWrapper { margin-bottom: 32px; } .PromoBourdain__logo { margin: 0 24px 0 0; }}@media only screen and (min-width: 600px) { .PromoBourdain__wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; margin-bottom: 8px; margin-top: 8px; } .PromoBourdain__primary { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; } .PromoBourdain__heroWrapper { margin: 0 16px 0 0; width: calc(100% - 235px); } .PromoBourdain__logo { -ms-flex-item-align: end; align-self: flex-end; margin-right: 0; }}@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) { .PromoBourdain__logo { background-image: url(https://verticals-static.cnn.com/travel/assets/ccf54309f86acbf266092bd934dee93e.png); }}</style><title>CNN Travel | Global Destinations, Tips &amp; Video</title><meta data-react-helmet="true" name="theme-color" content="#31315b"><link data-react-helmet="true" rel="icon" sizes="192x192" href="https://i2.cdn.turner.com/cnn/2017/images/09/08/logo-cnntravel.png"><style>#optanon ul#optanon-menu li { background-color: #F8F8F8 !important }#optanon ul#optanon-menu li.menu-item-selected { background-color: #FFFFFF !important }#optanon #optanon-popup-wrapper .optanon-white-button-middle { background-color: #FFFFFF !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle { background-color: #FFFFFF !important; border-color: #FFFFFF !important; }#optanon #optanon-popup-wrapper .optanon-white-button-middle button { color: #000000 !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle button { color: #000000 !important }#optanon #optanon-popup-bottom { background-color: #FFFFFF !important }#optanon.modern #optanon-popup-top, #optanon.modern #optanon-popup-body-left-shading { background-color: #FFFFFF !important }.optanon-alert-box-wrapper { background-color:#262626 !important }.optanon-alert-box-wrapper .optanon-alert-box-bg p { color:#D9D9D9 !important }#optanon #optanon-popup-wrapper,
+#optanon #optanon-popup-bg {
+  z-index: 9999999999;
+}
+
+.optanon-alert-box-wrapper {
+  z-index: 99999;
+}
+
+#optanon *,
+.optanon-alert-box-wrapper * {
+  font-family: CNN,CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.optanon-alert-box-wrapper .optanon-alert-box-bg p {
+    font-size: 14px;
+    line-height: 1.62;
+}
+
+.optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle a {
+    border-bottom: none;
+}
+
+.optanon-alert-box-wrapper .optanon-button-allow .optanon-alert-box-button-middle a:before,.optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle a:before {
+    display: none;
+}
+
+.optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+    border-radius: 4px;
+}
+
+.optanon-alert-box-wrapper .optanon-alert-box-bg p a {
+    border-bottom: 1px solid #ff3f3f;
+    color: #D9D9D9;
+}
+
+.optanon-alert-box-wrapper .optanon-alert-box-bg p a:hover {
+border-bottom-color: transparent;
+    color: #ff3f3f;
+}
+
+.optanon-alert-box-wrapper .optanon-alert-box-corner-close a {
+    background: #262626;
+}
+
+#optanon #optanon-popup-top .optanon-close {
+    background: #fff;
+    right: 16px;
+    top: 28px;
+}
+
+#optanon #optanon-popup-top .optanon-close:before,
+#optanon #optanon-popup-top .optanon-close:after,
+.optanon-alert-box-wrapper .optanon-alert-box-corner-close a:before,
+.optanon-alert-box-wrapper .optanon-alert-box-corner-close a:after {
+    content: '';
+    height: 22px;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 10px;
+}
+
+#optanon #optanon-popup-top .optanon-close:before,
+.optanon-alert-box-wrapper .optanon-alert-box-corner-close a:before {
+    transform: rotate(-45deg);
+}
+
+#optanon #optanon-popup-top .optanon-close:after,
+.optanon-alert-box-wrapper .optanon-alert-box-corner-close a:after {
+    transform: rotate(45deg);
+}
+
+#optanon #optanon-popup-top .optanon-close:before,
+#optanon #optanon-popup-top .optanon-close:after {
+    border-left-color: #262626;
+}
+
+#optanon #optanon-menu li {
+    background: none !important;
+}
+
+#optanon #optanon-menu li p {
+    margin-left: 16px;
+}
+
+#optanon #optanon-main-info-text a {
+    text-decoration: underline;
+}
+
+.optanon-alert-box-wrapper .banner-content .banner-policy-link {
+text-decoration: none !important;
+}</style><style type="text/css" id="s335-0">/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: "CNNSans";
+    font-style: normal;
+    font-weight: 300;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/557bb10607ba3d656d2bd2b59e020119.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/ea36f6343335a13a079e7bdc15ce25a0.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNSans";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/211b2f2141e3c4e2ddef82016bf521e8.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/4b91f5d3a49228ec789e5a11a72aaa8b.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 200;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/01117b3bc5b6b91ed8e0586de8569d73.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/b93400b84ea66b3b0714db1fc3c41575.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 300;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/a9dd70f8b1b04de30f0d5ad1bb1134d2.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/35f1399b54b947a0617fdec8cf9a9601.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/531dff7d4e1abb89f59f087aa22a0e8d.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/c27c05374a745d3f15f307ea2ab11138.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 500;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/cd02fb2f31c0dd5036f647c8ee20c586.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/3263dde5fcf1b576638661c36084551f.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 600;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/9c13f4c0a5b24fa0bd5f249da45b85c2.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/644181cf5228ce16069dbbc93cc8e002.woff) format("woff");
+}
+
+@font-face {
+    font-family: "CNNTravel";
+    font-style: normal;
+    font-weight: 700;
+    src:
+        url(https://verticals-static.cnn.com/travel/assets/01d67c62c3203106e75c7e67ab11bb53.woff2) format("woff2"),
+        url(https://verticals-static.cnn.com/travel/assets/cf32a16d91981bc4157dbe798ce7d76d.woff) format("woff");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    min-width: 320px;
+}
+
+.Chrome__component {
+    background-color: #fff;
+    color: #000;
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.searchShown.Chrome__component {
+        position: fixed;
+        width: 100%;
+    }
+
+.Chrome__content {
+    min-height: calc(100vh - 50px);
+    position: relative;
+}
+
+.Chrome__adTop {
+    background-color: #f0f0f0;
+    max-height: 500px;
+    overflow: hidden;
+    -webkit-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    transition: max-height 1s;
+}
+
+.hasModal .Chrome__adTop, .menuShown .Chrome__adTop {
+        display: none;
+    }
+
+.searchShown .Chrome__adTop {
+        max-height: 0;
+    }
+
+.Chrome__sticky .sticky-outer-wrapper {
+    position: relative;
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 100;
+}
+
+.nav-hidden .Chrome__sticky .sticky-outer-wrapper {
+        -webkit-transform: translateY(-50px);
+            -ms-transform: translateY(-50px);
+                transform: translateY(-50px);
+        -webkit-transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        -o-transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        transition: all 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+.hasModal .Chrome__component > .sticky-outer-wrapper {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.bookmarksShown .Chrome__content, .searchShown .Chrome__content, .menuShown .Chrome__content {
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+}
+
+.menuShown .Chrome__sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .Chrome__content {
+        min-height: calc(100vh - 60px);
+    }
+
+        .hasModal .Chrome__content {
+            min-height: 0;
+        }
+
+    .searchShown .Chrome__content, .menuShown .Chrome__content {
+        top: 60px;
+    }
+        .nav-hidden .Chrome__sticky .sticky-outer-wrapper {
+            -webkit-transform: translateY(-60px);
+                -ms-transform: translateY(-60px);
+                    transform: translateY(-60px);
+        }
+}
+
+@media only screen and (min-width: 1024px) {
+    .searchShown.Chrome__component {
+        position: relative;
+        width: auto;
+    }
+
+    .searchShown .Chrome__content, .menuShown .Chrome__content {
+        overflow: visible;
+        position: static;
+    }
+
+    .searchResultsShown .Chrome__content {
+        overflow: hidden;
+        position: fixed;
+    }
+
+    .menuShown .Chrome__sticky {
+        position: static;
+        top: inherit;
+        width: auto;
+    }
+}
+</style><style type="text/css" id="s411-0">.StickyTop__ad {
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+}
+
+    .StickyTop__isMenuShown:not(.StickyTop__isStickyAd) .StickyTop__ad {
+        display: none;
+    }
+.StickyTop__isStickyAd {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 7;
+}
+</style><style type="text/css" id="s430-0">.Ad__component {
+    position: relative;
+}
+.Ad__tag {
+    text-align: center;
+}
+.Ad__hasLabel.adfuel-rendered::after {
+    color: #9b9b9b;
+    content: "Advertisement";
+    display: block;
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 16px;
+    text-align: center;
+}
+/* Fix beacon images causing white space at bottom of page */
+body > img[style*="height:0"] {
+    bottom: 0;
+    position: absolute;
+}
+</style><style type="text/css" id="s358-0">.Header__container {
+    position: relative;
+    z-index: 5
+}
+.Header__container.Header__isShown {
+    z-index: 10;
+}
+.Header__component {
+    background-color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.Header__isSticky {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 7;
+}
+.Header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.Header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.Header__logoCNN, .Header__logoTravel {
+    background: no-repeat center;
+    background-size: contain;
+    height: 50px;
+}
+.Header__logoCNN {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NSIgaGVpZ2h0PSI2NSIgdmlld0JveD0iMCAwIDY1IDY1Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNDMDAiIGQ9Ik0wIDY1aDY1VjBIMHoiLz48ZyBmaWxsPSIjRkVGRUZFIj48cGF0aCBkPSJNNTQuMjc4IDIyLjM3NHYxOC4yMjFjMCAuNzIzLS40NTMgMS4zMzMtMS4xMjcgMS41MTdhMS41NDcgMS41NDcgMCAwIDEtLjM5Ny4wNTNjLS41MTQgMC0xLjEwNi0uMjU3LTEuNTMzLS45ODItLjAyMy0uMDM5LTEuNzE0LTIuOTU3LTQuMjk1LTcuNDA0bC00LjI3Ni03LjM3Yy0uMjM2LS40MDQtLjU2OC0uNTk0LS44ODUtLjUwOC0uMjY5LjA3NC0uNDQ0LjMyMS0uNDQ0LjYzdjE0LjA2NGMwIC43MjMtLjQ1MiAxLjMzMy0xLjEyNiAxLjUxNy0uNTc2LjE1OC0xLjM4Ny0uMDA2LTEuOTMtLjkyOWwtMy45MTktNi43NTQtNC42NS04LjAyYy0uMjQtLjQwNS0uNTc0LS41OTUtLjg5Ni0uNTA3LS4yMDYuMDU3LS40NDcuMjU1LS40NDcuNjI5djEzLjc1N2MwIC45MDYtLjc5NiAxLjctMS43MDMgMS43aC02Ljk4NGMtNC42NDYgMC04LjQyNi0zLjc3OS04LjQyNi04LjQyNiAwLTQuNjQ2IDMuNzgtOC40MjUgOC40MjYtOC40MjVoMy42Mjd2LTIuNzYzSDE5LjY3Yy02LjE4IDAtMTEuMTg5IDUuMDA5LTExLjE4OSAxMS4xODggMCA2LjE4IDUuMDEgMTEuMTkgMTEuMTkgMTEuMTloNy4wNWMyLjY4MS4wMDEgNC40MDUtMS41NjkgNC40MDEtNC40Njh2LTYuMzgxczQuNSA3Ljc0OSA0LjcwNiA4LjFjMi44NTUgNC44NTEgOC4yNTIgMi44NDYgOC4yNTItMS4zMjl2LTYuNzcxczQuNDk4IDcuNzQ5IDQuNzA0IDguMWMyLjg1NSA0Ljg1MSA4LjI1MiAyLjg0NiA4LjI1Mi0xLjMyOXYtMTguM2gtMi43NTd6Ii8+PHBhdGggZD0iTTEyLjE2MiAzMy41NjNjMCA0LjEzNyAzLjM2NyA3LjUwNCA3LjUwNCA3LjUwNGg2Ljk4NWMuNDM5IDAgLjc4LS40MTkuNzgtLjc3OGwuMDAyLTEzLjc1OWMwLS43MjQuNDUyLTEuMzMzIDEuMTI2LTEuNTE3LjU3Ny0uMTU4IDEuMzg2LjAwNCAxLjkzLjkyOGw0LjY1NSA4LjAyNSAzLjkxNiA2Ljc1Yy4yMzcuNDA1LjU3Mi41OTQuODkzLjUwNi4yMDctLjA1Ni40NDktLjI1NC40NDktLjYyOFYyNi41M2MwLS43MjUuNDUtMS4zMzUgMS4xMjItMS41MTcuNTczLS4xNTcgMS4zNzkuMDA2IDEuOTIuOTI4bDQuMjggNy4zNzUgNC4yOTIgNy40Yy4yMzguNDA1LjU3Mi41OTUuODk0LjUwNi4yMDctLjA1Ni40NDgtLjI1NC40NDgtLjYyOHYtMTguMjJoLTIuNzd2MTAuODQ4cy00LjQ5OC03Ljc1LTQuNzA1LTguMWMtMi44NTQtNC44NTItOC4yNTItMi44NDctOC4yNTIgMS4zM3Y2Ljc3cy00LjQ5OC03Ljc1LTQuNzAzLTguMWMtMi44NTYtNC44NTItOC4yNTItMi44NDctOC4yNTIgMS4zM3YxMS4wOTVhLjczOC43MzggMCAwIDEtLjc0NS43NTdoLTQuMjM0YTQuNzQyIDQuNzQyIDAgMSAxIDAtOS40ODNoMy41OTd2LTIuNzYzaC0zLjYyOGMtNC4xMzcgMC03LjUwNCAzLjM2OC03LjUwNCA3LjUwNSIvPjwvZz48L2c+PC9zdmc+);
+    margin-right: 8px;
+    width: 50px;
+}
+.Header__logoTravel {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDcwIDIyIj48cGF0aCBkPSJNOC4zMjQgOC4yMDRINC41djkuMzM3YzAgMS40MDYuNzYgMS44ODQgMS42NiAxLjg4NC44MTUgMCAxLjg1NS0uMjUzIDIuNTYtLjYxOGwuMzY0IDEuNzE0Yy0uNzg3LjQyMi0yLjA4LjczMi0zLjIwNi43MzItMS44NTYgMC0zLjQ4Ny0uNzU5LTMuNDg3LTMuMzQ3VjguMjA0SC4wMjhWNi40NjFIMi4zOVYxLjI4Nkg0LjV2NS4xNzVoNC4xNmwtLjMzNyAxLjc0M3ptNC43MjYgMTEuMDUzVjguMjA0aC0xLjc3M1Y2LjQ2aDMuODI1djEuOTdjMS4wNC0xLjQzNSAyLjYxNS0yLjEzOCA0LjQ0My0yLjEzOC40NSAwIC45LjAyOCAxLjI5NC4xNGwtLjM2NiAyLjExYy0uMzA5LS4wODQtLjc4Ny0uMTEyLTEuMjM3LS4xMTItMS43MTYgMC0zLjA2NS42MTgtNC4wNzggMi4wNTN2OC43NzRoMi4xNjVWMjFoLTYuMDQ2di0xLjc0M2gxLjc3MnptMTQuMzE0LTQuODk0Yy0xLjk2OCAwLTMuMDM3IDEuMDY4LTMuMDM3IDIuNjQ0IDAgMS4zNS43ODcgMi42NDMgMi45NTMgMi42NDMgMS44MjggMCAzLjAzNy0uOTU2IDMuNi0xLjQ5di0zLjc5N2gtMy41MTZ6bTMuNTE2LTMuNDNjMC0xLjk0LS44NzItMi45ODItMy4wMS0yLjk4Mi0yLjA1MiAwLTMuNzY4Ljk4NC00LjY5NiAxLjYzMWwtLjM2Ni0xLjg4NGMxLjEyNS0uNzMgMi45MjUtMS42MDMgNS4yNi0xLjYwMyAzLjI5IDAgNC45MjEgMS43MTUgNC45MjEgNC4zM3Y4LjgzMmgxLjUxOFYyMWgtMy41MTV2LTEuMjY2Yy0xLjAxMi45ODQtMi4yNzggMS42MzEtNC4xMDYgMS42MzEtMi45MjQgMC00LjY2OC0xLjgyNy00LjY2OC00LjM1OCAwLTIuNyAxLjgtNC4zMDMgNC44OTMtNC4zMDNoMy43N3YtMS43NzJ6bTE3LjAxNS0yLjcyOUw0My43ODggMjFINDAuNjFMMzYuNDc4IDguMjA0aC0xLjMyMlY2LjQ2MWg1LjY1M3YxLjc0M2gtMi4wNTNsMy4yODggMTAuOTY4aC4zNjdsMy4yNjItMTAuOTY4aC0yLjA4MVY2LjQ2MWg1LjY1M3YxLjc0M3ptMTEuMjUgMy4yOTFjMC0yLjEwOS0uNzg4LTMuNTQ0LTMuMDk0LTMuNTQ0LTIuMjIgMC0zLjEyMiAxLjMyMi0zLjEyMiAzLjQzMXYxLjE1M2g2LjIxNXYtMS4wNHptLTYuMjE2IDQuNjY4YzAgMi40NzUgMS40OSAzLjM0NyAzLjQwNCAzLjM0NyAxLjY2IDAgMi45ODItLjY3NSA0LjE5LTEuNDlsLjU5IDEuODI3Yy0xLjc0MiAxLjI2NS0zLjcxMiAxLjUxOC00Ljk0OSAxLjUxOC0zLjU0MyAwLTUuMzcyLTIuMDI0LTUuMzcyLTQuNzUydi01LjczN2MwLTIuNzI4IDEuOTctNC43OCA1LjI4OC00Ljc4IDMuMjkgMCA1LjE3NCAyLjAyNCA1LjE3NCA1LjAzM3YzLjA2NWgtOC4zMjV2MS45N3ptMTIuNzE0IDMuMDk0VjIuMjE1aC0xLjc3MVYuNDdoMy44OHYxOC43ODZoMS43NzJWMjFoLTUuNjUydi0xLjc0M3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+    width: 70px;
+}
+.Header__navigation {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 16px;
+}
+.Header__section {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    display: none;
+    margin-top: 2px;
+    position: relative;
+}
+.Header__section + .Header__section {
+        margin-left: 32px;
+    }
+.Header__section.Header__video {
+    display: block;
+}
+.Header__isOverlayVisible .Header__section.Header__video {
+            display: none;
+}
+.Header__section.Header__active {
+    font-weight: 600;
+}
+.Header__section::after {
+    background: #4a4a4a;
+    bottom: -5px;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 0;
+}
+.Header__section:hover::after, .Header__section.Header__active::after {
+    width: 100%;
+}
+.Header__section:active::after {
+    height: 2px;
+}
+.Header__isOverlayVisible .Header__section {
+        display: none;
+}
+.Header__heart, .Header__search, .Header__burger {
+    background: no-repeat center;
+    cursor: pointer;
+    height: 21px;
+    margin-left: 24px;
+    width: 21px;
+}
+.Header__isOverlayVisible .Header__heart, .Header__isOverlayVisible .Header__search, .Header__isOverlayVisible .Header__burger {
+        display: none;
+    }
+.Header__heart {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxOSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTEwLjM5IDE3LjY1MmwuODM5LS43NmM1LjA0LTQuNTU0IDYuNjM0LTYuMTg4IDcuNzM0LTguMjIuNTUzLTEuMDIuODIxLTEuOTg2LjgyMS0yLjk3N0MxOS43ODQgMy4wNTkgMTcuNzE4IDEgMTUuMDcgMWE1LjIzMiA1LjIzMiAwIDAgMC0zLjkxNyAxLjgxNGwtLjc2Ljg5LS43Ni0uODlBNS4yMzIgNS4yMzIgMCAwIDAgNS43MTYgMUMzLjA2NiAxIDEgMy4wNTkgMSA1LjY5NWMwIC45ODcuMjY2IDEuOTQ4LjgxNCAyLjk2NCAxLjA5NyAyLjAzNSAyLjY4IDMuNjYgNy43NCA4LjI0MWwuODM2Ljc1MnoiIG9wYWNpdHk9Ii4xIi8+PC9zdmc+);
+    position: relative;
+    width: 24px
+}
+.Header__heart.Header__hasBookmarks {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMCI+PHBhdGggZmlsbD0iIzAyMDMwMyIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTUuODYyIDBjLTEuOTA0IDAtMy43My44ODMtNC45MjMgMi4yNzhDOS43NDcuODgzIDcuOTE5IDAgNi4wMTYgMCAyLjY0NyAwIDAgMi42MzggMCA1Ljk5NWMwIDQuMTIgMy43MiA3LjQ3NiA5LjM1MyAxMi41NzdMMTAuOTM5IDIwbDEuNTg2LTEuNDM5YzUuNjM0LTUuMDkgOS4zNTMtOC40NDcgOS4zNTMtMTIuNTY2QzIxLjg3OCAyLjYzOCAxOS4yMzEgMCAxNS44NjIgMHoiLz48L3N2Zz4=);
+}
+.Header__heart.Header__isOpen, .Header__search.Header__isOpen {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyI+PHBhdGggZD0iTTEgMWwxNSAxNW0wLTE1TDEgMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=);
+    display: block;
+}
+.Header__heartIcon {
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: relative;
+}
+.Header__unwatchedBookmarksCount {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #c00;
+    border-radius: 10px;
+    bottom: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 8px;
+    height: 15px;
+    position: absolute;
+    right: -5px;
+    text-align: center;
+    width: 15px;
+}
+.Header__search {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAyMDMwMyIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNi43NDMgMTYuNDVsMi44MjggMi44MjgiLz48cGF0aCBkPSJNMTMuODAzIDEzLjgwM0E3LjUgNy41IDAgMSAwIDMuMTk2IDMuMTk2YTcuNSA3LjUgMCAwIDAgMTAuNjA3IDEwLjYwN3oiLz48L2c+PC9zdmc+);
+}
+.Header__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 18px;
+}
+.Header__burgerIcon {
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: relative
+}
+.Header__burgerIcon, .Header__burgerIcon::before, .Header__burgerIcon::after {
+    background-color: #000;
+    border-radius: 2px;
+    height: 2px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 18px;
+}
+.Header__isOpen .Header__burgerIcon {
+        background-color: transparent;
+}
+.Header__burgerIcon::before, .Header__burgerIcon::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.Header__isOpen .Header__burgerIcon::before, .Header__isOpen .Header__burgerIcon::after {
+            width: 22px;
+}
+.Header__burgerIcon::before {
+    -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+            transform: translateY(-7px);
+}
+.Header__isOpen .Header__burgerIcon::before {
+            -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+}
+.Header__burgerIcon::after {
+    -webkit-transform: translateY(7px);
+        -ms-transform: translateY(7px);
+            transform: translateY(7px);
+}
+.Header__isOpen .Header__burgerIcon::after {
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+}
+.Header__hidden {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+@media (max-width: 599px) {
+        .Header__isBookmarksEnabled .Header__video {
+            display: none;
+        }
+}
+@media (min-width: 600px) {
+    .Header__wrapper, .Header__logoCNN, .Header__logoTravel {
+        height: 60px;
+    }
+
+    .Header__logoCNN {
+        width: 60px;
+    }
+
+    .Header__heart {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+        .Header__isOverlayVisible .Header__component {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+        }
+        .Header__isOverlayVisible .Header__logo {
+            display: none;
+        }
+        .Header__isOverlayVisible .Header__navigation {
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            width: 100%;
+        }
+
+    .Header__section {
+        display: block;
+    }
+
+    .Header__heart {
+        display: none;
+    }
+        .Header__isOverlayVisible .Header__search {
+            display: none;
+        }
+
+    .Header__burger {
+        display: none;
+    }
+}
+@media (min-width: 1100px) {
+        .Header__isOverlayVisible .Header__navigation {
+            margin-right: 0;
+        }
+}
+</style><style type="text/css" id="s1223-0">.Homepage__component {
+    margin-bottom: 72px;
+    overflow: hidden;
+    position: relative;
+}
+.Homepage__zone {
+    margin: 32px auto 0;
+    max-width: 1100px
+}
+.Homepage__zone:first-child {
+    margin-top: 0;
+}
+.Homepage__zone.Homepage__bleed {
+    max-width: none;
+}
+.Homepage__zone.Homepage__pad {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.Homepage__zone.Homepage__editorsChoice {
+    overflow: visible;
+}
+.Homepage__zone.Homepage__sections, .Homepage__zone.Homepage__destinations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.Homepage__primary {
+    width: 100%;
+}
+.Homepage__secondary {
+    display: none;
+    margin-right: 16px;
+    width: 300px;
+    z-index: 1;
+}
+.Homepage__sections .Homepage__secondary {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+.Homepage__adRect {
+    margin: 32px 0;
+}
+@media only screen and (min-width: 600px) {
+    .Homepage__primary {
+        margin: 0 16px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .Homepage__primary {
+        float: left;
+        width: calc(100% - 300px - 48px);
+    }
+
+    .Homepage__secondary {
+        display: block;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .Homepage__zone.Homepage__pad {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Homepage__primary {
+        margin: 0;
+        width: calc(100% - 300px - 16px);
+    }
+
+    .Homepage__secondary {
+        margin-left: 16px;
+        margin-right: 0;
+    }
+}
+</style><style type="text/css" id="s770-0">.Zone__component {
+    overflow: hidden;
+    position: relative;
+}
+</style><style type="text/css" id="s1239-0">.EditorsChoice__wrapper {
+    padding-top: 112.26%;
+    position: relative;
+    width: 100%;
+}
+.EditorsChoice__component {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+    width: 100%;
+}
+.EditorsChoice__placeholder {
+    background: #fff;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.EditorsChoice__isCarouselReady {
+    opacity: 1;
+}
+@media only screen and (min-width: 600px) {
+    .EditorsChoice__wrapper {
+        padding-top: 48.26%;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .EditorsChoice__wrapper {
+        padding-top: 650px;
+    }
+}
+</style><style type="text/css" id="s810-0">.Carousel__component {
+    position: relative;
+}
+.Carousel__slide {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s
+}
+.Carousel__slide.Carousel__isSlideActive {
+    opacity: 1;
+}
+.Carousel__overflowDecorators {
+    padding-bottom: 56px;
+}
+</style><style type="text/css" id="s386-0">.Image__component {
+    overflow: hidden;
+    position: relative
+}
+
+.Image__component.Image__isLoaded {
+    overflow: visible;
+}
+
+.Image__image {
+    display: block;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transform: scale(1.01) translateZ(0);
+            transform: scale(1.01) translateZ(0);
+    width: 100%;
+}
+
+.Image__hasAspectRatio .Image__image {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+.Image__isLoaded .Image__image {
+        -webkit-filter: none;
+                filter: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+</style><style type="text/css" id="s815-0">.CarouselDecorators__arrows {
+    border-right: 1px solid #e2e2e2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 56px;
+    padding-right: 16px;
+}
+.CarouselDecorators__button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    background: no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+.CarouselDecorators__button + .CarouselDecorators__button {
+        margin-left: 8px;
+    }
+.CarouselDecorators__button.CarouselDecorators__previous {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QjFCNDQ5NTEtQjYzOS00Qzc1LUJEMEQtQUVGQzgyMzU2NUJGPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgc3Ryb2tlPSIjRTJFMkUyIiBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiLz48cGF0aCBkPSJNMTkuNSAyOC41bC05LTggOS04bS04IDhoMTciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PC9zdmc+);
+}
+:not(.CarouselDecorators__arrows) > .CarouselDecorators__button.CarouselDecorators__previous {
+            -webkit-transform: translate3d(1.5vw, -50%, 0);
+                    transform: translate3d(1.5vw, -50%, 0);
+}
+.CarouselDecorators__button.CarouselDecorators__next {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+M0FFRkI1RDQtQjYzMy00MzdELTlGODMtRTgzRDVERDdBNkJGPC90aXRsZT48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMC41IDEyLjVsOSA4LTkgOG04LThoLTE3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBzdHJva2U9IiNFMkUyRTIiIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIvPjwvZz48L3N2Zz4=);
+}
+:not(.CarouselDecorators__arrows) > .CarouselDecorators__button.CarouselDecorators__next {
+            -webkit-transform: translate3d(-1.5vw, -50%, 0);
+                    transform: translate3d(-1.5vw, -50%, 0);
+}
+.CarouselDecorators__buttonDisabled {
+    opacity: 0.3;
+}
+.CarouselDecorators__count {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIzIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiPgogICAgICAgIDxwYXRoIGQ9Ik0xNyAyLjAydi0uMjU1YzAtLjUwMi0uMjM1LS43NjUtLjcyNy0uNzY1SDEuNzI3QzEuMjE3IDEgMSAxLjE4MiAxIDEuNzY1djExLjQ3YzAgLjc0OS4yMzUuNzY1LjcyNy43NjVoLjI0MyIvPgogICAgICAgIDxwYXRoIGQ9Ik0yMC43NDcgMTguMjZINi4wNDFhLjkwNS45MDUgMCAwIDEtLjg5Ny0uOTEzVjYuNDIzYzAtLjUwNS40MDItLjkxMy44OTctLjkxM2gxNC43MDZjLjQ5NiAwIC44OTcuNDA4Ljg5Ny45MTN2MTAuOTI0YS45MDUuOTA1IDAgMCAxLS44OTcuOTEzIi8+CiAgICA8L2c+Cjwvc3ZnPgo=) transparent no-repeat left center;
+    line-height: 56px;
+    padding-left: 32px;
+}
+.CarouselDecorators__dots {
+    -webkit-transform: translateY(calc(-48px + 32px));
+        -ms-transform: translateY(calc(-48px + 32px));
+            transform: translateY(calc(-48px + 32px));
+}
+.CarouselDecorators__dot {
+    background: transparent;
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin: 0 3px;
+    opacity: 0.5;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    width: 10px;
+}
+.CarouselDecorators__dotActive {
+    background: #4a4a4a;
+    opacity: 1;
+}
+</style><style type="text/css" id="s1237-0">.ThemedGrid__component {
+    border: 12px solid #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 32px;
+    padding: 16px;
+    position: relative
+}
+.ThemedGrid__component:last-child {
+    margin-bottom: 0;
+}
+.ThemedGrid__component.ThemedGrid__themeFoodAndDrink {
+    border-color: #55c2bf;
+}
+.ThemedGrid__component.ThemedGrid__themePlay {
+    border-color: #fdbe34;
+}
+.ThemedGrid__component.ThemedGrid__themeStay {
+    border-color: #3e74c1;
+}
+.ThemedGrid__titleContainer {
+    width: 100%;
+}
+.ThemedGrid__title {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    line-height: 38px;
+    border-bottom: 1px solid #e2e2e2;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ThemedGrid__themeFoodAndDrink .ThemedGrid__title { color: #55c2bf; }
+.ThemedGrid__themePlay .ThemedGrid__title { color: #fdbe34; }
+.ThemedGrid__themeStay .ThemedGrid__title { color: #3e74c1; }
+.ThemedGrid__item {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    border-bottom: 1px solid #e2e2e2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    overflow: auto;
+    padding: 16px 0;
+    text-decoration: none;
+    width: 100%;
+}
+.ThemedGrid__itemsPrimary .ThemedGrid__item {
+        height: 100%;
+        padding: 0 0 24px;
+    }
+.ThemedGrid__itemsSecondary .ThemedGrid__item:nth-last-child(2) {
+        border: none;
+    }
+.ThemedGrid__media {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+}
+.ThemedGrid__itemsPrimary .ThemedGrid__media {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+.ThemedGrid__zoom {
+    -webkit-transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ThemedGrid__item:hover .ThemedGrid__zoom, .ThemedGrid__item:focus .ThemedGrid__zoom {
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+    }
+.ThemedGrid__mediaOverlay {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background: no-repeat #fff;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: calc(-16px + -12px);
+    position: absolute;
+    text-align: center;
+    width: 66px;
+}
+.ThemedGrid__durationLabel {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 3px;
+}
+.ThemedGrid__galleryLabel {
+    color: #fff;
+    font-size: 11px;
+    margin-bottom: 12px;
+    margin-left: 3px;
+}
+.ThemedGrid__content {
+    width: calc(50% - 16px);
+}
+.ThemedGrid__itemsPrimary .ThemedGrid__content {
+        width: 100%;
+    }
+.ThemedGrid__headline {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000;
+}
+.ThemedGrid__itemsPrimary .ThemedGrid__headline {
+        font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        line-height: 40px;
+    }
+.ThemedGrid__item:hover .ThemedGrid__headline, .ThemedGrid__item:focus .ThemedGrid__headline {
+        color: #4a4a4a;
+    }
+.ThemedGrid__byline {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9b9b9b;
+}
+.ThemedGrid__cta {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    .ThemedGrid__cta {
+        margin-top: auto;
+        padding-top: 0;
+    }
+
+    .ThemedGrid__items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .ThemedGrid__itemsPrimary {
+        border-right: 1px solid #e2e2e2;
+        -ms-flex-preferred-size: 55%;
+            flex-basis: 55%;
+        padding-right: 16px;
+    }
+
+        .ThemedGrid__invertColumns .ThemedGrid__itemsPrimary {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .ThemedGrid__itemsPrimary .ThemedGrid__content {
+            margin-top: 8px;
+        }
+
+    .ThemedGrid__itemsSecondary {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        padding-left: 16px;
+    }
+
+    .ThemedGrid__item {
+        border-bottom: 1px solid #e2e2e2;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+
+        .ThemedGrid__itemsPrimary .ThemedGrid__item {
+            border-bottom: 0 none;
+            padding: 0;
+        }
+
+        .ThemedGrid__itemsSecondary .ThemedGrid__item {
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+    .ThemedGrid__item:first-child {
+        padding-top: 0;
+    }
+        .ThemedGrid__itemsPrimary .ThemedGrid__media {
+            margin-bottom: 0;
+        }
+        .ThemedGrid__itemsPrimary .ThemedGrid__headline {
+            font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 28px;
+            margin-top: 8px;
+        }
+}
+@media only screen and (min-width: 1024px) {
+    .ThemedGrid__component {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+
+    .ThemedGrid__titleContainer {
+        position: relative;
+        width: 3em;
+    }
+
+    .ThemedGrid__title {
+        border-bottom: none;
+        display: inline-block;
+        position: relative;
+        top: 238px;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: 0 0 0;
+            -ms-transform-origin: 0 0 0;
+                transform-origin: 0 0 0;
+        width: 200px;
+    }
+
+        .ThemedGrid__invertColumns .ThemedGrid__title {
+            margin-left: 16px;
+        }
+
+    .ThemedGrid__items {
+        border-left: 1px solid #e2e2e2;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        padding-left: 16px;
+    }
+}
+</style><style type="text/css" id="s371-0">.CardBasic__component {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+.CardBasic__component.CardBasic__isLeadOnMobile {
+    padding-top: 56.25%;
+}
+.CardBasic__thumb, .CardBasic__details {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.CardBasic__thumb {
+    overflow: hidden;
+}
+.CardBasic__isLeadOnMobile .CardBasic__thumb {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+.CardBasic__link {
+    display: block;
+    position: relative;
+}
+.CardBasic__details {
+    margin-left: 16px;
+}
+.CardBasic__isLeadOnMobile .CardBasic__details {
+        margin: 0;
+    }
+.CardBasic__section {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9b9b9b;
+    display: block;
+    margin-bottom: 8px;
+}
+.light .CardBasic__title, .light .CardBasic__aux {
+        color: #fff;
+    }
+.CardBasic__title {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    display: block;
+}
+.CardBasic__isLeadOnMobile .CardBasic__title {
+        font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-top: 16px;
+    }
+.CardBasic__hasLargeTitle .CardBasic__title {
+        font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+.CardBasic__aux {
+    font-family: CNNSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9b9b9b;
+    padding-top: 8px;
+}
+.CardBasic__videoIcon {
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 54px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    width: 54px
+}
+.CardBasic__videoIcon::before {
+    background-color: #31315b;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    width: 0;
+    z-index: 1;
+}
+.CardBasic__videoIcon::after {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMSAxbDE1IDguMDc3TDEgMTZ6Ii8+PC9zdmc+) center no-repeat;
+    background-size: 15px 15px;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.CardBasic__videoIcon.CardBasic__videoIconSmall {
+    bottom: 0;
+    height: 34px;
+    left: 0;
+    top: initial;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    width: 34px
+}
+.CardBasic__videoIcon.CardBasic__videoIconSmall::after {
+    background-size: 11px 11px;
+}
+.CardBasic__thumb:hover .CardBasic__videoIcon::before {
+    width: 100%;
+    z-index: 1;
+}
+.CardBasic__thumb:hover .CardBasic__videoIcon::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMSAxbDE1IDguMDc3TDEgMTZ6Ii8+PC9zdmc+);
+}
+.CardBasic__cursor:hover {
+    cursor: pointer;
+}
+@media (min-width: 375px) {
+    .CardBasic__title {
+        font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}
+@media (min-width: 600px) {
+    .CardBasic__component:not(.CardBasic__isSmall) {
+        padding-top: 56.25%;
+    }
+    .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__thumb {
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+    }
+    .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__details {
+                margin: 0;
+    }
+    .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__section {
+                margin-bottom: 16px;
+                margin-top: 8px;
+    }
+    .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title {
+                margin-top: 16px;
+    }
+
+                .CardBasic__isHover .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title {
+                    color: #4a4a4a;
+                }
+
+                    .light .CardBasic__isHover .CardBasic__component:not(.CardBasic__isSmall) .CardBasic__title {
+                        color: #fff;
+                    }
+
+    .CardBasic__title {
+        font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+
+        .CardBasic__hasLargeTitle .CardBasic__title {
+            font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 26px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 28px;
+        }
+
+    .CardBasic__videoIcon {
+        height: 54px;
+        width: 54px;
+    }
+
+    .CardBasic__image {
+        -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+        .CardBasic__isHover .CardBasic__image {
+            -webkit-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                    transform: scale(1.05);
+        }
+}
+</style><style type="text/css" id="s373-0">.Button__component {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border: 1px solid;
+    cursor: pointer;
+    display: block;
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    -webkit-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    width: 100%
+}
+.Button__component.Button__blue {
+    border-color: #e2e2e2;
+    color: #3e74c1;
+}
+.Button__component.Button__dark {
+    border-color: #e2e2e2;
+    color: #000;
+}
+.Button__component.Button__light {
+    border-color: #fff;
+    color: #fff;
+}
+.Button__component .Button__ctaText {
+        position: relative;
+        z-index: 1;
+}
+.hover:hover .Button__component, .Button__component:hover, .Button__component:hover a {
+        color: #fff;
+}
+.Button__component::before {
+    background: #000;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+    width: 0;
+}
+.hover:hover .Button__component::before, .Button__component:hover::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+}
+.Button__component.Button__FOOD_AND_DRINK::before {
+    background: #55c2bf;
+}
+.Button__component.Button__PLAY::before {
+    background: #fdbe34;
+}
+.Button__component.Button__STAY::before {
+    background: #3e74c1;
+}
+.Button__component.Button__WHITE:hover {
+    color: #000;
+}
+.Button__component.Button__WHITE::before {
+    background: #fff;
+}
+.Button__component.Button__VIDEO_HUB:hover {
+    color: #31315b;
+}
+.Button__component.Button__VIDEO_HUB::before {
+    background: #fff;
+}
+.Button__component.Button__DESTINATION {
+    border: 0
+}
+.Button__component.Button__DESTINATION:hover {
+    color: #edf4fc;
+}
+.Button__component.Button__DESTINATION::before {
+    background: #31315b;
+}
+</style><style type="text/css" id="s921-0">.PromoBestBeaches__component {
+    overflow: hidden;
+    padding-top: 133%;
+    position: relative;
+}
+.PromoBestBeaches__wrapper {
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.PromoBestBeaches__heroImage {
+    height: 100%;
+    width: 100%;
+}
+.PromoBestBeaches__heroVideo {
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: auto;
+}
+.PromoBestBeaches__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 0;
+    margin: 0 auto;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+}
+.PromoBestBeaches__titleTop {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 28px;
+    color: #fff;
+    line-height: 1em;
+    margin-bottom: 16px;
+    position: relative;
+}
+.PromoBestBeaches__beaches {
+    background: url(https://verticals-static.cnn.com/travel/assets/ed91e68296cc0c8391e8fc429759704e.png) no-repeat center top;
+    background-size: contain;
+    max-width: 760px;
+    padding-top: 20%;
+    position: relative;
+    text-indent: -9999em;
+    width: 100%;
+}
+.PromoBestBeaches__titleBottom {
+    color: #fff;
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 24px;
+    max-width: 491px;
+    position: relative;
+}
+.PromoBestBeaches__button {
+    margin: 0 16px;
+    max-width: 320px;
+}
+@media (min-width: 600px) {
+    .PromoBestBeaches__component {
+        padding-top: 56.25%;
+    }
+
+    .PromoBestBeaches__content {
+        margin: 0 110px;
+    }
+
+        .PromoBestBeaches__isHomepage .PromoBestBeaches__content {
+            margin: 0 120px;
+        }
+
+    .PromoBestBeaches__titleBottom {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+@media (min-width: 1024px) {
+        .PromoBestBeaches__isHomepage .PromoBestBeaches__titleTop {
+            font-size: 32px;
+            line-height: 26px;
+        }
+
+        .PromoBestBeaches__isHomepage .PromoBestBeaches__titleBottom {
+            font-size: 22px;
+            line-height: 26px;
+        }
+}
+</style><style type="text/css" id="s1235-0">.PromoBourdain__component {
+    margin: 0 auto;
+    max-width: 728px;
+}
+.PromoBourdain__wrapper {
+    border: 1px solid #d0011b;
+    padding: 16px;
+}
+.PromoBourdain__primary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+}
+.PromoBourdain__heroWrapper {
+    margin-bottom: 16px;
+}
+.PromoBourdain__hero {
+    background: url(https://verticals-static.cnn.com/travel/assets/5ced617915b933212b384b93be6bcff2.jpg) no-repeat right center;
+    background-size: cover;
+    padding-top: 56.25%;
+}
+.PromoBourdain__logo {
+    background: url(https://verticals-static.cnn.com/travel/assets/22bb695e14f677482f4e92712d9cc1e3.png) no-repeat;
+    background-size: contain;
+    height: 70px;
+    margin-bottom: 16px;
+    width: 80px;
+}
+.PromoBourdain__copy {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    width: 170px;
+}
+.PromoBourdain__arrow {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiIgdmlld0JveD0iMCAwIDQyIDQyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBzdHJva2U9IiNEMDAxMUIiLz48cGF0aCBkPSJNMjAuNSAxMi41bDkgOC05IDhtOC04aC0xNyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPjwvZz48L3N2Zz4=) no-repeat;
+    background-size: cover;
+    bottom: 0;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+@media only screen and (min-width: 375px) {
+    .PromoBourdain__primary {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .PromoBourdain__heroWrapper {
+        margin-bottom: 32px;
+    }
+
+    .PromoBourdain__logo {
+        margin: 0 24px 0 0;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .PromoBourdain__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .PromoBourdain__primary {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .PromoBourdain__heroWrapper {
+        margin: 0 16px 0 0;
+        width: calc(100% - 235px);
+    }
+
+    .PromoBourdain__logo {
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        margin-right: 0;
+    }
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .PromoBourdain__logo {
+        background-image: url(https://verticals-static.cnn.com/travel/assets/ccf54309f86acbf266092bd934dee93e.png);
+    }
+}
+</style><style type="text/css" id="s339-0">.Footer__component {
+    padding-bottom: 16px;
+}
+
+    .searchShown .Footer__component, .hasModal .Footer__component, .menuShown .Footer__component {
+        display: none;
+    }
+.Footer__wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+    overflow: hidden;
+    padding: 24px 16px 48px;
+}
+.Footer__primary {
+    background-color: #e2e2e2;
+}
+.Footer__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    float: left;
+}
+.Footer__section {
+    font-family: CNNTravel,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+    display: block;
+    margin: 2px 0 16px;
+}
+.Footer__aside {
+    float: right;
+}
+.Footer__top {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RURGMEQ4MUMtMzlCRS00MkYwLTlGMjItNTVFOTFGQzRGMDE5PC90aXRsZT48ZyBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xLjI1NSA5Ljc5Nmw3LjgwMi04LjUyMyA4LjAxNyA4LjUyM005IDIuMjIyVjE4LjA0Ii8+PC9nPjwvc3ZnPg==) no-repeat center;
+    display: block;
+    height: 55px;
+    margin-top: -17.5px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 60px;
+}
+.Footer__legal, .Footer__links {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+}
+.Footer__links {
+    margin-top: 8px;
+}
+.Footer__link {
+    border-right: 1px solid #000;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 10px;
+    margin-right: 8px;
+    padding-right: 8px
+}
+.Footer__link:last-child {
+    border: 0;
+}
+.Footer__link.Footer__adchoices::after {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiPjxnIGZpbGw9IiM1QzVDNUMiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTcuMzY0IDQuNTE4Yy0uMDE3LjA2My0uMDMxLjEyMy0uMDYyLjE4M2EuNTgyLjU4MiAwIDAgMS0uMjEuMjJjLS41MzIuMzMyLTEuMDYuNjY4LTEuNTg4IDFsLTEuNC44OGMtLjM4MS4yNC0uNzY2LjQ4MS0xLjE0OC43MjVhLjQ2My40NjMgMCAwIDEtLjY0Ny0uMTcuNTM5LjUzOSAwIDAgMS0uMDc1LS4zMzJjLjAwNC0uMDE4IDAtLjAzNSAwLS4wNTdWNC45NTZjMC0uMjMzLjE1LS40NDIuMzU4LS40OTguMjMyLS4wNjQuNDguMDcuNTY1LjMxYS42NjQuNjY0IDAgMCAxIC4wMzQuMjE2djEuMTJjMCAuMDE1LS4wMDYuMDM2LjAwNy4wNDMuMDE0LjAwNy4wMjctLjAwNy4wNDEtLjAxNC42MS0uMzg1IDEuMjItLjc2NyAxLjgyOS0xLjE1Mi4yNzMtLjE3My41NDUtLjM0My44MTctLjUxNmwuMDI0LS4wMThjLS4wODEtLjA1LS4xNi0uMDk5LS4yMzgtLjE0NS0uMjY2LS4xNjMtLjUzMS0uMzI1LS43OTQtLjQ4OGwtMS4xNC0uNjk2LTEuMDk3LS42NzJhMjYxLjcyIDI2MS43MiAwIDAgMC0xLjIxLS43MzlsLS40MjktLjI2MWMtLjAzLS4wMTgtLjAzNy0uMDEtLjAzNC4wMjF2Ni4xMDFjLjA4Mi0uMDUuMTU0LS4wOTUuMjI1LS4xNDEuMDU4LS4wMzUuMTE2LS4wNzQuMTc0LS4xMWEuNDYuNDYgMCAwIDEgLjY0NC4yMDUuNTU3LjU1NyAwIDAgMS0uMTk4LjcyNWMtLjM2MS4yMTYtLjcxMi40NDUtMS4wNy42NzJDLjY4NSA4Ljk1NC42MjMgOC45NzUuNTYgOUguNDJhLjAyNS4wMjUgMCAwIDAtLjAxNC0uMDA3LjQ4Mi40ODIgMCAwIDEtLjMzMy0uMjRDLjAzNCA4LjY4OS4wMTcgOC42MTUgMCA4LjU0NC4wMDcgNS44NDQuMDA3IDMuMTUuMDA3LjQ1Mi4wMTQuNDQ1LjAxNC40MzguMDE0LjQyOGEuNTEuNTEgMCAwIDEgLjMxLS4zOTZDLjM1NC4wMTguMzkyLjAxLjQyMiAwaC4xNGMuMDYxLjAyMS4xMi4wMzkuMTc3LjA3NC4yNjIuMTYzLjUyNS4zMjIuNzg3LjQ4MS4zOTUuMjQuNzg3LjQ4NCAxLjE3OC43MjUuNTE4LjMxNCAxLjAzNi42MzIgMS41NS45NDdsMS4xNTguNzFjLjU3Mi4zNSAxLjE0NC43IDEuNzEzIDEuMDUuMDcyLjA0Ni4xMjYuMTEuMTcuMTg4LjAzNS4wNi4wNTIuMTI3LjA2NS4xOTQuMDA0LjA1My4wMDQuMS4wMDQuMTQ5Ii8+PHBhdGggZD0iTTIuNzA3IDQuMDlhLjQxLjQxIDAgMCAxLS4wODQtLjgxLjQwNi40MDYgMCAwIDEgLjQ0Mi4yMjIuNDA5LjQwOSAwIDAgMS0uMjU5LjU3Ny4zOS4zOSAwIDAgMS0uMS4wMTIiLz48L2c+PC9zdmc+) no-repeat;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 7px;
+}
+.Footer__info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+    .Footer__wrapper {
+        padding: 16px;
+    }
+
+    .Footer__navigation {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+
+    .Footer__section {
+        margin-bottom: 0;
+        margin-right: 32px
+    }
+
+    .Footer__section:last-child {
+        margin-right: 0;
+    }
+
+    .Footer__section:nth-child(-n + 2) {
+        margin-bottom: 16px;
+    }
+
+    .Footer__aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .Footer__top {
+        border-right: 1px solid #9b9b9b;
+        margin-top: 0;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+    }
+
+    .Footer__primary {
+        margin-bottom: 8px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .Footer__navigation {
+        width: 320px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .Footer__navigation {
+        width: auto;
+    }
+        .Footer__primary .Footer__wrapper {
+            padding: 0 16px;
+        }
+
+    .Footer__section {
+        margin-bottom: 0
+    }
+
+    .Footer__section:nth-child(-n + 2) {
+        margin-bottom: 0;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .Footer__navigation {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 55px;
+        width: calc(100% - 300px);
+    }
+
+    .Footer__section {
+        margin-bottom: 0;
+    }
+
+    .Footer__aside {
+        margin-right: 40px;
+    }
+}
+</style><style type="text/css" id="s344-0">.SocialBar__component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+.SocialBar__component.SocialBar__vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.SocialBar__icon {
+    background: no-repeat center;
+    border: solid #9b9b9b;
+    cursor: pointer;
+    height: 55px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 60px
+}
+.SocialBar__icon.SocialBar__facebook {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxMiAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+NTA0MDU5RDAtMjkzNy00NTU2LUFCQkUtOEIxMzY2OTRBOUFEPC90aXRsZT48cGF0aCBkPSJNMTAuOTM1IDEyLjEzM2wuNTEyLTMuOTY2SDcuNTE5VjUuNjM1YzAtMS4xNDguMzItMS45MyAxLjk2Ny0xLjkzbDIuMDk4LS4wMDJWLjE1N0MxMS4yMjIuMTA3IDkuOTc2IDAgOC41MjQgMGMtMy4wMjggMC01LjEgMS44NDktNS4xIDUuMjQydjIuOTI1SDB2My45NjZoMy40MjRWMjIuMzFINy41MlYxMi4xMzNoMy40MTZ6IiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+}
+.SocialBar__icon.SocialBar__twitter {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QzEwNjY1N0YtMDIzNy00MjRFLTg0OUYtNEIzOTAxQ0RCMDlDPC90aXRsZT48cGF0aCBkPSJNMjEuMDk0IDIuMDI5YTguNjIgOC42MiAwIDAgMS0yLjQ4Ni42OEE0LjMzNiA0LjMzNiAwIDAgMCAyMC41MTEuMzE3YTguNjc0IDguNjc0IDAgMCAxLTIuNzQ3IDEuMDUgNC4zMjggNC4zMjggMCAwIDAtNy4zNzUgMy45NDYgMTIuMjggMTIuMjggMCAwIDEtOC45Mi00LjUyIDQuMzEyIDQuMzEyIDAgMCAwLS41ODYgMi4xNzZjMCAxLjUuNzY0IDIuODI2IDEuOTI0IDMuNjAxYTQuMjk2IDQuMjk2IDAgMCAxLTEuOTYtLjU0MXYuMDU1YTQuMzMgNC4zMyAwIDAgMCAzLjQ3MSA0LjI0MyA0LjMyNiA0LjMyNiAwIDAgMS0xLjk1NC4wNzQgNC4zMzMgNC4zMzMgMCAwIDAgNC4wNDIgMy4wMDZBOC42NzcgOC42NzcgMCAwIDEgMCAxNS4xOThhMTIuMjU1IDEyLjI1NSAwIDAgMCA2LjYzNSAxLjk0NGM3Ljk2IDAgMTIuMzEyLTYuNTk0IDEyLjMxMi0xMi4zMTMgMC0uMTg3LS4wMDQtLjM3NC0uMDExLS41NmE4LjgyIDguODIgMCAwIDAgMi4xNTgtMi4yNCIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+}
+.SocialBar__icon.SocialBar__instagram {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPjU0Q0RFNTdDLTY2ODktNEM2Ri1CRTYwLUVCQkIyQkMwODcyODwvdGl0bGU+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0wIDE5Ljk5OGgxOS45OTRWLjAwNkgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik05Ljk5Ny4wMDZjLTIuNzE1IDAtMy4wNTYuMDEyLTQuMTIyLjA2LTEuMDY0LjA0OS0xLjc5LjIxOC0yLjQyNi40NjVhNC45IDQuOSAwIDAgMC0xLjc3MSAxLjE1MyA0LjkgNC45IDAgMCAwLTEuMTUzIDEuNzdDLjI3OCA0LjA5Mi4xMDkgNC44MTguMDYgNS44ODIuMDEyIDYuOTQ4IDAgNy4yODggMCAxMC4wMDNzLjAxMiAzLjA1Ni4wNiA0LjEyMmMuMDQ5IDEuMDY0LjIxOCAxLjc5LjQ2NSAyLjQyNmE0LjkgNC45IDAgMCAwIDEuMTUzIDEuNzcxIDQuOSA0LjkgMCAwIDAgMS43NyAxLjE1M2MuNjM2LjI0NyAxLjM2My40MTYgMi40MjcuNDY1IDEuMDY2LjA0OCAxLjQwNy4wNiA0LjEyMi4wNnMzLjA1NS0uMDEyIDQuMTIyLS4wNmMxLjA2NC0uMDQ5IDEuNzktLjIxOCAyLjQyNi0uNDY1YTQuOSA0LjkgMCAwIDAgMS43Ny0xLjE1MyA0LjkgNC45IDAgMCAwIDEuMTU0LTEuNzdjLjI0Ny0uNjM2LjQxNi0xLjM2My40NjUtMi40MjcuMDQ4LTEuMDY2LjA2LTEuNDA3LjA2LTQuMTIycy0uMDEyLTMuMDU1LS4wNi00LjEyMmMtLjA0OS0xLjA2NC0uMjE4LTEuNzktLjQ2NS0yLjQyNmE0LjkgNC45IDAgMCAwLTEuMTUzLTEuNzdBNC45IDQuOSAwIDAgMCAxNi41NDYuNTNjLS42MzctLjI0Ny0xLjM2My0uNDE2LTIuNDI3LS40NjUtMS4wNjctLjA0OC0xLjQwNy0uMDYtNC4xMjItLjA2em0wIDEuODAyYzIuNjcgMCAyLjk4NS4wMSA0LjA0LjA1OC45NzQuMDQ0IDEuNTAzLjIwNyAxLjg1Ni4zNDQuNDY2LjE4MS44LjM5OCAxLjE1Ljc0OC4zNDkuMzUuNTY2LjY4My43NDcgMS4xNS4xMzcuMzUyLjMuODguMzQ0IDEuODU2LjA0OCAxLjA1NC4wNTggMS4zNy4wNTggNC4wNCAwIDIuNjY4LS4wMSAyLjk4NS0uMDU4IDQuMDM5LS4wNDQuOTc0LS4yMDcgMS41MDQtLjM0NCAxLjg1Ni0uMTgxLjQ2Ny0uMzk4LjgtLjc0OCAxLjE1LS4zNS4zNS0uNjgzLjU2Ni0xLjE1Ljc0Ny0uMzUyLjEzNy0uODguMy0xLjg1Ni4zNDQtMS4wNTQuMDQ5LTEuMzcuMDU5LTQuMDQuMDU5LTIuNjY5IDAtMi45ODUtLjAxLTQuMDM5LS4wNTktLjk3NC0uMDQ0LTEuNTA0LS4yMDctMS44NTYtLjM0NGEzLjA5NyAzLjA5NyAwIDAgMS0xLjE1LS43NDggMy4wOTcgMy4wOTcgMCAwIDEtLjc0Ny0xLjE0OWMtLjEzNy0uMzUyLS4zLS44ODItLjM0NC0xLjg1Ni0uMDQ5LTEuMDU0LS4wNTktMS4zNy0uMDU5LTQuMDRzLjAxLTIuOTg1LjA1OS00LjA0Yy4wNDQtLjk3NC4yMDctMS41MDMuMzQ0LTEuODU2LjE4MS0uNDY2LjM5OC0uOC43NDgtMS4xNS4zNS0uMzQ5LjY4Mi0uNTY2IDEuMTQ5LS43NDcuMzUyLS4xMzcuODgyLS4zIDEuODU2LS4zNDQgMS4wNTQtLjA0OCAxLjM3LS4wNTggNC4wNC0uMDU4eiIgZmlsbD0iIzBBMEEwOCIgbWFzaz0idXJsKCNiKSIvPjwvZz48cGF0aCBkPSJNOS45OTcgMTMuMzM1YTMuMzMyIDMuMzMyIDAgMSAxIDAtNi42NjQgMy4zMzIgMy4zMzIgMCAwIDEgMCA2LjY2NHptMC04LjQ2NWE1LjEzMyA1LjEzMyAwIDEgMCAwIDEwLjI2NyA1LjEzMyA1LjEzMyAwIDAgMCAwLTEwLjI2N3pNMTYuNTMzIDQuNjY3YTEuMiAxLjIgMCAxIDEtMi40IDAgMS4yIDEuMiAwIDAgMSAyLjQgMCIgZmlsbD0iIzBBMEEwOCIvPjwvZz48L3N2Zz4=);
+}
+.SocialBar__icon.SocialBar__email {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyMiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+MDcwRjM0ODAtODY0Ny00OTdELUE0MjgtMzRCMkRGOUUwQTRGPC90aXRsZT48cGF0aCBkPSJNNy4zMDYgNy42MjhsMi4yMDkgMi4wN2MuODMzLjc4IDIuMTUyLjc4IDIuOTg0IDBsMi4yMDItMi4wNjMgNC42MzcgNC41MzVIMi42NjJsNC42NDQtNC41NDJ6bTEzLjI5LTUuNTIydjkuMzI1bC00Ljg3MS00Ljc1NCA0Ljg3LTQuNTd6bS0xOS4xOTIgMEw2LjI4MiA2LjY3IDEuNDA0IDExLjQzVjIuMTA2em0xLjMxLS43MDJoMTYuNThsLTcuNzYgNy4yN2EuNzQuNzQgMCAwIDEtMS4wNTQgMGwtNy43NjctNy4yN3pNMi4xMDUgMEEyLjExNyAyLjExNyAwIDAgMCAwIDIuMTA2djkuMzYyYzAgMS4xNTUuOTUxIDIuMTA2IDIuMTA2IDIuMTA2aDE3Ljc4N0EyLjExNyAyLjExNyAwIDAgMCAyMiAxMS40NjhWMi4xMDZBMi4xMTcgMi4xMTcgMCAwIDAgMTkuODkzIDBIMi4xMDZ6IiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+}
+.SocialBar__horizontal .SocialBar__icon {
+        border-width: 0 1px 0 0
+}
+.SocialBar__horizontal .SocialBar__icon:first-child {
+    border-width: 0 1px;
+}
+.SocialBar__vertical .SocialBar__icon {
+        border-width: 0 0 1px
+}
+.SocialBar__vertical .SocialBar__icon:first-child {
+    border-width: 1px 0;
+}
+</style><style id="erd_scroll_detection_scrollbar_style">/* Created by the element-resize-detector library. */
+.erd_scroll_detection_container > div::-webkit-scrollbar { display: none; }
+
+.erd_scroll_detection_container_animation_active { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: erd_scroll_detection_container_animation; animation-name: erd_scroll_detection_container_animation; }
+@-webkit-keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }</style><link rel="canonical" href="https://www.cnn.com/travel" data-react-helmet="true"><link rel="alternate" href="https://www.cnn.com/travel" hreflang="en-us" data-react-helmet="true"><link rel="alternate" href="https://www.cnn.com/travel" hreflang="en-ca" data-react-helmet="true"><link rel="alternate" href="https://edition.cnn.com/travel" hreflang="en-gb" data-react-helmet="true"><link rel="alternate" href="https://edition.cnn.com/travel" hreflang="en" data-react-helmet="true"><meta name="description" content="Get travel tips and inspiration with insider guides, fascinating stories, video experiences and stunning photos." data-react-helmet="true"><meta name="keywords" content="travel news, world travel, aviation news" data-react-helmet="true"><meta name="news_keywords" content="travel news, world travel, aviation news" data-react-helmet="true"><meta property="og:site_name" content="CNN Travel" data-react-helmet="true"><meta property="og:title" content="CNN Travel | Global Destinations, Tips &amp; Video" data-react-helmet="true"><meta property="og:type" content="website" data-react-helmet="true"><meta property="og:url" content="https://www.cnn.com/travel" data-react-helmet="true"><meta property="og:description" content="Get travel tips and inspiration with insider guides, fascinating stories, video experiences and stunning photos." data-react-helmet="true"><meta property="fb:app_id" content="80401312489" data-react-helmet="true"><meta name="twitter:card" content="summary_large_image" data-react-helmet="true"><meta name="twitter:site" content="@CNNTravel" data-react-helmet="true"><style type="text/css" id="s1258-0">.Video__component {
+    position: relative;
+}
+
+.Video__player, .Video__poster {
+    width: 100%;
+}
+</style></head><body><div class="optanon-alert-box-wrapper hide-accept-button hide-cookie-setting-button" role="alertdialog" aria-labelledby="alert-box-title" aria-describedby="alert-box-message" style="bottom: -135.476px;"><div class="optanon-alert-box-bottom-top"><div class="optanon-alert-box-corner-close"></div></div><div class="optanon-alert-box-bg"><div class="optanon-alert-box-logo"> </div><div class="optanon-alert-box-body"><p class="optanon-alert-box-title legacy-banner-title sr-only" id="alert-box-title" role="heading" aria-level="2">Cookie Notice</p><p class="banner-content" id="alert-box-message">By using this site, you agree to our updated <a href="//www.cnn.com/privacy" class="banner-policy-link" tabindex="1" aria-label="Privacy Policy">Privacy Policy</a> and our <a href="//www.cnn.com/terms" class="banner-policy-link" tabindex="2" aria-label="Terms of Use">Terms of Use</a>.  </p></div><div class="optanon-clearfix"></div><div class="optanon-alert-box-button-container"><div class="optanon-alert-box-button optanon-button-close"><div class="optanon-alert-box-button-middle"></div></div></div><div class="optanon-clearfix optanon-alert-box-bottom-padding"></div></div></div><div id="optanon" class="modern"><div id="optanon-popup-bg"></div><div id="optanon-popup-wrapper" role="dialog" aria-modal="true" tabindex="-1" lang="en-US"><div id="optanon-popup-top"></div><div id="optanon-popup-body"><div id="optanon-popup-body-left"><div id="optanon-popup-body-left-shading"></div><div id="optanon-branding-top-logo" style="background-image: url('https://cdn.cookielaw.org/logos/10/10:cnn.com/logo-cnn.png') !important;"></div><ul id="optanon-menu" aria-label="Navigation Menu" role="tablist"><li class="menu-item-on menu-item-about" title="Your Privacy"><p class="preference-menu-item"></p></li><li class="menu-item-necessary menu-item-on" title="Strictly Necessary Cookies"><p class="preference-menu-item"></p></li><li class="menu-item-on menu-item-performance" title="Performance Cookies"><p class="preference-menu-item"></p></li><li class="menu-item-on menu-item-functional" title="Functional Cookies"><p class="preference-menu-item"></p></li><li class="menu-item-on menu-item-advertising" title="Targeting Cookies"><p class="preference-menu-item"></p></li><li class="menu-item-on menu-item-social" title="Social Media Cookies"><p class="preference-menu-item"></p></li><li class="menu-item-moreinfo menu-item-off" title="More Information"><p class="preference-menu-item"><a target="_blank" aria-label="More Information" href="https://cookiepedia.co.uk/giving-consent-to-cookies">More Information</a></p></li></ul></div><div id="optanon-popup-body-right"><p role="heading" aria-level="2" class="legacy-preference-banner-title h2" aria-label="Privacy Preference Centre">Privacy Preference Centre</p><div class="vendor-header-container"><p class="header-3" role="heading" aria-level="3"></p><div id="optanon-popup-more-info-bar"><div class="optanon-status"><div class="optanon-status-editable"><span class="fieldset"><p><label for="chkMain">Active</label></p></span></div><div class="optanon-status-always-active optanon-status-on"><p>Always Active</p></div></div></div></div><div class="optanon-main-info-text" role="tabpanel"></div></div><div class="optanon-bottom-spacer"></div></div><div id="optanon-popup-bottom"> <a href="https://onetrust.com/poweredbyonetrust" target="_blank"><div id="optanon-popup-bottom-logo" style="background: url(https://cdn.cookielaw.org/skins/4.5.0/default_flat_bottom_two_button_black/v2/images/cookie-collective-top-bottom.png);width:155px;height:35px;" title="powered by OneTrust"></div></a><div class="optanon-button-wrapper optanon-save-settings-button optanon-close optanon-close-consent"><div class="optanon-white-button-left"></div><div class="optanon-white-button-middle"></div><div class="optanon-white-button-right"></div></div><div class="optanon-button-wrapper optanon-allow-all-button optanon-allow-all" style="display: none;"><div class="optanon-white-button-left"></div><div class="optanon-white-button-middle"></div><div class="optanon-white-button-right"></div></div></div></div></div><div id="mount"><div class="Chrome__component" data-reactroot=""><span style="font-size:0"></span><div class=""><div class="StickyTop__ad" style="transition:max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1);max-height:none"><div class="Ad__component"><div id="ad_bnr_atf_01" class="Ad__tag"></div></div></div><span style="font-size:0"></span><div class="Header__container Header__isShown"><div class="Header__component header" style="transition:transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);transform:translateY(0)"><div class="Header__wrapper"><div class="Header__logo"><a class="Header__logoCNN" href="/" target="_self"></a><a class="Header__logoTravel active" aria-current="true" href="/travel"></a></div><div class="Header__navigation"><a class="Header__section" aria-current="false" href="/travel/destinations">Destinations</a><a class="Header__section" aria-current="false" href="/travel/food-and-drink">Food &amp; Drink</a><a class="Header__section" aria-current="false" href="/travel/play">Play</a><a class="Header__section" aria-current="false" href="/travel/stay">Stay</a><a class="Header__section Header__video" aria-current="false" href="/travel/videos">Video</a><div class="Header__search"><span class="Header__hidden">Search</span></div><div class="Header__burger"><div class="Header__burgerIcon"><span class="Header__hidden">Menu</span></div></div></div></div></div></div></div><div style="transition: padding-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s; padding-top: 60px;"></div><div class="Chrome__content"><div class="Homepage__component"><div class="Zone__component Homepage__editorsChoice Homepage__zone Homepage__bleed"><div class="EditorsChoice__wrapper"><div class="EditorsChoice__component"><div class="Carousel__component"><div class="slider Carousel__overflowDecorators" style="position: relative; display: block; width: 100%; height: auto; box-sizing: border-box; visibility: visible;"><div class="slider-frame" style="position:relative;display:block;overflow:visible;height:auto;margin:0px;padding:0;transform:translate3d(0, 0, 0);-webkit-transform:translate3d(0, 0, 0);-ms-transform:translate(0, 0);box-sizing:border-box;-moz-box-sizing:border-box"><ul class="slider-list" style="transform: translate3d(136.6px, 0px, 0px); position: relative; display: block; margin: 0px -2.5px; padding: 0px; height: 1457px; width: 5489px; cursor: inherit; box-sizing: border-box;"><li class="slider-slide" style="position: absolute; left: 0px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 1092.8px; height: auto; box-sizing: border-box; margin: auto 2.5px;"><div class="Carousel__slide Carousel__isSlideActive"><a href="https://www.cnn.com/travel/article/las-vegas-steak-dinner/index.html" target="_self"><div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top:133.33%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1093,c_fill,g_auto,h_1457,ar_3:4/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520121854-eds-choice-23may-mobile.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1104px; height: 1468px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div></li><li class="slider-slide" style="position: absolute; left: 1097.8px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 1092.8px; height: auto; box-sizing: border-box; margin: auto 2.5px;"><div class="Carousel__slide"><a href="https://www.cnn.com/travel/article/japan-female-airline-captain/index.html" target="_self"><div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top:133.33%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1093,c_fill,g_auto,h_1457,ar_3:4/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520121844-eds-choice-22may-mobile.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1104px; height: 1468px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div></li><li class="slider-slide" style="position: absolute; left: 2195.6px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 1092.8px; height: auto; box-sizing: border-box; margin: auto 2.5px;"><div class="Carousel__slide"><a href="https://www.cnn.com/travel/article/umaid-bhawan-palace-india/index.html" target="_self"><div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top:133.33%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1093,c_fill,g_auto,h_1457,ar_3:4/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520121836-eds-choice-21may-mobile.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1104px; height: 1468px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div></li><li class="slider-slide" style="position: absolute; left: 3293.4px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 1092.8px; height: auto; box-sizing: border-box; margin: auto 2.5px;"><div class="Carousel__slide"><a href="https://www.cnn.com/travel/article/game-of-thrones-classic-film-locations/index.html" target="_self"><div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top:133.33%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1093,c_fill,g_auto,h_1457,ar_3:4/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520121828-eds-choice-20may-mobile.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1104px; height: 1468px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div></li><li class="slider-slide" style="position: absolute; left: -1097.8px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 1092.8px; height: auto; box-sizing: border-box; margin: auto 2.5px;"><div class="Carousel__slide"><a href="https://www.cnn.com/travel/article/cano-cristales-colombia/index.html" target="_self"><div class="Image__component Image__isLoaded Image__hasAspectRatio" style="padding-top:133.33%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1093,c_fill,g_auto,h_1457,ar_3:4/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190513121826-eds-choice-17may-mobile.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1104px; height: 1468px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div></li></ul></div><div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)" class="slider-decorator-0"><div class="CarouselDecorators__dots"><div class="CarouselDecorators__dot CarouselDecorators__dotActive"></div><div class="CarouselDecorators__dot"></div><div class="CarouselDecorators__dot"></div><div class="CarouselDecorators__dot"></div><div class="CarouselDecorators__dot"></div></div></div><style type="text/css">.slider-slide > img {width: 100%; display: block;}</style></div></div></div></div></div><div class="Zone__component Homepage__zone Homepage__sections"><div class="Homepage__primary"><div class="ThemedGrid__component ThemedGrid__themePlay"><div class="ThemedGrid__titleContainer"><div class="ThemedGrid__title">Play</div></div><div class="ThemedGrid__items"><div class="ThemedGrid__itemsPrimary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isLeadOnMobile CardBasic__hasLargeTitle"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/amsterdam-overtourism/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_300,c_fill,g_auto,h_169,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190315131613-07-netherlands-happiest-coutries-2018.jpg" alt="Bike over canal Amsterdam city. Picturesque town landscape in Netherlands with view on river Amstel. "><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 311px; height: 180px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/amsterdam-overtourism/index.html"><div>Why Amsterdam wants tourists to go elsewhere</div></a></div></div></div></div></span></div><div class="ThemedGrid__itemsSecondary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/most-beautiful-villages-italy/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520121223-manarola-1.jpg" alt="Manarola"><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/most-beautiful-villages-italy/index.html"><div>The most beautiful villages in Italy</div></a></div></div></div></div></span><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/plane-wing-walker-washington/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190521100653-wing-walker-3.jpg" alt="Wing walker"><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/plane-wing-walker-washington/index.html"><div>Riding on an airplane's wings at 140mph</div></a></div></div></div></div></span><div class="ThemedGrid__cta"><a class="Button__component Button__dark Button__PLAY" aria-current="false" href="/travel/play"><span class="Button__ctaText">See all play</span></a></div></div></div></div><div class="Ad__component"><div id="ad_rect_atf_01" class="Ad__tag Homepage__adRect Ad__hasLabel"></div></div><div class="ThemedGrid__component ThemedGrid__themeFoodAndDrink"><div class="ThemedGrid__titleContainer"><div class="ThemedGrid__title">Food &amp; Drink</div></div><div class="ThemedGrid__items"><div class="ThemedGrid__itemsPrimary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isLeadOnMobile CardBasic__hasLargeTitle"><div class="CardBasic__thumb"><a class="CardBasic__link" href="/2019/05/22/europe/belgian-monks-beer-intl-scli/index.html" target="_self"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_300,c_fill,g_auto,h_169,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190522094227-03-belgian-monks-beer-intl-scli.jpg" alt="Grimbergen has revealed plans to build a new microbrewery inside the walls of Grimbergen Abbey near Brussels, which will combine modern techniques with brewing traditions from ancient books. Pictured is Father Karel Stautemas, subprior at Grimbergen Abbey, who is studying to be a brewer to join the microbrewery team."><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 311px; height: 180px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" href="/2019/05/22/europe/belgian-monks-beer-intl-scli/index.html" target="_self"><div>Belgian monks brew beer to newly discovered recipe</div></a></div></div></div></div></span></div><div class="ThemedGrid__itemsSecondary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/uk-restaurant-diner-wine-scli-intl-gbr/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190516115333-red-wine-stock.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/uk-restaurant-diner-wine-scli-intl-gbr/index.html"><div>Diner is served $5,800 wine by mistake</div></a></div></div></div></div></span><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/kamakura-japan-eat-walking/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190509112058-01-kamakura-restricted.jpg" alt="Tourists take photographs with their smartphones in front of the Great Buddha at the Kotokuin temple in Kamakura, Kanagawa, Japan, on Monday, Feb. 19, 2018. The Japan National Tourism Organization's monthly statistics on the number of foreign visitors to Japan will be published on Feb. 21. Photographer: Kentaro Takahashi/Bloomberg via Getty Images"><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/kamakura-japan-eat-walking/index.html"><div>Japan town asks tourists not to eat while walking</div></a></div></div></div></div></span><div class="ThemedGrid__cta"><a class="Button__component Button__dark Button__FOOD_AND_DRINK" aria-current="false" href="/travel/food-and-drink"><span class="Button__ctaText">See all food &amp; drink</span></a></div></div></div></div><div class="ThemedGrid__component ThemedGrid__themeStay"><div class="ThemedGrid__titleContainer"><div class="ThemedGrid__title">Stay</div></div><div class="ThemedGrid__items"><div class="ThemedGrid__itemsPrimary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isLeadOnMobile CardBasic__hasLargeTitle"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/hard-rock-guitar-hotel-hollywood-florida/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_300,c_fill,g_auto,h_169,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190521153719-04-guitar-hotel.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 311px; height: 180px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/hard-rock-guitar-hotel-hollywood-florida/index.html"><div>Sneak peek at the world's first guitar-shaped hotel </div></a></div></div></div></div></span></div><div class="ThemedGrid__itemsSecondary"><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/cher-hotel-suite-sofitel-new-york/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190520150428-02-cher-file.jpg" alt='Cher poses on the red carpet upon arrival for the world premiere of the film "Mamma Mia! Here We Go Again" in London on July 16, 2018. (Photo by Anthony HARVEY / AFP)        (Photo credit should read ANTHONY HARVEY/AFP/Getty Images)'><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/cher-hotel-suite-sofitel-new-york/index.html"><div>Cher-themed suite opens at NYC hotel</div></a></div></div></div></div></span><span class="ThemedGrid__item"><div class="CardBasic__component CardBasic__isSmall"><div class="CardBasic__thumb"><a class="CardBasic__link" aria-current="false" href="/travel/article/elba-italy-rain-refund-hotels/index.html"><div class="Image__component CardBasic__image Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_157,c_fill,g_auto,h_88,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190516161038-elba-italy-no-rain.jpg" alt="elba italy no rain"><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 168px; height: 99px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></a></div><div class="CardBasic__details"><div><div><a class="CardBasic__title" aria-current="false" href="/travel/article/elba-italy-rain-refund-hotels/index.html"><div>Italian island will refund your hotel room if it rains</div></a></div></div></div></div></span><div class="ThemedGrid__cta"><a class="Button__component Button__dark Button__STAY" aria-current="false" href="/travel/stay"><span class="Button__ctaText">See all stay</span></a></div></div></div></div></div><div class="Homepage__secondary secondary-1"></div></div><div class="Zone__component Homepage__zone"><div class="PromoBestBeaches__component PromoBestBeaches__isHomepage"><a href="//www.cnn.com/interactive/travel/best-beaches" target="_self"><div class="PromoBestBeaches__content"><span class="PromoBestBeaches__titleTop">A year of the world's</span><span class="PromoBestBeaches__beaches">Best Beaches</span><span class="PromoBestBeaches__titleBottom">There's a perfect beach for every week of the year. Join us on a 12-month journey to see them all</span><div class="Button__component Button__light Button__WHITE PromoBestBeaches__button"><span class="Button__ctaText">Go to the best beaches</span></div></div><div class="PromoBestBeaches__wrapper"><div class="Image__component PromoBestBeaches__heroImage Image__hasAspectRatio" style="padding-top:56.25%"><img class="Image__image" src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F171220172042-best-beaches-promo.jpg" alt=""><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1111px; height: 630px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div><div style="height: 100%; position: relative;" class="lazyload-placeholder"><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;" class="erd_scroll_detection_container"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1111px; height: 630px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></div></a></div></div><div class="Zone__component Homepage__zone Homepage__destinations Homepage__pad"><div class="Homepage__primary"><div style="height:100px" class="lazyload-placeholder"></div></div><div class="Homepage__secondary secondary-2"></div></div><div class="Zone__component Homepage__zone Homepage__pad"><div class="PromoBourdain__component"><a href="//explorepartsunknown.com" target="_blank"><div class="PromoBourdain__wrapper"><div class="PromoBourdain__heroWrapper"><div class="PromoBourdain__hero"></div></div><div class="PromoBourdain__primary"><div class="PromoBourdain__logo"></div><div class="PromoBourdain__copy">Want more Bourdain? Explore further</div><div class="PromoBourdain__arrow"></div></div></div></a></div></div><div class="Zone__component Homepage__zone Homepage__pad"></div></div></div><div class="Footer__component"><div class="Footer__primary"><div class="Footer__wrapper"><div class="Footer__navigation"><a class="Footer__section" aria-current="false" href="/travel/destinations">Destinations</a><a class="Footer__section" aria-current="false" href="/travel/food-and-drink">Food &amp; Drink</a><a class="Footer__section" aria-current="false" href="/travel/play">Play</a><a class="Footer__section" aria-current="false" href="/travel/stay">Stay</a><a class="Footer__section" aria-current="false" href="/travel/videos">Video</a></div><div class="Footer__aside"><a class="Footer__top" href="#" target="_self">Go to top of page</a><div class="SocialBar__component SocialBar__vertical"><a class="SocialBar__icon SocialBar__instagram" href="http://www.instagram.com/cnntravel" target="_blank">Instagram</a><a class="SocialBar__icon SocialBar__facebook" href="http://www.facebook.com/cnntravel" target="_blank">Facebook</a><a class="SocialBar__icon SocialBar__twitter" href="http://www.twitter.com/CNNTravel" target="_blank">Twitter</a></div></div></div></div><div class="Footer__wrapper Footer__info"><div class="Footer__legal">© 2019 Cable News Network. <a href="//www.turner.com" target="_self">Turner Broadcasting System, Inc.</a> All Rights Reserved. CNN Sans ™ &amp; © 2016 Cable News Network.</div><div class="Footer__links"><a class="Footer__link" href="//cnn.com/terms" target="_self">Terms of Use</a><a class="Footer__link" href="//cnn.com/privacy" target="_self">Privacy Policy</a><a class="Footer__link Footer__adchoices" href="//preferences-mgr.truste.com/?pid=turnermedia01&amp;aid=turnermedia01&amp;type=turner_pop&amp;site=turner.com&amp;action=notice&amp;country=us&amp;locale=en&amp;behavior=implied&amp;from=http://consent.truste.com/" target="_blank">AdChoices</a><a class="Footer__link" href="//cnn.com/about" target="_self">About us</a><a class="Footer__link" href="//cnn.com/newsletters" target="_self">Newsletters</a><a class="Footer__link" href="http://www.wearecnn.com" target="_self">Work for us</a><a class="Footer__link" href="//cnn.com/help" target="_self">Help</a><a class="Footer__link" href="http://transcripts.cnn.com/TRANSCRIPTS" target="_self">Transcripts</a><a class="Footer__link" href="//collection.cnn.com/content/home.do" target="_self">License Footage</a><a class="Footer__link" href="http://www.cnnnewsource.com" target="_self">CNN Newsource</a></div></div></div><div id="flyoutContainer"></div></div></div></body></html>
