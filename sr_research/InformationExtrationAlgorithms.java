@@ -4,21 +4,26 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
+import org.jsoup.select.NodeTraversor;
+import org.jsoup.select.NodeVisitor;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
 import com.opencsv.CSVReader;
-import java.util.List; 
+import java.util.List;
+import java.util.Set; 
 
 //import org.junit.Test;
 
@@ -53,12 +58,15 @@ public class InformationExtrationAlgorithms {
     private static Pattern slideshow;
     private static Pattern episode;
     private static Pattern player;
-    private static Pattern comment;
     private static Pattern idpattern;
     private static Pattern numpattern;
-    private static Pattern datepattern;
-    private static ArrayList<Storage> domNodes;
-    private static int depth2; 
+    private static Pattern datepattern;  
+    private static Storage store;
+    private static double max=0.0d; 
+	private static float weightRatio = 0.99f; 
+	private static float weightText = 0.01f; 
+	private static int pageText;
+	private static Node htmlbody; 
     
     /**
      * Constructor that compiles the case-sensitive regrex pattern once, 
@@ -73,12 +81,11 @@ public class InformationExtrationAlgorithms {
 		 slideshow = Pattern.compile(slideshow_pattern, Pattern.CASE_INSENSITIVE);
 		 episode = Pattern.compile(episode_pattern, Pattern.CASE_INSENSITIVE);
 		 player = Pattern.compile(player_pattern, Pattern.CASE_INSENSITIVE);
-		 comment = Pattern.compile(comment_pattern, Pattern.CASE_INSENSITIVE);
 		 idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE);
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
-		 domNodes = new ArrayList<Storage>();
-		 depth2=0; 
+		 pageText=0; 
+		 
 	}
 
 	/**
@@ -94,6 +101,7 @@ public class InformationExtrationAlgorithms {
 	public static void main(String[] args) throws IOException 
 	{
 		InformationExtrationAlgorithms info = new InformationExtrationAlgorithms(); 
+		store = info.new Storage();
 //		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/datTested_May22_linkTarget/"); 
 //		File [] listOfFiles = folder.listFiles(); 
 //		for(File file: listOfFiles)
@@ -112,7 +120,7 @@ public class InformationExtrationAlgorithms {
 //		
 		File folder = new File("/Users/adam/Desktop/aHR0cDovL3d3dy5iYmMuY29tL2N1bHR1cmUvc3RvcnkvMjAxODA3MjUtaG93LWphcGFucy12aXNpb25hcmllcy1zYXctdGhlLWZ1dHVyZQ==.html"); 
 		String root_url = folder.getName();
-		CorexEx(folder, root_url, info); 
+		CorexEx(folder, root_url); 
 	}
 	
 	/**
@@ -215,10 +223,6 @@ public class InformationExtrationAlgorithms {
 			reservedWord=true; //checks if link has player word in link
 		}
 		
-		if(comment.matcher(baseurl).find())
-		{
-			reservedWord=true;  //checks if link has comment word in link (added this for Reddit)
-		}
 	    
 	    	   
 	}
@@ -231,36 +235,37 @@ public class InformationExtrationAlgorithms {
 	 * @param baseurl is the root URL of the web page
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
-	public static void CorexEx(File file, String baseurl, InformationExtrationAlgorithms info) throws IOException
+	public static void CorexEx(File file, String baseurl) throws IOException
 	{
 		//Opens the document for traversing the body of the document
 		Document doc = Jsoup.parse(file, "UTF-8", baseurl);
 		doc.outputSettings().indentAmount(0).prettyPrint(false);
 
-		Node htmlbody = doc.root();
+		 htmlbody = doc.root();
 		//System.out.println(htmlbody.outerHtml());
 		
 		//gets the total amount of text contained in the body, used later for scoring
 		String totalText = ((Element) htmlbody).text();
 		StringTokenizer tokens = new StringTokenizer(totalText);
-		int pageText = tokens.countTokens(); 
+		pageText = tokens.countTokens(); 
 		Node body = doc.body(); 
-		//calls the function that recursively traverses the dom tree
-		nonTerminalNode(body, true, info);
-		//System.out.println("Finished");
-		//calls the scoring function and determines the main content node
-//		Storage mainContent =  scoring(domNodes, pageText);
-//		ArrayList<Node> content = (ArrayList<Node>) mainContent.S.clone();
-//		for (int i=0; i<content.size(); i++)
-//		{
-//			Node dom = content.get(i); 
-//			System.out.println(dom.nodeName());
-//		}
-
 		
-		//store the main content node's tag
-//		Node tag = mainContent.nonTerminalChild; 
-//		String mainTag = tag.nodeName();
+		//calls the function that recursively traverses the dom tree
+		nonTerminalNode(body, true);
+		
+		//Print out the main content node's values to Screen
+		Iterator<Set<Node>> tag = store.getS().iterator(); 
+		while(tag.hasNext())
+		{
+			Set<Node> nodes = tag.next();
+			Iterator<Node> nodeIterator = nodes.iterator();
+			while (nodeIterator.hasNext())
+			{
+				Node mainContent = nodeIterator.next();
+				System.out.println(mainContent.nodeName());
+				System.out.println(mainContent.outerHtml());
+			}
+		}
 		
 		//have to add the other features here used for project 
 		
@@ -270,14 +275,16 @@ public class InformationExtrationAlgorithms {
 	/**
 	 * The recursive algorithm that implements CoreEx's determination of the text-to-link ratio for each
 	 * DOM node in the tree. After doing so, each non-terminal node will have an associated text count, 
-	 * link count, and a list of nodes that make up the main content of the web page.
+	 * link count, and a list of nodes that make up the main content of the web page.Furthermore
+	 * the algorithm implements CoreEx's scoring function that determines the main content node. 
+	 * CoreEx's weighted function outputs the node with the highest text-to-link ratio and 
+	 * this node along with its accumulated values will be used as features for the C4.5 machine learning algorithm
 	 * @param child2 is Element from the HTML page that represents a given node in the DOM tree
 	 * @param flag is used to determine whether the textCnt or LinkCnt should be returned from the base case
-	 * @param info is the main class used to instantiate the inner class Storage to store each node's attributes
 	 * @return an integer that represents either terminal counts of text and links or the value zero which means
 	 * the algorithm has finished
 	 */
-	public static int nonTerminalNode(Node child2, boolean flag, InformationExtrationAlgorithms info)
+	public static int nonTerminalNode(Node child2, boolean flag)
 	{
 		 
 		int terminalTextCnt=0; 
@@ -334,13 +341,10 @@ public class InformationExtrationAlgorithms {
 				return terminalLinkCnt; 
 			}
 		}
-
-		
-		
 		float childRatio=0; 
 		int textCnt =0; 
 		int linkCnt=0; 
-		ArrayList<Node> S = new ArrayList<Node>();
+		Set<Node> S = new LinkedHashSet<Node>(); 
 		int setTextCnt=0; 
 		int setLinkCnt=0;
 		List<Node> children = child2.childNodes();
@@ -348,8 +352,8 @@ public class InformationExtrationAlgorithms {
 		{
 			if (!(child instanceof TextNode))
 			{
-				textCnt = textCnt + nonTerminalNode(child, true, info);
-				linkCnt = linkCnt + nonTerminalNode(child, false, info); 
+				textCnt = textCnt + nonTerminalNode(child, true);
+				linkCnt = linkCnt + nonTerminalNode(child, false); 
 				childRatio = (((float)textCnt-linkCnt)/textCnt);
 				if(childRatio>0.9f)
 				{
@@ -359,13 +363,82 @@ public class InformationExtrationAlgorithms {
 				}
 			}
 		}
-		int nodeDepth = depth2; 
-		Storage store = info.new Storage(S, textCnt, linkCnt, setTextCnt, setLinkCnt, nodeDepth);
-		if (!(S.isEmpty()))//problem area!!!!!!!!!!
+		if (!(S.isEmpty()))
 		{
+			Set<Set<Node>> setNodes = store.getS();
+			if(setNodes.contains(S))
+			{
+				; 
+			}
+			else if(!(setNodes.contains(S)))
+			{
+				
+				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + 
+					       	   (weightText * ((float)setTextCnt/pageText)); 
+				
+				if (store.isEmpty())
+				{
+					store.setS(S);
+					store.setSetTextCnt(setTextCnt);
+					store.setSetLinkCnt(setLinkCnt);
+					store.setScore(score);
+					store.setNodeDepth(getDepth(S.iterator().next()));
+					max=score; 
+				}
+				else
+				{
+					if(score > max)
+					{
+						store.remove();
+						store.setS(S);
+						store.setSetTextCnt(setTextCnt);
+						store.setSetLinkCnt(setLinkCnt);
+						store.setScore(score);
+						store.setNodeDepth(getDepth(S.iterator().next()));
+						max=score; 
+					}
+					else if (score==max)
+					{
+						int previousDepth = store.getNodeDepth(); 
+						int newDepth = getDepth(S.iterator().next()); 
+						if (newDepth < previousDepth)
+						{
+							store.remove();
+							store.setS(S);
+							store.setSetTextCnt(setTextCnt);
+							store.setSetLinkCnt(setLinkCnt);
+							store.setScore(score);
+							store.setNodeDepth(newDepth);
+							max=score; 
+						}
+						else if (newDepth > previousDepth)
+						{
+							; 
+						}
+						else
+						{
+							int randomPick = (int)Math.random()*1; 
+							if (randomPick==0)
+							{
+								; 
+							}
+							else
+							{
+								store.remove();
+								store.setS(S);
+								store.setSetTextCnt(setTextCnt);
+								store.setSetLinkCnt(setLinkCnt);
+								store.setScore(score);
+								store.setNodeDepth(newDepth);
+								max=score; 
+							}
+						}
+						
+					}
+				}
 			
-			//System.out.println(depth2++);
-			//domNodes.add(store);
+				
+			}
 		}
 		if(flag==true)
 		{
@@ -387,109 +460,95 @@ public class InformationExtrationAlgorithms {
 	 */
 	public class Storage 
 	{
-		public int  nodeDepth; 
-		public ArrayList<Node> S;
-		public int textCnt; 
-		public int linkCnt; 
-		public int SetTextCnt; 
-		public int SetLinkCnt;
-		public double score; 
+		public int  nodeDepth=0; 
+		public Set<Set<Node>> S= new LinkedHashSet<Set<Node>>(); 
+		public int setLinkCnt=0; 
+		public int setTextCnt=0; 
+		public double score=0.0; 
 		
-		public Storage (ArrayList<Node> set, int text, int link, int totaltext, int totallinks, int nodeDepth)
+		public Storage (){}
+		
+		public boolean isEmpty()
 		{
-			
-			S = new ArrayList<Node>();
-			Iterator<Node> iterate = set.iterator(); 
-			while(iterate.hasNext())
+			if(S.isEmpty())
 			{
-				Node sub_node = iterate.next(); 
-				S.add(sub_node); 
+				return true; 
 			}
-			textCnt=text; 
-			linkCnt=link; 
-			SetTextCnt=totaltext; 
-			SetLinkCnt=totallinks;
-			this.nodeDepth=nodeDepth; 
+			else
+			{
+				return false;
+			}
+			
 		}
 		
 		public void setScore(double score)
 		{
 			this.score=score; 
 		}
-	}
-	
-	/**
-	 * CoreEx's scoring function that determines the main content node. CoreEx's weighted function
-	 * outputs the node with the highest text-to-link ratio and this node along with its accumulated 
-	 * values will be used as features for the C4.5 machine learning algorithm
-	 * @param nodes all of the non-terminal nodes of the web page
-	 * @param pageText the total amount text contained in the web page
-	 * @return the node with the highest weighted score 
-	 */
-	public static Storage scoring(ArrayList<Storage> nodes, int pageText)
-	{
-		Storage highestScoringNode = null; 
-		double max=0.0d; 
-		float weightRatio = 0.99f; 
-		float weightText = 0.01f; 
-		Iterator<Storage> iterate = nodes.iterator();
-		if(iterate.hasNext())
-		{
-			Storage node = iterate.next();
-			double score = (weightRatio * (((float)node.SetTextCnt-node.SetLinkCnt)/node.SetTextCnt)) + 
-					       (weightText * ((float)node.SetTextCnt/pageText)); 
-			
-			max=score;
-			highestScoringNode=node;
-			node.setScore(score);
+
+		public int getNodeDepth() {
+			return nodeDepth;
 		}
-		while(iterate.hasNext())
-		{
-			Storage node = iterate.next();
-			double score = (weightRatio * (((float)node.SetTextCnt-node.SetLinkCnt)/node.SetTextCnt)) + 
-					       (weightText * ((float)node.SetTextCnt/pageText)); 
-			
-			if(score > max)
-			{
-				max=score;
-				highestScoringNode=node;
-				node.setScore(score);
-			}
-			else if (score == max)
-			{
-				if (node.nodeDepth < highestScoringNode.nodeDepth)
-				{
-					max=score; 
-					highestScoringNode=node; 
-					node.setScore(score);
-				}
-				else if (node.nodeDepth == highestScoringNode.nodeDepth)
-				{
-					int randomChoice=  (int) (Math.random()*1); 
-					if(randomChoice==0)
-					{
-						; 
-					}
-					else
-					{
-						max=score; 
-						highestScoringNode=node; 
-						node.setScore(score);
-					}
-				}
-				else
-				{
-					; 
-				}
-				
-			}
-			
+
+		public void setNodeDepth(int nodeDepth) {
+			this.nodeDepth = nodeDepth;
 		}
-	
-		return highestScoringNode;
+
+		public Set<Set<Node>> getS() {
+			return S;
+		}
+
+		public void setS(Set<Node> s) {
+			S.add(s);
+		}
+		
+		public void remove()
+		{
+			if(!(this.isEmpty()))
+			{
+				S.clear();
+			}
+		}
+
+		public int getSetTextCnt() {
+			return setTextCnt;
+		}
+
+		public void setSetTextCnt(int e) {
+			this.setTextCnt=e; 
+		}
+
+		public int getSetLinkCnt() {
+			return setLinkCnt;
+		}
+
+		public void setSetLinkCnt(int e) {
+			this.setLinkCnt=e; 
+		}
+
+		public double getScore() {
+			return score;
+		}
 		
 	}
 	
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static int getDepth(Node n)
+	{
+		int count=0; 
+		while(n.hasParent() && !(n.equals(htmlbody)))
+		{
+			n=n.parent(); 
+			count++; 
+		}
+		
+		return count;
+		
+	}
 
 
 	
