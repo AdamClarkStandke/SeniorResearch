@@ -31,10 +31,10 @@ import java.util.Set;
 /**
  * The main class that houses both information extraction algorithms, 
  * namely Link-Target Identification and CoreEx. This main class can 
- * run either or the two extraction algorithms. When done the class will 
+ * run either of the two extraction algorithms. When done the class will 
  * generate a csv file that will be inputed to the C4.5 machine learning 
- * algorithm. 
- * @author adam
+ * algorithm.(hopefully!!!) 
+ * @author Adam Standke
  *
  */
 public class InformationExtrationAlgorithms {
@@ -47,7 +47,6 @@ public class InformationExtrationAlgorithms {
     private static String slideshow_pattern = "\\bslideshows?";
     private static String episode_pattern = "\\bepisodes?";
     private static String player_pattern = "\\bplayers?";
-    private static String comment_pattern = "\\bcomments?";
     private static String id_pattern = "id=[\\d]+";
     private static String numberRegrex= "[-]\\d{5,}[-/]?|[/]\\d{5,}[/]"; 
     private static String dateRegrex ="\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,4}|[/]\\d{8}[-]";
@@ -142,7 +141,7 @@ public class InformationExtrationAlgorithms {
 		int lenghLink =0; 
 		int numForwardSlashes = 0; 
 		
-		//pre-processes url to get rid of first terms of 
+		//pre-processes url to get rid of the  first terms up to .com 
 		StringBuffer https = new StringBuffer("https://"); 
 		StringBuffer http  = new StringBuffer("http://"); 
 		if(baseurl.contains(https) || baseurl.contains(http))
@@ -232,23 +231,23 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static void CorexEx(File file, String baseurl) throws IOException
 	{
-		//Opens the document for traversing the body of the document
+		//Opens the document for traversing the document
 		Document doc = Jsoup.parse(file, "UTF-8", baseurl);
 		doc.outputSettings().indentAmount(0).prettyPrint(false);
-
-		 htmlbody = doc.root();
-		//System.out.println(htmlbody.outerHtml());
+		htmlbody = doc.root();
 		
 		//gets the total amount of text contained in the body, used later for scoring
 		String totalText = ((Element) htmlbody).text();
 		StringTokenizer tokens = new StringTokenizer(totalText);
-		pageText = tokens.countTokens(); 
+		pageText = tokens.countTokens();
+
+		//get the body node on which CoreEx will be run on
 		Node body = doc.body(); 
 		
-		//calls the function that recursively traverses the dom tree
+		//calls the main function of CoreEX that recursively traverses the DOM tree
 		nonTerminalNode(body, true);
 		
-		//Print out the main content node's values to Screen
+		//prints out the main content node's and their HTML content to the screen
 		Iterator<Set<Node>> tag = store.getS().iterator(); 
 		while(tag.hasNext())
 		{
@@ -262,7 +261,7 @@ public class InformationExtrationAlgorithms {
 			}
 		}
 		
-		//have to add the other features here used for project 
+		//other features to extract!!!(if possible) 
 		
 		
 	}
@@ -275,16 +274,16 @@ public class InformationExtrationAlgorithms {
 	 * CoreEx's weighted function outputs the node with the highest text-to-link ratio and 
 	 * this node along with its accumulated values will be used as features for the C4.5 machine learning algorithm
 	 * @param child2 is Element from the HTML page that represents a given node in the DOM tree
-	 * @param flag is used to determine whether the textCnt or LinkCnt should be returned from the base case
+	 * @param flag is used to determine whether the textCnt or linkCnt value should be returned from the base case
 	 * @return an integer that represents either terminal counts of text and links or the value zero which means
 	 * the algorithm has finished
 	 */
 	public static int nonTerminalNode(Node child2, boolean flag)
 	{
-		 
+		//initializing base counts 
 		int terminalTextCnt=0; 
 		int terminalLinkCnt=0;
-		//base case where node is a terminal node (ie., has no children)
+		//base case where node's child is either a textnode, linknode or neither (ie. terminal node)
 		if(child2.childNodeSize()==1 && child2.childNode(0) instanceof TextNode)
 		{
 			Node terminalchild = child2.childNode(0); 
@@ -306,10 +305,12 @@ public class InformationExtrationAlgorithms {
 		}
 		else if(child2.childNodeSize()==1 && child2.childNode(0) instanceof Element)
 		{
+			//determines if node's child is a linknode or node's parent is a linknode 
 			Node terminalchild = child2.childNode(0);
 			Node parent = terminalchild.parent();
 			String parentName = parent.nodeName(); 
-			if(parentName.equals("a"))
+			String childName = terminalchild.nodeName(); 
+			if(parentName.equals("a") || childName.equals("a"))
 			{
 				if(flag==true) //if so the amount of text will be 1
 				{
@@ -324,33 +325,33 @@ public class InformationExtrationAlgorithms {
  
 			}
 		}
-		else if (child2.childNodeSize()==0)
+		else if (child2.childNodeSize()==0) //third case used as a catch all
 		{
 			if(flag==true)
 			{
-				terminalTextCnt = 0; 
+				terminalTextCnt = 0; //if so the amount of text will be zero 
 				return terminalTextCnt; 
 			}
 			if(flag==false)
 			{
-				terminalLinkCnt = 0;
+				terminalLinkCnt = 0; //if so the amount of links will be zero
 				return terminalLinkCnt; 
 			}
 		}
-		
+		//main portion of CoreEx algorithm where non-terminal nodes are handled
 		float childRatio=0; 
 		int textCnt =0; 
 		int linkCnt=0; 
-		Set<Node> S = new LinkedHashSet<Node>(); 
+		Set<Node> S = new LinkedHashSet<Node>(); //set is used to store nodes
 		int setTextCnt=0; 
 		int setLinkCnt=0;
 		List<Node> children = child2.childNodes();
-		for(Node child: children)
+		for(Node child: children)  //for loop where each child node's text and link counts are iterated through
 		{
-			if (!(child instanceof TextNode))
+			if (!(child instanceof TextNode)) //used to deal with white space characters found in the HTML document
 			{
-				textCnt = textCnt + nonTerminalNode(child, true);
-				linkCnt = linkCnt + nonTerminalNode(child, false); 
+				textCnt = textCnt + nonTerminalNode(child, true); //recursive updating of textCnt value based on child values
+				linkCnt = linkCnt + nonTerminalNode(child, false); //recursive updating of linkCnt values based on child values
 				childRatio = (((float)textCnt-linkCnt)/textCnt);
 				if(childRatio>0.9f)
 				{
@@ -360,29 +361,28 @@ public class InformationExtrationAlgorithms {
 				}
 			}
 		}
-		if (!(S.isEmpty()))
+		//storage and scoring portion of CoreEx
+		if (!(S.isEmpty()))   
 		{
 			Set<Set<Node>> setNodes = store.getS();
-			if(setNodes.contains(S))
+		    if(!(setNodes.contains(S))) //a check to make sure that current set is not already part of stored set
 			{
-				; 
-			}
-			else if(!(setNodes.contains(S)))
-			{
-				
+				//CoreEx's weighted scoring function
 				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + 
 					       	   (weightText * ((float)setTextCnt/pageText)); 
 				
+				//if storage is initially empty add the set S to storage and keep the values of 
+				//setTextCnt, setLinkCnt, its score, and the depth within the DOM tree
 				if (store.isEmpty())
 				{
 					store.setS(S);
 					store.setSetTextCnt(setTextCnt);
 					store.setSetLinkCnt(setLinkCnt);
 					store.setScore(score);
-					store.setNodeDepth(getDepth(S.iterator().next()));
+					store.setNodeDepth(getDepth(child2));
 					max=score; 
 				}
-				else
+				else //else apply the the procedure for finding the highest scoring node
 				{
 					if(score > max)
 					{
@@ -391,13 +391,13 @@ public class InformationExtrationAlgorithms {
 						store.setSetTextCnt(setTextCnt);
 						store.setSetLinkCnt(setLinkCnt);
 						store.setScore(score);
-						store.setNodeDepth(getDepth(S.iterator().next()));
+						store.setNodeDepth(getDepth(child2));
 						max=score; 
 					}
-					else if (score==max)
+					else if (score==max) //if the score are tied, the node higher in the DOM tree is stored
 					{
 						int previousDepth = store.getNodeDepth(); 
-						int newDepth = getDepth(S.iterator().next()); 
+						int newDepth = getDepth(child2); 
 						if (newDepth < previousDepth)
 						{
 							store.remove();
@@ -412,14 +412,14 @@ public class InformationExtrationAlgorithms {
 						{
 							; 
 						}
-						else
+						else //if the nodes have the same depth (ie., siblings) choose randomly 
 						{
 							int randomPick = (int)Math.random()*1; 
-							if (randomPick==0)
+							if (randomPick==0) //if a zero is returned do nothing
 							{
 								; 
 							}
-							else
+							else //else if a 1 is chosen at random store the node
 							{
 								store.remove();
 								store.setS(S);
@@ -434,15 +434,14 @@ public class InformationExtrationAlgorithms {
 					}
 				}
 			
-				
 			}
 		}
-		if(flag==true)
+		if(flag==true) //if recursive function call is in true state return textCnt
 		{
  
 			return textCnt; 
 		}
-		else
+		else  //if recursive function call is in false state return linkCnt
 		{
 			return linkCnt; 
 		}
@@ -451,7 +450,7 @@ public class InformationExtrationAlgorithms {
 	}
 	
 	/**
-	 * Inner-class used to store the values of a DOM node throughout CoreEx's execution
+	 * Inner-class used to store the highest scoring node and its respective attributes
 	 * @author Adam Standke
 	 *
 	 */
@@ -463,8 +462,15 @@ public class InformationExtrationAlgorithms {
 		public int setTextCnt=0; 
 		public double score=0.0; 
 		
+		/**
+		 * Class constructor that initializes the class 
+		 */
 		public Storage (){}
 		
+		/**
+		 * method that checks to see if the set that stores the set of nodes is empty
+		 * @return boolean that means either true or false
+		 */
 		public boolean isEmpty()
 		{
 			if(S.isEmpty())
@@ -478,27 +484,49 @@ public class InformationExtrationAlgorithms {
 			
 		}
 		
+		/**
+		 * Method that holds the score of the node
+		 * @param score a double that represents its score, higher scores are better [0,1]
+		 */
 		public void setScore(double score)
 		{
 			this.score=score; 
 		}
 
+		/**
+		 * Method that holds the depth of the node in the DOM tree
+		 * @return an int that represent the depth of the node in the DOM tree
+		 */
 		public int getNodeDepth() {
 			return nodeDepth;
 		}
-
+		
+		/**
+		* Method that stores the Node's depth in the DOM tree
+		*/
 		public void setNodeDepth(int nodeDepth) {
 			this.nodeDepth = nodeDepth;
 		}
-
+		
+		/**
+		 * Returns the storage structure that holds the set of nodes S that holds the content
+		 *
+		 */
 		public Set<Set<Node>> getS() {
 			return S;
 		}
-
+		
+		/**
+		 * Adds to the storage structure a set of nodes S that holds the content
+		 * @param s Set<Nodes> holds the set of nodes that holds the content
+		 */
 		public void setS(Set<Node> s) {
 			S.add(s);
 		}
 		
+		/**
+		 * Clears the storage structure for another set of nodes to be stored
+		 */
 		public void remove()
 		{
 			if(!(this.isEmpty()))
@@ -507,22 +535,43 @@ public class InformationExtrationAlgorithms {
 			}
 		}
 
+		/**
+		 * Keeps track of the node's setTextCnt
+		 * @return an int that represents setTextCnt
+		 */
 		public int getSetTextCnt() {
 			return setTextCnt;
 		}
-
+		
+		/**
+		 * Stores the node's setTextCnt 
+		 * @param e an int that represents the node's setTextCnt
+		 */
 		public void setSetTextCnt(int e) {
 			this.setTextCnt=e; 
 		}
-
+		
+		/**
+		 * Keeps track of the node's setLinkCnt
+		 * @return an int that represents setLinkCnt
+		 * 
+		 */
 		public int getSetLinkCnt() {
 			return setLinkCnt;
 		}
 
+		/**
+		 * Stores the node's setLinkCnt 
+		 * @param e an int that represents the node's setLinkCnt
+		 */
 		public void setSetLinkCnt(int e) {
 			this.setLinkCnt=e; 
 		}
-
+		
+		/**
+		 * Returns the score of the node computed by CoreEx function
+		 * @return an int that represents a node's score
+		 */
 		public double getScore() {
 			return score;
 		}
@@ -530,9 +579,11 @@ public class InformationExtrationAlgorithms {
 	}
 	
 	/**
-	 * 
-	 * @param n
-	 * @return
+	 * Method that is used to calculate a node's depth within a 
+	 * DOM tree by calculating the number of steps it takes to reach the root
+	 * of the tree
+	 * @param n a Node that is part of the DOM tree
+	 * @return an int that represents a Node's depth in the DOM tree
 	 */
 	public static int getDepth(Node n)
 	{
