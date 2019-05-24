@@ -116,7 +116,7 @@ public class InformationExtrationAlgorithms {
 //			}
 //		}
 		
-		File folder = new File("/Users/adam/Desktop/simple.html"); 
+		File folder = new File("/Users/adam/Desktop/aHR0cHM6Ly93d3cuY25uLmNvbS8yMDE5LzA1LzI0L2V1cm9wZS90aGVyZXNhLW1heS1yZXNpZ25zLWJyZXhpdC1nYnItaW50bC9pbmRleC5odG1s.html"); 
 		String root_url = folder.getName();
 		CorexEx(folder, root_url); 
 	}
