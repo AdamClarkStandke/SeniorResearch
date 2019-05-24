@@ -17,14 +17,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import org.jsoup.select.NodeTraversor;
-import org.jsoup.select.NodeVisitor;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
 import com.opencsv.CSVWriter;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set; 
 
 //import org.junit.Test;
@@ -93,8 +92,8 @@ public class InformationExtrationAlgorithms {
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
 		 pageText=0; 
-		 Linkfile = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/LinkTargetResults.csv");
-		 coreExfile = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/CorexResults.csv");
+		 Linkfile = new File("/Users/adam/Desktop/link.csv");
+		 coreExfile = new File("/Users/adam/Desktop/CoreEx.csv");
 		 linkOutputfile = new FileWriter(Linkfile);
 		 corexOutputfile = new FileWriter(coreExfile);
 		 linkwriter = new CSVWriter(linkOutputfile);
@@ -113,15 +112,29 @@ public class InformationExtrationAlgorithms {
 	 */
 	public static void main(String[] args) throws IOException 
 	{
+		//simple input scanner in which user types in the classification of data and where
+		//data is located in the file directory
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Please enter classification");
+		String classification = scan.nextLine();
+		System.out.println("Please Enter Directory");
+		String directory = scan.nextLine(); 
+		scan.close();
+		
+		//Instantiates the main class and the inner storage class
 		InformationExtrationAlgorithms info = new InformationExtrationAlgorithms(); 
 		store = info.new Storage();	
 		
+		//writes the header of features for link-target Id csv
 		String[] linkheader = {"Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount"}; 
 		linkwriter.writeNext(linkheader);
+		
+		//writes the header of features for CoreEx csv
 		String[] coreExheader = {"MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
 		coreExwriter.writeNext(coreExheader);
 		
-		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/datTested_May22_linkTarget/"); 
+		//opens file directory, pulls in files, decodes filename, and then run's info extract algorithms
+		File folder = new File(directory); 
 		File [] listOfFiles = folder.listFiles(); 
 		for(File file: listOfFiles)
 		{
@@ -131,15 +144,11 @@ public class InformationExtrationAlgorithms {
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-				LinkTargetIdentification(root_url);
-//				CorexEx(file, root_url); 	
+				LinkTargetIdentification(root_url, classification);
+				CorexEx(file, root_url, classification); 	
 			}
 		}
-		linkwriter.close();
-		
-		File folder2 = new File("/Users/adam/Desktop/orginalCNNWebpage_noStyleTags_article.html"); 
-		String root_url = folder2.getName();
-		CorexEx(folder2, root_url);
+		linkwriter.close(); 
 		coreExwriter.close();
 	}
 	
@@ -153,7 +162,7 @@ public class InformationExtrationAlgorithms {
 	 * @param baseurl the root URL that will be parsed for information
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
-	public static void LinkTargetIdentification(String baseurl) throws IOException 
+	public static void LinkTargetIdentification(String baseurl, String classification) throws IOException 
 	{   
 		//features to extract for each link
 		boolean num_or_id=false; 
@@ -239,14 +248,14 @@ public class InformationExtrationAlgorithms {
 			reservedWord=true; //checks if link has player word in link
 		}
 		
-		//writing to csv file for link target
+		//writing to csv file for link target the different feature values
 		String number = Boolean.toString(num_or_id); 
 		String Date = Boolean.toString(date); 
 		String word = Boolean.toString(reservedWord);
 		String slash = Boolean.toString(endWithSlash); 
 		String Length = Integer.toString(lenghLink); 
 		String numslashes = Integer.toString(numForwardSlashes); 
-		String[] data = {number, Date, Length, slash, word, numslashes}; 
+		String[] data = {number, Date, Length, slash, word, numslashes, classification}; 
 		linkwriter.writeNext(data);
   
 	}
@@ -259,8 +268,9 @@ public class InformationExtrationAlgorithms {
 	 * @param baseurl is the root URL of the web page
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
-	public static void CorexEx(File file, String baseurl) throws IOException
+	public static void CorexEx(File file, String baseurl, String classification) throws IOException
 	{
+		
 		//Opens the document for traversing the document
 		Document doc = Jsoup.parse(file, "UTF-8", baseurl);
 		doc.outputSettings().indentAmount(0).prettyPrint(false);
@@ -346,11 +356,11 @@ public class InformationExtrationAlgorithms {
         System.out.println("Frequcney count:");
         System.out.print(max_count);
 		
-        //CSV file that contains features extracted by CorexEx
+        //CSV file that contains feature values extracted by CorexEx
         String freqCount = Integer.toString(max_count);
         String mainScore = Double.toString(scoreMainContentNode);
         String depthDomTree = Integer.toString(store.getNodeDepth()); 
-        String[] data = {mainTagName, first, freqCount, mainScore, depthDomTree}; 
+        String[] data = {mainTagName, first, freqCount, mainScore, depthDomTree, classification}; 
         coreExwriter.writeNext(data);
 		
 	}

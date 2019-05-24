@@ -59,9 +59,9 @@ def firefox_list_history():
        driver.get(row[0])
        content = driver.page_source
        #preprocesses the html dodcument(want to get rid of script tags and forms)
-       cleaner = clean.Cleaner(style=True, page_structure=False, safe_attrs_only=False, 
-                               remove_unknown_tags=True, links=False, scripts=True,
-                               javascript=True, forms=True, embedded=False, comments=True, meta=False,
+       cleaner = clean.Cleaner(style=True, inline_style=True, page_structure=False, safe_attrs_only=False, 
+                               remove_unknown_tags=True, links=False, scripts=True, kill_tags=['noscript'],
+                               javascript=True, forms=True, embedded=True, comments=True, meta=False,
                                add_nofollow=False, frames=False, annoying_tags=False, processing_instructions=True)
        content = cleaner.clean_html(content)
        with open(file, 'w+') as f:
