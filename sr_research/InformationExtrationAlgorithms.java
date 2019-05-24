@@ -1,6 +1,7 @@
 package sr_research;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,7 +22,8 @@ import org.jsoup.select.NodeVisitor;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
-import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
+
 import java.util.List;
 import java.util.Set; 
 
@@ -65,13 +67,20 @@ public class InformationExtrationAlgorithms {
 	private static float weightRatio = 0.99f; 
 	private static float weightText = 0.01f; 
 	private static int pageText;
-	private static Node htmlbody; 
-    
+	private static Node htmlbody;
+	private static File coreExfile;
+	private static File Linkfile;  
+	private static FileWriter linkOutputfile;
+	private static FileWriter corexOutputfile;
+	private static CSVWriter coreExwriter;
+	private static CSVWriter linkwriter; 
+	
     /**
      * Constructor that compiles the case-sensitive regrex pattern once, 
      * so that it does not have to be recompiled multiple times for each web page 
+     * @throws IOException 
      */
-	public InformationExtrationAlgorithms() 
+	public InformationExtrationAlgorithms() throws IOException 
 	{
 		 gallery = Pattern.compile(gallery_pattern, Pattern.CASE_INSENSITIVE); 
 		 video = Pattern.compile(video_pattern, Pattern.CASE_INSENSITIVE);
@@ -84,7 +93,12 @@ public class InformationExtrationAlgorithms {
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
 		 pageText=0; 
-		 
+		 Linkfile = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/LinkTargetResults.csv");
+		 coreExfile = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/CorexResults.csv");
+		 linkOutputfile = new FileWriter(Linkfile);
+		 corexOutputfile = new FileWriter(coreExfile);
+		 linkwriter = new CSVWriter(linkOutputfile);
+		 coreExwriter = new CSVWriter(corexOutputfile);
 	}
 
 	/**
@@ -100,25 +114,33 @@ public class InformationExtrationAlgorithms {
 	public static void main(String[] args) throws IOException 
 	{
 		InformationExtrationAlgorithms info = new InformationExtrationAlgorithms(); 
-		store = info.new Storage();
-//		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/datTested_May22_linkTarget/"); 
-//		File [] listOfFiles = folder.listFiles(); 
-//		for(File file: listOfFiles)
-//		{
-//			if(file.isFile())
-//			{
-//				String rm_html = file.getName(); 
-//				rm_html=rm_html.replace(".html", ""); 
-//				byte[] decoded = Base64.decodeBase64(rm_html);
-//				String root_url= new String(decoded, "UTF-8");
-//				LinkTargetIdentification(root_url);
-//				CorexEx(file, root_url); 
-//			}
-//		}
+		store = info.new Storage();	
 		
-		File folder = new File("/Users/adam/Desktop/aHR0cHM6Ly93d3cuY25uLmNvbS8yMDE5LzA1LzI0L2V1cm9wZS90aGVyZXNhLW1heS1yZXNpZ25zLWJyZXhpdC1nYnItaW50bC9pbmRleC5odG1s.html"); 
-		String root_url = folder.getName();
-		CorexEx(folder, root_url); 
+		String[] linkheader = {"Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount"}; 
+		linkwriter.writeNext(linkheader);
+		String[] coreExheader = {"MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
+		coreExwriter.writeNext(coreExheader);
+		
+		File folder = new File("/Users/adam/eclipse-workspace/sr_research/sr_research_498_adam_new_project/going_headless/data/datTested_May22_linkTarget/"); 
+		File [] listOfFiles = folder.listFiles(); 
+		for(File file: listOfFiles)
+		{
+			if(file.isFile())
+			{
+				String rm_html = file.getName(); 
+				rm_html=rm_html.replace(".html", ""); 
+				byte[] decoded = Base64.decodeBase64(rm_html);
+				String root_url= new String(decoded, "UTF-8");
+				LinkTargetIdentification(root_url);
+//				CorexEx(file, root_url); 	
+			}
+		}
+		linkwriter.close();
+		
+		File folder2 = new File("/Users/adam/Desktop/orginalCNNWebpage_noStyleTags_article.html"); 
+		String root_url = folder2.getName();
+		CorexEx(folder2, root_url);
+		coreExwriter.close();
 	}
 	
 	/**
@@ -217,8 +239,16 @@ public class InformationExtrationAlgorithms {
 			reservedWord=true; //checks if link has player word in link
 		}
 		
-	    
-	    	   
+		//writing to csv file for link target
+		String number = Boolean.toString(num_or_id); 
+		String Date = Boolean.toString(date); 
+		String word = Boolean.toString(reservedWord);
+		String slash = Boolean.toString(endWithSlash); 
+		String Length = Integer.toString(lenghLink); 
+		String numslashes = Integer.toString(numForwardSlashes); 
+		String[] data = {number, Date, Length, slash, word, numslashes}; 
+		linkwriter.writeNext(data);
+  
 	}
 	
 	/**
@@ -246,9 +276,32 @@ public class InformationExtrationAlgorithms {
 		
 		//calls the main function of CoreEX that recursively traverses the DOM tree
 		nonTerminalNode(body, true);
+	
+		//<----Features extracted from CoreEx---->
 		
-		//prints out the main content node's and their HTML content to the screen
+		//gets the main content Tag of the web page 
+		Node mainContentTag = store.getMainContentNode(); 
+		String mainTagName = mainContentTag.nodeName();
+		System.out.println("Main Content node:");
+		System.out.println(mainTagName);
+		List<Node> children = mainContentTag.childNodes();
+		for(Node child: children)
+		{
+			System.out.println(child.outerHtml());
+			System.out.println("\n");
+		}
+		System.out.println("\n");
+		
+		//gets the score that CoreEx assigned to the main content of the web page
+		double scoreMainContentNode = store.getScore();
+		System.out.println("Main Content node's Score:");
+		System.out.print(scoreMainContentNode);
+		System.out.println("\n");
+		
+		//gets the node with the highest frequency count in the set S
+		System.out.println("Sub Node with the highest frequency count:");
 		Iterator<Set<Node>> tag = store.getS().iterator(); 
+		ArrayList<String> S = new ArrayList<String>(); 
 		while(tag.hasNext())
 		{
 			Set<Node> nodes = tag.next();
@@ -256,13 +309,49 @@ public class InformationExtrationAlgorithms {
 			while (nodeIterator.hasNext())
 			{
 				Node mainContent = nodeIterator.next();
-				System.out.println(mainContent.nodeName());
-				System.out.println(mainContent.outerHtml());
+				S.add(mainContent.nodeName()); 
 			}
 		}
+		//procedure to find the most frequent node in the set S
+		int max_count = 1; 
+	    int curr_count = 1;
+	    String first = null; 
+	    if (!(S.isEmpty()))
+	    {
+	    	first= S.get(0); 
+	    }
+	    for (int i = 1; i < S.size(); i++) 
+        { 
+            if (S.get(i).equalsIgnoreCase(S.get(i-1)))
+                curr_count++; 
+            else 
+            { 
+                if (curr_count > max_count) 
+                { 
+                    max_count = curr_count; 
+                    first = S.get(i-1); 
+                } 
+                curr_count = 1; 
+            } 
+        } 
+        // If last element is most frequent 
+        if (curr_count > max_count) 
+        { 
+            max_count = curr_count; 
+            first = S.get(S.size()-1); 
+        } 
+        
+        System.out.println(first);
+        System.out.println("\n");
+        System.out.println("Frequcney count:");
+        System.out.print(max_count);
 		
-		//other features to extract!!!(if possible) 
-		
+        //CSV file that contains features extracted by CorexEx
+        String freqCount = Integer.toString(max_count);
+        String mainScore = Double.toString(scoreMainContentNode);
+        String depthDomTree = Integer.toString(store.getNodeDepth()); 
+        String[] data = {mainTagName, first, freqCount, mainScore, depthDomTree}; 
+        coreExwriter.writeNext(data);
 		
 	}
 	
@@ -375,6 +464,7 @@ public class InformationExtrationAlgorithms {
 				//setTextCnt, setLinkCnt, its score, and the depth within the DOM tree
 				if (store.isEmpty())
 				{
+					store.setMainContentNode(child2);
 					store.setS(S);
 					store.setSetTextCnt(setTextCnt);
 					store.setSetLinkCnt(setLinkCnt);
@@ -387,6 +477,7 @@ public class InformationExtrationAlgorithms {
 					if(score > max)
 					{
 						store.remove();
+						store.setMainContentNode(child2);
 						store.setS(S);
 						store.setSetTextCnt(setTextCnt);
 						store.setSetLinkCnt(setLinkCnt);
@@ -401,6 +492,7 @@ public class InformationExtrationAlgorithms {
 						if (newDepth < previousDepth)
 						{
 							store.remove();
+							store.setMainContentNode(child2);
 							store.setS(S);
 							store.setSetTextCnt(setTextCnt);
 							store.setSetLinkCnt(setLinkCnt);
@@ -422,6 +514,7 @@ public class InformationExtrationAlgorithms {
 							else //else if a 1 is chosen at random store the node
 							{
 								store.remove();
+								store.setMainContentNode(child2);
 								store.setS(S);
 								store.setSetTextCnt(setTextCnt);
 								store.setSetLinkCnt(setLinkCnt);
@@ -457,6 +550,7 @@ public class InformationExtrationAlgorithms {
 	public class Storage 
 	{
 		public int  nodeDepth=0; 
+		public Node mainNode; 
 		public Set<Set<Node>> S= new LinkedHashSet<Set<Node>>(); 
 		public int setLinkCnt=0; 
 		public int setTextCnt=0; 
@@ -482,6 +576,16 @@ public class InformationExtrationAlgorithms {
 				return false;
 			}
 			
+		}
+		
+		public void setMainContentNode(Node mainContent)
+		{
+			this.mainNode=mainContent; 
+		}
+		
+		public Node getMainContentNode()
+		{
+			return this.mainNode; 
 		}
 		
 		/**
