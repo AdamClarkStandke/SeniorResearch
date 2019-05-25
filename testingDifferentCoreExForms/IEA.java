@@ -3,6 +3,7 @@ package testingDifferentCoreExForms;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -93,7 +94,7 @@ public class IEA {
 		 datepattern= Pattern.compile(dateRegrex);
 		 pageText=0; 
 		 Linkfile = new File("/Users/adam/Desktop/link.csv");
-		 coreExfile = new File("/Users/adam/Desktop/CoreEx.csv");
+		 coreExfile = new File("/Users/adam/Desktop/TestCSV_Corex.csv");
 		 linkOutputfile = new FileWriter(Linkfile);
 		 corexOutputfile = new FileWriter(coreExfile);
 		 linkwriter = new CSVWriter(linkOutputfile);
@@ -131,6 +132,10 @@ public class IEA {
 		//writes the header of features for CoreEx csv
 		String[] coreExheader = {"MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
 		coreExwriter.writeNext(coreExheader);
+		
+		//prints output to files called ModifiedCorex where only parentlinks are scored 
+		PrintStream fileOut = new PrintStream("ModifiedCorex_parentLinksOnly_articles_fox.html");
+		System.setOut(fileOut);
 		
 		//opens file directory, pulls in files, decodes filename, and then run's info extract algorithms
 		File folder = new File(directory); 
@@ -404,12 +409,11 @@ public class IEA {
 		}
 		else if(child2.childNodeSize()==1 && child2.childNode(0) instanceof Element)
 		{
-			//determines if node's child is a linknode or node's parent is a linknode 
+			//determines if node's parent is a linknode 
 			Node terminalchild = child2.childNode(0);
 			Node parent = terminalchild.parent();
-			String parentName = parent.nodeName(); 
-			String childName = terminalchild.nodeName(); 
-			if(parentName.equals("a") || childName.equals("a"))
+			String parentName = parent.nodeName();  
+			if(parentName.equals("a"))
 			{
 				terminalValues[0]=1; 
 				terminalValues[1]=1; 
