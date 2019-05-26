@@ -4,12 +4,16 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
@@ -67,6 +71,7 @@ public class IEA {
 	private static float weightRatio = 0.99f; 
 	private static float weightText = 0.01f; 
 	private static int pageText;
+	private static int count;
 	private static Node htmlbody;
 	private static File coreExfile;
 	private static File Linkfile;  
@@ -92,9 +97,10 @@ public class IEA {
 		 idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE);
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
-		 pageText=0; 
-		 Linkfile = new File("/Users/adam/Desktop/link.csv");
-		 coreExfile = new File("/Users/adam/Desktop/TestCSV_Corex.csv");
+		 pageText=0;
+		 count=0; 
+		 Linkfile = new File("/Users/adam/Desktop/resultslink_nonarticles_May262019.csv");
+		 coreExfile = new File("/Users/adam/Desktop/resultscoreEx_nonarticles_May262019.csv");
 		 linkOutputfile = new FileWriter(Linkfile);
 		 corexOutputfile = new FileWriter(coreExfile);
 		 linkwriter = new CSVWriter(linkOutputfile);
@@ -126,31 +132,36 @@ public class IEA {
 		info = new IEA(); 
 		
 		//writes the header of features for link-target Id csv
-		String[] linkheader = {"Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount"}; 
+		String[] linkheader = {"Number", "BaseURl","Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount"}; 
 		linkwriter.writeNext(linkheader);
 		
 		//writes the header of features for CoreEx csv
-		String[] coreExheader = {"MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
+		String[] coreExheader = {"Number","BaseUrl", "MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
 		coreExwriter.writeNext(coreExheader);
 		
 		//prints output to files called ModifiedCorex where only parentlinks are scored 
-		PrintStream fileOut = new PrintStream("ModifiedCorex_parentLinksOnly_articles_fox.html");
+		PrintStream fileOut = new PrintStream("nonarticlelinks.html");
 		System.setOut(fileOut);
 		
-		//opens file directory, pulls in files, decodes filename, and then run's info extract algorithms
-		File folder = new File(directory); 
-		File [] listOfFiles = folder.listFiles(); 
-		for(File file: listOfFiles)
+		
+		//opens file directorectory, pulls in files, decodes filename, and then run's info extract algorithms
+		List<Path> files = Files.walk(Paths.get(directory)).collect(Collectors.toList());
+		Iterator<Path> path = files.iterator();
+		while(path.hasNext())
 		{
-			if(file.isFile())
+			Path path2 = path.next(); 
+			File file = path2.toFile();
+			if (file.isFile() && (!(file.isHidden())))
 			{
+				count++; 
 				String rm_html = file.getName(); 
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-				//LinkTargetIdentification(root_url, classification);
-				CorexEx(file, root_url, classification); 	
+				LinkTargetIdentification(root_url, classification);
+				//CorexEx(file, root_url, classification);
 			}
+		 
 		}
 		linkwriter.close(); 
 		coreExwriter.close();
@@ -253,13 +264,14 @@ public class IEA {
 		}
 		
 		//writing to csv file for link target the different feature values
-		String number = Boolean.toString(num_or_id); 
+		String number = Boolean.toString(num_or_id);
+		String num = Integer.toString(count); 
 		String Date = Boolean.toString(date); 
 		String word = Boolean.toString(reservedWord);
 		String slash = Boolean.toString(endWithSlash); 
 		String Length = Integer.toString(lenghLink); 
 		String numslashes = Integer.toString(numForwardSlashes); 
-		String[] data = {number, Date, Length, slash, word, numslashes, classification}; 
+		String[] data = {num, baseurl, number, Date, Length, slash, word, numslashes, classification}; 
 		linkwriter.writeNext(data);
   
 	}
@@ -300,13 +312,14 @@ public class IEA {
 		//gets the main content Tag of the web page 
 		Node mainContentTag = store.getMainContentNode(); 
 		String mainTagName = mainContentTag.nodeName();
+		System.out.println(baseurl);
+		System.out.println("\n\n");
 		System.out.println("Main Content node:");
 		System.out.println(mainTagName);
 		List<Node> children = mainContentTag.childNodes();
 		for(Node child: children)
 		{
 			System.out.println(child.outerHtml());
-			System.out.println("\n");
 		}
 		System.out.println("\n");
 		
@@ -363,12 +376,14 @@ public class IEA {
         System.out.println("\n");
         System.out.println("Frequcney count:");
         System.out.print(max_count);
+        System.out.println("\n\n\n");
 		
         //CSV file that contains feature values extracted by CorexEx
         String freqCount = Integer.toString(max_count);
+        String num = Integer.toString(count); 
         String mainScore = Double.toString(scoreMainContentNode);
         String depthDomTree = Integer.toString(store.getNodeDepth()); 
-        String[] data = {mainTagName, first, freqCount, mainScore, depthDomTree, classification}; 
+        String[] data = {num, baseurl, mainTagName, first, freqCount, mainScore, depthDomTree, classification}; 
         coreExwriter.writeNext(data);
 		
 	}
