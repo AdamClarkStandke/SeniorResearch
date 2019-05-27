@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
@@ -48,15 +49,20 @@ public class IEA {
 	//instance variables used for link-target identification and CoreEx
 	private static String gallery_pattern = "\\bgallery?";
 	private static String video_pattern = "\\bvideos?";
+	private static String podcast_pattern = "\\bpodcasts?";
+	private static String picture_pattern = "\\bpictures?"; 
     private static String image_pattern = "\\bimages?";
     private static String photo_pattern = "\\bphotos?";
     private static String slideshow_pattern = "\\bslideshows?";
     private static String episode_pattern = "\\bepisodes?";
     private static String player_pattern = "\\bplayers?";
     private static String id_pattern = "id=[\\d]+";
-    private static String numberRegrex= "[-]\\d{5,}[-/]?|[/]\\d{5,}[/]"; 
+    private static String numberRegrex= "[-a-zA-Z]\\d{6,}[-/]?|[/]\\d{5,}[/]"; 
     private static String dateRegrex ="\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,4}|[/]\\d{8}[-]";
+    private static String classification=null; 
     private static Pattern gallery; 
+    private static Pattern podcast; 
+    private static Pattern picture; 
     private static Pattern video;
     private static Pattern image;
     private static Pattern photo;
@@ -94,13 +100,15 @@ public class IEA {
 		 slideshow = Pattern.compile(slideshow_pattern, Pattern.CASE_INSENSITIVE);
 		 episode = Pattern.compile(episode_pattern, Pattern.CASE_INSENSITIVE);
 		 player = Pattern.compile(player_pattern, Pattern.CASE_INSENSITIVE);
+		 picture = Pattern.compile(picture_pattern, Pattern.CASE_INSENSITIVE);
+		 podcast = Pattern.compile(podcast_pattern, Pattern.CASE_INSENSITIVE);
 		 idpattern = Pattern.compile(id_pattern, Pattern.CASE_INSENSITIVE);
 		 numpattern = Pattern.compile(numberRegrex);
 		 datepattern= Pattern.compile(dateRegrex);
 		 pageText=0;
 		 count=0; 
-		 Linkfile = new File("/Users/adam/Desktop/resultslink_nonarticles_May262019.csv");
-		 coreExfile = new File("/Users/adam/Desktop/resultscoreEx_nonarticles_May262019.csv");
+		 Linkfile = new File("/Users/adam/Desktop/link_results_nonarticles_May272019_v2.csv");
+		 coreExfile = new File("/Users/adam/nonarticles.csv");
 		 linkOutputfile = new FileWriter(Linkfile);
 		 corexOutputfile = new FileWriter(coreExfile);
 		 linkwriter = new CSVWriter(linkOutputfile);
@@ -122,8 +130,8 @@ public class IEA {
 		//simple input scanner in which user types in the classification of data and where
 		//data is located in the file directory
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Please enter classification");
-		String classification = scan.nextLine();
+		System.out.print("Are they articles:");
+		classification = scan.nextLine();
 		System.out.println("Please Enter Directory");
 		String directory = scan.nextLine(); 
 		scan.close();
@@ -132,16 +140,16 @@ public class IEA {
 		info = new IEA(); 
 		
 		//writes the header of features for link-target Id csv
-		String[] linkheader = {"Number", "BaseURl","Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount"}; 
+		String[] linkheader = {"Number", "BaseUrl","Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount", "Article"}; 
 		linkwriter.writeNext(linkheader);
 		
 		//writes the header of features for CoreEx csv
-		String[] coreExheader = {"Number","BaseUrl", "MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree"}; 
+		String[] coreExheader = {"Number","BaseUrl", "MainConentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree", "Article"}; 
 		coreExwriter.writeNext(coreExheader);
 		
 		//prints output to files called ModifiedCorex where only parentlinks are scored 
-		PrintStream fileOut = new PrintStream("nonarticlelinks.html");
-		System.setOut(fileOut);
+		//PrintStream fileOut = new PrintStream("nonarticlev6.html");
+		//System.setOut(fileOut);
 		
 		
 		//opens file directorectory, pulls in files, decodes filename, and then run's info extract algorithms
@@ -158,8 +166,8 @@ public class IEA {
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
 				String root_url= new String(decoded, "UTF-8");
-				LinkTargetIdentification(root_url, classification);
-				//CorexEx(file, root_url, classification);
+				LinkTargetIdentification(root_url);
+				//CorexEx(file, root_url);
 			}
 		 
 		}
@@ -177,7 +185,7 @@ public class IEA {
 	 * @param baseurl the root URL that will be parsed for information
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
-	public static void LinkTargetIdentification(String baseurl, String classification) throws IOException 
+	public static void LinkTargetIdentification(String baseurl) throws IOException 
 	{   
 		//features to extract for each link
 		boolean num_or_id=false; 
@@ -232,7 +240,17 @@ public class IEA {
 		{
 			reservedWord=true; //checks if link has gallery word in link
 		}
-		 
+		
+		if(picture.matcher(baseurl).find())
+		{
+			reservedWord=true; //checks if link has picture word in link
+		}
+		
+		if(podcast.matcher(baseurl).find())
+		{
+			reservedWord=true; //checks if link has podcast word in link
+		}
+		
 		if(video.matcher(baseurl).find())
 		{
 			reservedWord=true; //checks if link has video word in link
@@ -284,7 +302,7 @@ public class IEA {
 	 * @param baseurl is the root URL of the web page
 	 * @throws IOException exception thrown in case an i/o exception occurs
 	 */
-	public static void CorexEx(File file, String baseurl, String classification) throws IOException
+	public static void CorexEx(File file, String baseurl) throws IOException
 	{
 		
 		//Opens the document for traversing the document
@@ -406,41 +424,117 @@ public class IEA {
 		//initializing base counts 
 		terminalValues[0]=0; //holds the word count 
 		terminalValues[1]=0; //holds the link count
-		//base case where node's child is either a textnode, linknode or neither (ie. terminal node)
+		//base case where terminal node is a textnode 
 		if(child2.childNodeSize()==1 && child2.childNode(0) instanceof TextNode)
 		{
 			 
 			//if so the amount of text will be equal to how much text the node contains
 			Node terminalchild = child2.childNode(0);
-			String text_node =  ((TextNode) terminalchild).getWholeText();  
-			StringTokenizer tokens = new StringTokenizer(text_node);
-			if(tokens != null)
+			if(terminalchild.childNodeSize()==0)
 			{
-				terminalValues[0] = tokens.countTokens();
+				String text_node =  ((TextNode) terminalchild).getWholeText();  
+				StringTokenizer tokens = new StringTokenizer(text_node);
+				if(tokens != null)
+				{
+					terminalValues[0] = tokens.countTokens();
+				}
+				terminalValues[1] = 0;
+				return terminalValues;
 			}
-			terminalValues[1] = 0;
-			return terminalValues; 
+			
 				
 		}
 		else if(child2.childNodeSize()==1 && child2.childNode(0) instanceof Element)
 		{
-			//determines if node's parent is a linknode 
+			//determines if terminal node's parent is a linknode 
 			Node terminalchild = child2.childNode(0);
 			Node parent = terminalchild.parent();
-			String parentName = parent.nodeName();  
-			if(parentName.equals("a"))
+			String parentName = parent.nodeName();
+			
+			//added addition only used for article extraction represents terminal node's two other
+			//ancestors other than node's parent
+			Node grandparent = null; 
+			Node greatGrandParent= null;
+			String grandParentName = null;  
+			String greatGrandParentName =null;
+			
+			if(classification.equalsIgnoreCase("no")) //if data is classified as not being an article this conditional will only run
 			{
-				terminalValues[0]=1; 
-				terminalValues[1]=1; 
-				return terminalValues; 
- 
+				if(terminalchild.childNodeSize()==0) //check making sure element is a terminal node
+				{
+					if(parentName.equals("a"))
+					{
+						terminalValues[0]=1; //assign traditional CoreEx counts to terminal linknode 
+						terminalValues[1]=1; 
+						return terminalValues;
+					}
+				}
+			}
+			else if(classification.equalsIgnoreCase("yes")) //if data is classified as being an article this conditional will only run
+			{
+				if(terminalchild.childNodeSize()==0) //check making sure element is a terminal node
+				{
+					//because many links are sometimes contained within article texts
+					//this simple heuristic checks to see if a link is contained within a paragraph
+					//by traversing up the DOM tree until the node's great grandparent is reached;
+					//if the node's parent is a link node, and the node's grandparent is not a li node, and
+					//if the node's great grandparent is a p node than the text that that is contained 
+					//within the link is scored similar to how a text node is. The only difference is that
+					//the linkCnt is set to one
+					if(parent.hasParent())
+					{
+						grandparent = parent.parent();
+						grandParentName= grandparent.nodeName(); 
+					}
+					if(grandparent.hasParent())
+					{
+						greatGrandParent = grandparent.parent();
+						greatGrandParentName = greatGrandParent.nodeName(); 
+					}
+			  
+					if(parentName.equals("a") && grandparent != null) //if terminal node has grandparent but grandparent is li node, assign traditional CoreEx scoring 
+					{
+						if(grandParentName.equals("li"))
+						{
+							terminalValues[0]=1; 
+							terminalValues[1]=1; 
+							return terminalValues; 
+						}
+				 
+					}
+					else if(parentName.equals("a") && grandparent != null && greatGrandParent != null) //grabs links contained within a paragraph block
+					{
+						if(!(grandParentName.equals("li")) && greatGrandParentName.equals("p"))
+						{
+							String text_node =  ((Element) terminalchild).ownText();  
+							StringTokenizer tokens = new StringTokenizer(text_node);
+							if(tokens != null)
+							{
+								terminalValues[0] = tokens.countTokens();
+							}
+							terminalValues[1]=1; 
+							return terminalValues; 
+						}
+			 
+					}
+					else if(parentName.equals("a")) //in all other cases just assign CoreEx text and linkCnts to terminal node
+					{
+						terminalValues[0]=1; 
+						terminalValues[1]=1; 
+						return terminalValues;
+				
+					}
+				}
 			}
 		}
-		else if (child2.childNodeSize()==0) //third case used as a catch all
+		else if (child2.childNodeSize()==1 && child2.childNode(0) instanceof Element) //third case used as a catch all where terminal node is not a textnode or linknode
 		{
-			terminalValues[0]=0; 
-			terminalValues[1]=1; 
-			return terminalValues; 
+			if(child2.childNode(0).childNodeSize()==0)
+			{
+				terminalValues[0]=0; 
+				terminalValues[1]=0; 
+				return terminalValues;
+			}
 		}
 		//main portion of CoreEx algorithm where non-terminal nodes are handled
 		float childRatio=0; 
@@ -522,7 +616,7 @@ public class IEA {
 						}
 						else //if the nodes have the same depth (ie., siblings) choose randomly 
 						{
-							int randomPick = (int)Math.random()*1; 
+							int randomPick = (int)(Math.random()*2); 
 							if (randomPick==0) //if a zero is returned do nothing
 							{
 								; 
