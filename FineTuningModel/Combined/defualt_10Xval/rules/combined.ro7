@@ -1,0 +1,104 @@
+
+C4.5 [release 8] rule generator	Wed May 29 19:02:24 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 310 cases (11 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 11:
+    	tag bounding main content = div
+    	length > 46
+    	score of tag bounding main content > 0.99519
+	->  class yes  [97.9%]
+
+Rule 6:
+    	date = TRUE
+	->  class yes  [97.1%]
+
+Rule 2:
+    	number = TRUE
+    	score of tag bounding main content > 1.00858
+	->  class yes  [96.7%]
+
+Rule 9:
+    	tag bounding main content = section
+    	length > 46
+	->  class yes  [87.1%]
+
+Rule 5:
+    	number of forward slash marks = 2
+    	DOM tree depth of tag bounding main content = 13
+	->  class yes  [82.0%]
+
+Rule 8:
+    	tag bounding main content = ul
+	->  class no  [97.5%]
+
+Rule 7:
+    	tag bounding main content = div
+    	score of tag bounding main content <= 0.99519
+	->  class no  [97.2%]
+
+Rule 3:
+    	number = FALSE
+    	length <= 46
+	->  class no  [96.7%]
+
+Rule 13:
+    	tag bounding main content = body
+	->  class no  [82.0%]
+
+Default class: no
+
+
+Evaluation on training data (310 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  11     3   2.1%   127      1 (0.8%)	    30 (30|0) 	yes
+   6     1   2.9%     6      0 (0.0%)	     1 (1|0) 	yes
+   2     2   3.3%    15      0 (0.0%)	    15 (15|0) 	yes
+   9     2  12.9%     5      0 (0.0%)	     5 (5|0) 	yes
+   5     2  18.0%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     1   2.5%    55      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.8%    48      0 (0.0%)	     0 (0|0) 	no
+   3     2   3.3%    47      0 (0.0%)	     0 (0|0) 	no
+  13     1  18.0%     5      0 (0.0%)	     0 (0|0) 	no
+
+Tested 310, errors 1 (0.3%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  153     	(a): class yes
+	    1  156	(b): class no
+
+
+Evaluation on test data (34 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  11     3   2.1%    13      0 (0.0%)	     2 (2|0) 	yes
+   6     1   2.9%     1      0 (0.0%)	     1 (1|0) 	yes
+   2     2   3.3%     2      0 (0.0%)	     2 (2|0) 	yes
+   8     1   2.5%     9      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.8%     3      0 (0.0%)	     0 (0|0) 	no
+   3     2   3.3%     5      0 (0.0%)	     0 (0|0) 	no
+  13     1  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 34, errors 0 (0.0%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16     	(a): class yes
+	        18	(b): class no
+

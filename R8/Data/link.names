@@ -1,30 +1,8 @@
-|created by Adam Standke
-|
-|1. Title: Does an article exist within a web page?
-|
-|2. Source Information
-|   web pages gathered from the following websites: CNN, DW news, abc news,  
-|   nbc news, cbs news, fox news, bbc news, yahoo news, reddit, foodnetwork,
-|   the verge, the huffington post
-| 
-|3. Number of Instances: 344 
-|
-|4. Number of Attributes: 6 
-|
-|---------------------------------------------------------------------------
-
-
-|  Classes
-|  -------
-
 yes, no.
 
-|  Attributes
-|  ----------
-
-number:                                             true, false.
-date:                                               true, false.
+number:                                             TRUE, FALSE.
+date:                                               TRUE, FALSE.
 length:                                             continuous.
-ends with forward slash mark:                       true, false.
-reserved word:                                      true, false.
-number of forward slash marks:                      continuous.
+ends with forward slash mark:                       TRUE, FALSE.
+reserved word:                                      TRUE, FALSE.
+number of forward slash marks:                      discrete 6. 

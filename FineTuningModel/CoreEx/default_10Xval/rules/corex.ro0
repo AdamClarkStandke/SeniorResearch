@@ -1,0 +1,184 @@
+
+C4.5 [release 8] rule generator	Wed May 29 18:34:06 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (5 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 6:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.6%]
+
+Rule 8:
+    	frequency count of most frequent tag > 11
+    	score of tag bounding main content <= 1.01131
+	->  class no  [96.6%]
+
+Rule 22:
+    	frequency count of most frequent tag > 19
+    	score of tag bounding main content <= 1.03882
+	->  class no  [93.0%]
+
+Rule 3:
+    	DOM tree depth of tag bounding main content = 14
+	->  class no  [91.2%]
+
+Rule 14:
+    	DOM tree depth of tag bounding main content = 7
+	->  class no  [88.2%]
+
+Rule 19:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 12:
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content <= 0.99844
+	->  class no  [87.3%]
+
+Rule 17:
+    	DOM tree depth of tag bounding main content = 2
+	->  class no  [84.1%]
+
+Rule 24:
+    	frequency count of most frequent tag > 37
+	->  class no  [82.2%]
+
+Rule 4:
+    	DOM tree depth of tag bounding main content = 15
+	->  class no  [82.0%]
+
+Rule 23:
+    	frequency count of most frequent tag <= 37
+    	score of tag bounding main content > 1.03882
+	->  class yes  [97.6%]
+
+Rule 21:
+    	frequency count of most frequent tag <= 19
+    	score of tag bounding main content > 1.01131
+	->  class yes  [97.4%]
+
+Rule 13:
+    	frequency count of most frequent tag <= 11
+    	score of tag bounding main content > 0.99844
+    	DOM tree depth of tag bounding main content = 11
+	->  class yes  [94.8%]
+
+Rule 1:
+    	most frequent tag listed in the main content = p
+	->  class yes  [92.2%]
+
+Rule 7:
+    	most frequent tag listed in the main content = div
+    	frequency count of most frequent tag <= 11
+    	DOM tree depth of tag bounding main content = 8
+	->  class yes  [84.1%]
+
+Rule 10:
+    	most frequent tag listed in the main content = div
+    	frequency count of most frequent tag <= 10
+    	DOM tree depth of tag bounding main content = 10
+	->  class yes  [79.4%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.4%    56      0 (0.0%)	     0 (0|0) 	no
+   8     2   3.4%    42      1 (2.4%)	     0 (0|0) 	no
+  22     2   7.0%     3      0 (0.0%)	     0 (0|0) 	no
+   3     1   8.8%     1      0 (0.0%)	     1 (1|0) 	no
+  14     1  11.8%     7      0 (0.0%)	     0 (0|0) 	no
+  19     1  11.8%    10      0 (0.0%)	     0 (0|0) 	no
+  12     2  12.7%    26      4 (15.4%)	    -3 (0|3) 	no
+  17     1  15.9%     4      0 (0.0%)	     0 (0|0) 	no
+  24     1  17.8%     7      1 (14.3%)	    -1 (0|1) 	no
+   4     1  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+  23     2   2.4%    56      0 (0.0%)	     3 (3|0) 	yes
+  21     2   2.6%    49      0 (0.0%)	     4 (4|0) 	yes
+  13     3   5.2%    14      0 (0.0%)	     8 (8|0) 	yes
+   1     1   7.8%    24      4 (16.7%)	    16 (20|4) 	yes
+   7     3  15.9%     2      0 (0.0%)	     2 (2|0) 	yes
+  10     3  20.6%     3      0 (0.0%)	     3 (3|0) 	yes
+
+Drop rule 12
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.4%    56      0 (0.0%)	     0 (0|0) 	no
+   8     2   3.4%    42      1 (2.4%)	     0 (0|0) 	no
+  22     2   7.0%     3      0 (0.0%)	     0 (0|0) 	no
+   3     1   8.8%     1      0 (0.0%)	     1 (1|0) 	no
+  14     1  11.8%     7      0 (0.0%)	     0 (0|0) 	no
+  19     1  11.8%    10      0 (0.0%)	     0 (0|0) 	no
+  17     1  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+  24     1  17.8%     7      1 (14.3%)	    -1 (0|1) 	no
+   4     1  18.0%     5      0 (0.0%)	     0 (0|0) 	no
+  23     2   2.4%    56      0 (0.0%)	     3 (3|0) 	yes
+  21     2   2.6%    49      0 (0.0%)	     4 (4|0) 	yes
+  13     3   5.2%    14      0 (0.0%)	     8 (8|0) 	yes
+   1     1   7.8%    24      4 (16.7%)	    16 (20|4) 	yes
+   7     3  15.9%     2      0 (0.0%)	     2 (2|0) 	yes
+  10     3  20.6%     6      0 (0.0%)	     6 (6|0) 	yes
+
+Drop rule 24
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.4%    56      0 (0.0%)	     0 (0|0) 	no
+   8     2   3.4%    42      1 (2.4%)	     0 (0|0) 	no
+  22     2   7.0%     3      0 (0.0%)	     0 (0|0) 	no
+   3     1   8.8%     1      0 (0.0%)	     1 (1|0) 	no
+  14     1  11.8%     7      0 (0.0%)	     0 (0|0) 	no
+  19     1  11.8%    10      0 (0.0%)	     0 (0|0) 	no
+  17     1  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+   4     1  18.0%     5      0 (0.0%)	     0 (0|0) 	no
+  23     2   2.4%    56      0 (0.0%)	     3 (3|0) 	yes
+  21     2   2.6%    49      0 (0.0%)	     4 (4|0) 	yes
+  13     3   5.2%    14      0 (0.0%)	     8 (8|0) 	yes
+   1     1   7.8%    25      4 (16.0%)	    17 (21|4) 	yes
+   7     3  15.9%     2      0 (0.0%)	     2 (2|0) 	yes
+  10     3  20.6%     6      0 (0.0%)	     6 (6|0) 	yes
+
+Tested 309, errors 7 (2.3%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  148    3	(a): class yes
+	    4  154	(b): class no
+
+
+Evaluation on test data (35 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.4%     8      0 (0.0%)	     0 (0|0) 	no
+   8     2   3.4%     3      0 (0.0%)	     0 (0|0) 	no
+   3     1   8.8%     1      0 (0.0%)	     1 (1|0) 	no
+  19     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   4     1  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+  23     2   2.4%     9      0 (0.0%)	     0 (0|0) 	yes
+  21     2   2.6%     8      1 (12.5%)	     0 (0|0) 	yes
+   1     1   7.8%     1      0 (0.0%)	     1 (1|0) 	yes
+   7     3  15.9%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 35, errors 1 (2.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	    1   16	(b): class no
+

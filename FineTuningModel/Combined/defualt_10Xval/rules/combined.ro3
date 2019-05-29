@@ -1,0 +1,103 @@
+
+C4.5 [release 8] rule generator	Wed May 29 19:02:23 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 12:
+    	tag bounding main content = div
+    	length > 47
+    	score of tag bounding main content > 0.995009
+	->  class yes  [97.9%]
+
+Rule 6:
+    	date = TRUE
+	->  class yes  [97.2%]
+
+Rule 2:
+    	number = TRUE
+    	score of tag bounding main content > 1.01025
+	->  class yes  [96.7%]
+
+Rule 9:
+    	tag bounding main content = section
+    	length > 47
+	->  class yes  [85.7%]
+
+Rule 3:
+    	number of forward slash marks = 2
+    	DOM tree depth of tag bounding main content = 13
+	->  class yes  [79.4%]
+
+Rule 8:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 7:
+    	date = FALSE
+    	score of tag bounding main content <= 0.995009
+	->  class no  [97.0%]
+
+Rule 4:
+    	number = FALSE
+    	length <= 47
+	->  class no  [96.8%]
+
+Rule 14:
+    	tag bounding main content = body
+	->  class no  [82.0%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  12     3   2.1%   127      1 (0.8%)	    30 (30|0) 	yes
+   6     1   2.8%     7      0 (0.0%)	     2 (2|0) 	yes
+   2     2   3.3%    13      0 (0.0%)	    13 (13|0) 	yes
+   9     2  14.3%     4      0 (0.0%)	     4 (4|0) 	yes
+   3     2  20.6%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     1   2.3%    60      0 (0.0%)	     0 (0|0) 	no
+   7     2   3.0%    51      0 (0.0%)	     0 (0|0) 	no
+   4     2   3.2%    44      0 (0.0%)	     0 (0|0) 	no
+  14     1  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 309, errors 1 (0.3%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  151     	(a): class yes
+	    1  157	(b): class no
+
+
+Evaluation on test data (35 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  12     3   2.1%    14      1 (7.1%)	     2 (3|1) 	yes
+   2     2   3.3%     4      0 (0.0%)	     4 (4|0) 	yes
+   9     2  14.3%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     1   2.3%     4      0 (0.0%)	     0 (0|0) 	no
+   7     2   3.0%     7      0 (0.0%)	     0 (0|0) 	no
+   4     2   3.2%     5      0 (0.0%)	     0 (0|0) 	no
+
+Tested 35, errors 1 (2.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	    1   16	(b): class no
+

@@ -1,0 +1,136 @@
+
+C4.5 [release 8] rule generator	Wed May 29 18:34:07 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 310 cases (5 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 16:
+    	tag bounding main content = div
+    	frequency count of most frequent tag <= 22
+    	score of tag bounding main content > 1.01131
+	->  class yes  [98.7%]
+
+Rule 18:
+    	frequency count of most frequent tag <= 42
+    	score of tag bounding main content > 1.03882
+	->  class yes  [97.7%]
+
+Rule 6:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content = 12
+	->  class yes  [95.6%]
+
+Rule 1:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content = 11
+	->  class yes  [95.2%]
+
+Rule 12:
+    	most frequent tag listed in the main content = div
+    	frequency count of most frequent tag <= 11
+    	score of tag bounding main content > 0.998785
+	->  class yes  [88.5%]
+
+Rule 2:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content = 8
+    	score of tag bounding main content <= 1.01131
+	->  class yes  [85.7%]
+
+Rule 19:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 13:
+    	frequency count of most frequent tag > 11
+    	score of tag bounding main content <= 1.01131
+	->  class no  [96.4%]
+
+Rule 3:
+    	DOM tree depth of tag bounding main content = 14
+	->  class no  [92.6%]
+
+Rule 17:
+    	frequency count of most frequent tag > 22
+    	score of tag bounding main content <= 1.03882
+	->  class no  [92.2%]
+
+Rule 9:
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content <= 0.998785
+	->  class no  [90.1%]
+
+Rule 20:
+    	frequency count of most frequent tag > 42
+	->  class no  [89.9%]
+
+Rule 15:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 5:
+    	DOM tree depth of tag bounding main content = 15
+	->  class no  [84.1%]
+
+Default class: no
+
+
+Evaluation on training data (310 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  16     3   1.3%   105      0 (0.0%)	    25 (25|0) 	yes
+  18     2   2.3%     4      0 (0.0%)	     3 (3|0) 	yes
+   6     2   4.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   1     2   4.8%    11      0 (0.0%)	    11 (11|0) 	yes
+  12     3  11.5%    15      1 (6.7%)	    13 (14|1) 	yes
+   2     3  14.3%     9      0 (0.0%)	     9 (9|0) 	yes
+  19     1   2.3%    59      0 (0.0%)	     0 (0|0) 	no
+  13     2   3.6%    37      1 (2.7%)	     0 (0|0) 	no
+   3     1   7.4%     2      0 (0.0%)	     0 (0|0) 	no
+  17     2   7.8%     2      0 (0.0%)	     0 (0|0) 	no
+   9     2   9.9%    32      3 (9.4%)	     0 (0|0) 	no
+  20     1  10.1%     5      0 (0.0%)	     0 (0|0) 	no
+  15     1  11.8%    10      0 (0.0%)	     0 (0|0) 	no
+
+Tested 310, errors 9 (2.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  145    8	(a): class yes
+	    1  156	(b): class no
+
+
+Evaluation on test data (34 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  16     3   1.3%    13      0 (0.0%)	     4 (4|0) 	yes
+   1     2   4.8%     1      1 (100.0%)	    -1 (0|1) 	yes
+  12     3  11.5%     1      0 (0.0%)	     1 (1|0) 	yes
+   2     3  14.3%     1      0 (0.0%)	     1 (1|0) 	yes
+  19     1   2.3%     5      0 (0.0%)	     0 (0|0) 	no
+  13     2   3.6%     8      0 (0.0%)	     0 (0|0) 	no
+  17     2   7.8%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2   9.9%     2      1 (50.0%)	     0 (0|0) 	no
+  20     1  10.1%     1      0 (0.0%)	     0 (0|0) 	no
+  15     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 34, errors 2 (5.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    1	(a): class yes
+	    1   17	(b): class no
+

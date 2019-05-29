@@ -1,0 +1,146 @@
+
+C4.5 [release 8] rule generator	Wed May 29 18:34:07 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 310 cases (5 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 17:
+    	tag bounding main content = ul
+	->  class no  [97.6%]
+
+Rule 2:
+    	frequency count of most frequent tag > 11
+    	score of tag bounding main content <= 1.01087
+	->  class no  [96.6%]
+
+Rule 11:
+    	DOM tree depth of tag bounding main content = 14
+	->  class no  [91.2%]
+
+Rule 7:
+    	most frequent tag listed in the main content = article
+	->  class no  [89.1%]
+
+Rule 14:
+    	DOM tree depth of tag bounding main content = 7
+	->  class no  [89.1%]
+
+Rule 21:
+    	frequency count of most frequent tag > 42
+	->  class no  [89.1%]
+
+Rule 9:
+    	tag bounding main content = div
+    	score of tag bounding main content <= 1.00097
+    	DOM tree depth of tag bounding main content = 8
+	->  class no  [88.2%]
+
+Rule 19:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Rule 12:
+    	DOM tree depth of tag bounding main content = 15
+	->  class no  [82.0%]
+
+Rule 16:
+    	DOM tree depth of tag bounding main content = 3
+	->  class no  [75.8%]
+
+Rule 20:
+    	tag bounding main content = div
+    	frequency count of most frequent tag <= 42
+    	score of tag bounding main content > 1.01087
+	->  class yes  [97.7%]
+
+Rule 4:
+    	tag bounding main content = div
+    	score of tag bounding main content > 0.996551
+    	DOM tree depth of tag bounding main content = 12
+	->  class yes  [95.5%]
+
+Rule 1:
+    	frequency count of most frequent tag <= 11
+    	DOM tree depth of tag bounding main content = 11
+	->  class yes  [92.0%]
+
+Rule 10:
+    	score of tag bounding main content > 1.00097
+    	score of tag bounding main content <= 1.01087
+    	DOM tree depth of tag bounding main content = 8
+	->  class yes  [82.0%]
+
+Rule 5:
+    	most frequent tag listed in the main content = div
+    	frequency count of most frequent tag <= 10
+    	DOM tree depth of tag bounding main content = 10
+	->  class yes  [79.4%]
+
+Rule 18:
+    	tag bounding main content = section
+    	score of tag bounding main content <= 1.01087
+	->  class yes  [75.6%]
+
+Default class: no
+
+
+Evaluation on training data (310 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  17     1   2.4%    58      0 (0.0%)	     0 (0|0) 	no
+   2     2   3.4%    41      1 (2.4%)	     1 (1|0) 	no
+  11     1   8.8%     1      0 (0.0%)	     0 (0|0) 	no
+   7     1  10.9%    11      0 (0.0%)	     0 (0|0) 	no
+  14     1  10.9%     7      0 (0.0%)	     0 (0|0) 	no
+  21     1  10.9%     6      0 (0.0%)	     0 (0|0) 	no
+   9     3  11.8%     2      0 (0.0%)	     0 (0|0) 	no
+  19     1  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+  12     1  18.0%     5      0 (0.0%)	     0 (0|0) 	no
+  16     1  24.2%     5      0 (0.0%)	     0 (0|0) 	no
+  20     3   2.3%   113      1 (0.9%)	    70 (71|1) 	yes
+   4     3   4.5%     3      0 (0.0%)	     3 (3|0) 	yes
+   1     2   8.0%    18      1 (5.6%)	    16 (17|1) 	yes
+  10     3  18.0%     7      0 (0.0%)	     3 (3|0) 	yes
+   5     3  20.6%     6      0 (0.0%)	     6 (6|0) 	yes
+  18     2  24.4%     5      0 (0.0%)	     5 (5|0) 	yes
+
+Tested 310, errors 5 (1.6%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  150    3	(a): class yes
+	    2  155	(b): class no
+
+
+Evaluation on test data (34 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  17     1   2.4%     6      0 (0.0%)	     0 (0|0) 	no
+   2     2   3.4%     4      0 (0.0%)	     0 (0|0) 	no
+  11     1   8.8%     1      0 (0.0%)	     0 (0|0) 	no
+  12     1  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+  16     1  24.2%     2      0 (0.0%)	     0 (0|0) 	no
+  20     3   2.3%    12      2 (16.7%)	     3 (5|2) 	yes
+   1     2   8.0%     5      2 (40.0%)	     1 (3|2) 	yes
+  18     2  24.4%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 34, errors 6 (17.6%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   14    2	(a): class yes
+	    4   14	(b): class no
+

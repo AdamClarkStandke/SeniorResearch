@@ -1,0 +1,23 @@
+Tested 309, errors 12 (3.9%)   <<
+Tested 35, errors 5 (14.3%)   <<
+Tested 309, errors 10 (3.2%)   <<
+Tested 35, errors 3 (8.6%)   <<
+Tested 309, errors 11 (3.6%)   <<
+Tested 35, errors 2 (5.7%)   <<
+Tested 309, errors 11 (3.6%)   <<
+Tested 35, errors 2 (5.7%)   <<
+Tested 310, errors 12 (3.9%)   <<
+Tested 34, errors 3 (8.8%)   <<
+Tested 310, errors 12 (3.9%)   <<
+Tested 34, errors 5 (14.7%)   <<
+Tested 310, errors 13 (4.2%)   <<
+Tested 34, errors 0 (0.0%)   <<
+Tested 310, errors 13 (4.2%)   <<
+Tested 34, errors 1 (2.9%)   <<
+Tested 310, errors 13 (4.2%)   <<
+Tested 34, errors 0 (0.0%)   <<
+Tested 310, errors 9 (2.9%)   <<
+Tested 34, errors 3 (8.8%)   <<
+
+train:	Tested 309.6, errors 11.6 (3.8%)   <<
+test:	Tested 34.4, errors 2.4 (7.0%)   <<

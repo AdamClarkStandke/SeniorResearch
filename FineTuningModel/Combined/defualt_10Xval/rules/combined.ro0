@@ -1,0 +1,98 @@
+
+C4.5 [release 8] rule generator	Wed May 29 19:02:23 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 13:
+    	tag bounding main content = div
+    	length > 47
+    	score of tag bounding main content > 0.99519
+	->  class yes  [97.9%]
+
+Rule 7:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 2:
+    	number = TRUE
+    	score of tag bounding main content > 1.0025
+	->  class yes  [95.5%]
+
+Rule 10:
+    	tag bounding main content = section
+    	length > 47
+	->  class yes  [85.7%]
+
+Rule 9:
+    	tag bounding main content = ul
+	->  class no  [97.6%]
+
+Rule 8:
+    	date = FALSE
+    	tag bounding main content = div
+    	score of tag bounding main content <= 0.99519
+	->  class no  [97.2%]
+
+Rule 4:
+    	number = FALSE
+    	length <= 47
+	->  class no  [96.9%]
+
+Rule 16:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     3   2.1%   124      1 (0.8%)	    31 (31|0) 	yes
+   7     1   3.0%     6      0 (0.0%)	     2 (2|0) 	yes
+   2     2   4.5%    17      1 (5.9%)	    15 (16|1) 	yes
+  10     2  14.3%     5      0 (0.0%)	     5 (5|0) 	yes
+   9     1   2.4%    55      0 (0.0%)	     0 (0|0) 	no
+   8     3   2.8%    48      0 (0.0%)	     0 (0|0) 	no
+   4     2   3.1%    48      1 (2.1%)	     0 (0|0) 	no
+  16     1  15.9%     6      0 (0.0%)	     0 (0|0) 	no
+
+Tested 309, errors 3 (1.0%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  150    1	(a): class yes
+	    2  156	(b): class no
+
+
+Evaluation on test data (35 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     3   2.1%    16      0 (0.0%)	     1 (1|0) 	yes
+   7     1   3.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   2     2   4.5%     2      1 (50.0%)	     0 (1|1) 	yes
+   9     1   2.4%     7      0 (0.0%)	     0 (0|0) 	no
+   8     3   2.8%     3      0 (0.0%)	     0 (0|0) 	no
+   4     2   3.1%     5      0 (0.0%)	     0 (0|0) 	no
+
+Tested 35, errors 1 (2.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	    1   16	(b): class no
+
