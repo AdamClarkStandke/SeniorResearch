@@ -133,7 +133,7 @@ extern char	Fn[500];	/* file name */
 	StreamIn((char *) &c, sizeof(ClassNo));
 	StreamIn((char *) &e, sizeof(float));
 	NewRule(Cond, n, c, e);
-	cfree(Cond);
+	free(Cond);
     }
 
     RecoverDiscreteNames();
@@ -160,7 +160,7 @@ Test FindTest(Newtest)
     {
 	if ( SameTest(Newtest, TestVec[i]) )
 	{
-	    cfree(Newtest);
+	    free(Newtest);
 	    return TestVec[i];
 	}
     }

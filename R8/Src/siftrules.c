@@ -93,18 +93,18 @@ ClassNo	FocusClass;
 
     /*  Clear  */
 
-    cfree(Value);
-    cfree(RuleIn);
-    cfree(ClassRules);
-    cfree(Subset);
-    cfree(Covered);
-    cfree(FalsePos);
-    cfree(NoRule);
+    free(Value);
+    free(RuleIn);
+    free(ClassRules);
+    free(Subset);
+    free(Covered);
+    free(FalsePos);
+    free(NoRule);
     ForEach(r, 1, OldNRules)
     {
-	cfree(Match[r]);
+	free(Match[r]);
     }
-    cfree(Match);
+    free(Match);
 }
 
 
@@ -724,7 +724,7 @@ ClassNo	FocusClass;
     }
 
     NRules = NewNRules;
-    cfree(Included);
+    free(Included);
 }
 
 

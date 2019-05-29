@@ -249,8 +249,8 @@ ItemNo Interpret(Fp, Lp, DeleteRules, CMInfo, Arrow)
 	}
     }
 
-    cfree(Better);
-    cfree(Worse);
+    free(Better);
+    free(Worse);
 
     if ( riDrop )
     {

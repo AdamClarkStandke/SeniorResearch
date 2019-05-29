@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -11,6 +14,7 @@ import java.util.LinkedHashSet;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
@@ -78,7 +82,8 @@ public class IEA {
 	private static Node htmlbody;
 	private static File combinedFile;   
 	private static FileWriter combinedOutputfile;
-	private static CSVWriter writer; 
+	private static CSVWriter writer;
+	private static String root_url; 
 	
     /**
      * Constructor that compiles the case-sensitive regrex pattern once, 
@@ -130,6 +135,10 @@ public class IEA {
 		//Instantiates the main class and the inner storage class
 		info = new IEA(); 
 		
+		//prints output to files 
+		PrintStream fileOut = new PrintStream("comibnedCoreEx.html");
+		System.setOut(fileOut);
+				
 		
 		//writes the header of features
 		String[] header = {"Number", "Date", "Length", "EndingSlash", "ReservedWord", "SlashCount", "MainContentTag", "HighestFreqTagSetS", "FrequencyCount", "MainContentScore", "DepthMainContentinDOMTree", "Article"}; 
@@ -137,20 +146,24 @@ public class IEA {
 		
 		
 		//opens file directory, pulls in files, decodes filename, and then run's info extract algorithms
-		File folder = new File(directory); 
-		File [] listOfFiles = folder.listFiles(); 
-		for(File file: listOfFiles)
+		List<Path> files = Files.walk(Paths.get(directory)).collect(Collectors.toList());
+		Iterator<Path> path = files.iterator();
+		while(path.hasNext())
 		{
-			if(file.isFile())
+			Path path2 = path.next(); 
+			File file = path2.toFile();
+			if (file.isFile() && (!(file.isHidden())))
 			{
+
 				String rm_html = file.getName(); 
 				rm_html=rm_html.replace(".html", ""); 
 				byte[] decoded = Base64.decodeBase64(rm_html);
-				String root_url= new String(decoded, "UTF-8");
-				String[] results =LinkTargetIdentification(root_url);
-				CorexEx(file, root_url, results); 	
+				root_url= new String(decoded, "UTF-8");
+				String[] data = LinkTargetIdentification(root_url); 
+				CorexEx(file, root_url, data);
 			}
-		} 
+		 
+		}
 		writer.close();
 	}
 	
@@ -166,7 +179,7 @@ public class IEA {
 	 */
 	public static String[] LinkTargetIdentification(String baseurl) throws IOException 
 	{   
-		//features to extract for each link
+		      //features to extract for each link
 				boolean num_or_id=false; 
 				boolean date =false; 
 				boolean reservedWord =false; 
@@ -182,7 +195,6 @@ public class IEA {
 					baseurl=baseurl.replaceFirst("([\\w.:/]+com\\/)", ""); 
 				}
 				
-				System.out.println(baseurl);
 				//checks to see if link ends with slash
 				if(baseurl.endsWith("/"))
 				{
@@ -267,7 +279,7 @@ public class IEA {
 				String slash = Boolean.toString(endWithSlash); 
 				String Length = Integer.toString(lenghLink); 
 				String numslashes = Integer.toString(numForwardSlashes); 
-				String[] data = {number, Date, Length, slash, word, numslashes}; 
+				String[] data = { number, Date, Length, slash, word, numslashes};
 				return data; 
 		  
   
