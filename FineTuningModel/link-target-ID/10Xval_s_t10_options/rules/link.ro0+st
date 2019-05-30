@@ -1,0 +1,961 @@
+
+C4.5 [release 8] rule generator	Thu May 30 10:30:23 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (6 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	number = FALSE
+    	length > 48
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 3, 2}
+	->  class yes  [96.0%]
+
+Rule 9:
+    	length > 62
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [93.9%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 2:
+    	date = FALSE
+    	number of forward slash marks in {0, 4, 5}
+	->  class no  [98.0%]
+
+Rule 7:
+    	number = FALSE
+    	date = FALSE
+    	length <= 48
+	->  class no  [97.8%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 5:
+    	number = TRUE
+    	number of forward slash marks = 3
+	->  class no  [85.7%]
+
+Rule 6:
+    	length <= 62
+    	number of forward slash marks = 2
+	->  class no  [85.0%]
+
+Default class: no
+
+------------------
+Processing tree 1
+
+Final rules from tree 1:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 11:
+    	length > 71
+    	reserved word = FALSE
+    	number of forward slash marks = 2
+	->  class yes  [95.1%]
+
+Rule 8:
+    	length > 39
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [92.5%]
+
+Rule 6:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 7:
+    	number = FALSE
+    	length <= 39
+	->  class no  [97.7%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 9:
+    	number of forward slash marks = 3
+	->  class no  [84.3%]
+
+Rule 12:
+    	date = FALSE
+    	number of forward slash marks in {4, 5}
+	->  class no  [84.1%]
+
+Rule 10:
+    	length <= 71
+    	number of forward slash marks = 2
+	->  class no  [78.9%]
+
+Default class: no
+
+------------------
+Processing tree 2
+
+Final rules from tree 2:
+
+Rule 7:
+    	number = FALSE
+    	date = FALSE
+    	length <= 48
+	->  class no  [97.8%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 9:
+    	date = FALSE
+    	number of forward slash marks in {3, 4, 5}
+	->  class no  [89.4%]
+
+Rule 6:
+    	length <= 48
+    	number of forward slash marks = 2
+	->  class no  [88.9%]
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 4:
+    	number = TRUE
+    	length <= 34
+    	number of forward slash marks = 1
+	->  class yes  [90.6%]
+
+Rule 8:
+    	length > 48
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [88.4%]
+
+Default class: no
+
+------------------
+Processing tree 3
+
+Final rules from tree 3:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 9:
+    	length > 71
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [96.4%]
+
+Rule 7:
+    	number = FALSE
+    	length > 39
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [95.9%]
+
+Rule 5:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 6:
+    	number = FALSE
+    	length <= 39
+	->  class no  [97.7%]
+
+Rule 1:
+    	number of forward slash marks in {0, 3}
+	->  class no  [96.6%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 10:
+    	date = FALSE
+    	number of forward slash marks in {4, 5}
+	->  class no  [84.1%]
+
+Rule 8:
+    	length <= 71
+    	number of forward slash marks = 2
+	->  class no  [78.9%]
+
+Default class: no
+
+------------------
+Processing tree 4
+
+Final rules from tree 4:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 6:
+    	length > 48
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [95.9%]
+
+Rule 10:
+    	length > 60
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [92.8%]
+
+Rule 4:
+    	number = TRUE
+    	length <= 34
+    	number of forward slash marks = 1
+	->  class yes  [90.6%]
+
+Rule 8:
+    	number = FALSE
+    	length <= 44
+	->  class no  [97.8%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 11:
+    	date = FALSE
+    	number of forward slash marks in {3, 4, 5}
+	->  class no  [89.4%]
+
+Rule 7:
+    	length <= 60
+    	number of forward slash marks = 2
+	->  class no  [84.3%]
+
+Default class: no
+
+------------------
+Processing tree 5
+
+Final rules from tree 5:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	length > 71
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [96.4%]
+
+Rule 7:
+    	number = FALSE
+    	length > 44
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [95.9%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 6:
+    	number = FALSE
+    	length <= 44
+	->  class no  [97.8%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 9:
+    	date = FALSE
+    	number of forward slash marks in {3, 4, 5}
+	->  class no  [89.4%]
+
+Rule 5:
+    	length <= 71
+    	number of forward slash marks = 2
+	->  class no  [78.9%]
+
+Default class: no
+
+------------------
+Processing tree 6
+
+Final rules from tree 6:
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	number = FALSE
+    	length > 44
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 3, 2}
+	->  class yes  [96.0%]
+
+Rule 6:
+    	length > 62
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [93.9%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 2:
+    	date = FALSE
+    	number of forward slash marks in {0, 4, 5}
+	->  class no  [98.0%]
+
+Rule 7:
+    	number = FALSE
+    	length <= 44
+	->  class no  [97.8%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 5:
+    	length <= 62
+    	number of forward slash marks = 2
+	->  class no  [85.0%]
+
+Rule 9:
+    	number of forward slash marks = 3
+	->  class no  [84.3%]
+
+Default class: no
+
+------------------
+Processing tree 7
+
+Final rules from tree 7:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 9:
+    	length > 60
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [92.8%]
+
+Rule 6:
+    	length > 38
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [92.5%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 5:
+    	number = FALSE
+    	length <= 38
+	->  class no  [97.7%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 8:
+    	length <= 60
+    	number of forward slash marks = 2
+	->  class no  [84.3%]
+
+Rule 7:
+    	number of forward slash marks = 3
+	->  class no  [84.3%]
+
+Rule 11:
+    	date = FALSE
+    	number of forward slash marks in {4, 5}
+	->  class no  [84.1%]
+
+Default class: no
+
+------------------
+Processing tree 8
+
+Final rules from tree 8:
+
+Rule 2:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 6:
+    	number = FALSE
+    	length > 39
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [95.9%]
+
+Rule 8:
+    	length > 60
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [92.8%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 5:
+    	number = FALSE
+    	length <= 39
+	->  class no  [97.7%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 7:
+    	length <= 60
+    	number of forward slash marks = 2
+	->  class no  [84.3%]
+
+Rule 9:
+    	number of forward slash marks = 3
+	->  class no  [84.3%]
+
+Rule 10:
+    	date = FALSE
+    	number of forward slash marks in {4, 5}
+	->  class no  [84.1%]
+
+Default class: no
+
+------------------
+Processing tree 9
+
+Final rules from tree 9:
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 6:
+    	number = FALSE
+    	length > 42
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [95.9%]
+
+Rule 8:
+    	length > 64
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [93.8%]
+
+Rule 4:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 5:
+    	number = FALSE
+    	length <= 42
+	->  class no  [97.8%]
+
+Rule 2:
+    	date = FALSE
+    	number of forward slash marks in {0, 3, 5}
+	->  class no  [96.9%]
+
+Rule 3:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 7:
+    	length <= 64
+    	number of forward slash marks = 2
+	->  class no  [83.0%]
+
+Default class: no
+
+Composite ruleset:
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 2:
+    	number = FALSE
+    	length > 48
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 3, 2}
+	->  class yes  [96.0%]
+
+Rule 3:
+    	length > 62
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2}
+	->  class yes  [93.9%]
+
+Rule 59:
+    	number = TRUE
+    	reserved word = FALSE
+    	number of forward slash marks = 1
+	->  class yes  [88.6%]
+
+Rule 6:
+    	number = FALSE
+    	date = FALSE
+    	length <= 48
+	->  class no  [97.8%]
+
+Rule 7:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 17:
+    	date = FALSE
+    	number of forward slash marks in {3, 4, 5}
+	->  class no  [89.4%]
+
+Rule 9:
+    	length <= 62
+    	number of forward slash marks = 2
+	->  class no  [85.0%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   8     4   4.0%    30      0 (0.0%)	     6 (6|0) 	yes
+   9     3   6.1%    54      3 (5.6%)	    37 (40|3) 	yes
+   4     3  11.4%    22      2 (9.1%)	    18 (20|2) 	yes
+   2     2   2.0%    68      0 (0.0%)	     0 (0|0) 	no
+   7     3   2.2%    59      1 (1.7%)	     0 (0|0) 	no
+   3     2   5.4%     9      0 (0.0%)	     0 (0|0) 	no
+   5     2  14.3%     8      0 (0.0%)	     0 (0|0) 	no
+   6     2  15.0%    14      4 (28.6%)	     0 (0|0) 	no
+
+Tested 309, errors 10 (3.2%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+  11     3   4.9%    49      1 (2.0%)	    47 (48|1) 	yes
+   8     3   7.5%    34      1 (2.9%)	    17 (17|0) 	yes
+   6     3  11.4%    16      1 (6.2%)	    14 (15|1) 	yes
+   7     2   2.3%   114      1 (0.9%)	     0 (0|0) 	no
+   3     2   5.4%    12      0 (0.0%)	     0 (0|0) 	no
+   9     1  15.7%    11      1 (9.1%)	     0 (0|0) 	no
+  12     2  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+  10     2  21.1%    20      8 (40.0%)	     0 (0|0) 	no
+
+Tested 309, errors 13 (4.2%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   7     3   2.2%   121      1 (0.8%)	     0 (0|0) 	no
+   3     2   5.4%     9      0 (0.0%)	     0 (0|0) 	no
+   9     2  10.6%    15      1 (6.7%)	     0 (0|0) 	no
+   6     2  11.1%     5      1 (20.0%)	     0 (0|0) 	no
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   4     3   9.4%    14      0 (0.0%)	    14 (14|0) 	yes
+   8     3  11.6%    97      9 (9.3%)	    79 (88|9) 	yes
+
+Tested 309, errors 13 (4.2%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   9     3   3.6%    68      1 (1.5%)	    35 (36|1) 	yes
+   7     4   4.1%     8      0 (0.0%)	     8 (8|0) 	yes
+   5     3  11.4%    23      2 (8.7%)	    19 (21|2) 	yes
+   6     2   2.3%   114      1 (0.9%)	     0 (0|0) 	no
+   1     1   3.4%    12      1 (8.3%)	     0 (0|0) 	no
+   3     2   5.4%    11      0 (0.0%)	     0 (0|0) 	no
+  10     2  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+   8     2  21.1%    20      8 (40.0%)	     0 (0|0) 	no
+
+Tested 309, errors 13 (4.2%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   6     3   4.1%    33      0 (0.0%)	     7 (7|0) 	yes
+  10     3   7.2%    56      4 (7.1%)	    48 (52|4) 	yes
+   4     3   9.4%    14      0 (0.0%)	    14 (14|0) 	yes
+   8     2   2.2%   119      1 (0.8%)	     0 (0|0) 	no
+   3     2   5.4%    11      0 (0.0%)	     0 (0|0) 	no
+  11     2  10.6%    15      1 (6.7%)	     0 (0|0) 	no
+   7     2  15.7%    13      4 (30.8%)	     0 (0|0) 	no
+
+Tested 309, errors 11 (3.6%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   8     3   3.6%    68      1 (1.5%)	    35 (36|1) 	yes
+   7     4   4.1%     8      0 (0.0%)	     8 (8|0) 	yes
+   4     3  11.4%    23      2 (8.7%)	    19 (21|2) 	yes
+   6     2   2.2%   119      1 (0.8%)	     0 (0|0) 	no
+   3     2   5.4%    11      0 (0.0%)	     0 (0|0) 	no
+   9     2  10.6%    15      1 (6.7%)	     0 (0|0) 	no
+   5     2  21.1%    20      8 (40.0%)	     0 (0|0) 	no
+
+Tested 309, errors 13 (4.2%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   8     4   4.0%    30      0 (0.0%)	     6 (6|0) 	yes
+   6     3   6.1%    54      3 (5.6%)	    37 (40|3) 	yes
+   4     3  11.4%    22      2 (9.1%)	    18 (20|2) 	yes
+   2     2   2.0%    68      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.2%    57      1 (1.8%)	     0 (0|0) 	no
+   3     2   5.4%    11      0 (0.0%)	     0 (0|0) 	no
+   5     2  15.0%    14      4 (28.6%)	     0 (0|0) 	no
+   9     1  15.7%     8      0 (0.0%)	     0 (0|0) 	no
+
+Tested 309, errors 10 (3.2%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   9     3   7.2%    82      4 (4.9%)	    48 (52|4) 	yes
+   6     3   7.5%     8      1 (12.5%)	     3 (3|0) 	yes
+   4     3  11.4%    16      1 (6.2%)	    14 (15|1) 	yes
+   5     2   2.3%   113      1 (0.9%)	     0 (0|0) 	no
+   3     2   5.4%    12      0 (0.0%)	     0 (0|0) 	no
+   8     2  15.7%    13      4 (30.8%)	     0 (0|0) 	no
+   7     1  15.7%    12      1 (8.3%)	     0 (0|0) 	no
+  11     2  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+
+Tested 309, errors 12 (3.9%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   6     4   4.1%    29      0 (0.0%)	     3 (3|0) 	yes
+   8     3   7.2%    56      4 (7.1%)	    36 (40|4) 	yes
+   4     3  11.4%    21      2 (9.5%)	    17 (19|2) 	yes
+   5     2   2.3%   114      1 (0.9%)	     0 (0|0) 	no
+   3     2   5.4%    12      0 (0.0%)	     0 (0|0) 	no
+   7     2  15.7%    13      4 (30.8%)	     0 (0|0) 	no
+   9     1  15.7%    11      1 (9.1%)	     0 (0|0) 	no
+  10     2  15.9%     8      0 (0.0%)	     0 (0|0) 	no
+
+Tested 309, errors 12 (3.9%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   6     4   4.1%    29      0 (0.0%)	     5 (5|0) 	yes
+   8     3   6.2%    52      3 (5.8%)	    36 (39|3) 	yes
+   4     3  11.4%    23      2 (8.7%)	    19 (21|2) 	yes
+   5     2   2.2%   116      1 (0.9%)	     0 (0|0) 	no
+   2     2   3.1%    18      1 (5.6%)	     0 (0|0) 	no
+   3     2   5.4%    10      0 (0.0%)	     0 (0|0) 	no
+   7     2  17.0%    15      5 (33.3%)	     0 (0|0) 	no
+
+Tested 309, errors 12 (3.9%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%    45      0 (0.0%)	    41 (41|0) 	yes
+   2     4   4.0%    30      0 (0.0%)	     6 (6|0) 	yes
+   3     3   6.1%    54      3 (5.6%)	    37 (40|3) 	yes
+  59     3  11.4%    22      2 (9.1%)	    18 (20|2) 	yes
+   6     3   2.2%   121      1 (0.8%)	     0 (0|0) 	no
+   7     2   5.4%     9      0 (0.0%)	     0 (0|0) 	no
+  17     2  10.6%    14      0 (0.0%)	     0 (0|0) 	no
+   9     2  15.0%    14      4 (28.6%)	     0 (0|0) 	no
+
+Tested 309, errors 10 (3.2%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  146    5	(a): class yes
+	    5  153	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       9   10( 3.2%)
+   1       9   13( 4.2%)
+   2       7   13( 4.2%)
+   3       9   13( 4.2%)
+   4       8   11( 3.6%)
+   5       8   13( 4.2%)
+   6       9   10( 3.2%)
+   7       9   12( 3.9%)
+   8       9   12( 3.9%)
+   9       8   12( 3.9%)
+  **       8   10( 3.2%)
+				Av size = 8.5,  av errors = 11.7 (3.8%)
+
+Evaluation on test data (35 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   8     4   4.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   9     3   6.1%     5      0 (0.0%)	     5 (5|0) 	yes
+   4     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   2     2   2.0%     5      0 (0.0%)	     0 (0|0) 	no
+   7     3   2.2%     7      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   5     2  14.3%     3      0 (0.0%)	     0 (0|0) 	no
+   6     2  15.0%     3      2 (66.7%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+  11     3   4.9%     2      0 (0.0%)	     2 (2|0) 	yes
+   8     3   7.5%     2      0 (0.0%)	     1 (1|0) 	yes
+   6     3  11.4%     1      0 (0.0%)	     1 (1|0) 	yes
+   7     2   2.3%    10      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     2      0 (0.0%)	     0 (0|0) 	no
+   9     1  15.7%     3      0 (0.0%)	     0 (0|0) 	no
+  12     2  15.9%     1      0 (0.0%)	     0 (0|0) 	no
+  10     2  21.1%     6      5 (83.3%)	     0 (0|0) 	no
+
+Tested 35, errors 5 (14.3%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   7     3   2.2%    11      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2  10.6%     4      0 (0.0%)	     0 (0|0) 	no
+   6     2  11.1%     1      0 (0.0%)	     0 (0|0) 	no
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   4     3   9.4%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     3  11.6%     9      0 (0.0%)	     9 (9|0) 	yes
+
+Tested 35, errors 0 (0.0%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   9     3   3.6%     3      0 (0.0%)	     2 (2|0) 	yes
+   5     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   6     2   2.3%    10      0 (0.0%)	     0 (0|0) 	no
+   1     1   3.4%     3      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     2      0 (0.0%)	     0 (0|0) 	no
+  10     2  15.9%     1      0 (0.0%)	     0 (0|0) 	no
+   8     2  21.1%     6      5 (83.3%)	     0 (0|0) 	no
+
+Tested 35, errors 5 (14.3%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   6     3   4.1%     2      0 (0.0%)	     1 (1|0) 	yes
+  10     3   7.2%     5      0 (0.0%)	     5 (5|0) 	yes
+   4     3   9.4%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     2   2.2%    11      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+  11     2  10.6%     4      0 (0.0%)	     0 (0|0) 	no
+   7     2  15.7%     3      2 (66.7%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   8     3   3.6%     3      0 (0.0%)	     2 (2|0) 	yes
+   4     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   6     2   2.2%    11      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2  10.6%     4      0 (0.0%)	     0 (0|0) 	no
+   5     2  21.1%     6      5 (83.3%)	     0 (0|0) 	no
+
+Tested 35, errors 5 (14.3%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   8     4   4.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   6     3   6.1%     5      0 (0.0%)	     5 (5|0) 	yes
+   4     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   2     2   2.0%     5      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.2%     7      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   5     2  15.0%     3      2 (66.7%)	     0 (0|0) 	no
+   9     1  15.7%     3      0 (0.0%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   9     3   7.2%     6      0 (0.0%)	     5 (5|0) 	yes
+   6     3   7.5%     1      0 (0.0%)	     0 (0|0) 	yes
+   4     3  11.4%     1      0 (0.0%)	     1 (1|0) 	yes
+   5     2   2.3%    10      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     2      0 (0.0%)	     0 (0|0) 	no
+   8     2  15.7%     3      2 (66.7%)	     0 (0|0) 	no
+   7     1  15.7%     3      0 (0.0%)	     0 (0|0) 	no
+  11     2  15.9%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   6     4   4.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   8     3   7.2%     5      0 (0.0%)	     5 (5|0) 	yes
+   4     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   5     2   2.3%    10      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     2      0 (0.0%)	     0 (0|0) 	no
+   7     2  15.7%     3      2 (66.7%)	     0 (0|0) 	no
+   9     1  15.7%     3      0 (0.0%)	     0 (0|0) 	no
+  10     2  15.9%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   6     4   4.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   8     3   6.2%     4      0 (0.0%)	     4 (4|0) 	yes
+   4     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   5     2   2.2%    11      0 (0.0%)	     0 (0|0) 	no
+   2     2   3.1%     4      0 (0.0%)	     0 (0|0) 	no
+   3     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   7     2  17.0%     4      3 (75.0%)	     0 (0|0) 	no
+
+Tested 35, errors 3 (8.6%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   1     1   3.0%     8      0 (0.0%)	     7 (7|0) 	yes
+   2     4   4.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   3     3   6.1%     5      0 (0.0%)	     5 (5|0) 	yes
+  59     3  11.4%     2      0 (0.0%)	     2 (2|0) 	yes
+   6     3   2.2%    11      0 (0.0%)	     0 (0|0) 	no
+   7     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+  17     2  10.6%     4      0 (0.0%)	     0 (0|0) 	no
+   9     2  15.0%     3      2 (66.7%)	     0 (0|0) 	no
+
+Tested 35, errors 2 (5.7%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    2	(a): class yes
+	        17	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       9    2( 5.7%)
+   1       9    5(14.3%)
+   2       7    0( 0.0%)
+   3       9    5(14.3%)
+   4       8    2( 5.7%)
+   5       8    5(14.3%)
+   6       9    2( 5.7%)
+   7       9    2( 5.7%)
+   8       9    2( 5.7%)
+   9       8    3( 8.6%)
+  **       8    2( 5.7%)
+				Av size = 8.5,  av errors = 2.7 (7.8%)

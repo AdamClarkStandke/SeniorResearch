@@ -1,0 +1,68 @@
+
+C4.5 [release 8] decision tree generator	Thu May 30 09:09:48 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+
+Read 310 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+most frequent tag listed in the main content = a: no (0.0)
+most frequent tag listed in the main content = p:
+|   DOM tree depth of tag bounding main content in {15,14}: no (4.0)
+|   DOM tree depth of tag bounding main content in {10,18,2,3,17,7,22,16,
+|                                                   24,5}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,9,11,12,6,19,20,
+|                                                   21}:
+|   |   number of forward slash marks in {5,3}: no (2.0)
+|   |   number of forward slash marks = 0: yes (0.0)
+|   |   number of forward slash marks in {1,2,4}:
+|   |   |   reserved word = FALSE: yes (119.0)
+|   |   |   reserved word = TRUE:
+|   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   date = FALSE: no (2.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,td}:
+|   date = TRUE: yes (13.0)
+|   date = FALSE:
+|   |   length <= 49 : no (123.0)
+|   |   length > 49 :
+|   |   |   number of forward slash marks = 1: yes (15.0)
+|   |   |   number of forward slash marks = 0: no (0.0)
+|   |   |   number of forward slash marks in {2,5,4,3}:
+|   |   |   |   DOM tree depth of tag bounding main content in {8,13,18,2,9,17,14,19,
+|   |   |   |                                                   7}: no (26.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {11,12}: yes (4.0/1.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {10,3,15,6,20,21,22,16,
+|   |   |   |                                                   24,5}: no (0.0)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  24    1( 0.3%)     24    1( 0.3%)    ( 4.2%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  24    0( 0.0%)     24    0( 0.0%)    ( 4.2%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   17     	(a): class yes
+	        17	(b): class no
+

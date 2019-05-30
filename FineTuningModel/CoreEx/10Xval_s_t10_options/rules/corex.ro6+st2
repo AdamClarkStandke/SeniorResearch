@@ -1,0 +1,937 @@
+
+C4.5 [release 8] rule generator	Thu May 30 10:43:15 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 310 cases (5 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 13:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, td}
+	->  class no  [98.3%]
+
+Rule 7:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 12:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 5:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 9:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 3:
+    	score of tag bounding main content > 1.00143
+    	most frequent tag listed in the main content = p
+	->  class yes  [97.6%]
+
+Rule 8:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00166
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 6:
+    	frequency count of most frequent tag <= 10
+    	score of tag bounding main content > 0.993614
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Default class: no
+
+------------------
+Processing tree 1
+
+Final rules from tree 1:
+
+Rule 11:
+    	most frequent tag listed in the main content in {li, ol, article, section, td}
+	->  class no  [98.2%]
+
+Rule 7:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 13:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17, 19, 22}
+	->  class no  [97.8%]
+
+Rule 5:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 9:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 3:
+    	score of tag bounding main content > 1.0025
+    	tag bounding main content = div
+    	most frequent tag listed in the main content = p
+	->  class yes  [98.7%]
+
+Rule 8:
+    	frequency count of most frequent tag <= 20
+    	score of tag bounding main content > 1.00166
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 6:
+    	frequency count of most frequent tag <= 10
+    	score of tag bounding main content > 0.993614
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Default class: no
+
+------------------
+Processing tree 2
+
+Final rules from tree 2:
+
+Rule 13:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, a, td}
+	->  class no  [98.3%]
+
+Rule 8:
+    	frequency count of most frequent tag > 11
+    	score of tag bounding main content <= 1.00332
+	->  class no  [98.1%]
+
+Rule 12:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 10:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 3:
+    	score of tag bounding main content > 1.00361
+    	most frequent tag listed in the main content = p
+	->  class yes  [97.5%]
+
+Rule 9:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00332
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.8%]
+
+Rule 7:
+    	frequency count of most frequent tag <= 11
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [92.1%]
+
+Default class: no
+
+------------------
+Processing tree 3
+
+Final rules from tree 3:
+
+Rule 10:
+    	most frequent tag listed in the main content in {li, div, ol, article, section, meta, td}
+    	DOM tree depth of tag bounding main content in {6, 5, 15, 2, 9, 7, 14, 18, 3, 17, 19, 22}
+	->  class no  [98.2%]
+
+Rule 6:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 3:
+    	most frequent tag listed in the main content in {li, article, section, td}
+	->  class no  [98.0%]
+
+Rule 8:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content in {li, div, ol, article, section, meta, td}
+	->  class no  [89.0%]
+
+Rule 1:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 9, 13, 20}
+	->  class yes  [94.9%]
+
+Rule 7:
+    	frequency count of most frequent tag <= 20
+    	score of tag bounding main content > 1.00166
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [93.9%]
+
+Rule 5:
+    	frequency count of most frequent tag > 4
+    	frequency count of most frequent tag <= 10
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [93.0%]
+
+Default class: no
+
+------------------
+Processing tree 4
+
+Final rules from tree 4:
+
+Rule 13:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, td}
+	->  class no  [98.3%]
+
+Rule 7:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 12:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 5:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 9:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 3:
+    	score of tag bounding main content > 1.0025
+    	most frequent tag listed in the main content = p
+	->  class yes  [97.6%]
+
+Rule 8:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00166
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 6:
+    	frequency count of most frequent tag <= 10
+    	score of tag bounding main content > 0.993614
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Default class: no
+
+------------------
+Processing tree 5
+
+Final rules from tree 5:
+
+Rule 13:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, a, td}
+	->  class no  [98.3%]
+
+Rule 7:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 12:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 5:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 9:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 3:
+    	score of tag bounding main content > 1.00143
+    	most frequent tag listed in the main content = p
+	->  class yes  [97.6%]
+
+Rule 8:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00166
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 6:
+    	frequency count of most frequent tag <= 10
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 0.993614
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Default class: no
+
+------------------
+Processing tree 6
+
+Final rules from tree 6:
+
+Rule 14:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, a}
+	->  class no  [98.3%]
+
+Rule 8:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 13:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 6:
+    	frequency count of most frequent tag <= 4
+    	score of tag bounding main content <= 1.00166
+    	most frequent tag listed in the main content = div
+	->  class no  [87.1%]
+
+Rule 10:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 9:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00166
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 21, 13, 20}
+	->  class yes  [97.0%]
+
+Rule 4:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 21, 13, 20}
+	->  class yes  [95.0%]
+
+Rule 7:
+    	frequency count of most frequent tag > 4
+    	most frequent tag listed in the main content in {p, div}
+    	frequency count of most frequent tag <= 10
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 21, 13, 20}
+	->  class yes  [93.3%]
+
+Default class: no
+
+------------------
+Processing tree 7
+
+Final rules from tree 7:
+
+Rule 9:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, td}
+	->  class no  [98.3%]
+
+Rule 4:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 8:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 2:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 6:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 7:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 5:
+    	frequency count of most frequent tag <= 20
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00166
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 3:
+    	frequency count of most frequent tag <= 10
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 0.993614
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Default class: yes
+
+------------------
+Processing tree 8
+
+Final rules from tree 8:
+
+Rule 8:
+    	most frequent tag listed in the main content in {li, ol, article, section, td}
+	->  class no  [98.2%]
+
+Rule 4:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 10:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17, 19, 22}
+	->  class no  [97.8%]
+
+Rule 2:
+    	score of tag bounding main content <= 0.993614
+    	most frequent tag listed in the main content = div
+	->  class no  [94.4%]
+
+Rule 6:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 7:
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {6, 9}
+	->  class no  [70.7%]
+
+Rule 5:
+    	frequency count of most frequent tag <= 20
+    	score of tag bounding main content > 1.00166
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.9%]
+
+Rule 3:
+    	frequency count of most frequent tag <= 10
+    	score of tag bounding main content > 0.993614
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [95.3%]
+
+Rule 1:
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [94.9%]
+
+Rule 9:
+    	DOM tree depth of tag bounding main content = 21
+	->  class yes  [70.7%]
+
+Default class: no
+
+------------------
+Processing tree 9
+
+Final rules from tree 9:
+
+Rule 15:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, a, td}
+	->  class no  [98.3%]
+
+Rule 5:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00122
+	->  class no  [98.1%]
+
+Rule 14:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 1:
+    	tag bounding main content = div
+    	score of tag bounding main content <= 0.993814
+	->  class no  [96.4%]
+
+Rule 12:
+    	most frequent tag listed in the main content = div
+    	frequency count of most frequent tag > 22
+	->  class no  [83.3%]
+
+Rule 11:
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 1.00122
+	->  class yes  [97.7%]
+
+Rule 10:
+    	frequency count of most frequent tag <= 22
+    	most frequent tag listed in the main content in {p, div}
+    	score of tag bounding main content > 1.00122
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 6, 10, 9, 13, 20}
+	->  class yes  [96.1%]
+
+Rule 2:
+    	frequency count of most frequent tag <= 10
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [92.8%]
+
+Default class: no
+
+Composite ruleset:
+
+Rule 18:
+    	most frequent tag listed in the main content in {li, ol, article, section, meta, a, td}
+	->  class no  [98.3%]
+
+Rule 2:
+    	frequency count of most frequent tag > 10
+    	score of tag bounding main content <= 1.00166
+	->  class no  [98.1%]
+
+Rule 3:
+    	DOM tree depth of tag bounding main content in {5, 15, 2, 7, 14, 18, 3, 17}
+	->  class no  [97.6%]
+
+Rule 73:
+    	tag bounding main content = div
+    	score of tag bounding main content <= 0.993814
+	->  class no  [96.4%]
+
+Rule 5:
+    	frequency count of most frequent tag > 20
+    	most frequent tag listed in the main content = div
+	->  class no  [83.3%]
+
+Rule 22:
+    	score of tag bounding main content > 1.00361
+    	most frequent tag listed in the main content = p
+	->  class yes  [97.5%]
+
+Rule 29:
+    	frequency count of most frequent tag <= 20
+    	score of tag bounding main content > 1.00166
+    	most frequent tag listed in the main content = div
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [93.9%]
+
+Rule 77:
+    	frequency count of most frequent tag <= 10
+    	most frequent tag listed in the main content in {p, div}
+    	DOM tree depth of tag bounding main content in {11, 8, 12, 10}
+	->  class yes  [92.8%]
+
+Default class: no
+
+
+Evaluation on training data (310 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    82      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%    26      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.6%     2      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  10     2  29.3%     3      0 (0.0%)	     1 (1|0) 	no
+   3     2   2.4%   110      1 (0.9%)	     7 (7|0) 	yes
+   8     4   3.1%    22      0 (0.0%)	    11 (11|0) 	yes
+   6     4   4.7%    20      1 (5.0%)	    18 (19|1) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  11     1   1.8%    78      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  13     1   2.2%    30      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.6%     2      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  10     2  29.3%     3      0 (0.0%)	     1 (1|0) 	no
+   3     3   1.3%   104      0 (0.0%)	     7 (7|0) 	yes
+   8     4   3.1%    27      1 (3.7%)	    11 (11|0) 	yes
+   6     4   4.7%    21      1 (4.8%)	    19 (20|1) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    83      0 (0.0%)	     0 (0|0) 	no
+   8     2   1.9%    29      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%    27      0 (0.0%)	     0 (0|0) 	no
+  10     2  16.7%     9      1 (11.1%)	     0 (0|0) 	no
+   3     2   2.5%   105      1 (1.0%)	     7 (7|0) 	yes
+   9     4   3.2%    21      1 (4.8%)	     7 (8|1) 	yes
+   7     3   7.9%    32      4 (12.5%)	    24 (28|4) 	yes
+
+Tested 310, errors 7 (2.3%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  10     2   1.8%    76      0 (0.0%)	     0 (0|0) 	no
+   6     2   1.9%    41      0 (0.0%)	     0 (0|0) 	no
+   3     1   2.0%    23      0 (0.0%)	     0 (0|0) 	no
+   8     2  11.0%     9      1 (11.1%)	     0 (0|0) 	no
+   1     2   5.1%   120      4 (3.3%)	   112 (116|4) 	yes
+   7     4   6.1%    22      0 (0.0%)	    13 (13|0) 	yes
+   5     4   7.0%    10      0 (0.0%)	    10 (10|0) 	yes
+
+Tested 310, errors 9 (2.9%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    82      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%    26      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.6%     2      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  10     2  29.3%     3      0 (0.0%)	     1 (1|0) 	no
+   3     2   2.4%   107      1 (0.9%)	     7 (7|0) 	yes
+   8     4   3.1%    24      0 (0.0%)	    11 (11|0) 	yes
+   6     4   4.7%    21      1 (4.8%)	    19 (20|1) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    83      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%    25      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.6%     2      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  10     2  29.3%     3      0 (0.0%)	     1 (1|0) 	no
+   3     2   2.4%   110      1 (0.9%)	     7 (7|0) 	yes
+   8     4   3.1%    22      0 (0.0%)	    11 (11|0) 	yes
+   6     4   4.7%    20      1 (5.0%)	    18 (19|1) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  14     1   1.7%    82      0 (0.0%)	     0 (0|0) 	no
+   8     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  13     1   2.4%    25      0 (0.0%)	     0 (0|0) 	no
+   6     3  12.9%     4      0 (0.0%)	     0 (0|0) 	no
+  10     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+   9     4   3.0%   129      2 (1.6%)	    12 (13|1) 	yes
+   4     2   5.0%    18      3 (16.7%)	    10 (11|1) 	yes
+   7     4   6.7%    10      0 (0.0%)	    10 (10|0) 	yes
+
+Tested 310, errors 6 (1.9%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   9     1   1.7%    82      0 (0.0%)	    24 (24|0) 	no
+   4     2   1.9%    31      0 (0.0%)	    16 (16|0) 	no
+   8     1   2.4%    26      0 (0.0%)	    13 (13|0) 	no
+   2     2   5.6%     2      0 (0.0%)	     2 (2|0) 	no
+   6     2  16.7%    10      1 (10.0%)	     7 (8|1) 	no
+   7     2  29.3%     3      0 (0.0%)	     3 (3|0) 	no
+   5     4   3.1%   124      1 (0.8%)	     0 (0|0) 	yes
+   3     4   4.7%    21      1 (4.8%)	     0 (0|0) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   8     1   1.8%    78      0 (0.0%)	     0 (0|0) 	no
+   4     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+  10     1   2.2%    30      0 (0.0%)	     0 (0|0) 	no
+   2     2   5.6%     2      0 (0.0%)	     0 (0|0) 	no
+   6     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+   7     2  29.3%     3      0 (0.0%)	     1 (1|0) 	no
+   5     4   3.1%   124      1 (0.8%)	    11 (11|0) 	yes
+   3     4   4.7%    21      1 (4.8%)	    10 (10|0) 	yes
+   1     2   5.1%     7      2 (28.6%)	     3 (5|2) 	yes
+   9     1  29.3%     4      0 (0.0%)	     4 (4|0) 	yes
+
+Tested 310, errors 5 (1.6%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  15     1   1.7%    83      0 (0.0%)	     0 (0|0) 	no
+   5     2   1.9%    30      0 (0.0%)	     0 (0|0) 	no
+  14     1   2.4%    25      0 (0.0%)	     0 (0|0) 	no
+   1     2   3.6%     5      0 (0.0%)	     3 (3|0) 	no
+  12     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  11     2   2.3%   111      1 (0.9%)	     6 (6|0) 	yes
+  10     4   3.9%    25      2 (8.0%)	     9 (11|2) 	yes
+   2     3   7.2%    19      0 (0.0%)	    19 (19|0) 	yes
+
+Tested 310, errors 4 (1.3%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  18     1   1.7%    83      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.9%    31      0 (0.0%)	     0 (0|0) 	no
+   3     1   2.4%    25      0 (0.0%)	     0 (0|0) 	no
+  73     2   3.6%     5      0 (0.0%)	     3 (3|0) 	no
+   5     2  16.7%    10      1 (10.0%)	     0 (0|0) 	no
+  22     2   2.5%   105      1 (1.0%)	    60 (60|0) 	yes
+  29     4   6.1%    22      0 (0.0%)	    11 (11|0) 	yes
+  77     3   7.2%    26      0 (0.0%)	    26 (26|0) 	yes
+
+Tested 310, errors 2 (0.6%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  152    1	(a): class yes
+	    1  156	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       9    5( 1.6%)
+   1       9    5( 1.6%)
+   2       7    7( 2.3%)
+   3       7    9( 2.9%)
+   4       9    5( 1.6%)
+   5       9    5( 1.6%)
+   6       8    6( 1.9%)
+   7       8    5( 1.6%)
+   8      10    5( 1.6%)
+   9       8    4( 1.3%)
+  **       8    2( 0.6%)
+				Av size = 8.4,  av errors = 5.3 (1.7%)
+
+Evaluation on test data (34 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   3     2   2.4%    12      0 (0.0%)	     3 (3|0) 	yes
+   8     4   3.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   6     4   4.7%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  11     1   1.8%    11      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  13     1   2.2%     3      1 (33.3%)	    -1 (0|1) 	no
+   9     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   3     3   1.3%    10      0 (0.0%)	     2 (2|0) 	yes
+   8     4   3.1%     2      0 (0.0%)	     0 (0|0) 	yes
+   6     4   4.7%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   8     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+  10     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   3     2   2.5%    12      0 (0.0%)	     3 (3|0) 	yes
+   9     4   3.2%     1      0 (0.0%)	     0 (0|0) 	yes
+   7     3   7.9%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  10     2   1.8%     5      0 (0.0%)	     0 (0|0) 	no
+   6     2   1.9%     7      0 (0.0%)	     0 (0|0) 	no
+   3     1   2.0%     4      0 (0.0%)	     0 (0|0) 	no
+   8     2  11.0%     2      1 (50.0%)	     0 (0|0) 	no
+   1     2   5.1%    10      0 (0.0%)	    10 (10|0) 	yes
+   7     4   6.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   5     4   7.0%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 34, errors 4 (11.8%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   3     2   2.4%    12      0 (0.0%)	     3 (3|0) 	yes
+   8     4   3.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   6     4   4.7%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  13     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   7     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  12     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+   9     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   3     2   2.4%    12      0 (0.0%)	     3 (3|0) 	yes
+   8     4   3.1%     1      0 (0.0%)	     0 (0|0) 	yes
+   6     4   4.7%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  14     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   8     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  13     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+  10     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   9     4   3.0%    12      0 (0.0%)	     0 (0|0) 	yes
+   4     2   5.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   7     4   6.7%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   9     1   1.7%    11      0 (0.0%)	     4 (4|0) 	no
+   4     2   1.9%     4      0 (0.0%)	     3 (3|0) 	no
+   8     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+   6     2  16.7%     2      1 (50.0%)	     0 (1|1) 	no
+   5     4   3.1%    10      0 (0.0%)	     0 (0|0) 	yes
+   3     4   4.7%     2      0 (0.0%)	     0 (0|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   8     1   1.8%    11      0 (0.0%)	     0 (0|0) 	no
+   4     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  10     1   2.2%     3      1 (33.3%)	     0 (0|0) 	no
+   6     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+   5     4   3.1%    10      0 (0.0%)	     0 (0|0) 	yes
+   3     4   4.7%     2      0 (0.0%)	     1 (1|0) 	yes
+   9     1  29.3%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  15     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   5     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+  14     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+   1     2   3.6%     1      0 (0.0%)	     0 (0|0) 	no
+  12     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+  11     2   2.3%    12      0 (0.0%)	     3 (3|0) 	yes
+  10     4   3.9%     1      0 (0.0%)	     0 (0|0) 	yes
+   2     3   7.2%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  18     1   1.7%    11      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.9%     4      0 (0.0%)	     0 (0|0) 	no
+   3     1   2.4%     1      0 (0.0%)	     0 (0|0) 	no
+  73     2   3.6%     1      0 (0.0%)	     0 (0|0) 	no
+   5     2  16.7%     2      1 (50.0%)	     0 (0|0) 	no
+  22     2   2.5%    12      0 (0.0%)	     4 (4|0) 	yes
+  29     4   6.1%     1      0 (0.0%)	     0 (0|0) 	yes
+  77     3   7.2%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    1	(a): class yes
+	        18	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       9    1( 2.9%)
+   1       9    2( 5.9%)
+   2       7    1( 2.9%)
+   3       7    4(11.8%)
+   4       9    1( 2.9%)
+   5       9    1( 2.9%)
+   6       8    2( 5.9%)
+   7       8    2( 5.9%)
+   8      10    2( 5.9%)
+   9       8    1( 2.9%)
+  **       8    1( 2.9%)
+				Av size = 8.4,  av errors = 1.6 (4.8%)

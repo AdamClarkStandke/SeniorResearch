@@ -1,0 +1,111 @@
+
+C4.5 [release 8] rule generator	Thu May 30 08:39:49 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (6 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 4:
+    	number = FALSE
+    	length <= 47
+	->  class no  [96.8%]
+
+Rule 6:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 1:
+    	length <= 47
+    	number of forward slash marks in {2, 3}
+	->  class no  [91.9%]
+
+Rule 9:
+    	number of forward slash marks = 3
+	->  class no  [87.4%]
+
+Rule 7:
+    	date = FALSE
+    	number of forward slash marks in {4, 5}
+	->  class no  [82.0%]
+
+Rule 5:
+    	date = TRUE
+	->  class yes  [97.2%]
+
+Rule 8:
+    	reserved word = FALSE
+    	length > 47
+    	number of forward slash marks in {2, 1}
+	->  class yes  [90.4%]
+
+Rule 2:
+    	number = TRUE
+    	length <= 34
+    	number of forward slash marks = 1
+	->  class yes  [88.2%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     2   3.2%   120      2 (1.7%)	    -1 (0|1) 	no
+   6     2   5.4%    10      0 (0.0%)	     0 (0|0) 	no
+   1     2   8.1%     8      1 (12.5%)	     0 (0|0) 	no
+   9     1  12.6%    10      1 (10.0%)	     0 (0|0) 	no
+   7     2  18.0%     5      0 (0.0%)	     0 (0|0) 	no
+   5     1   2.8%    48      0 (0.0%)	    43 (43|0) 	yes
+   8     3   9.6%    94      7 (7.4%)	    80 (87|7) 	yes
+   2     3  11.8%    11      0 (0.0%)	    11 (11|0) 	yes
+
+Drop rule 4
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     2   5.4%    25      0 (0.0%)	     0 (0|0) 	no
+   1     2   8.1%    35      2 (5.7%)	     0 (0|0) 	no
+   9     1  12.6%    10      1 (10.0%)	     0 (0|0) 	no
+   7     2  18.0%     7      0 (0.0%)	     0 (0|0) 	no
+   5     1   2.8%    49      0 (0.0%)	    44 (44|0) 	yes
+   8     3   9.6%    94      7 (7.4%)	    80 (87|7) 	yes
+   2     3  11.8%    11      0 (0.0%)	    11 (11|0) 	yes
+
+Tested 309, errors 11 (3.6%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  147    4	(a): class yes
+	    7  151	(b): class no
+
+
+Evaluation on test data (35 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     2   5.4%     3      0 (0.0%)	     0 (0|0) 	no
+   1     2   8.1%     2      0 (0.0%)	     0 (0|0) 	no
+   7     2  18.0%     2      0 (0.0%)	     0 (0|0) 	no
+   5     1   2.8%     4      0 (0.0%)	     4 (4|0) 	yes
+   8     3   9.6%    12      2 (16.7%)	     8 (10|2) 	yes
+   2     3  11.8%     4      0 (0.0%)	     4 (4|0) 	yes
+
+Tested 35, errors 2 (5.7%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	    2   15	(b): class no
+

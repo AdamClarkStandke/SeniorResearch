@@ -1,0 +1,81 @@
+
+C4.5 [release 8] decision tree generator	Thu May 30 08:39:49 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+
+Read 310 cases (6 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (120.0/2.0)
+|   number = TRUE:
+|   |   number of forward slash marks in {2,3}: no (9.0/1.0)
+|   |   number of forward slash marks = 1: yes (15.0/1.0)
+|   |   number of forward slash marks in {0,4,5}: yes (0.0)
+length > 47 :
+|   number of forward slash marks = 3: no (10.0/1.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {2,1,4,5}:
+|   |   reserved word = TRUE: no (9.0/1.0)
+|   |   reserved word = FALSE:
+|   |   |   number of forward slash marks in {1,4}: yes (60.0)
+|   |   |   number of forward slash marks in {0,3}: yes (0.0)
+|   |   |   number of forward slash marks in {2,5}:
+|   |   |   |   date = TRUE: yes (19.0)
+|   |   |   |   date = FALSE:
+|   |   |   |   |   number of forward slash marks = 2: yes (62.0/7.0)
+|   |   |   |   |   number of forward slash marks = 5: no (6.0)
+|   |   |   |   |   number of forward slash marks in {1,0,3,4}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (120.0/3.8)
+|   number = TRUE:
+|   |   number of forward slash marks in {2,3}: no (9.0/2.4)
+|   |   number of forward slash marks = 1: yes (15.0/2.5)
+|   |   number of forward slash marks in {0,4,5}: yes (0.0)
+length > 47 :
+|   number of forward slash marks = 3: no (10.0/2.4)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {2,1,4,5}:
+|   |   reserved word = TRUE: no (9.0/2.4)
+|   |   reserved word = FALSE:
+|   |   |   date = TRUE: yes (45.0/1.4)
+|   |   |   date = FALSE:
+|   |   |   |   number of forward slash marks = 2: yes (62.0/9.5)
+|   |   |   |   number of forward slash marks = 5: no (6.0/1.2)
+|   |   |   |   number of forward slash marks in {1,4}: yes (34.0/1.4)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  21   13( 4.2%)     18   13( 4.2%)    ( 8.7%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  21    5(14.7%)     18    5(14.7%)    ( 8.7%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    1	(a): class yes
+	    4   14	(b): class no
+

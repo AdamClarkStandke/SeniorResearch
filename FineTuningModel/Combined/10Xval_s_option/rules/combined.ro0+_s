@@ -1,0 +1,95 @@
+
+C4.5 [release 8] rule generator	Thu May 30 09:09:48 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 6:
+    	date = FALSE
+    	length <= 48
+    	most frequent tag listed in the main content in {li, div, ol, article, section, meta, a, td}
+	->  class no  [98.9%]
+
+Rule 8:
+    	number of forward slash marks in {3, 2, 4, 5}
+    	most frequent tag listed in the main content in {li, div, ol, article, section, meta, a, td}
+    	DOM tree depth of tag bounding main content in {8, 7, 9, 14, 18, 2, 19, 17}
+	->  class no  [96.9%]
+
+Rule 2:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [94.6%]
+
+Rule 4:
+    	DOM tree depth of tag bounding main content in {14, 15}
+	->  class no  [93.9%]
+
+Rule 3:
+    	reserved word = FALSE
+    	number of forward slash marks in {1, 2, 4}
+    	most frequent tag listed in the main content = p
+    	DOM tree depth of tag bounding main content in {8, 6, 11, 12, 21, 13, 9, 20, 19}
+	->  class yes  [98.8%]
+
+Rule 5:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 7:
+    	length > 48
+    	number of forward slash marks = 1
+	->  class yes  [92.5%]
+
+Default class: no
+
+
+Evaluation on training data (309 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     3   1.1%   126      0 (0.0%)	     0 (0|0) 	no
+   8     3   3.1%    24      0 (0.0%)	     0 (0|0) 	no
+   2     2   5.4%     2      0 (0.0%)	     1 (1|0) 	no
+   4     1   6.1%     3      0 (0.0%)	     0 (0|0) 	no
+   3     4   1.2%   114      0 (0.0%)	    70 (70|0) 	yes
+   5     1   3.0%    18      0 (0.0%)	    18 (18|0) 	yes
+   7     2   7.5%    16      0 (0.0%)	    16 (16|0) 	yes
+
+Tested 309, errors 3 (1.0%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  148    3	(a): class yes
+	       158	(b): class no
+
+
+Evaluation on test data (35 items):
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     3   1.1%    11      0 (0.0%)	     0 (0|0) 	no
+   8     3   3.1%     3      0 (0.0%)	     0 (0|0) 	no
+   2     2   5.4%     1      0 (0.0%)	     0 (0|0) 	no
+   4     1   6.1%     1      0 (0.0%)	     0 (0|0) 	no
+   3     4   1.2%    17      0 (0.0%)	     8 (8|0) 	yes
+   7     2   7.5%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 35, errors 0 (0.0%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	        17	(b): class no
+

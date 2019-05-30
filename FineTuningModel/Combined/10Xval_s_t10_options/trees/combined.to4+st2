@@ -1,0 +1,644 @@
+
+C4.5 [release 8] decision tree generator	Thu May 30 10:52:30 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+	Windowing enabled with 10 trials
+
+Read 310 cases (11 attributes) from XDF.data
+
+--------
+Trial 0
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        9        62     248         2  3.2%      25 10.1%      27  8.7%
+  2       13        74     236         3  4.1%      26 11.0%      29  9.4%
+  3       11        87     223         2  2.3%       8  3.6%      10  3.2%
+  4       18        95     215         3  3.2%      14  6.5%      17  5.5%
+  5       21       107     203         2  1.9%       1  0.5%       3  1.0%
+  6       18       108     202         4  3.7%       0  0.0%       4  1.3%
+
+Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (23.0)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (13.0)
+|   DOM tree depth of tag bounding main content in {22,16,24}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   number of forward slash marks = 0: no (4.0)
+|   |   number of forward slash marks in {1,2,5,4,3}:
+|   |   |   length <= 21 : no (7.0/1.0)
+|   |   |   length > 21 :
+|   |   |   |   reserved word = TRUE:
+|   |   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   |   date = FALSE: no (2.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   number of forward slash marks in {1,2}: yes (42.0)
+|   |   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   |   number of forward slash marks in {5,4,3}:[S1]
+
+
+Subtree [S1]
+
+DOM tree depth of tag bounding main content in {10,11,12,6}: yes (12.0/1.0)
+DOM tree depth of tag bounding main content in {9,19}: no (2.0)
+DOM tree depth of tag bounding main content in {8,13,18,2,3,17,15,14,
+                                                7,20,21,22,16,24,5}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (86.0/1.4)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (36.0/1.4)
+|   DOM tree depth of tag bounding main content in {22,16,24}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   length <= 21 : no (30.0/2.6)
+|   |   length > 21 :
+|   |   |   reserved word = FALSE: yes (154.0/7.3)
+|   |   |   reserved word = TRUE:
+|   |   |   |   date = TRUE: yes (2.0/1.0)
+|   |   |   |   date = FALSE: no (2.0/1.0)
+
+
+--------
+Trial 1
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       11        62     248         1  1.6%      19  7.7%      20  6.5%
+  2       13        74     236         0  0.0%      20  8.5%      20  6.5%
+  3       20        86     224         1  1.2%      23 10.3%      24  7.7%
+  4       22        98     212         2  2.0%       3  1.4%       5  1.6%
+  5       10       101     209         2  2.0%      11  5.3%      13  4.2%
+  6       22       112     198         0  0.0%       8  4.0%       8  2.6%
+  7       22       120     190         0  0.0%       0  0.0%       0  0.0%
+
+Decision Tree:
+
+most frequent tag listed in the main content = a: no (0.0)
+most frequent tag listed in the main content = p:
+|   DOM tree depth of tag bounding main content in {15,14}: no (3.0)
+|   DOM tree depth of tag bounding main content in {10,18,2,3,17,7,22,16,
+|                                                   24,5}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,9,11,12,6,19,20,
+|                                                   21}:
+|   |   number of forward slash marks in {5,3}: no (2.0)
+|   |   number of forward slash marks = 0: yes (0.0)
+|   |   number of forward slash marks in {1,2,4}:
+|   |   |   reserved word = FALSE: yes (38.0)
+|   |   |   reserved word = TRUE:
+|   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   date = FALSE: no (2.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,td}:
+|   length <= 47 : no (44.0)
+|   length > 47 :
+|   |   DOM tree depth of tag bounding main content in {13,18,2,9,17,14,19,7}: no (14.0)
+|   |   DOM tree depth of tag bounding main content in {3,15,6,20,21,22,16,24,
+|   |                                                   5}: no (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,10,11,12}:
+|   |   |   tag bounding main content = div: yes (13.0)
+|   |   |   tag bounding main content = ul: no (2.0)
+|   |   |   tag bounding main content in {section,body,tr}: yes (0.0)
+
+
+--------
+Trial 2
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        7        62     248         2  3.2%      68 27.4%      70 22.6%
+  2       12        96     214         0  0.0%      14  6.5%      14  4.5%
+  3       19       108     202         1  0.9%       7  3.5%       8  2.6%
+  4       16       115     195         2  1.7%      10  5.1%      12  3.9%
+  5       24       125     185         2  1.6%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+length <= 47 :
+|   DOM tree depth of tag bounding main content = 13: yes (2.0)
+|   DOM tree depth of tag bounding main content in {18,17,19,20,21,24}: no (0.0)
+|   DOM tree depth of tag bounding main content in {8,10,2,9,3,11,15,14,
+|                                                   12,6,7,22,16,5}:
+|   |   most frequent tag listed in the main content in {li,div,ol,article,
+|   |                                                    section,td}: no (50.0)
+|   |   most frequent tag listed in the main content in {meta,a}: no (0.0)
+|   |   most frequent tag listed in the main content = p:
+|   |   |   number = TRUE: yes (2.0)
+|   |   |   number = FALSE: no (3.0)
+length > 47 :
+|   DOM tree depth of tag bounding main content in {18,2,17,15,14,7}: no (10.0)
+|   DOM tree depth of tag bounding main content in {3,22,16,24,5}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   tag bounding main content = ul: no (5.0)
+|   |   tag bounding main content in {body,tr}: yes (0.0)
+|   |   tag bounding main content in {div,section}:
+|   |   |   DOM tree depth of tag bounding main content in {8,13,10,11,12,6,21}: yes (47.0/1.0)
+|   |   |   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+|   |   |                                                   16,24,5}: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content in {9,19,20}:
+|   |   |   |   number of forward slash marks = 1: yes (3.0/1.0)
+|   |   |   |   number of forward slash marks = 2: yes (1.0)
+|   |   |   |   number of forward slash marks in {5,4}: no (2.0)
+|   |   |   |   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 47 :
+|   most frequent tag listed in the main content in {li,div,ol,article,
+|                                                    section,td}: no (122.0/1.4)
+|   most frequent tag listed in the main content in {meta,a}: no (1.0/0.8)
+|   most frequent tag listed in the main content = p:
+|   |   number = TRUE: yes (13.0/1.3)
+|   |   number = FALSE: no (4.0/2.2)
+length > 47 :
+|   DOM tree depth of tag bounding main content in {18,2,17,15,14,7}: no (17.0/1.3)
+|   DOM tree depth of tag bounding main content in {3,22,16,24,5}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   tag bounding main content in {div,section}: yes (142.0/6.2)
+|   |   tag bounding main content = ul: no (11.0/1.3)
+|   |   tag bounding main content in {body,tr}: yes (0.0)
+
+
+--------
+Trial 3
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        9        62     248         1  1.6%      37 14.9%      38 12.3%
+  2       15        80     230         1  1.2%      17  7.4%      18  5.8%
+  3       16        92     218         2  2.2%      27 12.4%      29  9.4%
+  4       22       105     205         1  1.0%       4  2.0%       5  1.6%
+  5       24       109     201         2  1.8%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (26.0)
+most frequent tag listed in the main content = a: no (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (14.0)
+|   DOM tree depth of tag bounding main content in {22,16,24}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   number of forward slash marks = 0: no (4.0)
+|   |   number of forward slash marks in {1,2,5,4,3}:
+|   |   |   length <= 21 : no (7.0/1.0)
+|   |   |   length > 21 :
+|   |   |   |   number of forward slash marks = 3: no (3.0/1.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   |   reserved word = TRUE:
+|   |   |   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   |   |   date = FALSE: no (2.0)
+|   |   |   |   |   reserved word = FALSE:[S1]
+
+
+Subtree [S1]
+
+DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20,21}: yes (45.0)
+DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+                                                16,24,5}: yes (0.0)
+DOM tree depth of tag bounding main content in {9,19}:
+|   number of forward slash marks in {1,2}: yes (4.0)
+|   number of forward slash marks in {5,4}: no (2.0)
+|   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (86.0/1.4)
+most frequent tag listed in the main content = a: no (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (36.0/1.4)
+|   DOM tree depth of tag bounding main content in {22,16,24}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20,21}:
+|   |   length <= 21 : no (30.0/2.6)
+|   |   length > 21 :
+|   |   |   number of forward slash marks = 3: no (3.0/2.1)
+|   |   |   number of forward slash marks = 0: no (1.0/0.8)
+|   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   reserved word = TRUE:
+|   |   |   |   |   date = TRUE: yes (2.0/1.0)
+|   |   |   |   |   date = FALSE: no (2.0/1.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20,21}: yes (132.0/1.4)
+|   |   |   |   |   DOM tree depth of tag bounding main content in {9,19}:
+|   |   |   |   |   |   number of forward slash marks in {1,2}: yes (16.0/1.3)
+|   |   |   |   |   |   number of forward slash marks in {5,4}: no (2.0/1.0)
+
+
+--------
+Trial 4
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       10        62     248         2  3.2%      41 16.5%      43 13.9%
+  2       17        82     228         1  1.2%       9  3.9%      10  3.2%
+  3       17        91     219         0  0.0%      27 12.3%      27  8.7%
+  4       22       104     206         1  1.0%       2  1.0%       3  1.0%
+  5       24       106     204         1  0.9%       0  0.0%       1  0.3%
+
+Decision Tree:
+
+most frequent tag listed in the main content = a: no (0.0)
+most frequent tag listed in the main content = p:
+|   number of forward slash marks in {5,3}: no (2.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {1,2,4}:
+|   |   DOM tree depth of tag bounding main content in {15,14}: no (2.0)
+|   |   DOM tree depth of tag bounding main content in {10,18,2,3,17,7,22,16,
+|   |                                                   24,5}: yes (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,13,9,11,12,6,19,20,
+|   |                                                   21}:
+|   |   |   reserved word = FALSE: yes (27.0)
+|   |   |   reserved word = TRUE:
+|   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   date = FALSE: no (2.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,td}:
+|   date = TRUE: yes (2.0)
+|   date = FALSE:
+|   |   length <= 49 : no (49.0)
+|   |   length > 49 :
+|   |   |   number of forward slash marks = 1: yes (4.0)
+|   |   |   number of forward slash marks = 0: no (0.0)
+|   |   |   number of forward slash marks in {2,5,4,3}:
+|   |   |   |   DOM tree depth of tag bounding main content in {8,2,9,17,14,19,7}: no (12.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {11,12}: yes (4.0/1.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {13,10,18,3,15,6,20,21,
+|   |   |   |                                                   22,16,24,5}: no (0.0)
+
+
+--------
+Trial 5
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       11        62     248         2  3.2%      30 12.1%      32 10.3%
+  2        9        77     233         2  2.6%      26 11.2%      28  9.0%
+  3       16        90     220         3  3.3%      14  6.4%      17  5.5%
+  4       18       102     208         1  1.0%      20  9.6%      21  6.8%
+  5       20       114     196         2  1.8%       1  0.5%       3  1.0%
+  6       16       115     195         3  2.6%       2  1.0%       5  1.6%
+  7       23       117     193         1  0.9%       2  1.0%       3  1.0%
+  8       24       119     191         0  0.0%       0  0.0%       0  0.0%
+
+Decision Tree:
+
+most frequent tag listed in the main content in {a,td}: no (0.0)
+most frequent tag listed in the main content = p:
+|   number of forward slash marks in {5,3}: no (2.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {1,2,4}:
+|   |   DOM tree depth of tag bounding main content in {15,14}: no (2.0)
+|   |   DOM tree depth of tag bounding main content in {13,10,18,2,3,17,7,22,
+|   |                                                   16,24,5}: yes (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,9,11,12,6,19,20,21}:
+|   |   |   reserved word = FALSE: yes (42.0)
+|   |   |   reserved word = TRUE:
+|   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   date = FALSE: no (2.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta}:
+|   date = TRUE: yes (3.0)
+|   date = FALSE:
+|   |   most frequent tag listed in the main content in {li,ol,article,
+|   |                                                    section,meta}: no (37.0)
+|   |   most frequent tag listed in the main content in {p,a,td}: no (0.0)
+|   |   most frequent tag listed in the main content = div:
+|   |   |   DOM tree depth of tag bounding main content in {10,18,2,9,3,17,15,6,7,
+|   |   |                                                   5}: no (15.0)
+|   |   |   DOM tree depth of tag bounding main content in {13,14,19,20,21,22,16,
+|   |   |                                                   24}: no (0.0)
+|   |   |   DOM tree depth of tag bounding main content in {8,11,12}:
+|   |   |   |   length <= 39 : no (6.0)
+|   |   |   |   length > 39 : yes (8.0)
+
+
+--------
+Trial 6
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        8        62     248         1  1.6%      26 10.5%      27  8.7%
+  2       11        75     235         2  2.7%      26 11.1%      28  9.0%
+  3       17        88     222         2  2.3%       8  3.6%      10  3.2%
+  4       18        96     214         3  3.1%       5  2.3%       8  2.6%
+  5       17       101     209         2  2.0%       2  1.0%       4  1.3%
+  6       24       103     207         2  1.9%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (19.0)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (13.0)
+|   DOM tree depth of tag bounding main content in {21,22,16,24}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20}:
+|   |   number of forward slash marks = 0: no (6.0)
+|   |   number of forward slash marks in {1,2,5,4,3}:
+|   |   |   length <= 21 : no (7.0/1.0)
+|   |   |   length > 21 :
+|   |   |   |   number of forward slash marks = 3: no (3.0/1.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   |   reserved word = TRUE:
+|   |   |   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   |   |   date = FALSE: no (2.0)
+|   |   |   |   |   reserved word = FALSE:[S1]
+
+
+Subtree [S1]
+
+DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20}: yes (44.0)
+DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,21,
+                                                22,16,24,5}: yes (0.0)
+DOM tree depth of tag bounding main content in {9,19}:
+|   number of forward slash marks in {1,2}: yes (5.0)
+|   number of forward slash marks in {5,4}: no (2.0)
+|   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+most frequent tag listed in the main content in {li,ol,article,
+                                                 section,meta,td}: no (86.0/1.4)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content in {p,div}:
+|   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,5}: no (36.0/1.4)
+|   DOM tree depth of tag bounding main content in {21,22,16,24}: yes (5.0/1.2)
+|   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|                                                   20}:
+|   |   length <= 21 : no (30.0/2.6)
+|   |   length > 21 :
+|   |   |   number of forward slash marks = 3: no (3.0/2.1)
+|   |   |   number of forward slash marks = 0: no (1.0/0.8)
+|   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   reserved word = TRUE:
+|   |   |   |   |   date = TRUE: yes (2.0/1.0)
+|   |   |   |   |   date = FALSE: no (2.0/1.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20}: yes (127.0/1.4)
+|   |   |   |   |   DOM tree depth of tag bounding main content in {9,19}:
+|   |   |   |   |   |   number of forward slash marks in {1,2}: yes (16.0/1.3)
+|   |   |   |   |   |   number of forward slash marks in {5,4}: no (2.0/1.0)
+
+
+--------
+Trial 7
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       10        62     248         2  3.2%      27 10.9%      29  9.4%
+  2       10        75     235         2  2.7%      37 15.7%      39 12.6%
+  3       11        93     217         3  3.2%      17  7.8%      20  6.5%
+  4       13       105     205         3  2.9%       4  2.0%       7  2.3%
+  5       14       109     201         2  1.8%       7  3.5%       9  2.9%
+  6       20       116     194         2  1.7%       4  2.1%       6  1.9%
+  7       23       120     190         2  1.7%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+length <= 45 :
+|   DOM tree depth of tag bounding main content = 13: yes (2.0)
+|   DOM tree depth of tag bounding main content in {17,19,20,21,22}: no (0.0)
+|   DOM tree depth of tag bounding main content in {8,10,18,2,9,3,11,15,
+|                                                   14,12,6,7,16,24,5}:
+|   |   most frequent tag listed in the main content in {li,div,ol,article,
+|   |                                                    section,meta,td}: no (48.0)
+|   |   most frequent tag listed in the main content = a: no (0.0)
+|   |   most frequent tag listed in the main content = p:
+|   |   |   number = TRUE: yes (2.0)
+|   |   |   number = FALSE: no (3.0)
+length > 45 :
+|   tag bounding main content in {ul,body}: no (7.0)
+|   tag bounding main content = tr: yes (0.0)
+|   tag bounding main content in {div,section}:
+|   |   DOM tree depth of tag bounding main content in {18,17,15,7}: no (4.0)
+|   |   DOM tree depth of tag bounding main content in {2,3,14,22,16,24,5}: yes (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|   |                                                   20,21}:
+|   |   |   DOM tree depth of tag bounding main content in {8,13,10,11,12,6,21}: yes (44.0/1.0)
+|   |   |   DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+|   |   |                                                   16,24,5}: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content in {9,19,20}:
+|   |   |   |   number of forward slash marks in {1,2}: yes (8.0/1.0)
+|   |   |   |   number of forward slash marks in {5,4}: no (2.0)
+|   |   |   |   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 45 :
+|   most frequent tag listed in the main content in {li,div,ol,article,
+|                                                    section,meta,td}: no (122.0/1.4)
+|   most frequent tag listed in the main content = a: no (0.0)
+|   most frequent tag listed in the main content = p:
+|   |   number = TRUE: yes (13.0/1.3)
+|   |   number = FALSE: no (4.0/2.2)
+length > 45 :
+|   tag bounding main content in {ul,body}: no (20.0/1.3)
+|   tag bounding main content = tr: yes (0.0)
+|   tag bounding main content in {div,section}:
+|   |   DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+|   |                                                   20,21}: yes (142.0/6.2)
+|   |   DOM tree depth of tag bounding main content in {18,17,15,7}: no (9.0/1.3)
+|   |   DOM tree depth of tag bounding main content in {2,3,14,22,16,24,5}: yes (0.0)
+
+
+--------
+Trial 8
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       11        62     248         1  1.6%      12  4.8%      13  4.2%
+  2       13        74     236         1  1.4%      11  4.7%      12  3.9%
+  3       16        85     225         1  1.2%       9  4.0%      10  3.2%
+  4       26        94     216         2  2.1%       6  2.8%       8  2.6%
+  5       24       100     210         1  1.0%       6  2.9%       7  2.3%
+  6       22       106     204         1  0.9%      15  7.4%      16  5.2%
+  7       23       118     192         2  1.7%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+                                                16,24,5}: no (26.0)
+DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+                                                20,21}:
+|   most frequent tag listed in the main content in {li,ol,article,
+|                                                    section,td}: no (16.0)
+|   most frequent tag listed in the main content in {meta,a}: yes (0.0)
+|   most frequent tag listed in the main content in {p,div}:
+|   |   number of forward slash marks = 0: no (3.0)
+|   |   number of forward slash marks in {1,2,5,4,3}:
+|   |   |   length <= 21 : no (6.0/1.0)
+|   |   |   length > 21 :
+|   |   |   |   number of forward slash marks = 3: no (3.0/1.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   |   reserved word = TRUE:
+|   |   |   |   |   |   date = TRUE: yes (2.0)
+|   |   |   |   |   |   date = FALSE: no (2.0)
+|   |   |   |   |   reserved word = FALSE:[S1]
+
+
+Subtree [S1]
+
+DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20,21}: yes (54.0)
+DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+                                                16,24,5}: yes (0.0)
+DOM tree depth of tag bounding main content in {9,19}:
+|   number of forward slash marks in {1,2}: yes (4.0)
+|   number of forward slash marks in {5,4}: no (2.0)
+|   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+DOM tree depth of tag bounding main content in {18,2,3,17,15,14,7,22,
+                                                16,24,5}: no (60.0/1.4)
+DOM tree depth of tag bounding main content in {8,13,10,9,11,12,6,19,
+                                                20,21}:
+|   most frequent tag listed in the main content in {li,ol,article,
+|                                                    section,td}: no (62.0/1.4)
+|   most frequent tag listed in the main content in {meta,a}: yes (0.0)
+|   most frequent tag listed in the main content in {p,div}:
+|   |   length <= 21 : no (30.0/2.6)
+|   |   length > 21 :
+|   |   |   number of forward slash marks = 3: no (3.0/2.1)
+|   |   |   number of forward slash marks = 0: no (1.0/0.8)
+|   |   |   number of forward slash marks in {1,2,5,4}:
+|   |   |   |   reserved word = TRUE:
+|   |   |   |   |   date = TRUE: yes (2.0/1.0)
+|   |   |   |   |   date = FALSE: no (2.0/1.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   DOM tree depth of tag bounding main content in {8,13,10,11,12,6,20,21}: yes (132.0/1.4)
+|   |   |   |   |   DOM tree depth of tag bounding main content in {9,19}:
+|   |   |   |   |   |   number of forward slash marks in {1,2}: yes (16.0/1.3)
+|   |   |   |   |   |   number of forward slash marks in {5,4}: no (2.0/1.0)
+
+
+--------
+Trial 9
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        9        62     248         1  1.6%      24  9.7%      25  8.1%
+  2       15        74     236         1  1.4%      22  9.3%      23  7.4%
+  3       13        86     224         1  1.2%      20  8.9%      21  6.8%
+  4       13        98     212         1  1.0%      10  4.7%      11  3.5%
+  5       14       108     202         3  2.8%      20  9.9%      23  7.4%
+  6       22       120     190         0  0.0%       0  0.0%       0  0.0%
+
+Decision Tree:
+
+date = TRUE: yes (17.0)
+date = FALSE:
+|   most frequent tag listed in the main content = a: no (0.0)
+|   most frequent tag listed in the main content = p:
+|   |   DOM tree depth of tag bounding main content in {15,14}: no (4.0)
+|   |   DOM tree depth of tag bounding main content in {10,18,2,3,17,6,7,22,
+|   |                                                   16,24,5}: yes (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,13,9,11,12,19,20,21}:
+|   |   |   reserved word = TRUE: no (2.0)
+|   |   |   reserved word = FALSE:
+|   |   |   |   number of forward slash marks in {1,2}: yes (23.0)
+|   |   |   |   number of forward slash marks in {5,3}: no (2.0)
+|   |   |   |   number of forward slash marks in {0,4}: yes (0.0)
+|   most frequent tag listed in the main content in {li,div,ol,article,
+|                                                    section,meta,td}:
+|   |   DOM tree depth of tag bounding main content in {13,10,18,2,9,3,17,15,
+|   |                                                   14,6,19,7,22,24,5}: no (40.0)
+|   |   DOM tree depth of tag bounding main content in {20,21,16}: no (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,11,12}:
+|   |   |   length <= 48 : no (21.0)
+|   |   |   length > 48 :
+|   |   |   |   tag bounding main content = div: yes (9.0)
+|   |   |   |   tag bounding main content = ul: no (2.0)
+|   |   |   |   tag bounding main content in {section,body,tr}: yes (0.0)
+
+
+--------
+
+Best tree from trial 1 saved
+
+
+Evaluation on training data (310 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  21    3( 1.0%)     13    6( 1.9%)    ( 4.7%)
+   1	  22    0( 0.0%)     22    0( 0.0%)    ( 3.5%)   <<
+   2	  24    2( 0.6%)     14    5( 1.6%)    ( 4.7%)
+   3	  24    2( 0.6%)     20    2( 0.6%)    ( 4.5%)
+   4	  24    1( 0.3%)     24    1( 0.3%)    ( 4.6%)
+   5	  24    0( 0.0%)     23    0( 0.0%)    ( 4.6%)
+   6	  24    2( 0.6%)     20    2( 0.6%)    ( 4.8%)
+   7	  23    2( 0.6%)     14    5( 1.6%)    ( 4.4%)
+   8	  23    2( 0.6%)     19    2( 0.6%)    ( 4.5%)
+   9	  22    0( 0.0%)     22    0( 0.0%)    ( 3.9%)
+
+Evaluation on test data (34 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  21    2( 5.9%)     13    2( 5.9%)    ( 4.7%)
+   1	  22    1( 2.9%)     22    1( 2.9%)    ( 3.5%)   <<
+   2	  24    2( 5.9%)     14    1( 2.9%)    ( 4.7%)
+   3	  24    1( 2.9%)     20    1( 2.9%)    ( 4.5%)
+   4	  24    0( 0.0%)     24    0( 0.0%)    ( 4.6%)
+   5	  24    1( 2.9%)     23    1( 2.9%)    ( 4.6%)
+   6	  24    2( 5.9%)     20    2( 5.9%)    ( 4.8%)
+   7	  23    2( 5.9%)     14    1( 2.9%)    ( 4.4%)
+   8	  23    1( 2.9%)     19    1( 2.9%)    ( 4.5%)
+   9	  22    0( 0.0%)     22    0( 0.0%)    ( 3.9%)
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	        17	(b): class no
+

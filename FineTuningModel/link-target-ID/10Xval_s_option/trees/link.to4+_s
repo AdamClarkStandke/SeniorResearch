@@ -1,0 +1,77 @@
+
+C4.5 [release 8] decision tree generator	Thu May 30 08:39:49 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+
+Read 310 cases (6 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (121.0/1.0)
+|   number = TRUE:
+|   |   length <= 34 : yes (12.0)
+|   |   length > 34 : no (7.0/1.0)
+length > 47 :
+|   number of forward slash marks = 3: no (9.0/1.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {1,2,5,4}:
+|   |   reserved word = TRUE:
+|   |   |   date = TRUE: yes (2.0)
+|   |   |   date = FALSE: no (8.0)
+|   |   reserved word = FALSE:
+|   |   |   date = TRUE: yes (47.0)
+|   |   |   date = FALSE:
+|   |   |   |   number of forward slash marks in {1,2}: yes (97.0/9.0)
+|   |   |   |   number of forward slash marks in {5,4}: no (7.0)
+|   |   |   |   number of forward slash marks in {0,3}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (121.0/2.6)
+|   number = TRUE:
+|   |   length <= 34 : yes (12.0/1.3)
+|   |   length > 34 : no (7.0/2.4)
+length > 47 :
+|   reserved word = TRUE:
+|   |   date = TRUE: yes (2.0/1.0)
+|   |   date = FALSE: no (8.0/1.3)
+|   reserved word = FALSE:
+|   |   date = TRUE: yes (47.0/1.4)
+|   |   date = FALSE:
+|   |   |   number of forward slash marks in {1,2}: yes (97.0/11.7)
+|   |   |   number of forward slash marks in {5,4}: no (7.0/1.3)
+|   |   |   number of forward slash marks in {0,3}: no (9.0/2.4)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  19   12( 3.9%)     16   12( 3.9%)    ( 8.2%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  19    5(14.7%)     16    5(14.7%)    ( 8.2%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    2	(a): class yes
+	    3   14	(b): class no
+

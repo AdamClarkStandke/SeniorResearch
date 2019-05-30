@@ -1,0 +1,1020 @@
+
+C4.5 [release 8] rule generator	Thu May 30 10:23:35 2019
+-------------------------------
+
+    Options:
+	File stem <XDF>
+	Rulesets evaluated on unseen cases
+
+Read 310 cases (11 attributes) from XDF
+
+------------------
+Processing tree 0
+
+Final rules from tree 0:
+
+Rule 9:
+    	tag bounding main content = div
+    	length > 44
+    	score of tag bounding main content > 0.995279
+	->  class yes  [97.9%]
+
+Rule 4:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 2:
+    	number = TRUE
+    	score of tag bounding main content > 1.00872
+	->  class yes  [96.8%]
+
+Rule 7:
+    	tag bounding main content = section
+    	length > 44
+	->  class yes  [85.7%]
+
+Rule 3:
+    	number = FALSE
+    	length <= 44
+	->  class no  [97.8%]
+
+Rule 6:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 5:
+    	date = FALSE
+    	score of tag bounding main content <= 0.995279
+	->  class no  [97.0%]
+
+Rule 12:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Default class: no
+
+------------------
+Processing tree 1
+
+Final rules from tree 1:
+
+Rule 3:
+    	date = FALSE
+    	length <= 70
+    	score of tag bounding main content <= 0.996103
+	->  class no  [98.3%]
+
+Rule 6:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.7%]
+
+Rule 7:
+    	date = FALSE
+    	length <= 51
+    	most frequent tag listed in the main content = div
+	->  class no  [97.6%]
+
+Rule 2:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [95.2%]
+
+Rule 14:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 8:
+    	date = FALSE
+    	number of forward slash marks = 5
+	->  class no  [84.1%]
+
+Rule 16:
+    	most frequent tag listed in the main content = meta
+	->  class no  [70.7%]
+
+Rule 5:
+    	reserved word = FALSE
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.996103
+	->  class yes  [98.8%]
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 10:
+    	length > 72
+    	number of forward slash marks = 2
+	->  class yes  [92.6%]
+
+Rule 11:
+    	number of forward slash marks = 1
+    	length > 51
+	->  class yes  [92.0%]
+
+Default class: no
+
+------------------
+Processing tree 2
+
+Final rules from tree 2:
+
+Rule 4:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.7%]
+
+Rule 6:
+    	date = FALSE
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content <= 1.00162
+	->  class no  [97.5%]
+
+Rule 7:
+    	length <= 36
+    	most frequent tag listed in the main content = div
+	->  class no  [97.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 9:
+    	most frequent tag listed in the main content = ol
+	->  class no  [75.8%]
+
+Rule 12:
+    	most frequent tag listed in the main content = meta
+	->  class no  [70.7%]
+
+Rule 11:
+    	most frequent tag listed in the main content = section
+	->  class no  [63.0%]
+
+Rule 2:
+    	length > 72
+    	most frequent tag listed in the main content = p
+	->  class yes  [98.2%]
+
+Rule 3:
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.999437
+	->  class yes  [97.7%]
+
+Rule 5:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	length > 36
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content > 1.00162
+	->  class yes  [89.4%]
+
+Default class: no
+
+------------------
+Processing tree 3
+
+Final rules from tree 3:
+
+Rule 4:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.7%]
+
+Rule 6:
+    	date = FALSE
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content <= 1.00162
+	->  class no  [97.5%]
+
+Rule 7:
+    	length <= 38
+    	most frequent tag listed in the main content = div
+	->  class no  [97.4%]
+
+Rule 10:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 9:
+    	most frequent tag listed in the main content = ol
+	->  class no  [75.8%]
+
+Rule 12:
+    	most frequent tag listed in the main content = meta
+	->  class no  [70.7%]
+
+Rule 11:
+    	most frequent tag listed in the main content = section
+	->  class no  [63.0%]
+
+Rule 2:
+    	length > 71
+    	most frequent tag listed in the main content = p
+	->  class yes  [98.3%]
+
+Rule 3:
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.999841
+	->  class yes  [97.7%]
+
+Rule 5:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	length > 38
+    	most frequent tag listed in the main content = div
+    	score of tag bounding main content > 1.00162
+	->  class yes  [89.4%]
+
+Default class: no
+
+------------------
+Processing tree 4
+
+Final rules from tree 4:
+
+Rule 4:
+    	number = FALSE
+    	length <= 44
+	->  class no  [97.8%]
+
+Rule 8:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 7:
+    	date = FALSE
+    	score of tag bounding main content <= 0.995279
+	->  class no  [97.0%]
+
+Rule 3:
+    	number of forward slash marks = 3
+	->  class no  [91.7%]
+
+Rule 13:
+    	reserved word = FALSE
+    	length > 44
+    	score of tag bounding main content > 0.995279
+	->  class yes  [97.1%]
+
+Rule 6:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 9:
+    	tag bounding main content = section
+    	length > 44
+	->  class yes  [85.7%]
+
+Rule 2:
+    	number = TRUE
+    	number of forward slash marks = 1
+	->  class yes  [85.5%]
+
+Default class: no
+
+------------------
+Processing tree 5
+
+Final rules from tree 5:
+
+Rule 7:
+    	tag bounding main content = div
+    	length > 43
+    	score of tag bounding main content > 0.99519
+	->  class yes  [97.9%]
+
+Rule 2:
+    	number = TRUE
+    	score of tag bounding main content > 1.00872
+	->  class yes  [96.8%]
+
+Rule 4:
+    	DOM tree depth of tag bounding main content = 11
+    	length > 43
+	->  class yes  [96.5%]
+
+Rule 10:
+    	tag bounding main content = section
+    	length > 43
+	->  class yes  [85.7%]
+
+Rule 3:
+    	number = FALSE
+    	length <= 43
+	->  class no  [97.8%]
+
+Rule 9:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 5:
+    	tag bounding main content = div
+    	score of tag bounding main content <= 0.99519
+	->  class no  [94.1%]
+
+Rule 11:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Default class: no
+
+------------------
+Processing tree 6
+
+Final rules from tree 6:
+
+Rule 2:
+    	date = FALSE
+    	length <= 69
+    	score of tag bounding main content <= 1.00469
+	->  class no  [98.8%]
+
+Rule 12:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 6:
+    	length <= 38
+    	most frequent tag listed in the main content = div
+	->  class no  [97.4%]
+
+Rule 8:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 9:
+    	date = FALSE
+    	number of forward slash marks = 5
+	->  class no  [84.1%]
+
+Rule 14:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Rule 4:
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 1.00469
+	->  class yes  [97.5%]
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 10:
+    	number of forward slash marks = 2
+    	tag bounding main content = div
+    	length > 69
+	->  class yes  [97.0%]
+
+Rule 11:
+    	number of forward slash marks = 1
+    	length > 69
+	->  class yes  [93.0%]
+
+Rule 13:
+    	tag bounding main content = section
+    	length > 69
+	->  class yes  [85.7%]
+
+Default class: yes
+
+------------------
+Processing tree 7
+
+Final rules from tree 7:
+
+Rule 6:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.7%]
+
+Rule 7:
+    	length <= 44
+    	most frequent tag listed in the main content = div
+	->  class no  [97.6%]
+
+Rule 2:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [95.2%]
+
+Rule 3:
+    	length <= 70
+    	score of tag bounding main content <= 0.996103
+	->  class no  [93.9%]
+
+Rule 15:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 8:
+    	ends with forward slash mark = TRUE
+    	most frequent tag listed in the main content = div
+	->  class no  [84.1%]
+
+Rule 13:
+    	tag bounding main content = body
+	->  class no  [84.1%]
+
+Rule 5:
+    	reserved word = FALSE
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.996103
+	->  class yes  [98.8%]
+
+Rule 4:
+    	length > 70
+    	most frequent tag listed in the main content = p
+	->  class yes  [98.3%]
+
+Rule 10:
+    	ends with forward slash mark = FALSE
+    	tag bounding main content = div
+    	length > 44
+	->  class yes  [94.2%]
+
+Default class: no
+
+------------------
+Processing tree 8
+
+Final rules from tree 8:
+
+Rule 5:
+    	tag bounding main content = div
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 1.00122
+	->  class yes  [98.7%]
+
+Rule 3:
+    	length > 71
+    	frequency count of most frequent tag <= 6
+	->  class yes  [97.2%]
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 8:
+    	number of forward slash marks = 1
+    	length > 32
+    	score of tag bounding main content > 1.00122
+	->  class yes  [96.1%]
+
+Rule 2:
+    	date = FALSE
+    	length <= 71
+    	score of tag bounding main content <= 1.00122
+	->  class no  [98.7%]
+
+Rule 4:
+    	date = FALSE
+    	frequency count of most frequent tag > 6
+    	score of tag bounding main content <= 1.00122
+	->  class no  [98.5%]
+
+Rule 11:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 6:
+    	length <= 32
+    	most frequent tag listed in the main content = div
+	->  class no  [97.3%]
+
+Rule 10:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Default class: no
+
+------------------
+Processing tree 9
+
+Final rules from tree 9:
+
+Rule 6:
+    	most frequent tag listed in the main content = li
+	->  class no  [97.7%]
+
+Rule 7:
+    	length <= 44
+    	most frequent tag listed in the main content = div
+	->  class no  [97.6%]
+
+Rule 2:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [95.2%]
+
+Rule 13:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 8:
+    	ends with forward slash mark = TRUE
+    	most frequent tag listed in the main content = div
+	->  class no  [84.1%]
+
+Rule 9:
+    	number = TRUE
+    	length <= 60
+    	most frequent tag listed in the main content = div
+	->  class no  [82.0%]
+
+Rule 12:
+    	most frequent tag listed in the main content = ol
+	->  class no  [75.8%]
+
+Rule 15:
+    	most frequent tag listed in the main content = meta
+	->  class no  [70.7%]
+
+Rule 14:
+    	most frequent tag listed in the main content = section
+	->  class no  [63.0%]
+
+Rule 5:
+    	reserved word = FALSE
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.999841
+	->  class yes  [98.7%]
+
+Rule 4:
+    	length > 70
+    	most frequent tag listed in the main content = p
+	->  class yes  [98.3%]
+
+Rule 1:
+    	date = TRUE
+	->  class yes  [97.0%]
+
+Rule 11:
+    	number = FALSE
+    	ends with forward slash mark = FALSE
+    	length > 44
+	->  class yes  [96.8%]
+
+Rule 10:
+    	length > 60
+    	ends with forward slash mark = FALSE
+    	most frequent tag listed in the main content = div
+	->  class yes  [89.0%]
+
+Default class: no
+
+Composite ruleset:
+
+Rule 51:
+    	date = FALSE
+    	length <= 71
+    	score of tag bounding main content <= 1.00122
+	->  class no  [98.7%]
+
+Rule 6:
+    	tag bounding main content = ul
+	->  class no  [97.7%]
+
+Rule 53:
+    	length <= 32
+    	most frequent tag listed in the main content = div
+	->  class no  [97.3%]
+
+Rule 12:
+    	date = FALSE
+    	reserved word = TRUE
+	->  class no  [95.2%]
+
+Rule 13:
+    	most frequent tag listed in the main content = article
+	->  class no  [88.2%]
+
+Rule 45:
+    	ends with forward slash mark = TRUE
+    	most frequent tag listed in the main content = div
+	->  class no  [84.1%]
+
+Rule 15:
+    	most frequent tag listed in the main content = meta
+	->  class no  [70.7%]
+
+Rule 55:
+    	reserved word = FALSE
+    	most frequent tag listed in the main content = p
+    	score of tag bounding main content > 0.999841
+	->  class yes  [98.7%]
+
+Rule 33:
+    	tag bounding main content = div
+    	length > 43
+    	score of tag bounding main content > 0.99519
+	->  class yes  [97.9%]
+
+Rule 34:
+    	DOM tree depth of tag bounding main content = 11
+    	length > 43
+	->  class yes  [96.5%]
+
+Rule 42:
+    	tag bounding main content = section
+    	length > 69
+	->  class yes  [85.7%]
+
+Default class: no
+
+
+Evaluation on training data (310 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   9     3   2.1%   126      1 (0.8%)	    35 (35|0) 	yes
+   4     1   3.0%     6      0 (0.0%)	     2 (2|0) 	yes
+   2     2   3.2%    16      0 (0.0%)	    16 (16|0) 	yes
+   7     2  14.3%     5      0 (0.0%)	     5 (5|0) 	yes
+   3     2   2.2%   117      1 (0.9%)	     0 (0|0) 	no
+   6     1   2.3%    20      0 (0.0%)	     0 (0|0) 	no
+   5     2   3.0%    18      0 (0.0%)	     0 (0|0) 	no
+  12     1  15.9%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   3     3   1.7%    79      0 (0.0%)	     0 (0|0) 	no
+   6     1   2.3%    28      0 (0.0%)	     0 (0|0) 	no
+   7     3   2.4%    29      0 (0.0%)	     0 (0|0) 	no
+   2     2   4.8%     4      0 (0.0%)	     0 (0|0) 	no
+  14     1  11.8%     9      0 (0.0%)	     0 (0|0) 	no
+   8     2  15.9%     5      0 (0.0%)	     0 (0|0) 	no
+  16     1  29.3%     2      0 (0.0%)	     1 (1|0) 	no
+   5     3   1.2%   114      0 (0.0%)	    31 (31|0) 	yes
+   1     1   3.0%    19      0 (0.0%)	    17 (17|0) 	yes
+  10     2   7.4%     5      0 (0.0%)	     5 (5|0) 	yes
+  11     2   8.0%    15      0 (0.0%)	    15 (15|0) 	yes
+
+Tested 310, errors 0 (0.0%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     1   2.3%    59      0 (0.0%)	     0 (0|0) 	no
+   6     3   2.5%    55      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.7%     9      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%    11      0 (0.0%)	     0 (0|0) 	no
+   9     1  24.2%     5      0 (0.0%)	     0 (0|0) 	no
+  12     1  29.3%     4      0 (0.0%)	     0 (0|0) 	no
+  11     1  37.0%     3      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.8%    75      0 (0.0%)	     5 (5|0) 	yes
+   3     2   2.3%    47      1 (2.1%)	    36 (37|1) 	yes
+   5     1   3.0%    15      0 (0.0%)	     9 (9|0) 	yes
+   8     3  10.6%    18      1 (5.6%)	    16 (17|1) 	yes
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     1   2.3%    59      0 (0.0%)	     0 (0|0) 	no
+   6     3   2.5%    55      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.6%     9      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%    11      0 (0.0%)	     0 (0|0) 	no
+   9     1  24.2%     5      0 (0.0%)	     0 (0|0) 	no
+  12     1  29.3%     4      0 (0.0%)	     0 (0|0) 	no
+  11     1  37.0%     3      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.7%    79      0 (0.0%)	     5 (5|0) 	yes
+   3     2   2.3%    43      1 (2.3%)	    34 (35|1) 	yes
+   5     1   3.0%    15      0 (0.0%)	     9 (9|0) 	yes
+   8     3  10.6%    18      1 (5.6%)	    16 (17|1) 	yes
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     2   2.2%   117      1 (0.9%)	     0 (0|0) 	no
+   8     1   2.3%    20      0 (0.0%)	     0 (0|0) 	no
+   7     2   3.0%    19      1 (5.3%)	     2 (3|1) 	no
+   3     1   8.3%     1      0 (0.0%)	     0 (0|0) 	no
+  13     3   2.9%   131      2 (1.5%)	    68 (70|2) 	yes
+   6     1   3.0%     6      0 (0.0%)	     4 (4|0) 	yes
+   2     2  14.5%    16      0 (0.0%)	    16 (16|0) 	yes
+
+Tested 310, errors 4 (1.3%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   7     3   2.1%   127      1 (0.8%)	    29 (29|0) 	yes
+   2     2   3.2%    16      0 (0.0%)	    16 (16|0) 	yes
+   4     2   3.5%     1      0 (0.0%)	     1 (1|0) 	yes
+  10     2  14.3%     9      0 (0.0%)	     9 (9|0) 	yes
+   3     2   2.2%   116      1 (0.9%)	     0 (0|0) 	no
+   9     1   2.3%    20      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.9%    14      0 (0.0%)	     0 (0|0) 	no
+  11     1  15.9%     6      0 (0.0%)	     0 (0|0) 	no
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     3   1.2%   114      0 (0.0%)	    19 (19|0) 	no
+  12     1   2.3%    21      0 (0.0%)	    21 (21|0) 	no
+   6     2   2.6%     7      0 (0.0%)	     7 (7|0) 	no
+   8     1  11.8%     6      0 (0.0%)	     6 (6|0) 	no
+   9     2  15.9%     5      0 (0.0%)	     5 (5|0) 	no
+  14     1  15.9%     2      0 (0.0%)	     2 (2|0) 	no
+   4     2   2.5%   105      1 (1.0%)	     0 (0|0) 	yes
+   1     1   3.0%    21      0 (0.0%)	     0 (0|0) 	yes
+  10     3   3.0%    10      0 (0.0%)	     0 (0|0) 	yes
+  11     2   7.0%     9      0 (0.0%)	     0 (0|0) 	yes
+  13     2  14.3%     3      0 (0.0%)	     0 (0|0) 	yes
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.3%    59      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.4%    56      0 (0.0%)	     0 (0|0) 	no
+   2     2   4.8%     5      0 (0.0%)	     0 (0|0) 	no
+   3     2   6.1%    23      3 (13.0%)	     0 (3|3) 	no
+  15     1  11.8%     9      0 (0.0%)	     0 (0|0) 	no
+   8     2  15.9%     5      0 (0.0%)	     0 (0|0) 	no
+  13     1  15.9%     2      0 (0.0%)	     0 (0|0) 	no
+   5     3   1.2%   114      0 (0.0%)	    17 (17|0) 	yes
+   4     2   1.7%     6      0 (0.0%)	     4 (4|0) 	yes
+  10     3   5.8%    31      1 (3.2%)	    29 (30|1) 	yes
+
+Tested 310, errors 4 (1.3%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   5     3   1.3%   107      0 (0.0%)	    39 (39|0) 	yes
+   3     2   2.8%    16      0 (0.0%)	     8 (8|0) 	yes
+   1     1   3.0%    15      0 (0.0%)	    15 (15|0) 	yes
+   8     3   3.9%    13      0 (0.0%)	    13 (13|0) 	yes
+   2     3   1.3%   108      0 (0.0%)	     0 (0|0) 	no
+   4     3   1.5%    11      0 (0.0%)	     0 (0|0) 	no
+  11     1   2.3%    18      0 (0.0%)	     0 (0|0) 	no
+   6     2   2.7%     9      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%     9      0 (0.0%)	     0 (0|0) 	no
+
+Tested 310, errors 2 (0.6%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.3%    59      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.4%    56      0 (0.0%)	     0 (0|0) 	no
+   2     2   4.8%     5      0 (0.0%)	     0 (0|0) 	no
+  13     1  11.8%    10      0 (0.0%)	     0 (0|0) 	no
+   8     2  15.9%     5      0 (0.0%)	     0 (0|0) 	no
+   9     3  18.0%     3      0 (0.0%)	     0 (0|0) 	no
+  12     1  24.2%     5      0 (0.0%)	     0 (0|0) 	no
+  15     1  29.3%     4      0 (0.0%)	     0 (0|0) 	no
+  14     1  37.0%     2      0 (0.0%)	     0 (0|0) 	no
+   5     3   1.3%   110      0 (0.0%)	    33 (33|0) 	yes
+   4     2   1.7%    10      0 (0.0%)	     5 (5|0) 	yes
+   1     1   3.0%    16      0 (0.0%)	     1 (1|0) 	yes
+  11     3   3.2%    14      0 (0.0%)	     3 (3|0) 	yes
+  10     3  11.0%     4      1 (25.0%)	     2 (3|1) 	yes
+
+Tested 310, errors 1 (0.3%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  51     3   1.3%   108      0 (0.0%)	     0 (0|0) 	no
+   6     1   2.3%    24      0 (0.0%)	     0 (0|0) 	no
+  53     2   2.7%     9      0 (0.0%)	     0 (0|0) 	no
+  12     2   4.8%     2      0 (0.0%)	     0 (0|0) 	no
+  13     1  11.8%     8      0 (0.0%)	     0 (0|0) 	no
+  45     2  15.9%     4      0 (0.0%)	     0 (0|0) 	no
+  15     1  29.3%     1      0 (0.0%)	     0 (0|0) 	no
+  55     3   1.3%   110      0 (0.0%)	    17 (17|0) 	yes
+  33     3   2.1%    39      1 (2.6%)	    22 (23|1) 	yes
+  34     2   3.5%     1      0 (0.0%)	     1 (1|0) 	yes
+  42     2  14.3%     4      0 (0.0%)	     4 (4|0) 	yes
+
+Tested 310, errors 1 (0.3%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	  153     	(a): class yes
+	    1  156	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       8    2( 0.6%)
+   1      11    0( 0.0%)
+   2      11    2( 0.6%)
+   3      11    2( 0.6%)
+   4       8    4( 1.3%)
+   5       8    2( 0.6%)
+   6      11    2( 0.6%)
+   7      10    4( 1.3%)
+   8       9    2( 0.6%)
+   9      14    1( 0.3%)
+  **      11    1( 0.3%)
+				Av size = 10.2,  av errors = 2.0 (0.6%)
+
+Evaluation on test data (34 items):
+
+Ruleset 0:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   9     3   2.1%    15      0 (0.0%)	     4 (4|0) 	yes
+   4     1   3.0%     1      0 (0.0%)	     0 (0|0) 	yes
+   3     2   2.2%    13      0 (0.0%)	     0 (0|0) 	no
+   6     1   2.3%     3      0 (0.0%)	     0 (0|0) 	no
+   5     2   3.0%     2      0 (0.0%)	     0 (0|0) 	no
+
+Tested 34, errors 0 (0.0%)
+
+Ruleset 1:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   3     3   1.7%    10      0 (0.0%)	     0 (0|0) 	no
+   6     1   2.3%     2      0 (0.0%)	     0 (0|0) 	no
+   7     3   2.4%     4      0 (0.0%)	     0 (0|0) 	no
+  14     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   5     3   1.2%    11      0 (0.0%)	     1 (1|0) 	yes
+   1     1   3.0%     2      0 (0.0%)	     1 (1|0) 	yes
+  11     2   8.0%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 2:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     1   2.3%     5      0 (0.0%)	     0 (0|0) 	no
+   6     3   2.5%     5      1 (20.0%)	     0 (0|0) 	no
+   7     2   2.7%     3      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   9     1  24.2%     4      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.8%    11      1 (9.1%)	    -1 (0|1) 	yes
+   3     2   2.3%     2      0 (0.0%)	     1 (1|0) 	yes
+   5     1   3.0%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     3  10.6%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 3:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     1   2.3%     5      0 (0.0%)	     0 (0|0) 	no
+   6     3   2.5%     5      1 (20.0%)	     0 (0|0) 	no
+   7     2   2.6%     3      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   9     1  24.2%     4      0 (0.0%)	     0 (0|0) 	no
+   2     2   1.7%    12      1 (8.3%)	    -1 (0|1) 	yes
+   3     2   2.3%     1      0 (0.0%)	     1 (1|0) 	yes
+   5     1   3.0%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     3  10.6%     2      0 (0.0%)	     2 (2|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 4:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   4     2   2.2%    13      0 (0.0%)	     0 (0|0) 	no
+   8     1   2.3%     3      0 (0.0%)	     1 (1|0) 	no
+   7     2   3.0%     2      0 (0.0%)	     0 (0|0) 	no
+   3     1   8.3%     1      1 (100.0%)	    -1 (0|1) 	no
+  13     3   2.9%    15      0 (0.0%)	     6 (6|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 5:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   7     3   2.1%    15      0 (0.0%)	     5 (5|0) 	yes
+   4     2   3.5%     1      1 (100.0%)	    -1 (0|1) 	yes
+  10     2  14.3%     1      0 (0.0%)	     1 (1|0) 	yes
+   3     2   2.2%    13      0 (0.0%)	     0 (0|0) 	no
+   9     1   2.3%     3      0 (0.0%)	     0 (0|0) 	no
+   5     2   5.9%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 6:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   2     3   1.2%    14      1 (7.1%)	     4 (5|1) 	no
+  12     1   2.3%     1      0 (0.0%)	     1 (1|0) 	no
+   6     2   2.6%     2      0 (0.0%)	     2 (2|0) 	no
+   8     1  11.8%     1      0 (0.0%)	     1 (1|0) 	no
+   4     2   2.5%    11      0 (0.0%)	     0 (0|0) 	yes
+   1     1   3.0%     2      0 (0.0%)	     0 (0|0) 	yes
+  11     2   7.0%     1      0 (0.0%)	     0 (0|0) 	yes
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 7:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.3%     5      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.4%     6      0 (0.0%)	     0 (0|0) 	no
+   3     2   6.1%     5      0 (0.0%)	     1 (1|0) 	no
+  15     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   5     3   1.2%    11      0 (0.0%)	     0 (0|0) 	yes
+   4     2   1.7%     2      1 (50.0%)	     1 (1|0) 	yes
+  10     3   5.8%     4      0 (0.0%)	     4 (4|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Ruleset 8:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   5     3   1.3%    11      0 (0.0%)	     3 (3|0) 	yes
+   3     2   2.8%     2      1 (50.0%)	    -1 (0|1) 	yes
+   1     1   3.0%     1      0 (0.0%)	     1 (1|0) 	yes
+   8     3   3.9%     2      0 (0.0%)	     2 (2|0) 	yes
+   2     3   1.3%    12      1 (8.3%)	     0 (0|0) 	no
+   4     3   1.5%     1      0 (0.0%)	     0 (0|0) 	no
+  11     1   2.3%     1      0 (0.0%)	     0 (0|0) 	no
+   6     2   2.7%     3      0 (0.0%)	     0 (0|0) 	no
+  10     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+
+Tested 34, errors 2 (5.9%)
+
+Ruleset 9:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+   6     1   2.3%     5      0 (0.0%)	     0 (0|0) 	no
+   7     2   2.4%     6      0 (0.0%)	     0 (0|0) 	no
+  13     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+   9     3  18.0%     1      0 (0.0%)	     0 (0|0) 	no
+  12     1  24.2%     4      0 (0.0%)	     0 (0|0) 	no
+   5     3   1.3%    11      0 (0.0%)	     1 (1|0) 	yes
+   4     2   1.7%     2      1 (50.0%)	    -1 (0|1) 	yes
+   1     1   3.0%     1      0 (0.0%)	     0 (0|0) 	yes
+  11     3   3.2%     3      0 (0.0%)	     0 (0|0) 	yes
+
+Tested 34, errors 1 (2.9%)
+
+Composite ruleset:
+
+Rule  Size  Error  Used  Wrong	          Advantage
+----  ----  -----  ----  -----	          ---------
+  51     3   1.3%    12      1 (8.3%)	    -1 (0|1) 	no
+   6     1   2.3%     2      0 (0.0%)	     0 (0|0) 	no
+  53     2   2.7%     3      0 (0.0%)	     0 (0|0) 	no
+  13     1  11.8%     1      0 (0.0%)	     0 (0|0) 	no
+  55     3   1.3%    11      0 (0.0%)	     0 (0|0) 	yes
+  33     3   2.1%     3      0 (0.0%)	     3 (3|0) 	yes
+  34     2   3.5%     1      1 (100.0%)	    -1 (0|1) 	yes
+  42     2  14.3%     1      0 (0.0%)	     1 (1|0) 	yes
+
+Tested 34, errors 2 (5.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    1	(a): class yes
+	    1   17	(b): class no
+
+
+Trial   Size      Errors
+-----   ----      ------
+   0       8    0( 0.0%)
+   1      11    1( 2.9%)
+   2      11    2( 5.9%)
+   3      11    2( 5.9%)
+   4       8    1( 2.9%)
+   5       8    1( 2.9%)
+   6      11    2( 5.9%)
+   7      10    1( 2.9%)
+   8       9    2( 5.9%)
+   9      14    1( 2.9%)
+  **      11    2( 5.9%)
+				Av size = 10.2,  av errors = 1.4 (4.0%)
