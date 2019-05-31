@@ -1,0 +1,769 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 09:54:28 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Windowing enabled with 10 trials
+
+Read 310 cases (11 attributes) from XDF.data
+
+--------
+Trial 0
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         1  1.6%      29 11.7%      30  9.7%
+  2       22        76     234         2  2.6%      24 10.3%      26  8.4%
+  3       24        88     222         2  2.3%       5  2.3%       7  2.3%
+  4       40        93     217         1  1.1%      11  5.1%      12  3.9%
+  5       20       104     206         2  1.9%       4  1.9%       6  1.9%
+  6       43       108     202         2  1.9%       1  0.5%       3  1.0%
+  7       50       109     201         2  1.8%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+date = TRUE: yes (20.0)
+date = FALSE:
+|   length <= 68 :
+|   |   score of tag bounding main content <= 1.00481 : no (39.0/1.0)
+|   |   score of tag bounding main content > 1.00481 :
+|   |   |   most frequent tag listed in the main content = li: no (3.0)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: no (1.0)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   |   most frequent tag listed in the main content = p:
+|   |   |   |   DOM tree depth of tag bounding main content = 11: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 21: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 15: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 14: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 19: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 12: yes (6.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 8: no (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 20: yes (2.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 6: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 10: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 9: yes (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 7: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 18: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 13: yes (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 2: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 3: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 24: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 17: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 16: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 22: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 5: yes (0.0)
+|   |   |   most frequent tag listed in the main content = div:
+|   |   |   |   length <= 40 : no (4.0)
+|   |   |   |   length > 40 : yes (3.0/1.0)
+|   length > 68 :
+|   |   number of forward slash marks = 5: no (2.0)
+|   |   number of forward slash marks = 1: yes (10.0)
+|   |   number of forward slash marks = 0: yes (0.0)
+|   |   number of forward slash marks = 4: yes (0.0)
+|   |   number of forward slash marks = 3: no (1.0)
+|   |   number of forward slash marks = 2:
+|   |   |   tag bounding main content = div: yes (10.0)
+|   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   tag bounding main content = section: yes (3.0)
+|   |   |   tag bounding main content = body: no (1.0)
+|   |   |   tag bounding main content = tr: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (47.0/1.4)
+date = FALSE:
+|   length <= 68 :
+|   |   score of tag bounding main content <= 1.00481 : no (115.0/2.6)
+|   |   score of tag bounding main content > 1.00481 :
+|   |   |   most frequent tag listed in the main content = p: yes (30.0/2.6)
+|   |   |   most frequent tag listed in the main content = li: no (13.0/1.3)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: no (6.0/1.2)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   |   most frequent tag listed in the main content = div:
+|   |   |   |   length <= 40 : no (8.0/1.3)
+|   |   |   |   length > 40 : yes (6.0/2.3)
+|   length > 68 :
+|   |   number of forward slash marks = 5: no (4.0/1.2)
+|   |   number of forward slash marks = 2: yes (51.0/3.8)
+|   |   number of forward slash marks = 1: yes (22.0/1.3)
+|   |   number of forward slash marks = 0: yes (0.0)
+|   |   number of forward slash marks = 4: yes (0.0)
+|   |   number of forward slash marks = 3: no (8.0/1.3)
+
+
+--------
+Trial 1
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         0  0.0%      25 10.1%      25  8.1%
+  2       16        74     236         2  2.7%      11  4.7%      13  4.2%
+  3       22        85     225         0  0.0%      18  8.0%      18  5.8%
+  4       49        97     213         1  1.0%       3  1.4%       4  1.3%
+  5       29       100     210         2  2.0%       1  0.5%       3  1.0%
+  6       44       101     209         1  1.0%       0  0.0%       1  0.3%
+
+Decision Tree:
+
+date = TRUE: yes (14.0)
+date = FALSE:
+|   most frequent tag listed in the main content = li: no (17.0)
+|   most frequent tag listed in the main content = ol: no (2.0)
+|   most frequent tag listed in the main content = article: no (3.0)
+|   most frequent tag listed in the main content = section: no (1.0)
+|   most frequent tag listed in the main content = meta: no (0.0)
+|   most frequent tag listed in the main content = a: no (0.0)
+|   most frequent tag listed in the main content = td: no (0.0)
+|   most frequent tag listed in the main content = p:
+|   |   reserved word = TRUE: no (2.0)
+|   |   reserved word = FALSE:
+|   |   |   score of tag bounding main content > 0.996046 : yes (17.0)
+|   |   |   score of tag bounding main content <= 0.996046 :
+|   |   |   |   tag bounding main content = div: no (6.0/1.0)
+|   |   |   |   tag bounding main content = ul: no (0.0)
+|   |   |   |   tag bounding main content = section: yes (2.0)
+|   |   |   |   tag bounding main content = body: no (0.0)
+|   |   |   |   tag bounding main content = tr: no (0.0)
+|   most frequent tag listed in the main content = div:
+|   |   length <= 47 : no (20.0)
+|   |   length > 47 :
+|   |   |   DOM tree depth of tag bounding main content = 11: yes (1.0)
+|   |   |   DOM tree depth of tag bounding main content = 21: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 15: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 14: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 19: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 12: yes (2.0)
+|   |   |   DOM tree depth of tag bounding main content = 8: yes (6.0)
+|   |   |   DOM tree depth of tag bounding main content = 20: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 6: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 10: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 9: no (1.0)
+|   |   |   DOM tree depth of tag bounding main content = 7: no (2.0)
+|   |   |   DOM tree depth of tag bounding main content = 18: no (3.0)
+|   |   |   DOM tree depth of tag bounding main content = 13: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 2: no (1.0)
+|   |   |   DOM tree depth of tag bounding main content = 3: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 24: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 17: no (1.0)
+|   |   |   DOM tree depth of tag bounding main content = 16: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 22: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content = 5: yes (0.0)
+
+
+--------
+Trial 2
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       12        62     248         0  0.0%      34 13.7%      34 11.0%
+  2       18        79     231         0  0.0%      14  6.1%      14  4.5%
+  3       20        91     219         1  1.1%      16  7.3%      17  5.5%
+  4       23       103     207         2  1.9%      23 11.1%      25  8.1%
+  5       32       115     195         0  0.0%       3  1.5%       3  1.0%
+  6       32       118     192         0  0.0%       0  0.0%       0  0.0%
+
+Decision Tree:
+
+date = TRUE: yes (19.0)
+date = FALSE:
+|   score of tag bounding main content <= 0.999663 :
+|   |   length <= 72 : no (40.0)
+|   |   length > 72 :
+|   |   |   number of forward slash marks = 5: no (3.0)
+|   |   |   number of forward slash marks = 2: yes (4.0)
+|   |   |   number of forward slash marks = 1: no (0.0)
+|   |   |   number of forward slash marks = 0: no (0.0)
+|   |   |   number of forward slash marks = 4: no (0.0)
+|   |   |   number of forward slash marks = 3: no (2.0)
+|   score of tag bounding main content > 0.999663 :
+|   |   reserved word = TRUE: no (7.0)
+|   |   reserved word = FALSE:
+|   |   |   most frequent tag listed in the main content = p: yes (24.0)
+|   |   |   most frequent tag listed in the main content = li: no (1.0)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: no (1.0)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   |   most frequent tag listed in the main content = div:
+|   |   |   |   length <= 40 : no (5.0)
+|   |   |   |   length > 40 :
+|   |   |   |   |   number of forward slash marks = 5: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 2: yes (2.0)
+|   |   |   |   |   number of forward slash marks = 1: yes (8.0)
+|   |   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 4: no (1.0)
+|   |   |   |   |   number of forward slash marks = 3: yes (1.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (47.0/1.4)
+date = FALSE:
+|   score of tag bounding main content <= 0.999663 :
+|   |   length <= 72 : no (105.0/1.4)
+|   |   length > 72 :
+|   |   |   number of forward slash marks = 5: no (3.0/1.1)
+|   |   |   number of forward slash marks = 2: yes (5.0/1.2)
+|   |   |   number of forward slash marks = 1: no (0.0)
+|   |   |   number of forward slash marks = 0: no (0.0)
+|   |   |   number of forward slash marks = 4: no (0.0)
+|   |   |   number of forward slash marks = 3: no (7.0/1.3)
+|   score of tag bounding main content > 0.999663 :
+|   |   most frequent tag listed in the main content = p: yes (84.0/2.6)
+|   |   most frequent tag listed in the main content = li: no (19.0/1.3)
+|   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   most frequent tag listed in the main content = article: no (9.0/1.3)
+|   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   most frequent tag listed in the main content = div:
+|   |   |   length <= 40 : no (12.0/1.3)
+|   |   |   length > 40 : yes (19.0/2.5)
+
+
+--------
+Trial 3
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       22        62     248         2  3.2%      24  9.7%      26  8.4%
+  2       41        74     236         1  1.4%      27 11.4%      28  9.0%
+  3       11        87     223         1  1.1%      13  5.8%      14  4.5%
+  4       68        99     211         1  1.0%       7  3.3%       8  2.6%
+  5       32       106     204         1  0.9%       4  2.0%       5  1.6%
+  6       50       110     200         1  0.9%       3  1.5%       4  1.3%
+  7       21       113     197         3  2.7%       1  0.5%       4  1.3%
+  8       50       114     196         3  2.6%       9  4.6%      12  3.9%
+  9       27       123     187         3  2.4%       0  0.0%       3  1.0%
+
+Decision Tree:
+
+date = TRUE: yes (18.0)
+date = FALSE:
+|   score of tag bounding main content <= 0.995522 :
+|   |   ends with forward slash mark = FALSE: no (34.0)
+|   |   ends with forward slash mark = TRUE:
+|   |   |   tag bounding main content = div: no (4.0)
+|   |   |   tag bounding main content = ul: no (2.0)
+|   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   tag bounding main content = body: no (0.0)
+|   |   |   tag bounding main content = tr: no (0.0)
+|   score of tag bounding main content > 0.995522 :
+|   |   tag bounding main content = ul: no (11.0)
+|   |   tag bounding main content = section: yes (2.0/1.0)
+|   |   tag bounding main content = body: yes (0.0)
+|   |   tag bounding main content = tr: yes (0.0)
+|   |   tag bounding main content = div:
+|   |   |   length <= 44 :
+|   |   |   |   number = TRUE: yes (9.0/1.0)
+|   |   |   |   number = FALSE: no (14.0/1.0)
+|   |   |   length > 44 :
+|   |   |   |   number of forward slash marks = 5: yes (0.0)
+|   |   |   |   number of forward slash marks = 2: yes (14.0)
+|   |   |   |   number of forward slash marks = 1: yes (12.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks = 4: no (1.0)
+|   |   |   |   number of forward slash marks = 3: yes (1.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (47.0/1.4)
+date = FALSE:
+|   score of tag bounding main content <= 0.995522 : no (93.0/3.8)
+|   score of tag bounding main content > 0.995522 :
+|   |   tag bounding main content = ul: no (21.0/1.3)
+|   |   tag bounding main content = section: yes (4.0/2.2)
+|   |   tag bounding main content = body: yes (0.0)
+|   |   tag bounding main content = tr: yes (0.0)
+|   |   tag bounding main content = div:
+|   |   |   length > 44 : yes (87.0/2.6)
+|   |   |   length <= 44 :
+|   |   |   |   number = TRUE: yes (15.0/2.5)
+|   |   |   |   number = FALSE: no (43.0/2.6)
+
+
+--------
+Trial 4
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       35        62     248         0  0.0%      25 10.1%      25  8.1%
+  2       25        74     236         0  0.0%      11  4.7%      11  3.5%
+  3       37        85     225         2  2.4%       9  4.0%      11  3.5%
+  4       48        94     216         1  1.1%       0  0.0%       1  0.3%
+
+Decision Tree:
+
+tag bounding main content = ul: no (23.0)
+tag bounding main content = body: no (2.0)
+tag bounding main content = tr: no (0.0)
+tag bounding main content = div:
+|   score of tag bounding main content <= 0.999841 :
+|   |   date = TRUE: yes (3.0)
+|   |   date = FALSE:
+|   |   |   number = FALSE: no (13.0)
+|   |   |   number = TRUE:
+|   |   |   |   frequency count of most frequent tag <= 3 : yes (3.0/1.0)
+|   |   |   |   frequency count of most frequent tag > 3 : no (4.0)
+|   score of tag bounding main content > 0.999841 :
+|   |   most frequent tag listed in the main content = p: yes (22.0)
+|   |   most frequent tag listed in the main content = li: yes (0.0)
+|   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   most frequent tag listed in the main content = article: no (1.0)
+|   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   most frequent tag listed in the main content = div:
+|   |   |   length <= 38 : no (3.0)
+|   |   |   length > 38 :
+|   |   |   |   DOM tree depth of tag bounding main content = 11: yes (3.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 21: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 15: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 14: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 19: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 12: yes (2.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 8: yes (9.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 20: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 6: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 10: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 9: no (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 7: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 18: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 13: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 2: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 3: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 24: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 17: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 16: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 22: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 5: yes (0.0)
+tag bounding main content = section:
+|   length <= 55 : no (2.0)
+|   length > 55 : yes (3.0)
+
+
+Simplified Decision Tree:
+
+score of tag bounding main content <= 0.999841 :
+|   date = TRUE: yes (11.0/1.3)
+|   date = FALSE: no (121.0/7.3)
+score of tag bounding main content > 0.999841 :
+|   most frequent tag listed in the main content = p: yes (113.0/2.6)
+|   most frequent tag listed in the main content = li: no (18.0/1.3)
+|   most frequent tag listed in the main content = ol: yes (0.0)
+|   most frequent tag listed in the main content = article: no (9.0/1.3)
+|   most frequent tag listed in the main content = section: yes (0.0)
+|   most frequent tag listed in the main content = meta: yes (0.0)
+|   most frequent tag listed in the main content = a: yes (0.0)
+|   most frequent tag listed in the main content = td: yes (0.0)
+|   most frequent tag listed in the main content = div:
+|   |   length <= 38 : no (12.0/1.3)
+|   |   length > 38 : yes (26.0/2.6)
+
+
+--------
+Trial 5
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       31        62     248         2  3.2%      25 10.1%      27  8.7%
+  2       16        74     236         1  1.4%      16  6.8%      17  5.5%
+  3       28        86     224         1  1.2%       9  4.0%      10  3.2%
+  4       64        95     215         0  0.0%      13  6.0%      13  4.2%
+  5       50       107     203         1  0.9%       1  0.5%       2  0.6%
+  6       50       108     202         1  0.9%       0  0.0%       1  0.3%
+
+Decision Tree:
+
+score of tag bounding main content <= 0.999841 :
+|   date = TRUE: yes (3.0)
+|   date = FALSE:
+|   |   length <= 72 : no (38.0)
+|   |   length > 72 :
+|   |   |   number of forward slash marks = 5: no (1.0)
+|   |   |   number of forward slash marks = 2: yes (4.0)
+|   |   |   number of forward slash marks = 1: yes (0.0)
+|   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   number of forward slash marks = 3: no (2.0)
+score of tag bounding main content > 0.999841 :
+|   tag bounding main content = ul: no (2.0)
+|   tag bounding main content = section: yes (2.0/1.0)
+|   tag bounding main content = body: yes (0.0)
+|   tag bounding main content = tr: yes (0.0)
+|   tag bounding main content = div:
+|   |   length <= 17 : no (4.0)
+|   |   length > 17 :
+|   |   |   most frequent tag listed in the main content = p: yes (38.0)
+|   |   |   most frequent tag listed in the main content = li: yes (0.0)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: no (1.0)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+|   |   |   most frequent tag listed in the main content = div:
+|   |   |   |   DOM tree depth of tag bounding main content = 11: yes (3.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 21: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 15: no (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 14: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 19: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 12: yes (2.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 8: yes (6.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 20: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 6: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 10: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 9: no (1.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 7: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 18: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 13: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 2: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 3: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 24: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 17: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 16: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 22: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content = 5: yes (0.0)
+
+
+Simplified Decision Tree:
+
+score of tag bounding main content <= 0.999841 :
+|   date = TRUE: yes (11.0/1.3)
+|   date = FALSE:
+|   |   length <= 72 : no (106.0/1.4)
+|   |   length > 72 :
+|   |   |   number of forward slash marks = 5: no (3.0/1.1)
+|   |   |   number of forward slash marks = 2: yes (5.0/1.2)
+|   |   |   number of forward slash marks = 1: yes (0.0)
+|   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   number of forward slash marks = 3: no (7.0/1.3)
+score of tag bounding main content > 0.999841 :
+|   length <= 17 : no (16.0/1.3)
+|   length > 17 :
+|   |   most frequent tag listed in the main content = p: yes (113.0/2.6)
+|   |   most frequent tag listed in the main content = li: no (13.0/1.3)
+|   |   most frequent tag listed in the main content = div: yes (27.0/3.7)
+|   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   most frequent tag listed in the main content = article: no (9.0/1.3)
+|   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   most frequent tag listed in the main content = td: yes (0.0)
+
+
+--------
+Trial 6
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       31        62     248         2  3.2%      19  7.7%      21  6.8%
+  2       11        74     236         0  0.0%      25 10.6%      25  8.1%
+  3       16        86     224         3  3.5%       5  2.2%       8  2.6%
+  4       26        91     219         2  2.2%       1  0.5%       3  1.0%
+  5       28        92     218         2  2.2%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+length <= 44 :
+|   most frequent tag listed in the main content = li: no (13.0)
+|   most frequent tag listed in the main content = div: no (14.0)
+|   most frequent tag listed in the main content = ol: no (2.0)
+|   most frequent tag listed in the main content = article: no (3.0)
+|   most frequent tag listed in the main content = section: no (0.0)
+|   most frequent tag listed in the main content = meta: no (1.0)
+|   most frequent tag listed in the main content = a: no (0.0)
+|   most frequent tag listed in the main content = td: no (0.0)
+|   most frequent tag listed in the main content = p:
+|   |   number = TRUE: yes (2.0)
+|   |   number = FALSE: no (3.0/1.0)
+length > 44 :
+|   score of tag bounding main content <= 0.995279 :
+|   |   date = TRUE: yes (2.0)
+|   |   date = FALSE:
+|   |   |   tag bounding main content = div: no (7.0)
+|   |   |   tag bounding main content = ul: no (2.0)
+|   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   tag bounding main content = body: no (2.0)
+|   |   |   tag bounding main content = tr: no (0.0)
+|   score of tag bounding main content > 0.995279 :
+|   |   tag bounding main content = div: yes (36.0/1.0)
+|   |   tag bounding main content = ul: no (1.0)
+|   |   tag bounding main content = section: yes (3.0)
+|   |   tag bounding main content = body: yes (0.0)
+|   |   tag bounding main content = tr: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 44 :
+|   most frequent tag listed in the main content = li: no (39.0/1.4)
+|   most frequent tag listed in the main content = div: no (55.0/1.4)
+|   most frequent tag listed in the main content = ol: no (9.0/1.3)
+|   most frequent tag listed in the main content = article: no (10.0/1.3)
+|   most frequent tag listed in the main content = section: no (3.0/1.1)
+|   most frequent tag listed in the main content = meta: no (1.0/0.8)
+|   most frequent tag listed in the main content = a: no (1.0/0.8)
+|   most frequent tag listed in the main content = td: no (1.0/0.8)
+|   most frequent tag listed in the main content = p:
+|   |   number = TRUE: yes (14.0/1.3)
+|   |   number = FALSE: no (5.0/2.3)
+length > 44 :
+|   score of tag bounding main content <= 0.995279 :
+|   |   date = TRUE: yes (3.0/1.1)
+|   |   date = FALSE: no (27.0/2.6)
+|   score of tag bounding main content > 0.995279 :
+|   |   tag bounding main content = div: yes (129.0/2.6)
+|   |   tag bounding main content = ul: no (7.0/1.3)
+|   |   tag bounding main content = section: yes (6.0/1.2)
+|   |   tag bounding main content = body: yes (0.0)
+|   |   tag bounding main content = tr: yes (0.0)
+
+
+--------
+Trial 7
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         0  0.0%      27 10.9%      27  8.7%
+  2       63        75     235         0  0.0%      14  6.0%      14  4.5%
+  3       24        87     223         3  3.4%      13  5.8%      16  5.2%
+  4       14        99     211         3  3.0%       5  2.4%       8  2.6%
+  5       43       104     206         1  1.0%      10  4.9%      11  3.5%
+  6       43       114     196         2  1.8%       4  2.0%       6  1.9%
+  7       18       118     192         3  2.5%       1  0.5%       4  1.3%
+  8       14       119     191         3  2.5%       1  0.5%       4  1.3%
+  9       25       120     190         3  2.5%       2  1.1%       5  1.6%
+ 10       27       122     188         2  1.6%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+date = TRUE: yes (18.0)
+date = FALSE:
+|   length <= 47 :
+|   |   number = FALSE: no (44.0/1.0)
+|   |   number = TRUE:
+|   |   |   score of tag bounding main content <= 1.01025 : no (6.0)
+|   |   |   score of tag bounding main content > 1.01025 : yes (6.0)
+|   length > 47 :
+|   |   score of tag bounding main content <= 0.995279 :
+|   |   |   tag bounding main content = div: no (6.0)
+|   |   |   tag bounding main content = ul: no (2.0)
+|   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   tag bounding main content = body: no (2.0)
+|   |   |   tag bounding main content = tr: no (0.0)
+|   |   score of tag bounding main content > 0.995279 :
+|   |   |   reserved word = TRUE: no (2.0)
+|   |   |   reserved word = FALSE:[S1]
+
+
+Subtree [S1]
+
+most frequent tag listed in the main content = p: yes (23.0)
+most frequent tag listed in the main content = li: no (1.0)
+most frequent tag listed in the main content = div: yes (11.0/1.0)
+most frequent tag listed in the main content = ol: yes (0.0)
+most frequent tag listed in the main content = article: yes (0.0)
+most frequent tag listed in the main content = section: yes (0.0)
+most frequent tag listed in the main content = meta: yes (0.0)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content = td: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (47.0/1.4)
+date = FALSE:
+|   length <= 47 :
+|   |   number = FALSE: no (118.0/2.6)
+|   |   number = TRUE:
+|   |   |   score of tag bounding main content <= 1.01025 : no (9.0/1.3)
+|   |   |   score of tag bounding main content > 1.01025 : yes (15.0/1.3)
+|   length > 47 :
+|   |   score of tag bounding main content <= 0.995279 : no (25.0/2.5)
+|   |   score of tag bounding main content > 0.995279 :
+|   |   |   reserved word = TRUE: no (5.0/1.2)
+|   |   |   reserved word = FALSE: yes (91.0/3.8)
+
+
+--------
+Trial 8
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       31        62     248         0  0.0%      21  8.5%      21  6.8%
+  2       30        74     236         2  2.7%      14  5.9%      16  5.2%
+  3       17        86     224         2  2.3%      14  6.2%      16  5.2%
+  4       21        98     212         2  2.0%       4  1.9%       6  1.9%
+  5       14       102     208         3  2.9%       1  0.5%       4  1.3%
+  6       14       103     207         3  2.9%       0  0.0%       3  1.0%
+
+Decision Tree:
+
+length <= 44 :
+|   number = FALSE: no (35.0/1.0)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.01025 : no (5.0)
+|   |   score of tag bounding main content > 1.01025 : yes (7.0)
+length > 44 :
+|   tag bounding main content = ul: no (4.0)
+|   tag bounding main content = section: yes (4.0)
+|   tag bounding main content = body: no (3.0)
+|   tag bounding main content = tr: yes (0.0)
+|   tag bounding main content = div:
+|   |   score of tag bounding main content <= 0.995279 : no (7.0/1.0)
+|   |   score of tag bounding main content > 0.995279 : yes (38.0/1.0)
+
+
+--------
+Trial 9
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       10        62     248         0  0.0%      18  7.3%      18  5.8%
+  2        7        74     236         2  2.7%      28 11.9%      30  9.7%
+  3       39        88     222         2  2.3%      15  6.8%      17  5.5%
+  4       23       100     210         1  1.0%      12  5.7%      13  4.2%
+  5       42       112     198         2  1.8%       9  4.5%      11  3.5%
+  6       31       121     189         2  1.7%       6  3.2%       8  2.6%
+  7       36       127     183         2  1.6%       0  0.0%       2  0.6%
+
+Decision Tree:
+
+date = TRUE: yes (17.0)
+date = FALSE:
+|   length <= 19 : no (30.0)
+|   length > 19 :
+|   |   score of tag bounding main content <= 1.01202 :
+|   |   |   length <= 71 :
+|   |   |   |   number of forward slash marks = 5: no (3.0)
+|   |   |   |   number of forward slash marks = 2: no (18.0)
+|   |   |   |   number of forward slash marks = 0: no (3.0)
+|   |   |   |   number of forward slash marks = 4: no (0.0)
+|   |   |   |   number of forward slash marks = 3: no (5.0/1.0)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   score of tag bounding main content <= 1.00218 : no (5.0)
+|   |   |   |   |   score of tag bounding main content > 1.00218 : yes (2.0)
+|   |   |   length > 71 :
+|   |   |   |   number of forward slash marks = 5: no (2.0)
+|   |   |   |   number of forward slash marks = 1: yes (1.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   |   number of forward slash marks = 3: no (1.0)
+|   |   |   |   number of forward slash marks = 2:
+|   |   |   |   |   tag bounding main content = div: yes (8.0)
+|   |   |   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   |   |   tag bounding main content = section: yes (3.0)
+|   |   |   |   |   tag bounding main content = body: yes (0.0)
+|   |   |   |   |   tag bounding main content = tr: yes (0.0)
+|   |   score of tag bounding main content > 1.01202 :
+|   |   |   ends with forward slash mark = TRUE: yes (2.0/1.0)
+|   |   |   ends with forward slash mark = FALSE:
+|   |   |   |   number of forward slash marks = 5: yes (0.0)
+|   |   |   |   number of forward slash marks = 2: yes (7.0)
+|   |   |   |   number of forward slash marks = 1: yes (18.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks = 4: no (1.0)
+|   |   |   |   number of forward slash marks = 3: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (47.0/1.4)
+date = FALSE:
+|   length <= 19 : no (78.0/1.4)
+|   length > 19 :
+|   |   score of tag bounding main content > 1.01202 : yes (83.0/3.8)
+|   |   score of tag bounding main content <= 1.01202 :
+|   |   |   length <= 71 : no (70.0/6.1)
+|   |   |   length > 71 :
+|   |   |   |   number of forward slash marks = 5: no (3.0/1.1)
+|   |   |   |   number of forward slash marks = 2: yes (20.0/2.5)
+|   |   |   |   number of forward slash marks = 1: yes (2.0/1.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   |   number of forward slash marks = 3: no (7.0/1.3)
+
+
+--------
+
+Best tree from trial 8 saved
+
+
+Evaluation on training data (310 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  50    2( 0.6%)     24    5( 1.6%)    ( 6.5%)
+   1	  44    1( 0.3%)     44    1( 0.3%)    ( 7.6%)
+   2	  32    0( 0.0%)     24    2( 0.6%)    ( 5.0%)
+   3	  27    3( 1.0%)     14    6( 1.9%)    ( 5.3%)
+   4	  48    1( 0.3%)     16    7( 2.3%)    ( 5.7%)
+   5	  50    1( 0.3%)     24    3( 1.0%)    ( 5.3%)
+   6	  28    2( 0.6%)     23    3( 1.0%)    ( 6.8%)
+   7	  27    2( 0.6%)     13    4( 1.3%)    ( 4.6%)
+   8	  14    3( 1.0%)     14    3( 1.0%)    ( 4.5%)   <<
+   9	  36    2( 0.6%)     15    7( 2.3%)    ( 6.0%)
+
+Evaluation on test data (34 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  50    0( 0.0%)     24    1( 2.9%)    ( 6.5%)
+   1	  44    0( 0.0%)     44    0( 0.0%)    ( 7.6%)
+   2	  32    1( 2.9%)     24    1( 2.9%)    ( 5.0%)
+   3	  27    1( 2.9%)     14    1( 2.9%)    ( 5.3%)
+   4	  48    0( 0.0%)     16    0( 0.0%)    ( 5.7%)
+   5	  50    1( 2.9%)     24    1( 2.9%)    ( 5.3%)
+   6	  28    1( 2.9%)     23    1( 2.9%)    ( 6.8%)
+   7	  27    1( 2.9%)     13    1( 2.9%)    ( 4.6%)
+   8	  14    1( 2.9%)     14    1( 2.9%)    ( 4.5%)   <<
+   9	  36    2( 5.9%)     15    4(11.8%)    ( 6.0%)
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   15    1	(a): class yes
+	        18	(b): class no
+

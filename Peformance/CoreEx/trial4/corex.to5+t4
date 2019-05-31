@@ -1,0 +1,64 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 08:45:31 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+
+Read 310 cases (5 attributes) from XDF.data
+
+Decision Tree:
+
+most frequent tag listed in the main content = p:
+|   DOM tree depth of tag bounding main content in {19,11,9,8,12,13,6,21,
+|                                                   20}: yes (123.0/4.0)
+|   DOM tree depth of tag bounding main content in {14,15}: no (4.0)
+|   DOM tree depth of tag bounding main content in {10,3,16,7,2,18,22,24,
+|                                                   5,17}: yes (0.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,a,td}:
+|   most frequent tag listed in the main content in {li,ol,article,
+|                                                    section,meta,a,td}: no (86.0)
+|   most frequent tag listed in the main content = p: no (0.0)
+|   most frequent tag listed in the main content = div:
+|   |   DOM tree depth of tag bounding main content in {9,6,3,15,7,2,18,5,17}: no (34.0)
+|   |   DOM tree depth of tag bounding main content in {19,13,21,14,16,20,22,
+|   |                                                   24}: no (0.0)
+|   |   DOM tree depth of tag bounding main content in {11,8,12,10}:
+|   |   |   frequency count of most frequent tag <= 11 :
+|   |   |   |   score of tag bounding main content <= 0.993614 : no (2.0)
+|   |   |   |   score of tag bounding main content > 0.993614 : yes (26.0/1.0)
+|   |   |   frequency count of most frequent tag > 11 :
+|   |   |   |   score of tag bounding main content <= 1.00446 : no (21.0)
+|   |   |   |   score of tag bounding main content > 1.00446 :
+|   |   |   |   |   frequency count of most frequent tag <= 20 : yes (6.0)
+|   |   |   |   |   frequency count of most frequent tag > 20 : no (8.0/2.0)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  20    7( 2.3%)     19    7( 2.3%)    ( 6.3%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  20    1( 2.9%)     19    1( 2.9%)    ( 6.3%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   17     	(a): class yes
+	    1   16	(b): class no
+

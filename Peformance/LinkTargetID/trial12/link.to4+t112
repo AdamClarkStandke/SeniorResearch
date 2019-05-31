@@ -1,0 +1,572 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 08:18:04 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+	Windowing enabled with 10 trials
+
+Read 310 cases (6 attributes) from XDF.data
+
+--------
+Trial 0
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       18        62     248         3  4.8%      25 10.1%      28  9.0%
+  2       24        74     236         8 10.8%      22  9.3%      30  9.7%
+  3       19        86     224         9 10.5%      15  6.7%      24  7.7%
+  4       26        98     212        13 13.3%       5  2.4%      18  5.8%
+  5       27       103     207        11 10.7%       6  2.9%      17  5.5%
+  6       19       109     201        13 11.9%       5  2.5%      18  5.8%
+  7       24       114     196        12 10.5%       1  0.5%      13  4.2%
+  8       24       115     195        12 10.4%       0  0.0%      12  3.9%
+
+Decision Tree:
+
+date = TRUE: yes (11.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (20.0)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (4.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (19.0/1.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 34 : yes (7.0)
+|   |   |   |   |   |   length > 34 : no (3.0/1.0)
+|   |   |   length > 48 :
+|   |   |   |   number of forward slash marks = 1: yes (13.0)
+|   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   number of forward slash marks in {2,3}:
+|   |   |   |   |   number = FALSE: yes (3.0)
+|   |   |   |   |   number = TRUE:
+|   |   |   |   |   |   number of forward slash marks = 2: yes (27.0/9.0)
+|   |   |   |   |   |   number of forward slash marks = 3: no (3.0)
+|   |   |   |   |   |   number of forward slash marks in {5,4,1,0}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (66.0/1.4)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (21.0/1.3)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (49.0/2.6)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/2.3)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 34 : yes (13.0/1.3)
+|   |   |   |   |   |   length > 34 : no (3.0/2.1)
+|   |   |   length > 48 :
+|   |   |   |   number of forward slash marks = 2: yes (62.0/11.6)
+|   |   |   |   number of forward slash marks = 3: no (9.0/2.4)
+|   |   |   |   number of forward slash marks = 1: yes (33.0/1.4)
+
+
+--------
+Trial 1
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       11        62     248         0  0.0%      29 11.7%      29  9.4%
+  2       16        76     234         7  9.2%      14  6.0%      21  6.8%
+  3       18        88     222        10 11.4%      39 17.6%      49 15.8%
+  4       24       107     203         8  7.5%       4  2.0%      12  3.9%
+  5       21       111     199        12 10.8%       0  0.0%      12  3.9%
+
+Decision Tree:
+
+date = TRUE: yes (10.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (15.0)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (10.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 62 :
+|   |   |   |   number of forward slash marks = 2: no (23.0/4.0)
+|   |   |   |   number of forward slash marks = 3: no (1.0)
+|   |   |   |   number of forward slash marks in {5,4,0}: no (0.0)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   number = TRUE:
+|   |   |   |   |   |   length <= 34 : yes (4.0)
+|   |   |   |   |   |   length > 34 :
+|   |   |   |   |   |   |   length <= 49 : no (2.0)
+|   |   |   |   |   |   |   length > 49 : yes (2.0)
+|   |   |   |   |   number = FALSE:
+|   |   |   |   |   |   length <= 42 : no (6.0)
+|   |   |   |   |   |   length > 42 : yes (2.0)
+|   |   |   length > 62 :
+|   |   |   |   number of forward slash marks in {1,2}: yes (29.0/3.0)
+|   |   |   |   number of forward slash marks = 3: no (3.0/1.0)
+|   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (66.0/1.4)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (21.0/1.3)
+|   |   reserved word = FALSE:
+|   |   |   length <= 62 :
+|   |   |   |   number of forward slash marks = 2: no (39.0/9.3)
+|   |   |   |   number of forward slash marks = 3: no (5.0/1.2)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   number = TRUE: yes (21.0/3.7)
+|   |   |   |   |   number = FALSE:
+|   |   |   |   |   |   length <= 42 : no (21.0/1.3)
+|   |   |   |   |   |   length > 42 : yes (5.0/1.2)
+|   |   |   length > 62 :
+|   |   |   |   number of forward slash marks in {1,2}: yes (74.0/5.0)
+|   |   |   |   number of forward slash marks = 3: no (9.0/2.4)
+
+
+--------
+Trial 2
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        7        62     248         2  3.2%      41 16.5%      43 13.9%
+  2       15        82     228         5  6.1%      27 11.8%      32 10.3%
+  3       17        95     215         6  6.3%      13  6.0%      19  6.1%
+  4       17       107     203        14 13.1%      10  4.9%      24  7.7%
+  5       21       117     193        12 10.3%       1  0.5%      13  4.2%
+  6       21       118     192        12 10.2%       0  0.0%      12  3.9%
+
+Decision Tree:
+
+date = TRUE: yes (12.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (13.0)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (9.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (21.0/1.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 34 : yes (7.0)
+|   |   |   |   |   |   length > 34 : no (3.0/1.0)
+|   |   |   length > 48 :
+|   |   |   |   number = FALSE: yes (15.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {1,2}: yes (29.0/9.0)
+|   |   |   |   |   number of forward slash marks = 3: no (4.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   reserved word = TRUE: no (23.0/1.3)
+|   reserved word = FALSE:
+|   |   length <= 48 :
+|   |   |   number = FALSE: no (107.0/2.6)
+|   |   |   number = TRUE:
+|   |   |   |   number of forward slash marks in {2,3}: no (5.0/2.3)
+|   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   length <= 34 : yes (13.0/1.3)
+|   |   |   |   |   length > 34 : no (3.0/2.1)
+|   |   length > 48 :
+|   |   |   number of forward slash marks in {1,2}: yes (95.0/11.7)
+|   |   |   number of forward slash marks = 3: no (9.0/2.4)
+|   |   |   number of forward slash marks in {5,4,0}: no (6.0/1.2)
+
+
+--------
+Trial 3
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       18        62     248         3  4.8%      49 19.8%      52 16.8%
+  2       13        86     224        10 11.6%      16  7.1%      26  8.4%
+  3       20        98     212         9  9.2%       8  3.8%      17  5.5%
+  4       22       106     204        11 10.4%       2  1.0%      13  4.2%
+  5       22       108     202        12 11.1%       0  0.0%      12  3.9%
+
+Decision Tree:
+
+date = TRUE: yes (11.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0}: no (15.0)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (12.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (16.0/1.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: no (0.0)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 33 : yes (3.0)
+|   |   |   |   |   |   length > 33 : no (3.0/1.0)
+|   |   |   length > 48 :
+|   |   |   |   number = FALSE: yes (8.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks = 1: yes (4.0)
+|   |   |   |   |   number of forward slash marks = 2: yes (30.0/9.0)
+|   |   |   |   |   number of forward slash marks = 3: no (1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   reserved word = TRUE: no (23.0/1.3)
+|   reserved word = FALSE:
+|   |   length <= 48 :
+|   |   |   number = FALSE: no (107.0/2.6)
+|   |   |   number = TRUE:
+|   |   |   |   number of forward slash marks in {2,3}: no (5.0/2.3)
+|   |   |   |   number of forward slash marks in {5,4,0}: no (0.0)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   length <= 33 : yes (13.0/1.3)
+|   |   |   |   |   length > 33 : no (3.0/2.1)
+|   |   length > 48 :
+|   |   |   number of forward slash marks = 1: yes (33.0/1.4)
+|   |   |   number of forward slash marks = 2: yes (62.0/11.6)
+|   |   |   number of forward slash marks = 3: no (9.0/2.4)
+|   |   |   number of forward slash marks in {5,4,0}: no (6.0/1.2)
+
+
+--------
+Trial 4
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       17        62     248         2  3.2%      45 18.1%      47 15.2%
+  2       23        84     226         5  6.0%      19  8.4%      24  7.7%
+  3       20        96     214        11 11.5%       7  3.3%      18  5.8%
+  4       20       103     207        11 10.7%       6  2.9%      17  5.5%
+  5       30       109     201        14 12.8%       9  4.5%      23  7.4%
+  6       26       118     192        16 13.6%       0  0.0%      16  5.2%
+
+Decision Tree:
+
+number of forward slash marks = 0: no (11.0)
+number of forward slash marks in {5,4,1,2,3}:
+|   date = TRUE: yes (17.0)
+|   date = FALSE:
+|   |   reserved word = TRUE: no (4.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 19 : no (8.0)
+|   |   |   length > 19 :
+|   |   |   |   number of forward slash marks in {5,4}: no (3.0)
+|   |   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   |   number of forward slash marks in {1,2,3}:
+|   |   |   |   |   number of forward slash marks = 3: no (4.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   |   number of forward slash marks in {1,2}:
+|   |   |   |   |   |   length > 71 : yes (21.0/1.0)
+|   |   |   |   |   |   length <= 71 :
+|   |   |   |   |   |   |   number of forward slash marks in {5,4,0,3}: yes (0.0)
+|   |   |   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   |   |   number = TRUE: yes (14.0/2.0)
+|   |   |   |   |   |   |   |   number = FALSE:
+|   |   |   |   |   |   |   |   |   length <= 40 : no (5.0)
+|   |   |   |   |   |   |   |   |   length > 40 : yes (5.0)
+|   |   |   |   |   |   |   number of forward slash marks = 2:
+|   |   |   |   |   |   |   |   number = TRUE: yes (23.0/11.0)
+|   |   |   |   |   |   |   |   number = FALSE: no (3.0/1.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   reserved word = TRUE: no (23.0/1.3)
+|   reserved word = FALSE:
+|   |   number of forward slash marks = 3: no (14.0/2.5)
+|   |   number of forward slash marks in {5,4,0}: no (64.0/1.4)
+|   |   number of forward slash marks in {1,2}:
+|   |   |   number = TRUE: yes (86.0/17.1)
+|   |   |   number = FALSE:
+|   |   |   |   length <= 40 : no (45.0/2.6)
+|   |   |   |   length > 40 : yes (29.0/1.4)
+
+
+--------
+Trial 5
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         1  1.6%      28 11.3%      29  9.4%
+  2       18        76     234         7  9.2%      11  4.7%      18  5.8%
+  3       24        87     223         8  9.2%      16  7.2%      24  7.7%
+  4       19        99     211        13 13.1%       7  3.3%      20  6.5%
+  5       16       106     204        13 12.3%       0  0.0%      13  4.2%
+
+Decision Tree:
+
+date = TRUE: yes (13.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0,3}: no (26.0/1.0)
+|   number of forward slash marks in {1,2}:
+|   |   reserved word = TRUE: no (5.0)
+|   |   reserved word = FALSE:
+|   |   |   length > 48 : yes (40.0/9.0)
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (11.0/1.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks = 2: no (4.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0,3}: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 33 : yes (4.0)
+|   |   |   |   |   |   length > 33 : no (3.0/1.0)
+
+
+--------
+Trial 6
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       11        62     248         4  6.5%      26 10.5%      30  9.7%
+  2       18        75     235         5  6.7%      12  5.1%      17  5.5%
+  3       20        87     223        13 14.9%      47 21.1%      60 19.4%
+  4       14       110     200        16 14.5%       5  2.5%      21  6.8%
+  5       19       115     195        13 11.3%       8  4.1%      21  6.8%
+  6       18       123     187        15 12.2%       2  1.1%      17  5.5%
+  7       16       125     185        14 11.2%       0  0.0%      14  4.5%
+
+Decision Tree:
+
+date = TRUE: yes (12.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0,3}: no (31.0/1.0)
+|   number of forward slash marks in {1,2}:
+|   |   reserved word = TRUE: no (7.0)
+|   |   reserved word = FALSE:
+|   |   |   length > 68 : yes (28.0/2.0)
+|   |   |   length <= 68 :
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks = 1: yes (12.0/2.0)
+|   |   |   |   |   number of forward slash marks = 2: no (18.0/8.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0,3}: yes (0.0)
+|   |   |   |   number = FALSE:
+|   |   |   |   |   length <= 44 : no (15.0/1.0)
+|   |   |   |   |   length > 44 : yes (2.0)
+
+
+--------
+Trial 7
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         3  4.8%      28 11.3%      31 10.0%
+  2       18        76     234         6  7.9%      38 16.2%      44 14.2%
+  3       13        95     215         8  8.4%      13  6.0%      21  6.8%
+  4       16       107     203        15 14.0%       5  2.5%      20  6.5%
+  5       11       112     198        16 14.3%       0  0.0%      16  5.2%
+
+Decision Tree:
+
+date = TRUE: yes (14.0)
+date = FALSE:
+|   number of forward slash marks in {5,4,0,3}: no (30.0/1.0)
+|   number of forward slash marks in {1,2}:
+|   |   reserved word = TRUE: no (7.0)
+|   |   reserved word = FALSE:
+|   |   |   number = TRUE: yes (41.0/14.0)
+|   |   |   number = FALSE:
+|   |   |   |   length <= 44 : no (14.0/1.0)
+|   |   |   |   length > 44 : yes (6.0)
+
+
+--------
+Trial 8
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1       14        62     248         1  1.6%      19  7.7%      20  6.5%
+  2       14        74     236        10 13.5%      45 19.1%      55 17.7%
+  3       16        96     214        10 10.4%      20  9.3%      30  9.7%
+  4       22       108     202        12 11.1%       2  1.0%      14  4.5%
+  5       19       110     200        14 12.7%       2  1.0%      16  5.2%
+  6       22       112     198        15 13.4%       2  1.0%      17  5.5%
+  7       22       114     196        14 12.3%       0  0.0%      14  4.5%
+
+Decision Tree:
+
+number of forward slash marks = 0: no (13.0)
+number of forward slash marks in {5,4,1,2,3}:
+|   number of forward slash marks = 3: no (8.0/1.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks in {5,4,1,2}:
+|   |   date = TRUE: yes (11.0)
+|   |   date = FALSE:
+|   |   |   number of forward slash marks in {5,4}: no (4.0)
+|   |   |   number of forward slash marks in {0,3}: yes (0.0)
+|   |   |   number of forward slash marks in {1,2}:
+|   |   |   |   reserved word = TRUE: no (3.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   length > 68 : yes (30.0/1.0)
+|   |   |   |   |   length <= 68 :
+|   |   |   |   |   |   number = TRUE:
+|   |   |   |   |   |   |   number of forward slash marks = 1: yes (11.0/2.0)
+|   |   |   |   |   |   |   number of forward slash marks = 2: no (15.0/7.0)
+|   |   |   |   |   |   |   number of forward slash marks in {5,4,0,3}: yes (0.0)
+|   |   |   |   |   |   number = FALSE:
+|   |   |   |   |   |   |   length <= 44 : no (10.0/1.0)
+|   |   |   |   |   |   |   length > 44 : yes (3.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   number of forward slash marks in {5,4}: no (8.0/1.3)
+|   number of forward slash marks in {0,3}: no (75.0/2.6)
+|   number of forward slash marks in {1,2}:
+|   |   reserved word = TRUE: no (18.0/1.3)
+|   |   reserved word = FALSE:
+|   |   |   length > 68 : yes (69.0/3.8)
+|   |   |   length <= 68 :
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks = 1: yes (22.0/3.7)
+|   |   |   |   |   number of forward slash marks = 2: no (18.0/10.0)
+|   |   |   |   number = FALSE:
+|   |   |   |   |   length <= 44 : no (45.0/2.6)
+|   |   |   |   |   length > 44 : yes (6.0/1.2)
+
+
+--------
+Trial 9
+--------
+
+Cycle   Tree    -----Cases----    -----------------Errors-----------------
+        size    window   other    window  rate   other  rate   total  rate
+-----   ----    ------  ------    ------  ----  ------  ----  ------  ----
+  1        9        62     248         2  3.2%      32 12.9%      34 11.0%
+  2       18        78     232         5  6.4%      15  6.5%      20  6.5%
+  3       19        90     220        11 12.2%       6  2.7%      17  5.5%
+  4       22        96     214        11 11.5%      22 10.3%      33 10.6%
+  5       23       108     202        12 11.1%       1  0.5%      13  4.2%
+  6       25       109     201        13 11.9%       3  1.5%      16  5.2%
+  7       22       112     198        13 11.6%       0  0.0%      13  4.2%
+
+Decision Tree:
+
+date = TRUE: yes (10.0)
+date = FALSE:
+|   number of forward slash marks in {5,0}: no (15.0)
+|   number of forward slash marks = 4: no (0.0)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (6.0)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (17.0/1.0)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 34 : yes (6.0)
+|   |   |   |   |   |   length > 34 : no (2.0)
+|   |   |   length > 48 :
+|   |   |   |   number of forward slash marks = 1: yes (11.0)
+|   |   |   |   number of forward slash marks in {5,4,0}: yes (0.0)
+|   |   |   |   number of forward slash marks in {2,3}:
+|   |   |   |   |   number of forward slash marks = 2: yes (32.0/9.0)
+|   |   |   |   |   number of forward slash marks = 3: no (4.0/1.0)
+|   |   |   |   |   number of forward slash marks in {5,4,1,0}: yes (0.0)
+
+
+Simplified Decision Tree:
+
+date = TRUE: yes (49.0/1.4)
+date = FALSE:
+|   number of forward slash marks in {5,0}: no (65.0/1.4)
+|   number of forward slash marks = 4: no (1.0/0.8)
+|   number of forward slash marks in {1,2,3}:
+|   |   reserved word = TRUE: no (21.0/1.3)
+|   |   reserved word = FALSE:
+|   |   |   length <= 48 :
+|   |   |   |   number = FALSE: no (49.0/2.6)
+|   |   |   |   number = TRUE:
+|   |   |   |   |   number of forward slash marks in {2,3}: no (5.0/2.3)
+|   |   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   |   length <= 34 : yes (13.0/1.3)
+|   |   |   |   |   |   length > 34 : no (3.0/2.1)
+|   |   |   length > 48 :
+|   |   |   |   number of forward slash marks = 2: yes (62.0/11.6)
+|   |   |   |   number of forward slash marks = 3: no (9.0/2.4)
+|   |   |   |   number of forward slash marks = 1: yes (33.0/1.4)
+
+
+--------
+
+Best tree from trial 5 saved
+
+
+Evaluation on training data (310 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  24   12( 3.9%)     18   13( 4.2%)    ( 8.9%)
+   1	  24   12( 3.9%)     18   13( 4.2%)    ( 9.1%)
+   2	  21   12( 3.9%)     17   13( 4.2%)    ( 8.5%)
+   3	  22   12( 3.9%)     18   13( 4.2%)    ( 8.9%)
+   4	  26   16( 5.2%)     12   16( 5.2%)    ( 8.9%)
+   5	  16   13( 4.2%)     15   13( 4.2%)    ( 8.1%)   <<
+   6	  16   14( 4.5%)     15   14( 4.5%)    ( 8.6%)
+   7	  11   16( 5.2%)     11   16( 5.2%)    ( 8.5%)
+   8	  22   14( 4.5%)     16   14( 4.5%)    ( 9.0%)
+   9	  23   13( 4.2%)     19   13( 4.2%)    ( 9.2%)
+
+Evaluation on test data (34 items):
+
+Trial	 Before Pruning           After Pruning
+-----	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+   0	  24    0( 0.0%)     18    0( 0.0%)    ( 8.9%)
+   1	  24    0( 0.0%)     18    0( 0.0%)    ( 9.1%)
+   2	  21    0( 0.0%)     17    0( 0.0%)    ( 8.5%)
+   3	  22    1( 2.9%)     18    1( 2.9%)    ( 8.9%)
+   4	  26    2( 5.9%)     12    2( 5.9%)    ( 8.9%)
+   5	  16    1( 2.9%)     15    1( 2.9%)    ( 8.1%)   <<
+   6	  16    1( 2.9%)     15    1( 2.9%)    ( 8.6%)
+   7	  11    2( 5.9%)     11    2( 5.9%)    ( 8.5%)
+   8	  22    1( 2.9%)     16    1( 2.9%)    ( 9.0%)
+   9	  23    0( 0.0%)     19    0( 0.0%)    ( 9.2%)
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	        17	(b): class no
+

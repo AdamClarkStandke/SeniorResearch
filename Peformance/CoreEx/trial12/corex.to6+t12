@@ -1,0 +1,106 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 09:02:47 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+	Tests on discrete attribute groups
+
+Read 310 cases (5 attributes) from XDF.data
+
+Decision Tree:
+
+most frequent tag listed in the main content = p:
+|   DOM tree depth of tag bounding main content in {14,15}: no (4.0)
+|   DOM tree depth of tag bounding main content in {10,16,7,17,18,3,2,22,
+|                                                   24,5}: yes (0.0)
+|   DOM tree depth of tag bounding main content in {8,11,9,20,12,6,19,13,
+|                                                   21}:
+|   |   DOM tree depth of tag bounding main content = 19: yes (2.0/1.0)
+|   |   DOM tree depth of tag bounding main content in {10,16,7,17,18,3,2,14,
+|   |                                                   15,22,24,5}: yes (0.0)
+|   |   DOM tree depth of tag bounding main content in {8,11,9,20,12,6,13,21}:
+|   |   |   DOM tree depth of tag bounding main content in {11,9,12,6,21}: yes (88.0)
+|   |   |   DOM tree depth of tag bounding main content in {10,19,16,7,17,18,3,2,
+|   |   |                                                   14,15,22,24,5}: yes (0.0)
+|   |   |   DOM tree depth of tag bounding main content in {8,20,13}:
+|   |   |   |   DOM tree depth of tag bounding main content = 8: yes (16.0/1.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {10,11,9,12,6,19,16,7,
+|   |   |   |                                                   17,18,3,2,14,15,21,22,
+|   |   |   |                                                   24,5}: yes (0.0)
+|   |   |   |   DOM tree depth of tag bounding main content in {20,13}:
+|   |   |   |   |   score of tag bounding main content <= 1.00143 : no (2.0)
+|   |   |   |   |   score of tag bounding main content > 1.00143 : yes (17.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,a,td}:
+|   most frequent tag listed in the main content in {li,ol,article,
+|                                                    section,meta,a,td}: no (85.0)
+|   most frequent tag listed in the main content = p: no (0.0)
+|   most frequent tag listed in the main content = div:
+|   |   DOM tree depth of tag bounding main content in {9,6,7,17,18,3,2,15,5}: no (33.0)
+|   |   DOM tree depth of tag bounding main content in {20,19,16,13,14,21,22,
+|   |                                                   24}: no (0.0)
+|   |   DOM tree depth of tag bounding main content in {10,8,11,12}:
+|   |   |   frequency count of most frequent tag <= 10 :
+|   |   |   |   score of tag bounding main content <= 0.993614 : no (2.0)
+|   |   |   |   score of tag bounding main content > 0.993614 : yes (20.0)
+|   |   |   frequency count of most frequent tag > 10 :
+|   |   |   |   score of tag bounding main content <= 1.00446 : no (23.0)
+|   |   |   |   score of tag bounding main content > 1.00446 :
+|   |   |   |   |   frequency count of most frequent tag <= 20 : yes (9.0)
+|   |   |   |   |   frequency count of most frequent tag > 20 : no (9.0/2.0)
+
+
+Simplified Decision Tree:
+
+most frequent tag listed in the main content = p:
+|   DOM tree depth of tag bounding main content in {8,11,9,20,12,6,19,13,
+|                                                   21}: yes (125.0/6.2)
+|   DOM tree depth of tag bounding main content in {14,15}: no (4.0/1.2)
+|   DOM tree depth of tag bounding main content in {10,16,7,17,18,3,2,22,
+|                                                   24,5}: yes (0.0)
+most frequent tag listed in the main content in {li,div,ol,article,
+                                                 section,meta,a,td}:
+|   most frequent tag listed in the main content in {li,ol,article,
+|                                                    section,meta,a,td}: no (85.0/1.4)
+|   most frequent tag listed in the main content = div:
+|   |   DOM tree depth of tag bounding main content in {9,6,7,17,18,3,2,15,5}: no (33.0/1.4)
+|   |   DOM tree depth of tag bounding main content in {20,19,16,13,14,21,22,
+|   |                                                   24}: no (0.0)
+|   |   DOM tree depth of tag bounding main content in {10,8,11,12}:
+|   |   |   frequency count of most frequent tag <= 10 :
+|   |   |   |   score of tag bounding main content <= 0.993614 : no (2.0/1.0)
+|   |   |   |   score of tag bounding main content > 0.993614 : yes (20.0/1.3)
+|   |   |   frequency count of most frequent tag > 10 :
+|   |   |   |   score of tag bounding main content <= 1.00446 : no (23.0/1.3)
+|   |   |   |   score of tag bounding main content > 1.00446 :
+|   |   |   |   |   frequency count of most frequent tag <= 20 : yes (9.0/1.3)
+|   |   |   |   |   frequency count of most frequent tag > 20 : no (9.0/3.5)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  31    4( 1.3%)     19    6( 1.9%)    ( 6.0%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  31    2( 5.9%)     19    2( 5.9%)    ( 6.0%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	    1   16	(b): class no
+
