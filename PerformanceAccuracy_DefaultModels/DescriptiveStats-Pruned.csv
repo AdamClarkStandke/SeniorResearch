@@ -1,0 +1,8 @@
+"","Pruned Decision Tree using features from Link-Taget Identification","Pruned Decision Tree using features from CoreEx","Pruned Decision Tree using features from both Link-Target Identification and CoreEx"
+"median",94.2,89.2,96.8
+"mean",94.135,89.205,96.845
+"SE.mean",0.0998090281751262,0.211071826138577,0.0792979059921306
+"CI.mean",0.208902696817656,0.44177840931593,0.165972424705738
+"var",0.199236842105263,0.891026315789474,0.125763157894736
+"std.dev",0.446359543535548,0.94394190276175,0.354631016543584
+"coef.var",0.00474169589988365,0.0105817151814556,0.00366184125709726

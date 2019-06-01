@@ -1,0 +1,81 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 20:12:30 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 310 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 44 :
+|   number = FALSE: no (119.0/1.0)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.00872 : no (8.0)
+|   |   score of tag bounding main content > 1.00872 : yes (15.0)
+length > 44 :
+|   score of tag bounding main content <= 0.995009 :
+|   |   date = TRUE: yes (3.0)
+|   |   date = FALSE:
+|   |   |   tag bounding main content = div: no (9.0)
+|   |   |   tag bounding main content = ul: no (10.0)
+|   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   tag bounding main content = body: no (4.0)
+|   |   |   tag bounding main content = tr: no (0.0)
+|   score of tag bounding main content > 0.995009 :
+|   |   reserved word = TRUE:
+|   |   |   number = TRUE: yes (2.0)
+|   |   |   number = FALSE: no (6.0)
+|   |   reserved word = FALSE:
+|   |   |   tag bounding main content = div: yes (124.0/1.0)
+|   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   tag bounding main content = section: yes (7.0)
+|   |   |   tag bounding main content = body: no (1.0)
+|   |   |   tag bounding main content = tr: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 44 :
+|   number = FALSE: no (119.0/2.6)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.00872 : no (8.0/1.3)
+|   |   score of tag bounding main content > 1.00872 : yes (15.0/1.3)
+length > 44 :
+|   score of tag bounding main content <= 0.995009 :
+|   |   date = TRUE: yes (3.0/1.1)
+|   |   date = FALSE: no (24.0/2.5)
+|   score of tag bounding main content > 0.995009 :
+|   |   reserved word = FALSE: yes (133.0/5.0)
+|   |   reserved word = TRUE:
+|   |   |   number = TRUE: yes (2.0/1.0)
+|   |   |   number = FALSE: no (6.0/1.2)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  25    2( 0.6%)     15    5( 1.6%)    ( 5.2%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  25    1( 2.9%)     15    1( 2.9%)    ( 5.2%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   17     	(a): class yes
+	    1   16	(b): class no
+

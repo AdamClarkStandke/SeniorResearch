@@ -1,0 +1,102 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 19:40:05 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 310 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+score of tag bounding main content <= 1.01087 :
+|   date = TRUE: yes (20.0)
+|   date = FALSE:
+|   |   length <= 61 :
+|   |   |   number = FALSE: no (109.0)
+|   |   |   number = TRUE:
+|   |   |   |   number of forward slash marks = 0: no (0.0)
+|   |   |   |   number of forward slash marks = 3: no (3.0)
+|   |   |   |   number of forward slash marks = 2: no (12.0)
+|   |   |   |   number of forward slash marks = 4: no (0.0)
+|   |   |   |   number of forward slash marks = 5: no (0.0)
+|   |   |   |   number of forward slash marks = 1:
+|   |   |   |   |   tag bounding main content = div: yes (2.0)
+|   |   |   |   |   tag bounding main content = ul: yes (0.0)
+|   |   |   |   |   tag bounding main content = section: yes (0.0)
+|   |   |   |   |   tag bounding main content = body: no (2.0)
+|   |   |   |   |   tag bounding main content = tr: yes (0.0)
+|   |   length > 61 :
+|   |   |   score of tag bounding main content <= 0.995279 :
+|   |   |   |   tag bounding main content = div: no (9.0)
+|   |   |   |   tag bounding main content = ul: no (8.0)
+|   |   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   |   tag bounding main content = body: no (1.0)
+|   |   |   |   tag bounding main content = tr: no (0.0)
+|   |   |   score of tag bounding main content > 0.995279 :
+|   |   |   |   tag bounding main content = div: yes (15.0)
+|   |   |   |   tag bounding main content = ul: no (3.0)
+|   |   |   |   tag bounding main content = section: yes (4.0)
+|   |   |   |   tag bounding main content = body: no (1.0)
+|   |   |   |   tag bounding main content = tr: yes (0.0)
+score of tag bounding main content > 1.01087 :
+|   length <= 17 : no (8.0)
+|   length > 17 :
+|   |   reserved word = TRUE: yes (3.0/1.0)
+|   |   reserved word = FALSE:
+|   |   |   most frequent tag listed in the main content = p: yes (94.0)
+|   |   |   most frequent tag listed in the main content = li: no (1.0)
+|   |   |   most frequent tag listed in the main content = div: yes (14.0)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: yes (0.0)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+
+
+Simplified Decision Tree:
+
+score of tag bounding main content <= 1.01087 :
+|   date = TRUE: yes (20.0/1.3)
+|   date = FALSE:
+|   |   length <= 61 : no (128.0/3.8)
+|   |   length > 61 :
+|   |   |   score of tag bounding main content <= 0.995279 : no (19.0/2.5)
+|   |   |   score of tag bounding main content > 0.995279 :
+|   |   |   |   tag bounding main content = div: yes (15.0/1.3)
+|   |   |   |   tag bounding main content = ul: no (3.0/1.1)
+|   |   |   |   tag bounding main content = section: yes (4.0/1.2)
+|   |   |   |   tag bounding main content = body: no (1.0/0.8)
+|   |   |   |   tag bounding main content = tr: yes (0.0)
+score of tag bounding main content > 1.01087 :
+|   length <= 17 : no (8.0/1.3)
+|   length > 17 : yes (112.0/3.8)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  45    1( 0.3%)     16    5( 1.6%)    ( 5.5%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  45    2( 5.9%)     16    3( 8.8%)    ( 5.5%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	    2   15	(b): class no
+

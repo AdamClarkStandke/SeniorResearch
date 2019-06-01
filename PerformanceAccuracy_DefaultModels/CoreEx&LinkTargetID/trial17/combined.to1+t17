@@ -1,0 +1,72 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 20:10:05 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (118.0/1.0)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.01025 : no (9.0)
+|   |   score of tag bounding main content > 1.01025 : yes (16.0)
+length > 47 :
+|   score of tag bounding main content <= 0.99519 :
+|   |   date = TRUE: yes (3.0)
+|   |   date = FALSE: no (23.0)
+|   score of tag bounding main content > 0.99519 :
+|   |   reserved word = TRUE: no (6.0/1.0)
+|   |   reserved word = FALSE:
+|   |   |   tag bounding main content = div: yes (127.0/1.0)
+|   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   tag bounding main content = section: yes (5.0)
+|   |   |   tag bounding main content = body: no (1.0)
+|   |   |   tag bounding main content = tr: yes (0.0)
+
+
+Simplified Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (118.0/2.6)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.01025 : no (9.0/1.3)
+|   |   score of tag bounding main content > 1.01025 : yes (16.0/1.3)
+length > 47 :
+|   score of tag bounding main content <= 0.99519 :
+|   |   date = TRUE: yes (3.0/1.1)
+|   |   date = FALSE: no (23.0/1.3)
+|   score of tag bounding main content > 0.99519 :
+|   |   reserved word = TRUE: no (6.0/2.3)
+|   |   reserved word = FALSE: yes (134.0/5.0)
+
+
+Tree saved
+
+
+Evaluation on training data (309 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  18    3( 1.0%)     13    5( 1.6%)    ( 4.9%)   <<
+
+Evaluation on test data (35 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  18    3( 8.6%)     13    3( 8.6%)    ( 4.9%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   14    3	(a): class yes
+	        18	(b): class no
+

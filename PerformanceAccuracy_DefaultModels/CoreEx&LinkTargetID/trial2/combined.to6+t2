@@ -1,0 +1,100 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 19:37:38 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 310 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (121.0/2.0)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.00872 : no (10.0)
+|   |   score of tag bounding main content > 1.00872 : yes (16.0)
+length > 47 :
+|   score of tag bounding main content <= 0.995027 :
+|   |   date = TRUE: yes (3.0)
+|   |   date = FALSE:
+|   |   |   tag bounding main content = div: no (10.0)
+|   |   |   tag bounding main content = ul: no (9.0)
+|   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   tag bounding main content = body: no (3.0)
+|   |   |   tag bounding main content = tr: no (0.0)
+|   score of tag bounding main content > 0.995027 :
+|   |   reserved word = TRUE:
+|   |   |   frequency count of most frequent tag <= 8 : yes (2.0)
+|   |   |   frequency count of most frequent tag > 8 : no (5.0)
+|   |   reserved word = FALSE:
+|   |   |   tag bounding main content = ul: yes (0.0)
+|   |   |   tag bounding main content = section: yes (5.0)
+|   |   |   tag bounding main content = body: no (1.0)
+|   |   |   tag bounding main content = tr: yes (0.0)
+|   |   |   tag bounding main content = div:[S1]
+
+
+Subtree [S1]
+
+most frequent tag listed in the main content = p: yes (93.0)
+most frequent tag listed in the main content = li: yes (0.0)
+most frequent tag listed in the main content = ol: yes (0.0)
+most frequent tag listed in the main content = article: yes (0.0)
+most frequent tag listed in the main content = section: yes (0.0)
+most frequent tag listed in the main content = meta: yes (0.0)
+most frequent tag listed in the main content = a: yes (0.0)
+most frequent tag listed in the main content = td: yes (0.0)
+most frequent tag listed in the main content = div:
+|   number of forward slash marks = 2: yes (2.0)
+|   number of forward slash marks = 0: yes (0.0)
+|   number of forward slash marks = 1: yes (15.0)
+|   number of forward slash marks = 5: yes (12.0)
+|   number of forward slash marks = 4: no (1.0)
+|   number of forward slash marks = 3: yes (1.0)
+
+
+Simplified Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (121.0/3.8)
+|   number = TRUE:
+|   |   score of tag bounding main content <= 1.00872 : no (10.0/1.3)
+|   |   score of tag bounding main content > 1.00872 : yes (16.0/1.3)
+length > 47 :
+|   score of tag bounding main content <= 0.995027 :
+|   |   date = TRUE: yes (3.0/1.1)
+|   |   date = FALSE: no (23.0/2.5)
+|   score of tag bounding main content > 0.995027 :
+|   |   reserved word = FALSE: yes (130.0/3.8)
+|   |   reserved word = TRUE:
+|   |   |   frequency count of most frequent tag <= 8 : yes (2.0/1.0)
+|   |   |   frequency count of most frequent tag > 8 : no (5.0/1.2)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  40    2( 0.6%)     15    5( 1.6%)    ( 5.2%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  40    2( 5.9%)     15    2( 5.9%)    ( 5.2%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   17     	(a): class yes
+	    2   15	(b): class no
+

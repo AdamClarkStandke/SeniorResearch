@@ -1,0 +1,95 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 19:12:36 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 310 cases (5 attributes) from XDF.data
+
+Decision Tree:
+
+score of tag bounding main content <= 1.01131 :
+|   tag bounding main content = ul: no (55.0)
+|   tag bounding main content = section: yes (11.0/1.0)
+|   tag bounding main content = body: no (8.0)
+|   tag bounding main content = tr: no (1.0)
+|   tag bounding main content = div:
+|   |   DOM tree depth of tag bounding main content = 8: no (10.0)
+|   |   DOM tree depth of tag bounding main content = 9: yes (2.0/1.0)
+|   |   DOM tree depth of tag bounding main content = 6: no (10.0)
+|   |   DOM tree depth of tag bounding main content = 5: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 22: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 17: no (2.0)
+|   |   DOM tree depth of tag bounding main content = 20: yes (3.0/1.0)
+|   |   DOM tree depth of tag bounding main content = 21: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 13: no (1.0)
+|   |   DOM tree depth of tag bounding main content = 14: no (2.0)
+|   |   DOM tree depth of tag bounding main content = 2: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 7: no (9.0)
+|   |   DOM tree depth of tag bounding main content = 3: no (7.0)
+|   |   DOM tree depth of tag bounding main content = 15: no (7.0)
+|   |   DOM tree depth of tag bounding main content = 19: no (1.0)
+|   |   DOM tree depth of tag bounding main content = 18: no (5.0)
+|   |   DOM tree depth of tag bounding main content = 24: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 16: no (0.0)
+|   |   DOM tree depth of tag bounding main content = 12:
+|   |   |   score of tag bounding main content <= 0.996551 : no (2.0)
+|   |   |   score of tag bounding main content > 0.996551 : yes (3.0)
+|   |   DOM tree depth of tag bounding main content = 11:
+|   |   |   frequency count of most frequent tag > 11 : no (10.0/1.0)
+|   |   |   frequency count of most frequent tag <= 11 :
+|   |   |   |   score of tag bounding main content <= 0.993814 : no (2.0)
+|   |   |   |   score of tag bounding main content > 0.993814 : yes (19.0)
+|   |   DOM tree depth of tag bounding main content = 10:
+|   |   |   most frequent tag listed in the main content = p: no (0.0)
+|   |   |   most frequent tag listed in the main content = li: no (0.0)
+|   |   |   most frequent tag listed in the main content = ol: no (0.0)
+|   |   |   most frequent tag listed in the main content = article: no (11.0)
+|   |   |   most frequent tag listed in the main content = section: no (0.0)
+|   |   |   most frequent tag listed in the main content = meta: no (0.0)
+|   |   |   most frequent tag listed in the main content = a: no (0.0)
+|   |   |   most frequent tag listed in the main content = td: no (0.0)
+|   |   |   most frequent tag listed in the main content = div:
+|   |   |   |   frequency count of most frequent tag <= 10 : yes (5.0)
+|   |   |   |   frequency count of most frequent tag > 10 : no (2.0)
+score of tag bounding main content > 1.01131 :
+|   most frequent tag listed in the main content = p: yes (98.0/1.0)
+|   most frequent tag listed in the main content = li: no (3.0)
+|   most frequent tag listed in the main content = ol: yes (0.0)
+|   most frequent tag listed in the main content = article: yes (0.0)
+|   most frequent tag listed in the main content = section: yes (0.0)
+|   most frequent tag listed in the main content = meta: yes (0.0)
+|   most frequent tag listed in the main content = a: yes (0.0)
+|   most frequent tag listed in the main content = td: yes (0.0)
+|   most frequent tag listed in the main content = div:
+|   |   frequency count of most frequent tag <= 20 : yes (13.0)
+|   |   frequency count of most frequent tag > 20 : no (8.0/2.0)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  57    7( 2.3%)     57    7( 2.3%)    (12.8%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  57    6(17.6%)     57    6(17.6%)    (12.8%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   12    4	(a): class yes
+	    2   16	(b): class no
+

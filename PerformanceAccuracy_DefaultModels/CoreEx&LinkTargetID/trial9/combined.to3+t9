@@ -1,0 +1,98 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 19:51:55 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+score of tag bounding main content <= 1.01131 :
+|   date = TRUE: yes (19.0)
+|   date = FALSE:
+|   |   length <= 71 :
+|   |   |   most frequent tag listed in the main content = li: no (49.0)
+|   |   |   most frequent tag listed in the main content = div: no (54.0/1.0)
+|   |   |   most frequent tag listed in the main content = ol: no (7.0)
+|   |   |   most frequent tag listed in the main content = article: no (12.0)
+|   |   |   most frequent tag listed in the main content = section: no (1.0)
+|   |   |   most frequent tag listed in the main content = meta: no (3.0)
+|   |   |   most frequent tag listed in the main content = a: no (1.0)
+|   |   |   most frequent tag listed in the main content = td: no (1.0)
+|   |   |   most frequent tag listed in the main content = p:
+|   |   |   |   score of tag bounding main content <= 1.00143 : no (6.0)
+|   |   |   |   score of tag bounding main content > 1.00143 : yes (3.0)
+|   |   length > 71 :
+|   |   |   number of forward slash marks = 3: no (7.0)
+|   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   number of forward slash marks = 1: yes (2.0)
+|   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   number of forward slash marks = 5: no (4.0)
+|   |   |   number of forward slash marks = 2:
+|   |   |   |   tag bounding main content = div: yes (9.0)
+|   |   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   |   tag bounding main content = section: yes (4.0)
+|   |   |   |   tag bounding main content = body: no (1.0)
+|   |   |   |   tag bounding main content = tr: yes (0.0)
+score of tag bounding main content > 1.01131 :
+|   length <= 17 : no (9.0)
+|   length > 17 :
+|   |   reserved word = TRUE: yes (3.0/1.0)
+|   |   reserved word = FALSE:
+|   |   |   most frequent tag listed in the main content = p: yes (97.0)
+|   |   |   most frequent tag listed in the main content = li: no (1.0)
+|   |   |   most frequent tag listed in the main content = div: yes (15.0)
+|   |   |   most frequent tag listed in the main content = ol: yes (0.0)
+|   |   |   most frequent tag listed in the main content = article: yes (0.0)
+|   |   |   most frequent tag listed in the main content = section: yes (0.0)
+|   |   |   most frequent tag listed in the main content = meta: yes (0.0)
+|   |   |   most frequent tag listed in the main content = a: yes (0.0)
+|   |   |   most frequent tag listed in the main content = td: yes (0.0)
+
+
+Simplified Decision Tree:
+
+score of tag bounding main content <= 1.01131 :
+|   date = TRUE: yes (19.0/1.3)
+|   date = FALSE:
+|   |   length <= 71 : no (137.0/6.2)
+|   |   length > 71 :
+|   |   |   number of forward slash marks = 2: yes (15.0/3.7)
+|   |   |   number of forward slash marks = 3: no (7.0/1.3)
+|   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   number of forward slash marks = 1: yes (2.0/1.0)
+|   |   |   number of forward slash marks = 4: yes (0.0)
+|   |   |   number of forward slash marks = 5: no (4.0/1.2)
+score of tag bounding main content > 1.01131 :
+|   length <= 17 : no (9.0/1.3)
+|   length > 17 : yes (116.0/3.8)
+
+
+Tree saved
+
+
+Evaluation on training data (309 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  42    2( 0.6%)     15    8( 2.6%)    ( 6.4%)   <<
+
+Evaluation on test data (35 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  42    2( 5.7%)     15    2( 5.7%)    ( 6.4%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	    1   17	(b): class no
+

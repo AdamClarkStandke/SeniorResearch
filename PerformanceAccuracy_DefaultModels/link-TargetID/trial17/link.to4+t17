@@ -1,0 +1,63 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 18:31:01 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 310 cases (6 attributes) from XDF.data
+
+Decision Tree:
+
+length <= 47 :
+|   number = FALSE: no (119.0/1.0)
+|   number = TRUE:
+|   |   number of forward slash marks = 2: no (6.0/1.0)
+|   |   number of forward slash marks = 0: yes (0.0)
+|   |   number of forward slash marks = 5: yes (0.0)
+|   |   number of forward slash marks = 4: yes (0.0)
+|   |   number of forward slash marks = 3: no (3.0)
+|   |   number of forward slash marks = 1:
+|   |   |   length <= 34 : yes (13.0)
+|   |   |   length > 34 : no (3.0/1.0)
+length > 47 :
+|   reserved word = TRUE:
+|   |   date = TRUE: yes (2.0)
+|   |   date = FALSE: no (8.0)
+|   reserved word = FALSE:
+|   |   date = TRUE: yes (44.0)
+|   |   date = FALSE:
+|   |   |   number of forward slash marks = 2: yes (66.0/9.0)
+|   |   |   number of forward slash marks = 1: yes (32.0)
+|   |   |   number of forward slash marks = 0: yes (0.0)
+|   |   |   number of forward slash marks = 5: no (6.0)
+|   |   |   number of forward slash marks = 4: no (1.0)
+|   |   |   number of forward slash marks = 3: no (7.0/1.0)
+
+
+Tree saved
+
+
+Evaluation on training data (310 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  25   13( 4.2%)     25   13( 4.2%)    ( 9.8%)   <<
+
+Evaluation on test data (34 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  25    1( 2.9%)     25    1( 2.9%)    ( 9.8%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   16    1	(a): class yes
+	        17	(b): class no
+

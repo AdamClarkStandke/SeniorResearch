@@ -1,0 +1,98 @@
+
+C4.5 [release 8] decision tree generator	Fri May 31 19:44:05 2019
+----------------------------------------
+
+    Options:
+	File stem <XDF>
+	Trees evaluated on unseen cases
+
+Read 309 cases (11 attributes) from XDF.data
+
+Decision Tree:
+
+score of tag bounding main content <= 1.01131 :
+|   date = TRUE: yes (19.0)
+|   date = FALSE:
+|   |   length <= 49 :
+|   |   |   number = FALSE: no (108.0)
+|   |   |   number = TRUE:
+|   |   |   |   most frequent tag listed in the main content = p: yes (1.0)
+|   |   |   |   most frequent tag listed in the main content = li: no (4.0)
+|   |   |   |   most frequent tag listed in the main content = div: no (5.0)
+|   |   |   |   most frequent tag listed in the main content = ol: no (0.0)
+|   |   |   |   most frequent tag listed in the main content = article: no (0.0)
+|   |   |   |   most frequent tag listed in the main content = section: no (0.0)
+|   |   |   |   most frequent tag listed in the main content = meta: no (1.0)
+|   |   |   |   most frequent tag listed in the main content = a: no (0.0)
+|   |   |   |   most frequent tag listed in the main content = td: no (0.0)
+|   |   length > 49 :
+|   |   |   score of tag bounding main content <= 0.995279 :
+|   |   |   |   tag bounding main content = div: no (11.0)
+|   |   |   |   tag bounding main content = ul: no (9.0)
+|   |   |   |   tag bounding main content = section: yes (1.0)
+|   |   |   |   tag bounding main content = body: no (3.0)
+|   |   |   |   tag bounding main content = tr: no (0.0)
+|   |   |   score of tag bounding main content > 0.995279 :
+|   |   |   |   reserved word = TRUE: no (5.0)
+|   |   |   |   reserved word = FALSE:
+|   |   |   |   |   tag bounding main content = div: yes (17.0)
+|   |   |   |   |   tag bounding main content = ul: no (1.0)
+|   |   |   |   |   tag bounding main content = section: yes (4.0)
+|   |   |   |   |   tag bounding main content = body: no (1.0)
+|   |   |   |   |   tag bounding main content = tr: yes (0.0)
+score of tag bounding main content > 1.01131 :
+|   length <= 17 : no (7.0)
+|   length > 17 :
+|   |   reserved word = TRUE: yes (3.0/1.0)
+|   |   reserved word = FALSE:
+|   |   |   frequency count of most frequent tag <= 22 : yes (103.0)
+|   |   |   frequency count of most frequent tag > 22 :
+|   |   |   |   frequency count of most frequent tag <= 77 : yes (4.0)
+|   |   |   |   frequency count of most frequent tag > 77 : no (2.0)
+
+
+Simplified Decision Tree:
+
+score of tag bounding main content <= 1.01131 :
+|   date = TRUE: yes (19.0/1.3)
+|   date = FALSE:
+|   |   length <= 49 : no (119.0/2.6)
+|   |   length > 49 :
+|   |   |   score of tag bounding main content <= 0.995279 : no (24.0/2.5)
+|   |   |   score of tag bounding main content > 0.995279 :
+|   |   |   |   reserved word = TRUE: no (5.0/1.2)
+|   |   |   |   reserved word = FALSE: yes (23.0/3.7)
+score of tag bounding main content > 1.01131 :
+|   length <= 17 : no (7.0/1.3)
+|   length > 17 :
+|   |   frequency count of most frequent tag <= 22 : yes (106.0/2.6)
+|   |   frequency count of most frequent tag > 22 :
+|   |   |   frequency count of most frequent tag <= 77 : yes (4.0/1.2)
+|   |   |   frequency count of most frequent tag > 77 : no (2.0/1.0)
+
+
+Tree saved
+
+
+Evaluation on training data (309 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  40    1( 0.3%)     17    5( 1.6%)    ( 5.6%)   <<
+
+Evaluation on test data (35 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	  40    0( 0.0%)     17    0( 0.0%)    ( 5.6%)   <<
+
+
+	  (a)  (b)	<-classified as
+	 ---- ----
+	   18     	(a): class yes
+	        17	(b): class no
+
