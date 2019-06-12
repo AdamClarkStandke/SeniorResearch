@@ -1,4 +1,4 @@
-package coreExAlgorithm;
+package CoreEx_JavaCode;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -49,8 +49,25 @@ public class CoreExAlgo {
     private static String classification=null; 
     private static CoreExAlgo info; 
     private static double max=0.0d; 
+    
+    //literature weights associated with CoreEX scoring function
 	private static float weightRatio = 0.99f; 
-	private static float weightText = 0.01f; 
+	private static float weightText = 0.01f;
+	
+	//TESTING OF NODE DEPTH VALUE IN DOM TREE BASED ON 95% CI INTERVAL
+	//NOTE: variable weightDepth is how much weight to assign to the depth of
+	//the node. The entire score must sum to one as said in the literature. 
+	//95% CI interval constructed from averageDepth variable gathered from 
+	//the trial one mean depth value of main content node for articles with a
+	//sample std deviation of 5.23 as documented in section
+	//nine for senior research paper
+//	private static float weightRatio = 0.75f; 
+//	private static float weightText = 0.01f;
+//	private static float weightDepth = 0.24f;
+//	private static float upperSpread = 14.36f;
+//	private static float averageDepth= 13.14f; 
+//	private static float lowerSpread = 11.92f;
+	
 	private static int pageText;
 	private static int count;
 	private static Node htmlbody;
@@ -69,7 +86,7 @@ public class CoreExAlgo {
 		 
 		 pageText=0;
 		 count=0; 
-		 coreExfile = new File("/Users/adam/Desktop/nonarticles.csv");
+		 coreExfile = new File("/Users/adam/Desktop/testing.csv");
 		 corexOutputfile = new FileWriter(coreExfile);
 		 coreExwriter = new CSVWriter(corexOutputfile);
 	}
@@ -330,9 +347,19 @@ public class CoreExAlgo {
 			Set<Set<Node>> setNodes = store.getS();
 		    if(!(setNodes.contains(S))) //a check to make sure that current set is not already part of stored set
 			{
-				//CoreEx's weighted scoring function
-				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + 
-					       	   (weightText * ((float)setTextCnt/pageText)); 
+		    	float depth= (float)getDepth(child2);
+		    	
+		    	//NOTE: Simple scoring mechanism for determining the value to associate with a node DOM tree depth value.
+		    	//If the depth of the node is within the 95% confidence interval a value of one is assigned to the variables
+		    	//upperExtreme and lowerExtreme otherwise a penalty is assigned based on how far node's depth is from trial one's
+		    	//sample mean. Doing so leads to a larger value that is penalized based on the following equation added to CoreEx's
+		    	//originial scoring function: weightDepth * 1/(upperExtreme+lowerExtreme)
+//		    	float upperExtreme = (depth<=upperSpread)?1:(depth-averageDepth); 
+//		    	float lowerExtreme = (depth>=lowerSpread)?1:(depth-averageDepth);
+		    	
+				//CoreEx's weighted scoring function 
+		    	//(NOTE: second portion is simple scoring associated with node depth as detailed in section nine of senior research paper)
+				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + (weightText * ((float)setTextCnt/pageText)); //+ (weightDepth * 1/(upperExtreme+lowerExtreme)); 
 				
 				//if storage is initially empty add the set S to storage and keep the values of 
 				//setTextCnt, setLinkCnt, its score, and the depth within the DOM tree

@@ -1,4 +1,4 @@
-package linkTargetAnalysis;
+package linkTargetIdentification_JavaCode;
 
 import java.io.File;
 import java.io.FileWriter;

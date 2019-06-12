@@ -1,4 +1,4 @@
-package coreExandLinkTargetIdCombined;
+package coreExandLinkTargetIdCombined_JavaCode;
 
 import java.io.File;
 import java.io.FileWriter;
