@@ -56,11 +56,9 @@ public class CoreExAlgo {
 	
 	//TESTING OF NODE DEPTH VALUE IN DOM TREE BASED ON 95% CI INTERVAL
 	//NOTE: variable weightDepth is how much weight to assign to the depth of
-	//the node. The entire score must sum to one as said in the literature. 
-	//95% CI interval constructed from averageDepth variable gathered from 
-	//the trial one mean depth value of main content node for articles with a
-	//sample std deviation of 5.23 as documented in section
-	//nine for senior research paper
+	//the node criterion. The entire score must sum to one as said in the literature. 
+	//The value for the  averageDepth variable came from 
+	//trial one's sample mean depth value for main content nodes contained within articles. 
 //	private static float weightRatio = 0.75f; 
 //	private static float weightText = 0.01f;
 //	private static float weightDepth = 0.24f;
@@ -349,17 +347,16 @@ public class CoreExAlgo {
 			{
 		    	float depth= (float)getDepth(child2);
 		    	
-		    	//NOTE: Simple scoring mechanism for determining the value to associate with a node DOM tree depth value.
-		    	//If the depth of the node is within the 95% confidence interval a value of one is assigned to the variables
-		    	//upperExtreme and lowerExtreme otherwise a penalty is assigned based on how far node's depth is from trial one's
-		    	//sample mean. Doing so leads to a larger value that is penalized based on the following equation added to CoreEx's
-		    	//originial scoring function: weightDepth * 1/(upperExtreme+lowerExtreme)
-//		    	float upperExtreme = (depth<=upperSpread)?1:(depth-averageDepth); 
-//		    	float lowerExtreme = (depth>=lowerSpread)?1:(depth-averageDepth);
+		    	//NOTE: Simple scoring mechanism for determining the value to assign to a node's depth in the DOM tree.
+		    	//If the depth of the node is within the 95% confidence interval a value of one is assigned to the variable
+		    	//upperExtreme, otherwise a penalty is assigned based on how far the node's depth is from trial one's
+		    	//sample mean. A larger standard deviation is penalized by the following formula (which is added as a 
+		    	//third term to CoreEx's original scoring function): weightDepth * 1/(upperExtreme)
+//		    	float upperExtreme = (depth<=upperSpread && depth>=lowerSpread)?1:Math.abs(depth-averageDepth); 
 		    	
 				//CoreEx's weighted scoring function 
 		    	//(NOTE: second portion is simple scoring associated with node depth as detailed in section nine of senior research paper)
-				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + (weightText * ((float)setTextCnt/pageText)); //+ (weightDepth * 1/(upperExtreme+lowerExtreme)); 
+				double score = (weightRatio * (((float)setTextCnt-setLinkCnt)/setTextCnt)) + (weightText * ((float)setTextCnt/pageText)); //+ (weightDepth * 1/(upperExtreme)); 
 				
 				//if storage is initially empty add the set S to storage and keep the values of 
 				//setTextCnt, setLinkCnt, its score, and the depth within the DOM tree
