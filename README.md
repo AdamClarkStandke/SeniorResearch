@@ -1,5 +1,6 @@
-**Adam Standke, 
-(Advisor/Mentor)Dr. C. Dudley Girard** 
+**Adam Standke**
+
+**(Advisor/Mentor)Dr. C. Dudley Girard** 
 
 # DOES A NEWS ARTICLE EXIST WITHIN A WEB PAGE?
 ### Abstract
@@ -34,20 +35,36 @@ The CoreEx algorithm can be split up into two parts; namely, nodes that are term
 
 ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/CoreExscoring.png)
 
-Once the counts are known for each non-terminal node, the nodes are scored based on their values for setTextCnt and setLinkCnt[3]. Figure 3 details CoreEx’s scoring function for non-terminal nodes (ie., N). Pagetext is the total amount of text that the webpage contains[3]. Weightratio and weighttext are weights assigned to the function which have been experimentally determined to be 0.99 for weightratio and 0.01 for weighttext[3]. Using this scoring function the node with the highest score is picked as the main content node and the corresponding set of nodes within the set S contains the news article[3].
+Once the counts are known for each non-terminal node, the nodes are scored based on their values for setTextCnt and setLinkCnt[3]. Figure 3 details CoreEx’s scoring function for non-terminal nodes (ie., N). PageText is the total amount of text that the webpage contains[3]. WeightRatio and weightText are weights assigned to the function which have been experimentally determined to be 0.99 for weightratio and 0.01 for weightText[3]. Using this scoring function the node with the highest score is picked as the main content node and the corresponding set of nodes within the set S contains the news article[3].
 
 ### 2.3 The C4.5 Machine Learning Algorithm
 C4.5 is a machine learning algorithm that constructs classification models[4]. The classification task consists of assigning things to categories or classes as determined by their properties[4]. In doing so, C4.5 constructs classification models through induction by generalizing from specific examples[4]. C4.5 is a descendant of an earlier machine learning algorithm called ID3, however, C4.5 provides additional capabilities[4]. In its simplest form, C4.5 generates a classification model in the form of a decision tree, where each leaf indicates a particular class and each non-leaf represents a decision node that specifies some test to be carried out on an attribute[4]. To construct a decision tree C4.5 relies on partitioning a set of training cases T into subsets of cases until a single-class collection of cases is achieved[4]. 
 
-////
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image5.png)
+
+**Figure 4**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image6.png)
+
+**Figure 5**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image7.png)
+
+**Figure 6**
 
 Similar to the ID3 algorithm, C4.5 relies on a criteria called gain to effectively partition the training cases[4]. The information theory that underpins the gain criterion relies on the notion that the information conveyed by a message depends on its probability and can be measured in bits[4]. Figures 4, 5, and 6 detail C4.5’s calculation of gain.
 
-Figure 4 shows the function that is used to compute the (im)purity of an arbitrary collection of training examples[2]. This function when applied to a set of training cases measures the average amount of information needed to identify the class of a training case in T[4]. The quantity freq(Cj,T) calculates the number of training cases in T that belong to class Cj[4]. The other function, shown by figure 5 represents the information gained after partitioning a set of training cases by a certain attribute[4]. Each Ti is a subset of T for which attribute X has a value i[2]. Together, both these functions make up the gain criterion as shown by figure 6[4]. The gain criterion will select attributes that maximize the function[4]. In doing so, the  set of training cases are partitioned into a corresponding decision tree[4].
+Figure 4 shows the function that is used to compute the (im)purity of an arbitrary collection of training examples[2]. This function when applied to a set of training cases measures the average amount of information needed to identify the class of a training case in T[4]. The quantity ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image8.png)calculates the number of training cases in T that belong to class ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image9.png)[4]. The other function, shown by figure 5 represents the information gained after partitioning a set of training cases by a certain attribute[4]. Each ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image10.png)is a subset of T for which attribute X has a value i[2]. Together, both these functions make up the gain criterion as shown by figure 6[4]. The gain criterion will select attributes that maximize the function[4]. In doing so, the  set of training cases are partitioned into a corresponding decision tree[4].
 
-///
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image11.png)
 
-C4.5 improves upon the gain criterion by introducing an additional gain criteria called gain ratio[4]. The gain criterion is inherently biased, since it favors attributes with many different outcomes[4]. The bias inherent in the gain criterion is rectified by C4.5 through a normalization procedure in which the apparent gain attributable to an attribute with many outcomes is adjusted[4]. Figures 7 and 8 show C4.5’s calculation of the gain ratio criterion[4]. Figure 7 calculates the split information for an attribute X. T1 through Tn represents n different subsets of T, after being partitioned by n different values of attribute X[2]. After doing so, figure 8 expresses the proportion of information generated by the attribute that is useful for classification[4]. 
+**Figure 7**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image12.png)
+
+**Figure 8**
+
+C4.5 improves upon the gain criterion by introducing an additional gain criteria called gain ratio[4]. The gain criterion is inherently biased, since it favors attributes with many different outcomes[4]. The bias inherent in the gain criterion is rectified by C4.5 through a normalization procedure in which the apparent gain attributable to an attribute with many outcomes is adjusted[4]. Figures 7 and 8 show C4.5’s calculation of the gain ratio criterion[4]. Figure 7 calculates the split information for an attribute X. ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image13.png)through ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image14.png)represents n different subsets of T, after being partitioned by n different values of attribute X[2]. After doing so, figure 8 expresses the proportion of information generated by the attribute that is useful for classification[4]. 
 
 In addition to C4.5’s gain ratio, three additional options of C4.5 seem to improve its classification performance; namely, retrospective pruning, biased windowing, and discrete attribute-value grouping[4]. For retrospective pruning, C4.5 modifies the recursive partitioning of the training cases by removing, retrospectively, some of the original structure of the original decision tree[4]. Generally, this is done by replacing subtrees with leaves by comparing the total number of predicted errors[4]. Even though C4.5 cannot exactly determine the probability of a predicted error at a given leaf, it is able to bound an upper limit on this probability based on a given confidence level[4]. C4.5 then equates the predicted error rate with this upper limit to then compute the total number of predicted errors[4]. By removing parts of the tree that do not contribute to the accuracy of unseen cases, a pruned tree generally has a lower error rate on unseen cases than an un-pruned tree[4].
 
@@ -101,7 +118,7 @@ For the combination of CoreEx and link-target identification, because all of the
 
 **Figure 10: The legend shows the options used during the twenty trials and the dotted horizontal line represents the median value for the pruned decision trees constructed from CoreEx and link-target identification.**
 
-![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/results.png)
+<table class="c43 c49"><tbody><tr class="c26"><td class="c31" colspan="1" rowspan="1"><p class="c23"><span class="c3 c4 c6">Statistics</span></p></td><td class="c14" colspan="1" rowspan="1"><p class="c18"><span class="c3 c4 c6">LinkTarget </span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c18"><span class="c3 c4 c6">CoreEx</span></p></td><td class="c16" colspan="1" rowspan="1"><p class="c18"><span class="c3 c4 c6">LinkTarget and CoreEx</span></p><p class="c18"><span class="c3 c4 c6">(combined)</span></p></td></tr><tr class="c26"><td class="c31" colspan="1" rowspan="1"><p class="c23"><span class="c3 c1">Median</span></p></td><td class="c14" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">94.15%</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">95.9%</span></p></td><td class="c16" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">97.1%</span></p></td></tr><tr class="c26"><td class="c31" colspan="1" rowspan="1"><p class="c23"><span class="c3 c1">Mean</span></p></td><td class="c14" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">94.065%</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">95.83%</span></p></td><td class="c16" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">96.915%</span></p></td></tr><tr class="c26"><td class="c31" colspan="1" rowspan="1"><p class="c23"><span class="c3 c1">Standard Error of the Mean</span></p></td><td class="c14" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.1024%</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.0965%</span></p></td><td class="c16" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.1473%</span></p></td></tr><tr class="c26"><td class="c31" colspan="1" rowspan="1"><p class="c23"><span class="c3 c1">Standard Deviation</span></p></td><td class="c14" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.4579%</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.4317%</span></p></td><td class="c16" colspan="1" rowspan="1"><p class="c18"><span class="c3 c1">0.6587%</span></p></td></tr></tbody></table>
 
 **Table 3**
 
@@ -162,9 +179,118 @@ in the DOM tree. For articles this value was 11. As the histogram shows, most ma
 ![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/length-narticle.png)
 **Figure 22**
 
-Figure 18's histogram shows the depth of the main content node in the DOM tree across websites. The dotted black line represents the median depth value of the main content node in the DOM tree. For non-articles this value was 10. As the histogram shows,  the main content nodes for non-articles were more dispersed than the main content nodes for articles. Figure 19's histogram shows the scores CoreEx assigned to the main content node across websites. The dotted black line represents the median score of the main content node. For non-articles this value was 0.9945. Most scores were somewhere between 0.9925 and 1.0012, and generally less than 1.05. Figure 20 shows how many websites contained a number/id in their root-link. As the chart shows, 58% of websites did not contain a number/id in their root-link. However,  DW News, BBC News, and the Food Network had a significant proportion of their root-links contain a number/id. Figure 21 shows the main content node’s HTML tag across websites. Unlike articles, where the main content node’s HTML tag was either a <div> or <section> tag, for non-articles, the main content node’s HTML tag was more diverse. For  BBC News and CBS News the main content node’s HTML tag was generally a <ul> tag. For Yahoo News, the Verge, and NBC News the main content node’s HTML tag was generally either a <ul> tag or a <div> tag. For the Food Network the main content node’s HTML tag was generally a  <body> tag. And for all the other websites, the main content node’s HTML tag was generally a <div> tag.
+Figure 18's histogram shows the depth of the main content node in the DOM tree across websites. The dotted black line represents the median depth value of the main content node in the DOM tree. For non-articles this value was 10. As the histogram shows,  the main content nodes for non-articles were more dispersed than the main content nodes for articles. Figure 19's histogram shows the scores CoreEx assigned to the main content node across websites. The dotted black line represents the median score of the main content node. For non-articles this value was 0.9945. Most scores were somewhere between 0.9925 and 1.0012, and generally less than 1.05. Figure 20 shows how many websites contained a number/id in their root-link. As the chart shows, 58% of websites did not contain a number/id in their root-link. However,  DW News, BBC News, and the Food Network had a significant proportion of their root-links contain a number/id. Figure 21 shows the main content node’s HTML tag across websites. Unlike articles, where the main content node’s HTML tag was either a &lt;div&gt; or &lt;section&gt; tag, for non-articles, the main content node’s HTML tag was more diverse. For  BBC News and CBS News the main content node’s HTML tag was generally a &lt;ul&gt; tag. For Yahoo News, the Verge, and NBC News the main content node’s HTML tag was generally either a &lt;ul&gt; tag or a &lt;div&gt; tag. For the Food Network the main content node’s HTML tag was generally a  &lt;body&gt; tag. And for all the other websites, the main content node’s HTML tag was generally a &lt;div&gt; tag.
   
 ### 8.2 Structural Examination of the Decision Trees built from CoreEx
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image28.png)
+
+**Figure 23: Part of a web page in which CoreEx did not extract the first content chunk (ie., an  article), but did extract the second content chunk (ie., a list of products).** 
+
+When it came to only examining attributes of CoreEx that were most important to the classification task, three attributes that consistently provided a high gain-ratio value were: the HTML tag with the highest frequency count in the set S, the depth of the main content node in the DOM tree, and the count of the most frequent tag in the set S. The attribute that dealt with the score of the main content node was determined to be less relevant to the classification task. Which is surprising since from the histograms of figures 13 and 19 it would seem that the decision threshold of 1 would be a good value to partition the training cases on (ie., a score less than 1 would be a non-article, while a score equal to or greater than 1 would be an article).
+
+As shown by figure 23, the decision tree built from CoreEx would first split the training cases based on whether the HTML tag with the highest frequency count was a
+&lt;p&gt; tag or one of the following tags: a &lt;li&gt;,&lt;div&gt;,&lt;ol&gt;,&lt;article&gt;,&lt;section&gt;,&lt;meta&gt;,&lt;a&gt;,or &lt;td&gt; tag. Generally, a large proportion of training cases (eg., 138 in figure 10) were classified as articles if their tag with the highest frequency count was a &lt;p&gt; tag and their main content node’s depth value was either 11,6,8,12,9,20,21,19, or 13 in the DOM tree. Conversely, a large proportion of training cases (eg., 94 in figure 10) were classified as non-articles if their tag with the highest frequency count was either a &lt;li&gt;,&lt;ol&gt;,&lt;article&gt;,&lt;section&gt;,&lt;meta&gt;,&lt;a&gt;,or&lt;td&gt; tag.
+
+After examining the decision trees that were constructed for trial one it seems that the average depth value of the main content node was 13.14 (𝜎 = 5.23) for articles. This value was calculated by averaging together the values contained by the set that classified the largest proportion of training cases as articles when the most frequent HTML tag was a &lt;p&gt; tag (eg., in figure 10, this set would be {19, 9, 6, 11, 12,8, 13, 20, 21} since 138 training cases were classified as articles).
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image23.png)
+
+**Figure 24:  Simple scoring term and formula used for scoring a node’s depth in the DOM tree. The variable weightDepth determines how important the scoring term is in regards to the other two terms found in CoreEx’s scoring function.Furthermore,the variable DOMtreeDepth represents a node’s depth value in the DOM tree.**
+
+While CoreEx is a great content extraction algorithm, it primarily extracts content based on text and does have shortcomings, especially when it comes to a lack of structural separation[8]. Namely, when the HTML code offers no indication that two content chunks are unrelated, CoreEx cannot distinguish between those portions of a page[8]. One way to potentially overcome this problem is to extract both content chunks first and then afterwards, distinguish which portions of the content to keep. By  scoring  nodes’ depth values in the DOM tree, both content chunks could be theoretically extracted by retrieving a main content node whose depth lies within a predetermined confidence interval(s) where main content generally resides.
+
+CoreEx had a hard time extracting both content chunks of the web page shown by figure 23. The web page consists of two content chunks. Namely, the first content chunk, as shown by figure 23’s black border, is an article discussing how the Duchess Meghan Merkle is bringing the boatneck neckline back in fashion. The second content chunk, as shown by figure 23’s red border, deals with the actual dresses that one could buy to look like the Duchess Megan Merkle (ie., a non-article chunk). CoreEx extracted this second content chunk. The most frequent HTML tag in the set S was a &lt;p&gt; tag with a frequency count of 2.
+
+After trying various different thresholds and weight values, I was unable to extract the first content chunk (ie., the article). To test the previous theory out (ie.,  regarding the scoring of nodes’ depth values in the DOM tree) , the following 95% confidence interval of 13.14![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image17.png)1.22 was constructed from the previously calculated average depth value of 13.14 and standard deviation of 5.23.
+
+Figure 24 shows the scoring term and formula used to score a node’s depth value in the DOM tree. As figure 24 shows, if a node’s depth in the DOM tree was within the constructed confidence interval x would equal 1, otherwise x would equal the absolute value of its depth in the DOM tree minus 13.14. After, using a weightRatio value of 0.75, a weightText value of 0.01, and a weightDepth value of 0.24 (the default threshold value of 0.9 was also used), both content chunks were extracted. Interestingly, the most frequent HTML tag in the set S was now a &lt;div&gt; tag instead of a &lt;p&gt; tag with a frequency count of 5. In addition to both content chunks being extracted, other content not associated with the main content was also extracted (ie.,  closed caption settings associated with a video player were extracted too). Nevertheless, adding an additional scoring term based on a node’s depth in the DOM tree could potentially allow CoreEx to specialize its content extraction for specific sites that lack structural separation of unrelated content.
+
+### 8.3 Structural Examination of the Decision Trees built from Link-Target Identification
+
+When it came to only examining the attributes of link-target identification that were most important to the classification task, three attributes that consistently provided a high gain-ratio value were: did the root-link contain a date, the number of forward slashes in the root-link, and did the root-link contain a reserved word. With an initial window of 61 (or sometimes 62) training cases, it generally took an average of 5.1 cycles for windowing to converge to a final decision tree. Furthermore, the final window would contain an average of 105.3 training cases to build the final decision tree. Meaning that, in general, 31% of the selected training cases in the window contained as much information as training on the entire training set of 344!
+
+Consistently, decision trees built from link-target identification would first split the training cases based on whether the root-link contained a date. Then the second attribute generally picked would be whether the root-link contained a reserved word. If the root-link did not contain a reserved word, the number of forward slashes contained in the root-link would then be picked as the third attribute to split the training cases on. If a training case contained a date in its root-link, the decision tree would classify the training case as an article (eg., 53 in figure 10).Generally, a large proportion of training cases were classified as not containing an article if they did not have a date and a reserved word in their root-link, and contained either 0,3,4,or 5 slash marks in their root-link (eg., 87 in figure 10). Conversely, a good amount of training cases were classified as an article if their root-link contained either a date or their root-link did not contain a date and reserved word but had 1(or 2) forward slash mark(s) and a length greater than 49 (or 62).
+
+### 8.4 Structural Examination of the Decision Trees built from CoreEx and Link-Target Identification
+
+When it came to examining the combined attributes of link-target identification and CoreEx that were most important to the classification task, three attributes that consistently provided a high gain-ratio value were: the length of the root-link, whether the root-link contained a number/id, and the HTML tag of the main content node.With an initial window of 61 (or sometimes 62) training cases, it generally took an average of 7.1 cycles for windowing to converge to a final decision tree. Furthermore, the final window would contain an average of 112.1 training cases to build the final decision tree. Meaning that, in general, 33% of the selected training cases in the window contained as much information as training on the entire training set of 344!
+
+Consistently, decision trees built from link-target identification and CoreEx would first split the training cases based on the length of the root-link. Then the two closest attributes to the root node would be: 1) whether the root-link contained a number/id; and 2) the HTML tag of the main content node. Lastly, the score of  the main content node would be used as the last attribute to classify the training cases. Interestingly, these four attributes out of the original 11 attributes were deemed by C4.5 to fully cover the 309 (or sometimes 310) training cases.  From a feature engineering standpoint, the 11 attributes originally selected were chosen under the belief that each would be relevant to the classification task. However, as it turned out, only 4 to 6 of the original 11 attributes were actually used in the classification task (the others being: did the root-link contain a date and the HTML tag with the highest frequency count in the set S). As figure 10 shows, a large proportion of training cases were classified as non-articles if their root-link was less than or equal to 44 and their root-link did not have a number/id. Conversely, a large proportion of training cases were classified as articles if their root-link was greater than 44, their main content tag was a <div> tag, and the score of their main content node was greater than 0.99519.
+
+The fact that  decision trees built from link-target identification and CoreEx had different top attributes (ie., the root node of a decision tree or being close to the root node of a decision tree) than the top attributes of the individual decision trees was a bit surprising at first. However, discrete value grouping was not used for the decision trees built from link-target identification and CoreEx. To understand the potential effects that discrete value grouping had on the individual decision trees, two decision trees were constructed using the entire training set and C4.5’s default options.
+
+The first default decision tree examined was the decision tree constructed from link-target identification. The top three attributes that provided a high gain-ratio were: the length of the root-link, whether the root-link contained a number/id, and whether the root-link contained a reserved word. Thus, two of the top three attributes were different from the top three attributes found in decision trees that used C4.5’s options of windowing and discrete value grouping.
+
+The second default decision tree that was examined was the decision tree constructed from CoreEx.The top three attributes that provided a high gain-ratio were: the score of the main content node, the HTML tag of the main content node, and the count of the most frequent HTML tag in the set S. Once again, two of the top three attributes were different from the top three attributes found in decision trees that used C4.5’s option of discrete value grouping.
+
+Accordingly, for the decision trees that just used C4.5’s default options the top attributes were: the length of the root-link, whether the root-link contained a number/id, whether the root-link contained a reserved word, the score of the main content node, the HTML tag of the main content node, and the count of the most frequent HTML tag in the set S. Consequently, five of these attributes (ie.,the length of the root-link, whether the root-link contained a number/id, the HTML tag of the main content node, and the count of the most frequent HTML tag in the set S) were part of the six attributes that were previously discussed as the only attributes  used to construct decision trees from link-target identification and CoreEx. Thus, discrete value grouping played a significant role in modifying the top attributes for the individual decision trees constructed from CoreEx or link-target identification.
+
+### 8.5 Did Tuning the Decision Trees Beforehand Make a Difference?
+
+In order to see if tuning the decision trees beforehand actually resulted in better performance, a comparison was done between decision trees built using C4.5’s default options and decision trees that were tuned beforehand. 
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/compare_Accurary_DefaultvsTuned.png)
+
+**Figure 25: Boxplots comparing the accuracy of decision trees using C4.5’s default options vs. decision trees that were tuned beforehand. The green squares represent the average accuracy scores for the 20 trials.**
+
+The boxplots of figure 25 contain the results of  this comparison. As figure 25 shows, only the decision trees built from CoreEx benefited immensely by adding the extra option of discrete value grouping, since by doing so the decision trees were able to increase their median accuracy score by approximately 9%.
+
+To understand why the option of discrete value grouping had such a positive impact on decision trees constructed from CoreEx, the output generated from the default and tuned decision trees was examined. The first thing that stood out after examining both types of decision trees was the discrepancy in size of the unpruned decision trees. The unpruned decision trees using C4.5’s default options had an average size of 87, while the unpruned decision trees using C4.5’s option of discrete value grouping had an average size of 32. Which amounts to a 61% decrease in decision tree size! Since pruned decision trees are constructed from their unpruned counter parts, the pruned decision trees using C4.5’s default options would be larger in size than the pruned decision trees using C4.5’s option of discrete value grouping. This is important,since, in general, smaller decision trees provide a lower generalization error.
+
+The second thing that stood out after examining both types of decision trees was the absence of the attribute that dealt with the depth of the main content node in the DOM tree. It seems that C4.5’s gain-ratio criterion negatively biased this attribute, since this attribute was found almost always near the top of the decision trees that used C4.5’s option of discrete value grouping. By not including this attribute, the pruned decision trees that used C4.5’s default options left out an important attribute to the classification task and ultimately suffered a performance penalty for doing so.
+
+The reason why tuning the decision trees beforehand did not significantly matter for the decision trees constructed from link-target identification and CoreEx or for the decision trees constructed from link-target identification can be explained by examining the boxplot notches of figure 9. Boxplot notches are used not only for their primary purpose of determining whether random samples come from the same population, but they are also used as an informal measure to determine whether medians differ[7]. Generally, if the notches overlap it can be concluded with 95% confidence that the medians do not differ. Consequently, it should not be a surprise that tuning the decision trees beforehand did not significantly matter for the decision trees constructed from link-target identification and CoreEx or for the decision trees constructed from link-target identification. As mentioned previously in section 7, all of the boxplots’ notches overlapped for the decision trees constructed from link-target identification and the decision trees constructed from link-target identification and CoreEx. However, this was not the case for CoreEx’s boxplots, since not all of the notches overlapped with the default option. Accordingly, this would informally indicate that the median error rate for the tuned options differed from C4.5’s  default options (for CoreEx the tuned options were either: discrete value grouping or the combination of discrete value grouping and windowing).
+
+### 8.6 Conclusion
+
+In conclusion, both null hypotheses for hypothesis one and two can be rejected. Furthermore, after examining the results of table 3, table 4, and figure 10,  the alternative hypothesis for hypothesis two can be accepted. However, the alternative hypothesis for hypothesis one cannot be accepted since the results of table 3, table 4 ,and figure 10 show that the decision trees constructed from CoreEx perform better at identifying news articles than the decision trees constructed from link-target identification. Decision trees constructed from link-target identification and CoreEx that used C4.5’s windoing option had the highest mean accuracy score of 96.92%
+(SEM=.15%, SD=.66% )at identifying news articles within web pages. Furthermore,  decision trees constructed from CoreEx that used  C4.5’s option of discrete value grouping had the second highest mean accuracy score of  95.83% (SEM=.10%, SD=.43%)at identifying news articles within web pages.
+
+For decision trees constructed from link-target identification the three attributes that consistently provided a high gain-ratio value were: did the root-link contain a date, did the root-link contain a reserved word, and number of forward slashes in the root-link. For decision trees constructed from CoreEx the three attributes that consistently provided  a high gain-ratio value were: the HTML tag with the highest frequency count in the set S, the depth of the main content node in the DOM tree, and the count of the most frequent HTML tag in the set S. And for decision trees constructed from link-target identification and CoreEx the three attributes that consistently provided a high gain ratio value were: the length of the root-link, whether the root-link contained a number/id, and the HTML tag of the main content node.
+
+CoreEx had a hard time distinguishing between different forms of unrelated content on web pages that lacked some form of structural separation. As outlined by sub-section 8.2, one potential solution to this problem is to use a node’s depth value in the DOM tree to see if it is within a given confidence interval. This would allow both content chunks to be extracted for further deconstruction.
+
+Generally, tuning C4.5 beforehand did not significantly matter for decision trees constructed from link-target identification and CoreEx or for decision trees constructed from link-target identification. However, tuning  C4.5 beforehand did matter for CoreEx, since CoreEx increased is median accuracy score by approximately 9% by using C4.5’s option of discrete value grouping.
+
+### 9. Acknowledgments
+
+I would like to thank Dr. Girard for providing the idea and mentoring me throughout all phases of this research project. I would also like to thank Nicholas Rummel for giving me access to his data set and allowing me to expand upon his previous work. 
+
+### 10. Works Cited
+
+[1] Ferreira, Rodolfo, et al., “Appling Link Target Identification and Content Extraction to Improve Web News Summarization.” Proceedings of the 2016 ACM Symposium on Document Engineering - DocEng 16, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.
+
+[2] Mitchell, Tom M. Machine Learning. McGraw Hill, 2017.
+
+[3] Prasad, Jyotika, and Andreas Paepcke. “Coreex.” Proceeding of the 17th ACM Conference on 
+Document Engineering - DocEng 16, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.	
+			
+[4] Quinlan, John R. C4.5: Programs for Machine Learning. Morgan Kaufmann, 2006.
+
+[5] Remco R Bouckaert. “Choosing between two learning algorithms based on calibrated tests.” ICML'03 Proceedings of the Twentieth International Conference on International Conference on Machine Learning, Aug. 2003, pp. 51–58.
+
+[6] Pasternack, Jeff, and Dan Roth. “Extracting Article Text from the Web with Maximum Subsequence Segmentation.” Proceedings of the 18th International Conference on World Wide Web - WWW 09, 2009, doi:10.1145/1526709.1526840. 
+
+[7] Chambers, John M., William S. Cleveland, Beat Kleiner, and Paul A. Tukey. "Comparing Data Distributions." In Graphical Methods for Data Analysis. Wadsworth International Group, Belmont, CA, 1983. 
+
+[8]Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. Technical Report 2008-15, Stanford University, May. 2008.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
