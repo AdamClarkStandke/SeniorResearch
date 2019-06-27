@@ -260,21 +260,27 @@ I would like to thank Dr. Girard for providing the idea and mentoring me through
 ### 10. Works Cited
 
 [1] Ferreira, Rodolfo, et al., “Appling Link Target Identification and Content Extraction to Improve Web News Summarization.” *Proceedings of the 2016 ACM Symposium on Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.
+[Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/Ferreira_et_al._-_2016_-_Appling_Link_Target_Identification_and_Content_Ext.pdf)
 
 [2] Mitchell, Tom M. *Machine Learning*. McGraw Hill, 2017.
 
 [3] Prasad, Jyotika, and Andreas Paepcke. “Coreex.” *Proceeding of the 17th ACM Conference on 
-Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.	
+Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.
+[Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/Prasad%20and%20Paepcke%20-%202008%20-%20Coreex%20content%20extraction%20from%20online%20news%20article(2).pdf)
 			
 [4] Quinlan, John R. *C4.5: Programs for Machine Learning*. Morgan Kaufmann, 2006.
 
 [5] Remco R Bouckaert. “Choosing between two learning algorithms based on calibrated tests.” *ICML'03 Proceedings of the Twentieth International Conference on International Conference on Machine Learning*, Aug. 2003, pp. 51–58.
+[Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/bouckaert-calibrated-tests.pdf)
 
-[6] Pasternack, Jeff, and Dan Roth. “Extracting Article Text from the Web with Maximum Subsequence Segmentation.” *Proceedings of the 18th International Conference on World Wide Web - WWW 09*, 2009, doi:10.1145/1526709.1526840. 
+[6] Pasternack, Jeff, and Dan Roth. “Extracting Article Text from the Web with Maximum Subsequence Segmentation.” *Proceedings of the 18th International Conference on World Wide Web - WWW 09*, 2009, doi:10.1145/1526709.1526840.
+[Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/Pasternack_and_Roth_-_2009_-_Extracting_article_text_from_the_web_with_maximum_.pdf)
 
 [7] Chambers, John M., William S. Cleveland, Beat Kleiner, and Paul A. Tukey. "Comparing Data Distributions." *In Graphical Methods for Data Analysis*. Wadsworth International Group, Belmont, CA, 1983. 
 
-[8]Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. *Technical Report 2008-15*, Stanford University, May. 2008.
+[8] Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. *Technical Report 2008-15*, Stanford University, May. 2008.
+[Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/Prasad%20and%20Paepcke%20-%202008%20-%20Coreex%20content%20extraction%20from%20online%20news%20articl.pdf)
+
 
 
 
