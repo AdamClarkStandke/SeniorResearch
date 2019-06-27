@@ -200,7 +200,7 @@ After examining the decision trees that were constructed for trial one it seems 
 
 While CoreEx is a great content extraction algorithm, it primarily extracts content based on text and does have shortcomings, especially when it comes to a lack of structural separation[8]. Namely, when the HTML code offers no indication that two content chunks are unrelated, CoreEx cannot distinguish between those portions of a page[8]. One way to potentially overcome this problem is to extract both content chunks first and then afterwards, distinguish which portions of the content to keep. By  scoring  nodes’ depth values in the DOM tree, both content chunks could be theoretically extracted by retrieving a main content node whose depth lies within a predetermined confidence interval(s) where main content generally resides.
 
-CoreEx had a hard time extracting both content chunks of the web page shown by figure 23. The web page consists of two content chunks. Namely, the first content chunk, as shown by figure 23’s black border, is an article discussing how the Duchess Meghan Merkle is bringing the boatneck neckline back in fashion. The second content chunk, as shown by figure 23’s red border, deals with the actual dresses that one could buy to look like the Duchess Megan Merkle (ie., a non-article chunk). CoreEx extracted this second content chunk. The most frequent HTML tag in the set S was a &lt;p&gt; tag with a frequency count of 2.
+CoreEx had a hard time extracting both content chunks of the web page shown by figure 23. The web page consists of two content chunks. Namely, the first content chunk, as shown by figure 23’s black border, is an article discussing how the Duchess Meghan Merkle is bringing the boatneck neckline back in fashion. The second content chunk deals with the actual dresses that one could buy to look like the Duchess Megan Merkle (ie., a non-article chunk). CoreEx extracted this second content chunk. The most frequent HTML tag in the set S was a &lt;p&gt; tag with a frequency count of 2.
 
 After trying various different thresholds and weight values, I was unable to extract the first content chunk (ie., the article). To test the previous theory out (ie.,  regarding the scoring of nodes’ depth values in the DOM tree) , the following 95% confidence interval of 13.14![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/image17.png)1.22 was constructed from the previously calculated average depth value of 13.14 and standard deviation of 5.23.
 
@@ -259,22 +259,22 @@ I would like to thank Dr. Girard for providing the idea and mentoring me through
 
 ### 10. Works Cited
 
-[1] Ferreira, Rodolfo, et al., “Appling Link Target Identification and Content Extraction to Improve Web News Summarization.” Proceedings of the 2016 ACM Symposium on Document Engineering - DocEng 16, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.
+[1] Ferreira, Rodolfo, et al., “Appling Link Target Identification and Content Extraction to Improve Web News Summarization.” *Proceedings of the 2016 ACM Symposium on Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.
 
-[2] Mitchell, Tom M. Machine Learning. McGraw Hill, 2017.
+[2] Mitchell, Tom M. *Machine Learning*. McGraw Hill, 2017.
 
-[3] Prasad, Jyotika, and Andreas Paepcke. “Coreex.” Proceeding of the 17th ACM Conference on 
-Document Engineering - DocEng 16, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.	
+[3] Prasad, Jyotika, and Andreas Paepcke. “Coreex.” *Proceeding of the 17th ACM Conference on 
+Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/2960811.2967158.	
 			
-[4] Quinlan, John R. C4.5: Programs for Machine Learning. Morgan Kaufmann, 2006.
+[4] Quinlan, John R. *C4.5: Programs for Machine Learning*. Morgan Kaufmann, 2006.
 
-[5] Remco R Bouckaert. “Choosing between two learning algorithms based on calibrated tests.” ICML'03 Proceedings of the Twentieth International Conference on International Conference on Machine Learning, Aug. 2003, pp. 51–58.
+[5] Remco R Bouckaert. “Choosing between two learning algorithms based on calibrated tests.” *ICML'03 Proceedings of the Twentieth International Conference on International Conference on Machine Learning*, Aug. 2003, pp. 51–58.
 
-[6] Pasternack, Jeff, and Dan Roth. “Extracting Article Text from the Web with Maximum Subsequence Segmentation.” Proceedings of the 18th International Conference on World Wide Web - WWW 09, 2009, doi:10.1145/1526709.1526840. 
+[6] Pasternack, Jeff, and Dan Roth. “Extracting Article Text from the Web with Maximum Subsequence Segmentation.” *Proceedings of the 18th International Conference on World Wide Web - WWW 09*, 2009, doi:10.1145/1526709.1526840. 
 
-[7] Chambers, John M., William S. Cleveland, Beat Kleiner, and Paul A. Tukey. "Comparing Data Distributions." In Graphical Methods for Data Analysis. Wadsworth International Group, Belmont, CA, 1983. 
+[7] Chambers, John M., William S. Cleveland, Beat Kleiner, and Paul A. Tukey. "Comparing Data Distributions." *In Graphical Methods for Data Analysis*. Wadsworth International Group, Belmont, CA, 1983. 
 
-[8]Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. Technical Report 2008-15, Stanford University, May. 2008.
+[8]Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. *Technical Report 2008-15*, Stanford University, May. 2008.
 
 
 
