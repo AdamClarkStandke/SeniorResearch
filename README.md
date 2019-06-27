@@ -1,6 +1,6 @@
 **Adam Standke**
 
-**(Advisor/Mentor)Dr. C. Dudley Girard** 
+**(Advisor/Mentor) Dr. C. Dudley Girard** 
 
 # DOES A NEWS ARTICLE EXIST WITHIN A WEB PAGE?
 ### Abstract
