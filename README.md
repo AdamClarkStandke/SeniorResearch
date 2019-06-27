@@ -14,7 +14,7 @@ In doing so, this project will use the following definition of an article to cla
 ### 2. Literature Review
 Topics that deal with information retrieval, data mining, and machine learning will be subsequently discussed. These topics include the following: link-target identification, analysing the content of web pages, and the C4.5 machine learning algorithm.   
 
-### 2.1 Link-Target Identification
+### 2.1 Link-Target Identification 
 The link analysis field studies the relationship between web pages[1]. An area of research that really flourished after the proposal of the page rank algorithm[1]. The page rank algorithm assesses the importance of a web page according to the number of external links that point to it[1]. However, the page rank algorithm does not classify the content of web pages based on the structure of links[1]. In link target identification several features are extracted from the root link within a web page[1]. The features that are extracted are then used to determine whether the root link points to relevant content (eg., other news web pages that contain articles) or irrelevant content (eg., advertisement web pages)[1].
 
 To create such a classification, six specific features based on the link structure are used[1]. The first feature checks to see if the link contains a number/id in the name of the link[1]. Links related to news usually have an id in their structure[1]. 
@@ -281,6 +281,44 @@ Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/29608
 [8] Prasad, Jyotika, and Andreas Paepcke. CoreEx: Content extraction from online news articles. *Technical Report 2008-15*, Stanford University, May. 2008.
 [Click to see article](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Literature_articles/Prasad%20and%20Paepcke%20-%202008%20-%20Coreex%20content%20extraction%20from%20online%20news%20articl.pdf)
 
+### 11. Github Repository Table of Contents
+
+1. [Implementation of link-target identification as described by sub-section 2.1](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/linkTargetIdentification_JavaCode/LinkTargetId.java)
+
+2. [Implementation of CoreEx as described by sub-section 2.2.1](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/CoreEx_JavaCode/CoreExAlgo.java)
+
+3. [Implementation of link-target identification and CoreEx(combined)](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/coreExandLinkTargetIdCombined_JavaCode/IEA.java)
+
+4. [Implementation of Selenium WebDriver with access to FireFox's history file and lxml clean](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/webDriver/webgrabber.py)
+
+5. [Data Set of Articles used in Experiment](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/Articles)
+    * [What CoreEx and link-target extracted(data)](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/FeatureValuesCombined/FeatureValuesCombined_results_articles_May282019.csv)
+    * [What CoreEx extracted(html)](https://raw.githubusercontent.com/kingjames24/super-duper-octo-goggles/master/Corex%20Extracted%20HTML%20Content/CoreExarticles_May272019_v4.html)
+
+6. [Data Set of Non-Articles used in Experiment](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/not_articles)
+    * [What CoreEx extracted and link-target extracted(data)](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/FeatureValuesCombined/FeatureValuesCombined_resutls_nonarticles_May282019.csv)
+    * [What CoreEx extracted(html)](https://raw.githubusercontent.com/kingjames24/super-duper-octo-goggles/master/Corex%20Extracted%20HTML%20Content/CoreExnonarticles_May272019_v4.html)
+
+7. [Results of Tuning - link-target identification](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/OP%20Pilot-FineTuningDecisionTrees/link-target-ID)
+    * [C4.5's default options](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/link-target-ID/default_10xval/tree/link.tres)
+    * [C4.5's discrete value grouping option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/link-target-ID/10Xval_s_option/trees/link.tres%2B_s)
+    * [C4.5's windowing option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/link-target-ID/10Xval_t10_option/trees/link.tres%2B_t)
+    * [combination of discrete value grouping and windowing](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/link-target-ID/10Xval_s_t10_options/trees/link.tres%2Bst)
+    
+8. [Results of Tuning - CoreEx](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/OP%20Pilot-FineTuningDecisionTrees/CoreEx)
+    * [C4.5's default options](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/CoreEx/default_10Xval/trees/corex.tres)
+    * [C4.5's discrete value grouping option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/CoreEx/10Xval_s_option/trees/corex.tres%2B_s)
+    * [C4.5's windowing option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/CoreEx/10Xval_t10_option/trees/corex.tres%2B_t)
+    * [combination of discrete value grouping and windowing](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/CoreEx/10Xval_s_t10_options/trees/corex.tres%2Bst2)
+
+9. [Results of Tuning - CoreEx and link-target id(combined)](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/OP%20Pilot-FineTuningDecisionTrees/Combined)
+    * [C4.5's default options](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/Combined/defualt_10Xval/trees/combined.tres)
+    * [C4.5's discrete value grouping option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/Combined/10Xval_s_option/trees/combined.tres%2B_s)
+    * [C4.5's windowing option](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/Combined/10Xval_t10_option/trees/combined.tres%2B_t)
+    * [combination of discrete value grouping and windowing](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/OP%20Pilot-FineTuningDecisionTrees/Combined/10Xval_s_t10_options/trees/combined.tres%2Bst2)
+
+
+    
 
 
 
