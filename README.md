@@ -1,9 +1,9 @@
-Adam Standke, 
-Dr. C. Dudley Girard 
+**Adam Standke, 
+(Advisor/Mentor)Dr. C. Dudley Girard** 
 
 # DOES A NEWS ARTICLE EXIST WITHIN A WEB PAGE?
 ### Abstract
-This paper and project reposotory focuses on the problem of identifying whether a web page contains a news article. Contained within this paper is background information about how machine learning algorithms combined with information extraction algorithms and heuristics are able to identify online news articles. This paper also contains an experimental design along with a proposed solution. Lastly, this paper contains the results of an experiment that was run to determine whether the proposed solution solved the problem of identifying online news articles. This github reposotory contains all phases of the project. At the end this paper each directory of the github reposotry will be explained more fully.
+This paper and repository focuses on the problem of identifying whether a web page contains a news article. Contained within this paper is background information about how machine learning algorithms combined with information extraction algorithms and heuristics are able to identify online news articles. This paper also contains an experimental design along with a proposed solution. Lastly, this paper contains the results of an experiment that was run to determine whether the proposed solution solved the problem of identifying online news articles. This github repository contains all phases of the project. At the end this paper each directory of the repository will be explained more fully (ie., linking sections of this paper with the github repository).
 
 ### 1. Introduction
 Currently, many news based websites include content other than news articles. Often times, a news web page contains no articles at all but other forms of content such as videos, images, and/or slides. Consequently, identifying news articles by automatic means is a nontrivial task. Simple heuristics that may have worked to identify news articles in the early days of the web have become outdated in today’s web landscape. In order to effectively solve the problem of identifying news articles a multidisciplinary approach must be taken. This project takes such an approach by combining fields of information retrieval, data mining, and machine learning to solve this classification task. 
@@ -77,9 +77,107 @@ The dataset will contain a total of 344 fully rendered web pages. Using the tech
 
 ![Table1](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/ExperimentDesign.png)
 
-![Table2]////
+![Table2](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/experimentBlock.png)
 
 The web pages that will make up the dataset span from 2018-19 and consist of the following popular news and non-news based websites: CNN, Yahoo News, Food Network, Reddit, Fox News, BBC, The Verge, Huffington Post, ABC News, NBC News, DW news, and CBS News. Each web page will be manually labeled, with approximately 49% being labeled as an article and approximately 51% being labeled as not an article. Table 1 shows the experiment factors and Table 2 shows the experiment block design.
+
+
+![boxplot](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/LinkTuning.png)![boxplot](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/CoreExTuning.png)![boxplot](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/CombinedTuning.png)
+
+**Figure 9: The black solid line represents the median. The red stars represent the lower and upper extremes of each notch.
+The blue circles represent the error rates(in percentage form).**
+
+### 7. Results
+
+Before running the twenty-trials on the data, the decision trees were hand tuned beforehand to take advantage of C4.5’s additional options (as detailed in sub-section 2.3 of the literature review). C4.5 has many options that can be used to construct decision trees. However some of C4.5’s options such as weighting and confidence-level adjustment were not further explored since the data for the project did not contain a lot of noise and the actual error rate was lower than the predicted error rate for each pruned decision tree. Figure 9  shows the different notched boxplots that were constructed after one trial of 10 fold cross-validation was run for each option.
+
+For link-target identification, because all of the notches for the boxplots overlapped the median error rate was likely the same for each option. Nevertheless, the boxplot that used the combined options of windowing and discrete value grouping had the smallest upward spread from the median. Furthermore, this boxplot was the only boxplot in which its maximum value was equal to its upper quartile, which meant that every sample data point had an error rate less than 10%. Because of these two facts, pruned decision trees constructed from link-target identification used the options of discrete value grouping and windowing for the twenty trials.
+
+For CoreEx, the boxplot that used the option of discrete value grouping and the boxplot that used the options of discrete value grouping and windowing were the only two boxplots whose notches did not overlap with the notches of the default boxplot.  Accordingly, these two boxplots were examined further. The probability of getting an error rate lower than the median error rate was high for the boxplot that used the the option of discrete value grouping, since it had a much larger spread in the downward direction and its minimum value equaled its lower quartile. Because of these two facts, pruned decision trees constructed from CoreEx used the option of discrete value grouping for the twenty trials.
+
+For the combination of CoreEx and link-target identification, because all of the notches for the boxplots overlapped the median error rate was likely the same for each option. Nevertheless, the probability of getting error rates lower than 6% was high with the boxplot that used the option of windoing, since its maximum value was very close to its upper quartile. Thus, for pruned decision trees constructed from both CoreEx and link-target identification windowing was chosen as the option to use for the twenty trials. 
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/Boxplots_Tuned_Default_DecisionTreeModels/Tuned_Pruned_Accurary.png)
+
+**Figure 10: The legend shows the options used during the twenty trials and the dotted horizontal line represents the median value for the pruned decision trees constructed from CoreEx and link-target identification.**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/results.png)
+
+**Table 3**
+
+Figure 10 shows the overall accuracy of the decision trees over twenty trials and table 3 contains the descriptive statistics for the twenty trials. Figure 10 and table 3 both show that the decision trees constructed from CoreEx and link-target identification had the highest mean accuracy score of 96.92%
+(SEM=.15%, SD=.66% ).Furthermore, figure 10 and table 3 also show that decision trees constructed from CoreEx had the second highest mean accuracy score of 95.83%
+(SEM=.10%, SD=.43%).In terms of variability, the decision trees constructed from CoreEx and link-target identification had the highest variability with a standard deviation of approximately .66%.
+
+<table class="c49 c50"><tbody><tr class="c39"><td class="c34" colspan="1" rowspan="1"><p class="c15 c11"><span class="c3 c4 c6"></span></p></td><td class="c22" colspan="1" rowspan="1"><p class="c10"><span class="c3 c4 c6">Z Test</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c10"><span class="c3 c4 c6">Alpha</span></p><p class="c10"><span class="c3 c1">(0.05)</span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c10"><span class="c4 c6">Reject or Fail to </span><span class="c4 c6">reject Null</span><span class="c4 c6">&nbsp;Hypothesis </span><span class="c3 c1">(one-tailed testing)</span></p></td></tr><tr class="c26"><td class="c34" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">CoreEx </span></p><p class="c15"><span class="c3 c1">vs. LinkTarget </span></p></td><td class="c22" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">|-12.13|</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">1.645</span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">Reject null hypothesis since,| -12.13| &nbsp;&gt; 1.645</span></p></td></tr><tr class="c26"><td class="c34" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">CoreEx </span></p><p class="c15"><span class="c3 c1">vs. (combined)</span></p></td><td class="c22" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">5.21</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">1.645</span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">Reject null hypothesis since, 5.21 &gt; 1.645</span></p></td></tr><tr class="c26"><td class="c34" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">LinkTarget vs. (combined)</span></p></td><td class="c22" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">16.26</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">1.645</span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c15"><span class="c3 c1">Reject null hypothesis since, 16.26 &gt; 1.645</span></p></td></tr></tbody></table>
+
+**Table 4**
+
+In order to determine whether the different mean accuracies of table 3 were statistically significant, hypothesis testing was carried out using the mean folds test[5]. The mean folds test first averages the cells for a single 10 fold cross-validation experiment and considers these averages as samples[5]. These averages are known to be better estimates of accuracy[5]. Table 4 contains the results of conducting mean folds testing. Table 4 shows that the null hypothesis for hypothesis one and two can be rejected. Furthermore, after examining the results of  table 3, table 4, and figure 10, it can be concluded that the alternative hypothesis for hypothesis two can be accepted. Thus, the decision tree constructed from features extracted from link-target identification and CoreEx performed better at identifying news articles than the individual decision trees constructed from only CoreEx or link-target identification. 
+
+### 8. Discussion and Conclusion
+The results show that combining features from both link-target identification and CoreEx have the best performance in identifying news articles within web pages. Since approximately over 12,000 decision trees were constructed for this project each individual tree cannot be analyzed in its entirety, due to time constraints. However, in order to analyze the previous results three decision trees were constructed from the entire training set and are shown by figure 11. Furthermore, after reviewing the decision trees for the first ten trials some trends do emerge regarding characteristics of online news articles. 
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/Trees.png)
+
+**Figure 11: An example of three different pruned decision trees constructed from the entire training set. Circles represent attributes, lines represent attribute values, and diamonds represent classes. Furthermore, the two values contained in parentheses represent the number of training cases covered by the leaf and the predicted error rate.**
+
+### 8.1 Preprocessing and Exploratory Data Analysis
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/DOMTreeDepth.png)
+**Figure 12**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/ScoreofMainContent.png)
+**Figure 13**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/NumberID.png)
+**Figure 14**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/Date.png)
+**Figure 15**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/length.png)
+**Figure 16**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/MainContentNode.png)
+**Figure 17**
+
+Before CoreEx and link-target identification were run, each web page that was downloaded was preprocessed beforehand by removing HTML tags that may have been detrimental to the overall experiment. (For example, many CNN web pages contained style tags within the body portion of the HTML document.) In addition to script tags being removed, the following tags and/or objects were also removed: style tags, leftover javascript code, unknown tags not part of standard HTML syntax, noscript tags, form tags, flash and frame objects, and comment tags. By doing so, the core content of a web page could be extracted without also extracting irrelevant content such as advertisements, forms, and navigation menus.
+
+After the downloaded web pages were preprocessed, CoreEx and link-target identification were then subsequently run. Exploratory data analysis was then conducted by constructing histograms and bar charts from the data. Figure 12's histogram shows the depth of the main content node in the DOM tree across websites. The dotted black line represents the median depth value of the main content node 
+in the DOM tree. For articles this value was 11. As the histogram shows, most main content nodes had a depth value somewhere between 8 and 12 in the DOM tree. The only outlier was Yahoo News. Yahoo News had a much deeper DOM tree depth for its main content node compared to all of the other websites (Yahoo’s main content node generally was somewhere between 19 and 21 in the DOM tree). Figure 13 shows the scores CoreEx assigned to the main content node across websites. The dotted black line represents the median score of the main content node. For articles this value was 1.036. Generally, most scores were above 1 and less than 1.25; however, the Verge had a significant proportion of scores above 1.25 (ie., articles on the Verge contained more text than links). Figure 14 shows how many websites contained a number/id in their root-link. As the chart shows, 70% of websites did contain a number/id in their root-link. Only CNN, CBS News, and FOX News did not. Figure 15 shows how many websites contained a date in their root-link. As the chart shows, 60% of websites did not contain a date in their root-link. Only CNN, CBS News, FOX News, and the Verge contained a date in their root-link.
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/DOMTreeDepth-narticle.png)
+**Figure 18**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/ScoreofMainContent-narticle.png)
+**Figure 19**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/NumberID-narticle.png)
+**Figure 20**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/MainContentNode-narticle.png)
+**Figure 21**
+
+![](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/images/length-narticle.png)
+**Figure 22**
+
+Figure 18's histogram shows the depth of the main content node in the DOM tree across websites. The dotted black line represents the median depth value of the main content node in the DOM tree. For non-articles this value was 10. As the histogram shows,  the main content nodes for non-articles were more dispersed than the main content nodes for articles. Figure 19's histogram shows the scores CoreEx assigned to the main content node across websites. The dotted black line represents the median score of the main content node. For non-articles this value was 0.9945. Most scores were somewhere between 0.9925 and 1.0012, and generally less than 1.05. Figure 20 shows how many websites contained a number/id in their root-link. As the chart shows, 58% of websites did not contain a number/id in their root-link. However,  DW News, BBC News, and the Food Network had a significant proportion of their root-links contain a number/id. Figure 21 shows the main content node’s HTML tag across websites. Unlike articles, where the main content node’s HTML tag was either a <div> or <section> tag, for non-articles, the main content node’s HTML tag was more diverse. For  BBC News and CBS News the main content node’s HTML tag was generally a <ul> tag. For Yahoo News, the Verge, and NBC News the main content node’s HTML tag was generally either a <ul> tag or a <div> tag. For the Food Network the main content node’s HTML tag was generally a  <body> tag. And for all the other websites, the main content node’s HTML tag was generally a <div> tag.
+  
+### 8.2 Structural Examination of the Decision Trees built from CoreEx
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
