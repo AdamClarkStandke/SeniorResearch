@@ -81,6 +81,7 @@ To achieve the primary objective several tools will be used for this project. Fi
 Once all of the web pages have been downloaded and cleaned, a DOM tree parser will be constructed using the Java library called JSoup. JSoup is an application programming interface that allows HTML files to be parsed and manipulated using the DOM tree.Through JSoup, the Java language, and the Eclipse Integrated Development Environment (IDE), link-target identification and CoreEx will be implemented and applied to each downloaded web page.
 
 Lastly, the eighth release of the C4.5 machine learning program will be used to construct decision trees from the information gathered after running link-target identification and CoreEx.  Windows Visual Studio Integrated Development Environment (IDE) along with the C programming language, and the C-Shell command line interpreter will be used to interact with the C4.5 program. Furthermore, the command line utility program called shuf will  shuffle the data after each trial.
+Furthermore, the experiment will be run using a MacBook Air, with a 1.8 GHz Intel Core i5 processor and 8 GB of ram.
 
 ### 5. Hypothesis with Goal Tree
 This project proposes two hypotheses. Hypothesis one consists of the following claim: the decision tree constructed from link-target identification will perform better than CoreEx at identifying news articles. Alternatively, the null hypothesis is that the decision tree constructed from link-target identification will have the same performance at identifying news articles as the decision tree constructed from CoreEx.  
@@ -338,7 +339,10 @@ Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/29608
 
 17. [20 trials of running link-target Id and CoreEx with default options described by sub-section 8.5](https://github.com/kingjames24/super-duper-octo-goggles/tree/master/PerformanceAccuracy_DefaultModels/CoreEx%26LinkTargetID)
 
-18. [
+18. Node Depth OP Pilot described by sub-section 8.2
+     * [Web Page](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/orginialArticle.pdf)
+     * [What CoreEx extracted from web page](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/coreExdefualtweights.pdf)
+     * [What CoreEx extracted from web page after scoring nodes depth values](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/75wRatio_01wText_24wDepth.pdf)
 
 
 
