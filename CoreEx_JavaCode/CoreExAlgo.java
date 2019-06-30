@@ -53,18 +53,18 @@ public class CoreExAlgo {
     //literature weights associated with CoreEX scoring function
 //	private static float weightRatio = 0.99f; 
 //	private static float weightText = 0.01f;
-//	
+	
 	//TESTING OF NODE DEPTH VALUE IN DOM TREE BASED ON 60% CI INTERVAL
 	//NOTE: variable weightDepth is how much weight to assign to the depth of
 	//the node criterion. The entire score must sum to one as said in the literature. 
 	//The value for the  averageDepth variable came from 
 	//trial one's sample mean depth value for main content nodes contained within articles. 
-	private static float weightRatio = 0.75f; 
+	private static float weightRatio = 0.74f; 
 	private static float weightText = 0.01f;
-	private static float weightDepth = 0.24f;
-	private static float upperSpread = 14.61f;
+	private static float weightDepth = 0.25f;
+	private static float upperSpread = 14.60f;
 	private static float averageDepth= 13.14f; 
-	private static float lowerSpread = 11.67f;
+	private static float lowerSpread = 11.68f;
 	
 	private static int pageText;
 	private static int count;
