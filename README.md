@@ -343,7 +343,9 @@ Document Engineering - DocEng 16*, Sept. 2016, pp. 197–200., doi:10.1145/29608
 18. Node Depth OP Pilot described by sub-section 8.2
      * [Web Page](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/orginialArticle.pdf)
      * [What CoreEx extracted from web page](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/coreExdefualtweights.pdf)
-     * [What CoreEx extracted from web page after scoring nodes depth values](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/75wRatio_01wText_24wDepth.pdf)
+     * [What CoreEx extracted from web page after scoring nodes' depth values](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/75wRatio_01wText_24wDepth.pdf)
+     * [Extracted Yahoo news content - using CoreEx's default scoring function](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/YahooArticles_defualtscoring.html)
+     * [Extracted Yahoo news content - using the scoring of main content nodes' depth values](https://github.com/kingjames24/super-duper-octo-goggles/blob/master/pilot_coreEx_nodeDepth/YahooArticles_nodeScoring.html)
 
 
 
